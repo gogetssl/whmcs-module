@@ -1,0 +1,37 @@
+<?php
+
+namespace ModulesGarden\ggsmodule\App\UI\Admin\AutomationQueue\Index;
+
+use ModulesGarden\ggsmodule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue\DataTable;
+use ModulesGarden\ggsmodule\App\Libs\Icons;
+use ModulesGarden\ggsmodule\Components\Container\Container;
+use ModulesGarden\ggsmodule\Components\Text\Text;
+use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+
+class AutomationQueueContainer extends Container implements AdminAreaInterface
+{
+    public function loadHtml(): void
+    {
+        if(!\ModulesGarden\ggsmodule\App\Libs\GeneralSettings::enabled('hideInfoMessages'))
+        {
+            $text = new Text();
+            $text->setCss('ggs-html');
+            $text->setText($this->explanation());
+            $this->addElement($text);
+        }
+
+        $this->addElement(new DataTable());
+    }
+
+    protected function explanation(): string
+    {
+        $t    = function($key) { return htmlspecialchars((string)$this->translate($key), ENT_QUOTES); };
+        $item = function($key) use ($t) { return '<li>' . $t($key) . '</li>'; };
+
+        return '<div class="ggs-explain"><span class="ggs-explain__icon">' . Icons::svg('information-outline') . '</span><div>'
+            . '<h3>' . $t('about_title') . '</h3>'
+            . '<p>' . $t('about_intro') . '</p>'
+            . '<ul>' . $item('about_validate') . $item('about_install') . $item('about_reissue') . $item('about_status') . $item('about_error') . '</ul>'
+            . '</div></div>';
+    }
+}

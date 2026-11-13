@@ -1,0 +1,21 @@
+<?php
+
+namespace ModulesGarden\ggsmodule\Core\Http;
+
+use ModulesGarden\ggsmodule\Core\Helper\BuildUrl;
+
+/**
+ * Description of Request
+ */
+class Request extends \Symfony\Component\HttpFoundation\Request
+{
+    public function __construct()
+    {
+        parent::__construct($_GET, $_POST, [], $_COOKIE, $_FILES, $_SERVER);
+    }
+
+    public function getScheme(): string
+    {
+        return BuildUrl::getVisitorScheme() ?? parent::getScheme();
+    }
+}
