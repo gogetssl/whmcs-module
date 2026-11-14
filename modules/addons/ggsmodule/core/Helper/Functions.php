@@ -2,6 +2,14 @@
 
 namespace ModulesGarden\GGSModule\Core\Helper;
 
+// only through WHMCS: a direct request gets nothing (no output, no error with the server path)
+if(!defined('WHMCS'))
+{
+    http_response_code(403);
+    exit;
+}
+
+
 use ModulesGarden\GGSModule\Core\Http\JsonResponse;
 use ModulesGarden\GGSModule\Core\Http\RedirectResponse;
 use ModulesGarden\GGSModule\Core\Http\Response;
