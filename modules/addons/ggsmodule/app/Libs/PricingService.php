@@ -2,6 +2,8 @@
 
 namespace ModulesGarden\ggsmodule\App\Libs;
 
+use ModulesGarden\ggsmodule\App\Libs\Edition;
+
 use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
 use WHMCS\Database\Capsule;
 
@@ -50,7 +52,7 @@ class PricingService
 
         // the gateway products and the SAN options of all products: one query each
         $remotes = [];
-        foreach(Capsule::table('ggsmodule_RemoteProducts')->get(['vendor', 'remoteId', 'rawData']) as $row)
+        foreach(Capsule::table(Edition::table('RemoteProducts'))->get(['vendor', 'remoteId', 'rawData']) as $row)
         {
             $remotes[strtolower((string)$row->vendor) . '|' . $row->remoteId] = $row;
         }

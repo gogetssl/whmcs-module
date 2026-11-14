@@ -5,7 +5,7 @@ namespace ModulesGarden\ggsmodule\App\Migration;
 use ModulesGarden\ggsmodule\App\Models\RemoteProduct;
 
 /**
- * Finds the gateway product (ggsmodule_RemoteProducts, synced in wizard step 4) for a legacy product reference:
+ * Finds the gateway product (the RemoteProducts table, synced in wizard step 4) for a legacy product reference:
  *  - GGS: the GoGetSSL API product id, which the gateway keeps as its own id
  *  - TSS: the TheSSLStore product code, matched against the code fields the gateway exposes in the product's raw data
  */
