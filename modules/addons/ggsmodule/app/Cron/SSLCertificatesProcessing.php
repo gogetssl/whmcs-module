@@ -88,6 +88,7 @@ class SSLCertificatesProcessing extends AbstractCommand
                 $query->whereNull('tblproducts.configoption9')->orWhereNotIn('tblproducts.configoption9', array_merge(\ModulesGarden\GGSModule\App\Libs\GatewayOrderService::categories(), \ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi::SUBSCRIPTION_CATEGORIES));
             })
             ->groupBy('tblhosting.id');
+        \ModulesGarden\GGSModule\App\Libs\RecordOnly::exclude($certificatesQuery);
 
         $output->write('Start checking certificates...') .
 
