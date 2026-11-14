@@ -18,6 +18,7 @@
             </div>
         </div>
         <div class="ggs-hero__foot">
+            {if $renewalNotice}<p class="ggs-renewal-notice"><strong>{$renewalNotice|escape}</strong></p>{/if}
             <p>{$MGLANG->T('awaiting_configuration', 'desc')}</p>
             <div class="ggs-actions">
                 <a class="ggs-btn ggs-btn--primary" href="{$url|escape}">
