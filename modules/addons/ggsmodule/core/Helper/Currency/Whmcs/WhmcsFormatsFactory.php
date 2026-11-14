@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Helper\Currency\Whmcs;
+namespace ModulesGarden\GGSModule\Core\Helper\Currency\Whmcs;
 
-use ModulesGarden\ggsmodule\Core\Helper\Currency\Formatter;
-use ModulesGarden\ggsmodule\Core\Helper\Currency\Models\Format;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Client;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Currency;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\Price\Whmcs\WhmcsFormats as WhmcsFormats;
+use ModulesGarden\GGSModule\Core\Helper\Currency\Formatter;
+use ModulesGarden\GGSModule\Core\Helper\Currency\Models\Format;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Client;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Currency;
+use ModulesGarden\GGSModule\Core\UI\Formatters\Price\Whmcs\WhmcsFormats as WhmcsFormats;
 
 /**
- * @deprecated - use \ModulesGarden\ggsmodule\Core\UI\Formatters\Price\Price instead
+ * @deprecated - use \ModulesGarden\GGSModule\Core\UI\Formatters\Price\Price instead
  */
 class WhmcsFormatsFactory
 {

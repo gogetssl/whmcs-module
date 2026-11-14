@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
 /**
  * Stand-alone SSL tools for the client area: everything runs on this server with PHP's OpenSSL, no gateway call and

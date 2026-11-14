@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Exporters;
+namespace ModulesGarden\GGSModule\Core\Exporters;
 
-use ModulesGarden\ggsmodule\Core\Exporters\Source\DataModelWithHeadersInterface;
+use ModulesGarden\GGSModule\Core\Exporters\Source\DataModelWithHeadersInterface;
 
 class CsvExporter extends BaseExporter
 {

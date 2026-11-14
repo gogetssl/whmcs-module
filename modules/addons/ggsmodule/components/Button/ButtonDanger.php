@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Button;
+namespace ModulesGarden\GGSModule\Components\Button;
 
 class ButtonDanger extends Button
 {

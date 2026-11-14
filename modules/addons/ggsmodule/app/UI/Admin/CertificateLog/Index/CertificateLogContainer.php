@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\CertificateLog\Index;
+namespace ModulesGarden\GGSModule\App\UI\Admin\CertificateLog\Index;
 
-use ModulesGarden\ggsmodule\App\Libs\Icons;
-use ModulesGarden\ggsmodule\App\Libs\AutoInstallQueue;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\App\Libs\Icons;
+use ModulesGarden\GGSModule\App\Libs\AutoInstallQueue;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
 use WHMCS\Database\Capsule;
 
 /**
@@ -18,7 +18,7 @@ class CertificateLogContainer extends Container implements AdminAreaInterface
     use TranslatorTrait;
 
     const PER_PAGE = 50;
-    const BASE     = 'addonmodules.php?module=ggsmodule&mg-page=certificateLog';
+    const BASE     = 'addonmodules.php?module=GGSModule&mg-page=certificateLog';
     const COLORS   = ['success' => '#1f7a4d', 'error' => '#a8322d', 'info' => '#5b6673'];
 
     public function loadHtml(): void
@@ -74,14 +74,14 @@ class CertificateLogContainer extends Container implements AdminAreaInterface
     /** What the page is for and what the entries mean, then a separate note on what is not logged here */
     protected function explanation()
     {
-        if(\ModulesGarden\ggsmodule\App\Libs\GeneralSettings::enabled('hideInfoMessages'))
+        if(\ModulesGarden\GGSModule\App\Libs\GeneralSettings::enabled('hideInfoMessages'))
         {
             return '';
         }
         $item = function($key) {
             return '<li>' . $this->e($this->t($key)) . '</li>';
         };
-        $logs = '<a href="addonmodules.php?module=ggsmodule&mg-page=logs">' . $this->e($this->t('logs_page')) . '</a>';
+        $logs = '<a href="addonmodules.php?module=GGSModule&mg-page=logs">' . $this->e($this->t('logs_page')) . '</a>';
 
         return '<div class="ggs-explain"><span class="ggs-explain__icon">' . Icons::svg('information-outline') . '</span><div>'
             . '<h3>' . $this->e($this->t('about_title')) . '</h3>'
@@ -94,7 +94,7 @@ class CertificateLogContainer extends Container implements AdminAreaInterface
     protected function filters($service, $type, $search)
     {
         $html = '<form method="get" action="addonmodules.php" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px;">'
-            . '<input type="hidden" name="module" value="ggsmodule"><input type="hidden" name="mg-page" value="certificateLog">'
+            . '<input type="hidden" name="module" value="GGSModule"><input type="hidden" name="mg-page" value="certificateLog">'
             . '<input class="form-control" style="width:130px" name="service" type="number" min="1" placeholder="' . $this->e($this->t('service_id')) . '" value="' . ($service ?: '') . '">'
             . '<select class="form-control" style="width:150px" name="type"><option value="">' . $this->e($this->t('all_types')) . '</option>';
         foreach(array_keys(self::COLORS) as $option)

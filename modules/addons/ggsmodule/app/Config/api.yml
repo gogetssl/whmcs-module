@@ -14,7 +14,7 @@
 #  description: Find out more about Swagger
 #  url: http://swagger.io
 #servers:
-#  - url: https://dev22.modulesgarden-demo.com/dev/modules/addons/ggsmodule/packages/api/endpoint/index.php
+#  - url: https://dev22.modulesgarden-demo.com/dev/modules/addons/GGSModule/packages/api/endpoint/index.php
 #tags:
 #  - name: Modules Garden
 #    description: Everything about ModulesGarden FW API
@@ -28,7 +28,7 @@
 #        - service
 #      summary: Find service by ID
 #      description: Returns a single service
-#      operationId: home@test#ModulesGarden\ggsmodule\Packages\Logs\UI\Pages\LogsDataTable
+#      operationId: home@test#ModulesGarden\GGSModule\Packages\Logs\UI\Pages\LogsDataTable
 #      parameters:
 #        - name: serviceId
 #          in: path
@@ -56,7 +56,7 @@
 #        - service
 #      summary: Update service by ID
 #      description: Update service
-#      operationId: home@update#ModulesGarden\ggsmodule\App\UI\Client\Home\Index\SomeForm
+#      operationId: home@update#ModulesGarden\GGSModule\App\UI\Client\Home\Index\SomeForm
 #      parameters:
 #        - name: serviceId
 #          in: query

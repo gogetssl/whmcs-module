@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Support\Facades;
+namespace ModulesGarden\GGSModule\Core\Support\Facades;
 
 /**
  * @method static emergency($message, array $data = [])
@@ -16,6 +16,6 @@ class LogActivity extends AbstractFacade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \ModulesGarden\ggsmodule\Core\WHMCS\LogActivity::class;
+        return \ModulesGarden\GGSModule\Core\WHMCS\LogActivity::class;
     }
 }

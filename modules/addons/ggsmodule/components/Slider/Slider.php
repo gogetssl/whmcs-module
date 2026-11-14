@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Slider;
+namespace ModulesGarden\GGSModule\Components\Slider;
 
-use ModulesGarden\ggsmodule\Components\SliderMarks\SliderMarks;
-use ModulesGarden\ggsmodule\Core\Components\Enums\Type;
-use ModulesGarden\ggsmodule\Core\Components\FormFields\FormField;
+use ModulesGarden\GGSModule\Components\SliderMarks\SliderMarks;
+use ModulesGarden\GGSModule\Core\Components\Enums\Type;
+use ModulesGarden\GGSModule\Core\Components\FormFields\FormField;
 
 class Slider extends FormField
 {

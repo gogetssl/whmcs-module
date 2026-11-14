@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\OnOffSwitchers\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\OnOffSwitchers\Forms;
 
-use ModulesGarden\ggsmodule\Components\Form\AbstractForm;
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\OnOffSwitchers\Providers\OnOffSwitchersProviders;
+use ModulesGarden\GGSModule\Components\Form\AbstractForm;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\OnOffSwitchers\Providers\OnOffSwitchersProviders;
 
 class OnOffSwitchersForm extends AbstractForm implements AjaxComponentInterface, AdminAreaInterface
 {

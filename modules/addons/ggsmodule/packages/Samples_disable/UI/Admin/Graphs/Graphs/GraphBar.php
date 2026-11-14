@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs;
 
-use ModulesGarden\ggsmodule\Components\Form\AbstractForm;
-use ModulesGarden\ggsmodule\Components\Graph\Models\DataSet;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Forms\Filters;
+use ModulesGarden\GGSModule\Components\Form\AbstractForm;
+use ModulesGarden\GGSModule\Components\Graph\Models\DataSet;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Forms\Filters;
 
 
-class GraphBar extends \ModulesGarden\ggsmodule\Components\Graph\GraphBar implements AdminAreaInterface
+class GraphBar extends \ModulesGarden\GGSModule\Components\Graph\GraphBar implements AdminAreaInterface
 {
     public function loadHtml(): void
     {
@@ -18,7 +18,7 @@ class GraphBar extends \ModulesGarden\ggsmodule\Components\Graph\GraphBar implem
 
     public function loadData(): void
     {
-        $multiple = (int)\ModulesGarden\ggsmodule\Core\Support\Facades\Request::get('multiple', 1);
+        $multiple = (int)\ModulesGarden\GGSModule\Core\Support\Facades\Request::get('multiple', 1);
 
         $labels = ['day 1', 'day 2', 'day 3']; //labels on the bottom
         $this->setLabels($labels);

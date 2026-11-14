@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\FormGroup;
+namespace ModulesGarden\GGSModule\Components\FormGroup;
 
-use ModulesGarden\ggsmodule\Core\Components\Decorator\Decorator;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\FormFieldInterface;
+use ModulesGarden\GGSModule\Core\Components\Decorator\Decorator;
+use ModulesGarden\GGSModule\Core\Contracts\Components\FormFieldInterface;
 
 class FormGroupQuarterWidth extends FormGroup implements FormFieldInterface
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Card;
+namespace ModulesGarden\GGSModule\Components\Card;
 
-use ModulesGarden\ggsmodule\Components\Button\Button;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Icon\Icon;
-use ModulesGarden\ggsmodule\Core\Components\Enums\LayoutProps;
+use ModulesGarden\GGSModule\Components\Button\Button;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Icon\Icon;
+use ModulesGarden\GGSModule\Core\Components\Enums\LayoutProps;
 
 class CardButton extends Card
 {

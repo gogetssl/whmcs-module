@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Checkbox;
+namespace ModulesGarden\GGSModule\Components\Checkbox;
 
-use ModulesGarden\ggsmodule\Core\Components\FormFields\FormField;
+use ModulesGarden\GGSModule\Core\Components\FormFields\FormField;
 
 
 class Checkbox extends FormField

@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ReloadableDropdowns\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ReloadableDropdowns\Forms;
 
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Components\Form\AbstractForm;
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
-use ModulesGarden\ggsmodule\Components\Row\Row;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Actions\PassAjaxData;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ReloadById;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ReloadableDropdowns\Fields\SomeDropdown;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ReloadableDropdowns\Providers\ReloadableDropdownsProvider;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Components\Form\AbstractForm;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Components\Row\Row;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Actions\PassAjaxData;
+use ModulesGarden\GGSModule\Core\Components\Actions\ReloadById;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ReloadableDropdowns\Fields\SomeDropdown;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ReloadableDropdowns\Providers\ReloadableDropdownsProvider;
 
 class ReloadableDropdownsForm extends AbstractForm implements AdminAreaInterface
 {

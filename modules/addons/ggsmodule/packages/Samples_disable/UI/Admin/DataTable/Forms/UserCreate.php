@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Forms;
 
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Components\Form\AbstractFormOneColumn;
-use ModulesGarden\ggsmodule\Components\FormGroup\FormGroupHalfWidth;
-use ModulesGarden\ggsmodule\Components\FormInputEmail\FormInputEmail;
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Reload;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Providers\UserProvider;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Components\Form\AbstractFormOneColumn;
+use ModulesGarden\GGSModule\Components\FormGroup\FormGroupHalfWidth;
+use ModulesGarden\GGSModule\Components\FormInputEmail\FormInputEmail;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Core\Components\Actions\Reload;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Providers\UserProvider;
 
 class UserCreate extends AbstractFormOneColumn implements AdminAreaInterface, AjaxComponentInterface
 {

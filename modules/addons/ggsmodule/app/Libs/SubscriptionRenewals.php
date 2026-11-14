@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Helpers\EmailTemplates;
-use ModulesGarden\ggsmodule\App\Models\AcmeSubscription;
-use ModulesGarden\ggsmodule\App\Models\AisSubscription;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Service;
+use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
+use ModulesGarden\GGSModule\App\Models\AcmeSubscription;
+use ModulesGarden\GGSModule\App\Models\AisSubscription;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Service;
 use WHMCS\Database\Capsule;
 
 /**

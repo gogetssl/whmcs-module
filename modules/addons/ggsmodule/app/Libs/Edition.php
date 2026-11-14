@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
 /**
  * Distribution edition (GoGetSSL Module / TheSSLStore Plugin) - see app/Config/edition.php.
@@ -111,5 +111,26 @@ class Edition
     public static function table($name)
     {
         return self::tablePrefix() . '_' . $name;
+    }
+
+    /**
+     * Folders this edition was installed in before 1.4.0. WHMCS keeps the module's own name in its records -
+     * the product's server type, the addon's settings - so an install upgraded from one of those is moved over
+     * by App\Libs\ModuleRename, and its tables by App\Libs\TablePrefix.
+     *
+     * Only this edition's former names belong here: where both editions are installed, neither may adopt
+     * the other's products.
+     */
+    public static function legacyFolders()
+    {
+        return self::get() === self::TSS ? ['tssmodule'] : ['ggsmodule'];
+    }
+
+    /**
+     * Folder the module is installed in, which is the name WHMCS knows it by
+     */
+    public static function folder()
+    {
+        return basename(dirname(__DIR__, 2));
     }
 }

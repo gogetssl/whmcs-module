@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\DependencyInjection;
+namespace ModulesGarden\GGSModule\Core\DependencyInjection;
 
 use Illuminate\Contracts\Container\Container as ContainerContract;
 use ReflectionParameter;

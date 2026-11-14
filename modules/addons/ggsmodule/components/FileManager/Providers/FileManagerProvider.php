@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\FileManager\Providers;
+namespace ModulesGarden\GGSModule\Components\FileManager\Providers;
 
-use ModulesGarden\ggsmodule\Components\FileManager\Source\Item;
-use ModulesGarden\ggsmodule\Core\DataProviders\ArrayDataProvider;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Components\FileManager\Source\Item;
+use ModulesGarden\GGSModule\Core\DataProviders\ArrayDataProvider;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
 abstract class FileManagerProvider extends ArrayDataProvider
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Label;
+namespace ModulesGarden\GGSModule\Components\Label;
 
-use ModulesGarden\ggsmodule\Core\Components\Enums\Color;
+use ModulesGarden\GGSModule\Core\Components\Enums\Color;
 
 /**
  * Class Form

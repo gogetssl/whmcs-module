@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Support\Facades;
+namespace ModulesGarden\GGSModule\Core\Support\Facades;
 
 /**
  * @method static set(string $name, $value)
@@ -14,6 +14,6 @@ class Params extends AbstractFacade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \ModulesGarden\ggsmodule\Core\Services\Params::class;
+        return \ModulesGarden\GGSModule\Core\Services\Params::class;
     }
 }

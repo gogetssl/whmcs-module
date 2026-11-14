@@ -1,44 +1,44 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\app\controllers\server\clientarea\parts;
+namespace ModulesGarden\Servers\GGSModule\app\controllers\server\clientarea\parts;
 
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\Client;
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\Order;
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\Product;
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\Service;
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\SSL;
-use ModulesGarden\Servers\ggsmodule\app\repository\whmcs\Config;
-use ModulesGarden\Servers\ggsmodule\app\repository\whmcs\Domain;
-use ModulesGarden\Servers\ggsmodule\app\repository\whmcs\ProductConfigOptions;
-use ModulesGarden\Servers\ggsmodule\app\services\InvoiceRenew;
-use ModulesGarden\Servers\ggsmodule\app\services\SSLStepThree;
-use ModulesGarden\Servers\ggsmodule\core\Lang;
-use ModulesGarden\Servers\ggsmodule\core\process\AbstractController;
-use ModulesGarden\Servers\ggsmodule\Server;
-use ModulesGarden\ggsmodule\App\Helpers\EmailTemplates;
-use ModulesGarden\ggsmodule\App\Libs\AcmeHelpers;
-use ModulesGarden\ggsmodule\App\Libs\AisHelpers;
-use ModulesGarden\ggsmodule\App\Libs\AutoInstallHelpers;
-use ModulesGarden\ggsmodule\App\Libs\CertificateBundle;
-use ModulesGarden\ggsmodule\App\Libs\CertificateService;
-use ModulesGarden\ggsmodule\App\Libs\CertificateSyncHelpers;
-use ModulesGarden\ggsmodule\App\Libs\Cpanel;
-use ModulesGarden\ggsmodule\App\Libs\GeneralSettings;
-use ModulesGarden\ggsmodule\App\Libs\ProductSettings;
-use ModulesGarden\ggsmodule\App\Libs\SmimeService;
-use ModulesGarden\ggsmodule\App\Libs\CodeSigningService;
-use ModulesGarden\ggsmodule\App\Libs\SslProductHelpers;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\ggsmodule\App\Models\AcmeSubscription;
-use ModulesGarden\ggsmodule\App\Models\AcmeSubscriptionDomain;
-use ModulesGarden\ggsmodule\App\Models\AisSubscription;
-use ModulesGarden\ggsmodule\App\Models\RemoteProduct;
-use ModulesGarden\ggsmodule\App\Models\Request;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\ggsmodule\Core\WHMCS\Helper;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Invoice;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\Client;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\Order;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\Product;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\Service;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\SSL;
+use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Config;
+use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Domain;
+use ModulesGarden\Servers\GGSModule\app\repository\whmcs\ProductConfigOptions;
+use ModulesGarden\Servers\GGSModule\app\services\InvoiceRenew;
+use ModulesGarden\Servers\GGSModule\app\services\SSLStepThree;
+use ModulesGarden\Servers\GGSModule\core\Lang;
+use ModulesGarden\Servers\GGSModule\core\process\AbstractController;
+use ModulesGarden\Servers\GGSModule\Server;
+use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
+use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
+use ModulesGarden\GGSModule\App\Libs\AisHelpers;
+use ModulesGarden\GGSModule\App\Libs\AutoInstallHelpers;
+use ModulesGarden\GGSModule\App\Libs\CertificateBundle;
+use ModulesGarden\GGSModule\App\Libs\CertificateService;
+use ModulesGarden\GGSModule\App\Libs\CertificateSyncHelpers;
+use ModulesGarden\GGSModule\App\Libs\Cpanel;
+use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
+use ModulesGarden\GGSModule\App\Libs\ProductSettings;
+use ModulesGarden\GGSModule\App\Libs\SmimeService;
+use ModulesGarden\GGSModule\App\Libs\CodeSigningService;
+use ModulesGarden\GGSModule\App\Libs\SslProductHelpers;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
+use ModulesGarden\GGSModule\App\Models\AcmeSubscription;
+use ModulesGarden\GGSModule\App\Models\AcmeSubscriptionDomain;
+use ModulesGarden\GGSModule\App\Models\AisSubscription;
+use ModulesGarden\GGSModule\App\Models\RemoteProduct;
+use ModulesGarden\GGSModule\App\Models\Request;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
+use ModulesGarden\GGSModule\Core\WHMCS\Helper;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Invoice;
 use WHMCS\Billing\Tax;
 use WHMCS\Database\Capsule;
 
@@ -150,7 +150,7 @@ trait AcmeActions
 
         // when each domain was added, and - while it is still inside the refund window of its own addition - until
         // when removing it gives the money back (the slot is then free to be given back as well)
-        $refundDays = \ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::REFUND_DAYS;
+        $refundDays = \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::REFUND_DAYS;
         foreach($domains as $domainRow)
         {
             $added = (string)($domainRow->added_at ?: $domainRow->created_at);
@@ -582,14 +582,14 @@ trait AcmeActions
         // time, however long ago it was paid for; a slot holding a domain only while the vendor would still refund that
         // domain (within the refund window of the day THAT domain was added). So the check is how many slots are
         // refundable right now, per type.
-        $refundable = \ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::refundableSlots($serviceId);
+        $refundable = \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::refundableSlots($serviceId);
         foreach([['single', $hasSingle, $newSingle, $domainLimits['singleFromOption']], ['wildcard', $hasWildcard, $newWildcard, $domainLimits['wildcardFromOption']]] as $check)
         {
             list($type, $sent, $wanted, $current) = $check;
             $given = $sent ? (int)$current - (int)$wanted : 0;
             if($given > 0 && $given > $refundable[$type])
             {
-                throw new \Exception(sprintf(Lang::absoluteT('acme_downgrade_refund_window_passed'), \ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::REFUND_DAYS));
+                throw new \Exception(sprintf(Lang::absoluteT('acme_downgrade_refund_window_passed'), \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::REFUND_DAYS));
             }
         }
 
@@ -604,7 +604,7 @@ trait AcmeActions
                                 ->whereIn('tblinvoices.status', ['Unpaid', 'Overdue'])
                                 ->first();
 
-        if($unpaidInvoice || \ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::pendingSlotPurchase($serviceId))
+        if($unpaidInvoice || \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::pendingSlotPurchase($serviceId))
         {
             throw new \Exception(Lang::absoluteT('acme_upgrade_unpaid_invoice_exists'));
         }
@@ -704,7 +704,7 @@ trait AcmeActions
         $message = Lang::absoluteT('acme_upgrade_success');
         if($bought)
         {
-            $invoiceId = \ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::createSlotPurchaseInvoice($serviceId, $bought);
+            $invoiceId = \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::createSlotPurchaseInvoice($serviceId, $bought);
             if($invoiceId > 0)
             {
                 global $CONFIG;
@@ -784,7 +784,7 @@ trait AcmeActions
         }
 
         // acme_id is the CaaS item ID (items[0].id), not the order ID; within the refund window the vendor refunds the order
-        $refundable = \ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::orderRefundable($serviceId);
+        $refundable = \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::orderRefundable($serviceId);
         CertificateService::api($serviceId)->cancelItem((int)$subscription->acme_id, 'Cancelled by client', 'caas', $refundable);
 
         $subscription->status       = 'cancelled';
@@ -796,7 +796,7 @@ trait AcmeActions
                                                                           'domainstatus' => 'Cancelled'
                                                                       ]);
 
-        $refundedCreditsAmount = \ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::refundOnCancel($serviceId, 'Subscription cancelled by the client');
+        $refundedCreditsAmount = \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::refundOnCancel($serviceId, 'Subscription cancelled by the client');
         $message               = Lang::absoluteT('acme_subscription_cancelled');
         if($refundedCreditsAmount > 0)
         {

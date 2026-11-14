@@ -1,6 +1,6 @@
 <?php
 
-use ModulesGarden\ggsmodule\App\Libs\AcmeHelpers;
+use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
 use WHMCS\Database\Capsule;
 
 $hookManager->register(
@@ -13,10 +13,10 @@ $hookManager->register(
             $pid = isset($product['pid']) ? (int)$product['pid'] : 0;
 
             // code signing: 2 / 3 years only on an own HSM
-            $csError = $pid ? \ModulesGarden\ggsmodule\App\Libs\CodeSigningService::cartError($pid, $product['billingcycle'] ?? '', (array)($product['configoptions'] ?? [])) : null;
+            $csError = $pid ? \ModulesGarden\GGSModule\App\Libs\CodeSigningService::cartError($pid, $product['billingcycle'] ?? '', (array)($product['configoptions'] ?? [])) : null;
             if ($csError)
             {
-                $errors[] = \ModulesGarden\ggsmodule\Core\translate($csError);
+                $errors[] = \ModulesGarden\GGSModule\Core\translate($csError);
                 continue;
             }
 
@@ -49,7 +49,7 @@ $hookManager->register(
 
             if ($sansCount <= 0 && $wildcardCount <= 0)
             {
-                $errors[] = \ModulesGarden\ggsmodule\Core\translate('acme_order_requires_at_least_one_san');
+                $errors[] = \ModulesGarden\GGSModule\Core\translate('acme_order_requires_at_least_one_san');
             }
         }
 

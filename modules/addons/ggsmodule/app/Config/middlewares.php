@@ -2,5 +2,5 @@
 // phpcs:ignoreFile
 
 return [
-    new \ModulesGarden\ggsmodule\App\Middlewares\Controller()
+    new \ModulesGarden\GGSModule\App\Middlewares\Controller()
 ];

@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\app\services;
+namespace ModulesGarden\Servers\GGSModule\app\services;
 
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\Service;
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\SSL;
-use ModulesGarden\ggsmodule\App\Libs\AcmeHelpers;
-use ModulesGarden\ggsmodule\App\Libs\AutoInstallHelpers;
-use ModulesGarden\ggsmodule\App\Libs\CertificateService;
-use ModulesGarden\ggsmodule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\ggsmodule\App\Models\Request;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\InvoiceItem;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\Service;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\SSL;
+use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
+use ModulesGarden\GGSModule\App\Libs\AutoInstallHelpers;
+use ModulesGarden\GGSModule\App\Libs\CertificateService;
+use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
+use ModulesGarden\GGSModule\App\Models\Request;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\InvoiceItem;
 
 class Renew
 {
@@ -39,19 +39,19 @@ class Renew
 
         $service = Service::find($serviceId);
         // subscriptions are renewed by the vendor (SubscriptionRenewals bills them): nothing to order
-        if($service && \ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::isSubscriptionProduct($service->packageid)) {
+        if($service && \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::isSubscriptionProduct($service->packageid)) {
             return 'success';
         }
 
         // S/MIME: a renewal is a new certificate order - the service goes back to Awaiting Configuration and the client
         // gets the configuration link (the current certificate stays valid until it expires)
-        $gatewayType = $service ? \ModulesGarden\ggsmodule\App\Libs\GatewayOrderService::typeOfProduct($service->packageid) : null;
+        $gatewayType = $service ? \ModulesGarden\GGSModule\App\Libs\GatewayOrderService::typeOfProduct($service->packageid) : null;
         if($gatewayType) {
             // "ordered": placed with the previous details; "form": the client gets the order details e-mail
             if($gatewayType::renewal($serviceId) === 'form') {
                 $sslOrder = SSL::getByServiceId($serviceId);
-                \ModulesGarden\ggsmodule\App\Helpers\EmailTemplates::sendEmail($gatewayType::configurationTemplate(), $serviceId, [
-                    'ssl_configuration_link' => (new \ModulesGarden\Servers\ggsmodule\app\repository\whmcs\Config())->getConfigureSSLUrl($sslOrder ? $sslOrder->id : 0, $serviceId),
+                \ModulesGarden\GGSModule\App\Helpers\EmailTemplates::sendEmail($gatewayType::configurationTemplate(), $serviceId, [
+                    'ssl_configuration_link' => (new \ModulesGarden\Servers\GGSModule\app\repository\whmcs\Config())->getConfigureSSLUrl($sslOrder ? $sslOrder->id : 0, $serviceId),
                 ]);
             }
 

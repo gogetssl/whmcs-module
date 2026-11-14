@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Configuration\Addon\Deactivate;
+namespace ModulesGarden\GGSModule\Core\Configuration\Addon\Deactivate;
 
-use ModulesGarden\ggsmodule\Core\Configuration\Addon\AbstractAfter;
+use ModulesGarden\GGSModule\Core\Configuration\Addon\AbstractAfter;
 
 /**
  * Runs after addon deactivation

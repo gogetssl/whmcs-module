@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Emails\Index;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Emails\Index;
 
-use ModulesGarden\ggsmodule\App\Http\Admin\Emails as EmailsController;
-use ModulesGarden\ggsmodule\App\Libs\EmailCatalog;
-use ModulesGarden\ggsmodule\App\Libs\EmailManager;
-use ModulesGarden\ggsmodule\App\Libs\Icons;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\App\Http\Admin\Emails as EmailsController;
+use ModulesGarden\GGSModule\App\Libs\EmailCatalog;
+use ModulesGarden\GGSModule\App\Libs\EmailManager;
+use ModulesGarden\GGSModule\App\Libs\Icons;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
 
 /**
  * Admin page "Emails": the module's client e-mails by event, edited per language where WHMCS keeps them.
@@ -20,7 +20,7 @@ class EmailsContainer extends Container implements AdminAreaInterface
 {
     use TranslatorTrait;
 
-    const BASE = 'addonmodules.php?module=ggsmodule&mg-page=emails';
+    const BASE = 'addonmodules.php?module=GGSModule&mg-page=emails';
 
     /**
      * Page script, run by the onerror of an image (scripts in the rendered text are not executed): loads WHMCS's TinyMCE
@@ -64,7 +64,7 @@ class EmailsContainer extends Container implements AdminAreaInterface
             $html .= '<div class="ggs-note is-ok">' . $this->e($this->t('notice_' . $session['notice'], ['count' => (int)($session['count'] ?? 0)])) . '</div>';
         }
 
-        return $html . (\ModulesGarden\ggsmodule\App\Libs\GeneralSettings::enabled('hideInfoMessages') ? '' : $this->explanation())
+        return $html . (\ModulesGarden\GGSModule\App\Libs\GeneralSettings::enabled('hideInfoMessages') ? '' : $this->explanation())
             . '<div class="em-layout"><div class="em-card em-nav">' . $this->nav($overview, $key) . '</div>'
             . '<div class="em-card">' . $this->editor($overview[$key], $language, $languages, $session) . '</div></div>';
     }

@@ -1,23 +1,23 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Cron;
+namespace ModulesGarden\GGSModule\App\Cron;
 
-use ModulesGarden\ggsmodule\App\Libs\Edition;
+use ModulesGarden\GGSModule\App\Libs\Edition;
 
 use Exception;
-use ModulesGarden\ggsmodule\App\Helpers\EmailTemplates;
-use ModulesGarden\ggsmodule\App\Libs\AcmeHelpers;
-use ModulesGarden\ggsmodule\App\Libs\AutoInstallHelpers;
-use ModulesGarden\ggsmodule\App\Libs\CertificateService;
-use ModulesGarden\ggsmodule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\ggsmodule\App\Libs\SslProductHelpers;
-use ModulesGarden\ggsmodule\App\Models\AcmeSubscription;
-use ModulesGarden\ggsmodule\App\Models\CronCheck;
-use ModulesGarden\ggsmodule\App\Models\Request;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\Core\CommandLine\AbstractCommand;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Service;
-use ModulesGarden\ggsmodule\Packages\Logs\Support\Facades\Logger;
+use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
+use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
+use ModulesGarden\GGSModule\App\Libs\AutoInstallHelpers;
+use ModulesGarden\GGSModule\App\Libs\CertificateService;
+use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
+use ModulesGarden\GGSModule\App\Libs\SslProductHelpers;
+use ModulesGarden\GGSModule\App\Models\AcmeSubscription;
+use ModulesGarden\GGSModule\App\Models\CronCheck;
+use ModulesGarden\GGSModule\App\Models\Request;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\Core\CommandLine\AbstractCommand;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Service;
+use ModulesGarden\GGSModule\Packages\Logs\Support\Facades\Logger;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
@@ -25,7 +25,7 @@ use WHMCS\Database\Capsule;
 
 /**
  * Class Sample
- * @package ModulesGarden\ggsmodule\App\Cron
+ * @package ModulesGarden\GGSModule\App\Cron
  */
 class SSLCertificatesProcessing extends AbstractCommand
 {
@@ -80,12 +80,12 @@ class SSLCertificatesProcessing extends AbstractCommand
             // a new order is stored as "processing" until the gateway reports it (GoGetSSL adds the validation details
             // a few seconds after the order is placed) - without it such orders were never re-read
             ->whereIn($requests . '.status', ['pending', 'processing'])
-            ->where('tblproducts.servertype', 'ggsmodule')
+            ->where('tblproducts.servertype', 'GGSModule')
             ->where('tblhosting.domainstatus', 'Active')
             ->where('tblsslorders.status', 'Configuration Submitted')
             // S/MIME and code signing orders keep their own request rows (also pending): GatewayOrderService refreshes them
             ->where(function($query) {
-                $query->whereNull('tblproducts.configoption9')->orWhereNotIn('tblproducts.configoption9', array_merge(\ModulesGarden\ggsmodule\App\Libs\GatewayOrderService::categories(), \ModulesGarden\ggsmodule\App\Libs\SSLTrustCenterApi::SUBSCRIPTION_CATEGORIES));
+                $query->whereNull('tblproducts.configoption9')->orWhereNotIn('tblproducts.configoption9', array_merge(\ModulesGarden\GGSModule\App\Libs\GatewayOrderService::categories(), \ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi::SUBSCRIPTION_CATEGORIES));
             })
             ->groupBy('tblhosting.id');
 
@@ -111,7 +111,7 @@ class SSLCertificatesProcessing extends AbstractCommand
                     try {
                         $orderFiles = $api->getCertificateFiles($certificate['remoteid']);
                     } catch (Exception $exception) {
-                        Logger::error('Get Certificate Files Error:'.$exception->getMessage(), \ModulesGarden\ggsmodule\App\Libs\LogContext::exception($exception, ['service' => $certificate['id']]));
+                        Logger::error('Get Certificate Files Error:'.$exception->getMessage(), \ModulesGarden\GGSModule\App\Libs\LogContext::exception($exception, ['service' => $certificate['id']]));
                     }
                 }
 
@@ -177,7 +177,7 @@ class SSLCertificatesProcessing extends AbstractCommand
                 $failed[$certificate['id']] = $e->getMessage();
                 $io->write('Error: ' . $e->getMessage());
 
-                Logger::error($e->getMessage(), \ModulesGarden\ggsmodule\App\Libs\LogContext::exception($e, ['service' => $certificate['id']]));
+                Logger::error($e->getMessage(), \ModulesGarden\GGSModule\App\Libs\LogContext::exception($e, ['service' => $certificate['id']]));
 
                 continue;
 
@@ -188,7 +188,7 @@ class SSLCertificatesProcessing extends AbstractCommand
         // one line with the number of failed orders and which, not the message of the last one
         if($failed)
         {
-            $errorToDB = \ModulesGarden\ggsmodule\App\Libs\CronErrors::summary($failed, $totalChecked);
+            $errorToDB = \ModulesGarden\GGSModule\App\Libs\CronErrors::summary($failed, $totalChecked);
         }
         $io->title('Subscriptions');
         $pendingSubscriptions = AcmeSubscription::where('status', 'pending')->get();
@@ -213,7 +213,7 @@ class SSLCertificatesProcessing extends AbstractCommand
         // legacy migration housekeeping: expired backup tables, log rows older than 30 days
         try
         {
-            \ModulesGarden\ggsmodule\App\Migration\Engine::housekeeping();
+            \ModulesGarden\GGSModule\App\Migration\Engine::housekeeping();
         }
         catch(\Throwable $e)
         {

@@ -1,19 +1,19 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Helper;
+namespace ModulesGarden\GGSModule\Core\Helper;
 
-use ModulesGarden\ggsmodule\Core\Http\JsonResponse;
-use ModulesGarden\ggsmodule\Core\Http\RedirectResponse;
-use ModulesGarden\ggsmodule\Core\Http\Response;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\ServiceLocator;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Session;
-use ModulesGarden\ggsmodule\Core\UI\View;
-use ModulesGarden\ggsmodule\Core\UI\ViewAjax;
-use ModulesGarden\ggsmodule\Core\UI\ViewIntegrationAddon;
+use ModulesGarden\GGSModule\Core\Http\JsonResponse;
+use ModulesGarden\GGSModule\Core\Http\RedirectResponse;
+use ModulesGarden\GGSModule\Core\Http\Response;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\ServiceLocator;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\Support\Facades\Session;
+use ModulesGarden\GGSModule\Core\UI\View;
+use ModulesGarden\GGSModule\Core\UI\ViewAjax;
+use ModulesGarden\GGSModule\Core\UI\ViewIntegrationAddon;
 
-if (!function_exists('\ModulesGarden\ggsmodule\Core\Helper\response'))
+if (!function_exists('\ModulesGarden\GGSModule\Core\Helper\response'))
 {
     /**
      * @param array $data
@@ -25,7 +25,7 @@ if (!function_exists('\ModulesGarden\ggsmodule\Core\Helper\response'))
     }
 }
 
-if (!function_exists('\ModulesGarden\ggsmodule\Core\Helper\redirect'))
+if (!function_exists('\ModulesGarden\GGSModule\Core\Helper\redirect'))
 {
     /**
      * @param array $data
@@ -38,7 +38,7 @@ if (!function_exists('\ModulesGarden\ggsmodule\Core\Helper\redirect'))
 }
 
 
-if (!function_exists('\ModulesGarden\ggsmodule\Core\Helper\sl'))
+if (!function_exists('\ModulesGarden\GGSModule\Core\Helper\sl'))
 {
     /**
      * @param string $class
@@ -63,7 +63,7 @@ if (!function_exists('\ModulesGarden\ggsmodule\Core\Helper\sl'))
     }
 }
 
-if (!function_exists('\ModulesGarden\ggsmodule\Core\Helper\isAdmin'))
+if (!function_exists('\ModulesGarden\GGSModule\Core\Helper\isAdmin'))
 {
     /**
      * @return bool
@@ -74,7 +74,7 @@ if (!function_exists('\ModulesGarden\ggsmodule\Core\Helper\isAdmin'))
     }
 }
 
-if (!function_exists('\ModulesGarden\ggsmodule\Core\Helper\getAdminDirName'))
+if (!function_exists('\ModulesGarden\GGSModule\Core\Helper\getAdminDirName'))
 {
     /**
      * @return string
@@ -99,7 +99,7 @@ if (!function_exists('\ModulesGarden\ggsmodule\Core\Helper\getAdminDirName'))
     }
 }
 
-if (!function_exists('\ModulesGarden\ggsmodule\Core\Helper\view'))
+if (!function_exists('\ModulesGarden\GGSModule\Core\Helper\view'))
 {
     function view()
     {
@@ -112,7 +112,7 @@ if (!function_exists('\ModulesGarden\ggsmodule\Core\Helper\view'))
     }
 }
 
-if (!function_exists('\ModulesGarden\ggsmodule\Core\Helper\viewIntegrationAddon'))
+if (!function_exists('\ModulesGarden\GGSModule\Core\Helper\viewIntegrationAddon'))
 {
     /**
      * View Integration Addon Controler
@@ -130,13 +130,13 @@ if (!function_exists('\ModulesGarden\ggsmodule\Core\Helper\viewIntegrationAddon'
     }
 }
 
-if (!function_exists('\ModulesGarden\ggsmodule\Core\Helper\fire'))
+if (!function_exists('\ModulesGarden\GGSModule\Core\Helper\fire'))
 {
     /**
-     * @deprecated - use \ModulesGarden\ggsmodule\Core\fire
+     * @deprecated - use \ModulesGarden\GGSModule\Core\fire
      */
     function fire($event)
     {
-        return \ModulesGarden\ggsmodule\Core\fire($event);
+        return \ModulesGarden\GGSModule\Core\fire($event);
     }
 }

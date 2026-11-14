@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\Instances;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\Instances;
 
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Http\AddonIntegration;
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Http\AdminServicesTabFieldsIntegration;
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Http\ConfigOptionsIntegration;
-use ModulesGarden\ggsmodule\Core\App\Controllers\ResponseResolver;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\DefaultControllerInterface;
-use ModulesGarden\ggsmodule\Core\Traits\AppParams;
-use ModulesGarden\ggsmodule\Core\UI\ViewAjax;
-use ModulesGarden\ggsmodule\Core\UI\ViewConfigOptions;
-use ModulesGarden\ggsmodule\Core\UI\ViewIntegrationAddon;
-use function ModulesGarden\ggsmodule\Core\make;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\Http\AddonIntegration;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\Http\AdminServicesTabFieldsIntegration;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\Http\ConfigOptionsIntegration;
+use ModulesGarden\GGSModule\Core\App\Controllers\ResponseResolver;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\DefaultControllerInterface;
+use ModulesGarden\GGSModule\Core\Traits\AppParams;
+use ModulesGarden\GGSModule\Core\UI\ViewAjax;
+use ModulesGarden\GGSModule\Core\UI\ViewConfigOptions;
+use ModulesGarden\GGSModule\Core\UI\ViewIntegrationAddon;
+use function ModulesGarden\GGSModule\Core\make;
 
 abstract class AddonController implements DefaultControllerInterface
 {

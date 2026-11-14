@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Libs\Edition;
+use ModulesGarden\GGSModule\App\Libs\Edition;
 
 use WHMCS\Database\Capsule;
 
@@ -118,7 +118,7 @@ class ProductCatalog
         {
             return true;
         }
-        $remote = \ModulesGarden\ggsmodule\App\Models\RemoteProduct::where('remoteId', $product->configoption2)->first();
+        $remote = \ModulesGarden\GGSModule\App\Models\RemoteProduct::where('remoteId', $product->configoption2)->first();
 
         return $remote && is_array($remote->rawData) && !empty($remote->rawData['missing_since']);
     }
@@ -141,7 +141,7 @@ class ProductCatalog
         CertificateService::event((int)$serviceId, 'warning', $text);
         try
         {
-            \ModulesGarden\ggsmodule\App\Helpers\EmailTemplates::sendEmail(\ModulesGarden\ggsmodule\App\Helpers\EmailTemplates::DISCONTINUED_TEMPLATE, (int)$serviceId);
+            \ModulesGarden\GGSModule\App\Helpers\EmailTemplates::sendEmail(\ModulesGarden\GGSModule\App\Helpers\EmailTemplates::DISCONTINUED_TEMPLATE, (int)$serviceId);
         }
         catch(\Throwable $e)
         {
@@ -152,7 +152,7 @@ class ProductCatalog
 
     public static function setHidden($productId, $hidden)
     {
-        return Capsule::table('tblproducts')->where('id', (int)$productId)->where('servertype', 'ggsmodule')->update(['hidden' => $hidden ? 1 : 0]);
+        return Capsule::table('tblproducts')->where('id', (int)$productId)->where('servertype', 'GGSModule')->update(['hidden' => $hidden ? 1 : 0]);
     }
 
     /**
@@ -166,7 +166,7 @@ class ProductCatalog
             $columns['hidden'] = 1;
         }
 
-        return Capsule::table('tblproducts')->where('id', (int)$productId)->where('servertype', 'ggsmodule')->update($columns);
+        return Capsule::table('tblproducts')->where('id', (int)$productId)->where('servertype', 'GGSModule')->update($columns);
     }
 
     /**

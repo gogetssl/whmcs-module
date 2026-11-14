@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Hook\Integration\Models;
+namespace ModulesGarden\GGSModule\Core\Hook\Integration\Models;
 
 class ControllerCallback
 {

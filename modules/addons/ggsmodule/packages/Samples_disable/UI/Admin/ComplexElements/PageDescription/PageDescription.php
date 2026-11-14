@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\PageDescription;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\PageDescription;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 class PageDescription extends Container implements AdminAreaInterface
 {
     public function loadHtml(): void
     {
-        $pageDescription = new \ModulesGarden\ggsmodule\Components\PageDescription\PageDescription();
+        $pageDescription = new \ModulesGarden\GGSModule\Components\PageDescription\PageDescription();
         $pageDescription->setImagePath(ModuleConstants::getFullPath('resources', 'assets', 'img', 'actions', 'backup-jobs.png'));
         $pageDescription->setTitle('Mailing List');
         $pageDescription->setContent('Mailing lists allow you to use a single address to send message to multiple email addresses.

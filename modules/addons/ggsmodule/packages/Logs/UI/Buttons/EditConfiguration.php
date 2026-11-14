@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Buttons;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Buttons;
 
-use ModulesGarden\ggsmodule\Components\DropdownMenuItem\DropdownMenuItem;
-use ModulesGarden\ggsmodule\Core\Components\Action;
-use ModulesGarden\ggsmodule\Packages\Logs\UI\Modals\EditConfigurationModal;
+use ModulesGarden\GGSModule\Components\DropdownMenuItem\DropdownMenuItem;
+use ModulesGarden\GGSModule\Core\Components\Action;
+use ModulesGarden\GGSModule\Packages\Logs\UI\Modals\EditConfigurationModal;
 
 class EditConfiguration extends DropdownMenuItem
 {

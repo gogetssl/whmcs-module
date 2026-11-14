@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Traits;
+namespace ModulesGarden\GGSModule\Core\Traits;
 
-use ModulesGarden\ggsmodule\Core\ServiceLocator;
+use ModulesGarden\GGSModule\Core\ServiceLocator;
 
 /**
  * Description of IsDebugOn
@@ -13,6 +13,6 @@ trait IsDebugOn
 {
     public function isDebugOn()
     {
-        return \ModulesGarden\ggsmodule\Core\Support\Facades\Config::get('configuration.debug');
+        return \ModulesGarden\GGSModule\Core\Support\Facades\Config::get('configuration.debug');
     }
 }

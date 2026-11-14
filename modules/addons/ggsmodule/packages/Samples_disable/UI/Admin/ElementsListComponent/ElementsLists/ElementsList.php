@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ElementsListComponent\ElementsLists;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ElementsListComponent\ElementsLists;
 
-use ModulesGarden\ggsmodule\Components\ElementsList\ElementsList as ElementsListComponent;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\QueryDataProvider;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Client;
+use ModulesGarden\GGSModule\Components\ElementsList\ElementsList as ElementsListComponent;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\QueryDataProvider;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Client;
 
 class ElementsList extends ElementsListComponent implements AdminAreaInterface, AjaxComponentInterface
 {
@@ -18,8 +18,8 @@ class ElementsList extends ElementsListComponent implements AdminAreaInterface, 
 
         $dataProv = new QueryDataProvider($clients);
         $dataProv->setColumns([
-            (new \ModulesGarden\ggsmodule\Core\DataProviders\Column('id'))->setSearchable(true),
-            (new \ModulesGarden\ggsmodule\Core\DataProviders\Column('firstname'))->setSearchable(true),
+            (new \ModulesGarden\GGSModule\Core\DataProviders\Column('id'))->setSearchable(true),
+            (new \ModulesGarden\GGSModule\Core\DataProviders\Column('firstname'))->setSearchable(true),
         ]);
         $dataProv->setDefaultSorting('tblclients.id', 'DESC');
         $this->setDataProvider($dataProv);

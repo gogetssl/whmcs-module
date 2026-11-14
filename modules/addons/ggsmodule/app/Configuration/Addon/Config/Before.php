@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Configuration\Addon\Config;
+namespace ModulesGarden\GGSModule\App\Configuration\Addon\Config;
 
 /**
  * Runs before loading module configuration
  */
-class Before extends \ModulesGarden\ggsmodule\Core\Configuration\Addon\Config\Before
+class Before extends \ModulesGarden\GGSModule\Core\Configuration\Addon\Config\Before
 {
     /**
      * @param array $params

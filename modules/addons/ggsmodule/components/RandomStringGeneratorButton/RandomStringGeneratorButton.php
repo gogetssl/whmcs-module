@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\RandomStringGeneratorButton;
+namespace ModulesGarden\GGSModule\Components\RandomStringGeneratorButton;
 
-use ModulesGarden\ggsmodule\Components\Button\Button;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Components\Button\Button;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
 
 class RandomStringGeneratorButton extends Button
 {

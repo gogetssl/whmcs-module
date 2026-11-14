@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Actions;
+namespace ModulesGarden\GGSModule\Core\Components\Actions;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractActionInterface;
-use ModulesGarden\ggsmodule\Core\Components\DataBuilder;
+use ModulesGarden\GGSModule\Core\Components\AbstractActionInterface;
+use ModulesGarden\GGSModule\Core\Components\DataBuilder;
 
 class ModalOpen extends AbstractActionInterface
 {

@@ -1,25 +1,25 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Forms;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Forms;
 
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Concerns\SettingsLayout;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Providers\SslSettingsProvider;
-use ModulesGarden\ggsmodule\Components\Button\ButtonSuccess;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
-use ModulesGarden\ggsmodule\Components\Grid\Grid;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
-use ModulesGarden\ggsmodule\Components\TextArea\TextArea;
-use ModulesGarden\ggsmodule\Components\Toolbar\Toolbar;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Collapse;
-use ModulesGarden\ggsmodule\Core\Components\Actions\FormSubmit;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Concerns\SettingsLayout;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Providers\SslSettingsProvider;
+use ModulesGarden\GGSModule\Components\Button\ButtonSuccess;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Components\Grid\Grid;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Components\TextArea\TextArea;
+use ModulesGarden\GGSModule\Components\Toolbar\Toolbar;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Actions\Collapse;
+use ModulesGarden\GGSModule\Core\Components\Actions\FormSubmit;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
 /**
  * Settings of one product category. $scope:
@@ -292,7 +292,7 @@ class SslSettingsForm extends Form implements AdminAreaInterface, AjaxComponentI
         $this->builder->addFieldInContainer($widget, (new Switcher())->setName('requireAgreement')->addClass('switcher-revert'), true);
 
         // one agreement per certificate authority, picked automatically from the product's brand
-        foreach(array_keys(\ModulesGarden\ggsmodule\App\Libs\CertificateService::AUTHORITIES) as $authority)
+        foreach(array_keys(\ModulesGarden\GGSModule\App\Libs\CertificateService::AUTHORITIES) as $authority)
         {
             $sub = $this->subSection('agreement_' . $authority, $widget);
             $this->builder->addFieldInContainer($sub, (new FormInputText())->setName('agreementUrl_' . $authority), true);

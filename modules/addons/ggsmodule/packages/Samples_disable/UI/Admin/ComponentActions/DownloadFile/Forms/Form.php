@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComponentActions\DownloadFile\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComponentActions\DownloadFile\Forms;
 
-use ModulesGarden\ggsmodule\Components\Button\ButtonSubmitSuccess;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComponentActions\DownloadFile\Providers\Provider;
+use ModulesGarden\GGSModule\Components\Button\ButtonSubmitSuccess;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComponentActions\DownloadFile\Providers\Provider;
 
-class Form extends \ModulesGarden\ggsmodule\Components\Form\Form implements AdminAreaInterface, AjaxComponentInterface
+class Form extends \ModulesGarden\GGSModule\Components\Form\Form implements AdminAreaInterface, AjaxComponentInterface
 {
     protected string $provider = Provider::class;
 }

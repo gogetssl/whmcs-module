@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Models\RemoteProduct;
-use ModulesGarden\ggsmodule\App\Models\Request;
+use ModulesGarden\GGSModule\App\Models\RemoteProduct;
+use ModulesGarden\GGSModule\App\Models\Request;
 use WHMCS\Database\Capsule;
 
 /**
@@ -344,7 +344,7 @@ abstract class GatewayOrderService
         $serviceIds = Capsule::table('tblhosting')
             ->join('tblproducts', 'tblproducts.id', '=', 'tblhosting.packageid')
             ->join('tblsslorders', 'tblsslorders.serviceid', '=', 'tblhosting.id')
-            ->where('tblproducts.servertype', 'ggsmodule')
+            ->where('tblproducts.servertype', 'GGSModule')
             ->where('tblproducts.configoption9', static::CATEGORY)
             ->where('tblhosting.domainstatus', 'Active')
             ->where('tblsslorders.status', 'Configuration Submitted')
@@ -453,7 +453,7 @@ abstract class GatewayOrderService
     {
         $service   = Capsule::table('tblhosting')->where('id', (int)$serviceId)->first(['amount', 'firstpaymentamount']);
         $invoiceId = (int)Capsule::table('tblinvoiceitems')->where('relid', (int)$serviceId)->where('type', 'Hosting')->orderBy('invoiceid', 'desc')->value('invoiceid');
-        $rate      = (float)((new \ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository())->getModuleConfiguration()['financeSettings']['rate'] ?? 1) ?: 1;
+        $rate      = (float)((new \ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository())->getModuleConfiguration()['financeSettings']['rate'] ?? 1) ?: 1;
         // the first order is paid with the first payment (it includes one-time fees such as the token shipping),
         // the order after a renewal with the recurring amount
         $first     = empty(static::stored($serviceId)['previous']);
@@ -584,7 +584,7 @@ abstract class GatewayOrderService
     /** Days before the due date the client can renew: the renewal invoice days or the "expires soon" days */
     public static function renewalWindowDays()
     {
-        $ssl = (array)((new \ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository())->getModuleConfiguration()['sslSettings'] ?? []);
+        $ssl = (array)((new \ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository())->getModuleConfiguration()['sslSettings'] ?? []);
 
         return max(30, (int)($ssl['recurringDaysBeforeExpiry'] ?? 0), (int)GeneralSettings::get('expiresSoonDays'));
     }

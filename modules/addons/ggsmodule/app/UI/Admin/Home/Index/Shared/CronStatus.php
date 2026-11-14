@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared;
 
-use ModulesGarden\ggsmodule\App\Models\CronCheck;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Models\ModuleSettings;
+use ModulesGarden\GGSModule\App\Models\CronCheck;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Models\ModuleSettings;
 
 /**
  * Last run of the module cron and its scheduled tasks; read once per request (attention banner + System health card)

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Statistics\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Statistics\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Statistics\Index\Graphs\TotalIncomeGraph;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\App\UI\Admin\Statistics\Index\Graphs\TotalIncomeGraph;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
 
 
 class TotalIncomeWidget extends Widget

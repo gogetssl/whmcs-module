@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ProgressBar;
+namespace ModulesGarden\GGSModule\Components\ProgressBar;
 
-use ModulesGarden\ggsmodule\Components\Tooltip\Tooltip;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Enums\BackgroundColor;
-use ModulesGarden\ggsmodule\Core\Components\Enums\Size;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TextTrait;
+use ModulesGarden\GGSModule\Components\Tooltip\Tooltip;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Enums\BackgroundColor;
+use ModulesGarden\GGSModule\Core\Components\Enums\Size;
+use ModulesGarden\GGSModule\Core\Components\Traits\TextTrait;
 
 class ProgressBar extends AbstractComponent
 {

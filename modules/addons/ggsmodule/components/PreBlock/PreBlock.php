@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\PreBlock;
+namespace ModulesGarden\GGSModule\Components\PreBlock;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxTrait;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxTrait;
 
 /**
  * Class PreBlock

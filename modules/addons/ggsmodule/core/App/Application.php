@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App;
+namespace ModulesGarden\GGSModule\Core\App;
 
-use ModulesGarden\ggsmodule\Core\App\Controllers\AppControllers\Addon;
-use ModulesGarden\ggsmodule\Core\App\Controllers\AppControllers\Api;
-use ModulesGarden\ggsmodule\Core\App\Controllers\AppControllers\Http;
-use ModulesGarden\ggsmodule\Core\App\Controllers\AppControllers\MetaData;
-use ModulesGarden\ggsmodule\Core\App\Controllers\AppControllers\ServerHttp;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\ServiceLocator;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Params;
+use ModulesGarden\GGSModule\Core\App\Controllers\AppControllers\Addon;
+use ModulesGarden\GGSModule\Core\App\Controllers\AppControllers\Api;
+use ModulesGarden\GGSModule\Core\App\Controllers\AppControllers\Http;
+use ModulesGarden\GGSModule\Core\App\Controllers\AppControllers\MetaData;
+use ModulesGarden\GGSModule\Core\App\Controllers\AppControllers\ServerHttp;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\ServiceLocator;
+use ModulesGarden\GGSModule\Core\Support\Facades\Params;
 
 class Application
 {

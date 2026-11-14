@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Http\View\MenuProviders;
+namespace ModulesGarden\GGSModule\Core\Http\View\MenuProviders;
 
-use ModulesGarden\ggsmodule\Core\DependencyInjection\PackageServices;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use function ModulesGarden\ggsmodule\Core\make;
+use ModulesGarden\GGSModule\Core\DependencyInjection\PackageServices;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use function ModulesGarden\GGSModule\Core\make;
 
 class MenuProviderPackages implements MenuProviderInterface
 {

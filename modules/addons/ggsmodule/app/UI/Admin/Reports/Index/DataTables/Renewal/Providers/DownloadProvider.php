@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\Renewal\Providers;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\Renewal\Providers;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\Renewal\Forms\GetCsvForm;
-use ModulesGarden\ggsmodule\Core\Components\Actions\DownloadFileFromForm;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\Renewal\Forms\GetCsvForm;
+use ModulesGarden\GGSModule\Core\Components\Actions\DownloadFileFromForm;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
 
 class DownloadProvider extends CrudProvider
 {

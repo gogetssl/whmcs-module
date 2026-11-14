@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Modal;
+namespace ModulesGarden\GGSModule\Components\Modal;
 
-use ModulesGarden\ggsmodule\Components\Button\ButtonCancel;
-use ModulesGarden\ggsmodule\Components\Button\ButtonClose;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalClose;
+use ModulesGarden\GGSModule\Components\Button\ButtonCancel;
+use ModulesGarden\GGSModule\Components\Button\ButtonClose;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalClose;
 
 class ModalInfo extends ModalBase
 {

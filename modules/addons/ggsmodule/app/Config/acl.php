@@ -10,6 +10,6 @@ return [
         'Administrator',
     ],
     'namespaceRules' => [
-        //\ModulesGarden\ggsmodule\Packages\EasyTranslator\UI\LanguagesPage\Buttons\EditLanguageButton::class => 'report.edit'
+        //\ModulesGarden\GGSModule\Packages\EasyTranslator\UI\LanguagesPage\Buttons\EditLanguageButton::class => 'report.edit'
     ]
 ];

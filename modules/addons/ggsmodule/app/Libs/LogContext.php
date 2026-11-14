@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
 /**
  * Extra data for a Module Log entry, so "Show details" says more than the bare service ID

@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Services;
+namespace ModulesGarden\GGSModule\Packages\Product\Services;
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\Params;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\Configuration\ConfigurationContainer;
-use ModulesGarden\ggsmodule\Packages\Product\Support\Factories\ConfigurationFactory;
+use ModulesGarden\GGSModule\Core\Support\Facades\Params;
+use ModulesGarden\GGSModule\Packages\Product\Libs\Configuration\ConfigurationContainer;
+use ModulesGarden\GGSModule\Packages\Product\Support\Factories\ConfigurationFactory;
 
 class Configuration
 {

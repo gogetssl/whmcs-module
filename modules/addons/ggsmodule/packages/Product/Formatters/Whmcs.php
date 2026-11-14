@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Formatters;
+namespace ModulesGarden\GGSModule\Packages\Product\Formatters;
 
-use ModulesGarden\ggsmodule\Packages\Product\Services\ProductParameters;
+use ModulesGarden\GGSModule\Packages\Product\Services\ProductParameters;
 
 class Whmcs
 {

@@ -31,7 +31,7 @@ if (count($argList)  === 1)
     $argList = array_merge($argList, $defaultParamsList);
 }
 
-\ModulesGarden\ggsmodule\Core\ServiceLocator::call(\ModulesGarden\ggsmodule\App\Cron\WithoutThread\CronManager::class)
+\ModulesGarden\GGSModule\Core\ServiceLocator::call(\ModulesGarden\GGSModule\App\Cron\WithoutThread\CronManager::class)
     ->setArgv($argList)
     ->execute();
 

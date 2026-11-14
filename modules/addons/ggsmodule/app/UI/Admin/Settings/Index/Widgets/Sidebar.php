@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Widgets;
 
-use ModulesGarden\ggsmodule\Components\SidebarItem\SidebarItem;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Components\SidebarItem\SidebarItem;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
-class Sidebar extends \ModulesGarden\ggsmodule\Components\Sidebar\Sidebar
+class Sidebar extends \ModulesGarden\GGSModule\Components\Sidebar\Sidebar
 {
     /** page => Material Design icon */
     const ICONS = [
@@ -35,7 +35,7 @@ class Sidebar extends \ModulesGarden\ggsmodule\Components\Sidebar\Sidebar
 
         foreach($pages as $page)
         {
-            $item = (new SidebarItem($this->translate($page)))->setIcon(self::ICONS[$page])->setUrl('addonmodules.php?module=ggsmodule&mg-page=settings&settings-page=' . $page);
+            $item = (new SidebarItem($this->translate($page)))->setIcon(self::ICONS[$page])->setUrl('addonmodules.php?module=GGSModule&mg-page=settings&settings-page=' . $page);
 
             if($page == $currentPage)
             {

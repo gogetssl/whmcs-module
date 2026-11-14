@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Models;
+namespace ModulesGarden\GGSModule\App\Models;
 
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Libs\ProductCatalog;
-use ModulesGarden\ggsmodule\Core\Models\ExtendedEloquentModel;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Product;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Libs\ProductCatalog;
+use ModulesGarden\GGSModule\Core\Models\ExtendedEloquentModel;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Product;
 
 class RemoteProduct extends ExtendedEloquentModel
 {
@@ -88,7 +88,7 @@ class RemoteProduct extends ExtendedEloquentModel
 
     public function getWhmcsProduct()
     {
-        $whmcsProduct = Product::where('servertype', 'ggsmodule')
+        $whmcsProduct = Product::where('servertype', 'GGSModule')
                                ->where('configoption1', $this->vendor)
                                ->where('configoption2', $this->remoteId)
                                ->first();

@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Products\Index;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Products\Index;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Products\Index\DataTables\Products\ArrayDataProvider\DataTable;
-use ModulesGarden\ggsmodule\Components\Alert\Alert;
-use ModulesGarden\ggsmodule\App\Http\Admin\Products as ProductsController;
-use ModulesGarden\ggsmodule\Components\Alert\AlertDanger;
-use ModulesGarden\ggsmodule\Components\Alert\AlertInfo;
-use ModulesGarden\ggsmodule\Components\Alert\AlertSuccess;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\App\Libs\Icons;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\App\UI\Admin\Products\Index\DataTables\Products\ArrayDataProvider\DataTable;
+use ModulesGarden\GGSModule\Components\Alert\Alert;
+use ModulesGarden\GGSModule\App\Http\Admin\Products as ProductsController;
+use ModulesGarden\GGSModule\Components\Alert\AlertDanger;
+use ModulesGarden\GGSModule\Components\Alert\AlertInfo;
+use ModulesGarden\GGSModule\Components\Alert\AlertSuccess;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\App\Libs\Icons;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
 class ProductsContainer extends Container implements AdminAreaInterface
 {
@@ -29,7 +29,7 @@ class ProductsContainer extends Container implements AdminAreaInterface
             $this->addElement((new AlertSuccess())->setText($this->translate('notice_' . $notice['key'], ['product' => htmlspecialchars((string)$notice['product'], ENT_QUOTES, 'UTF-8', false), 'detail' => $notice['detail'] !== '' ? htmlspecialchars((string)$notice['detail'], ENT_QUOTES, 'UTF-8', false) : '-'])));
         }
 
-        if(!\ModulesGarden\ggsmodule\App\Libs\GeneralSettings::enabled('hideInfoMessages'))
+        if(!\ModulesGarden\GGSModule\App\Libs\GeneralSettings::enabled('hideInfoMessages'))
         {
             $text = new Text();
             $text->setCss('ggs-html');

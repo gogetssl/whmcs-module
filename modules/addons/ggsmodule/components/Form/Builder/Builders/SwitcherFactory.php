@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Form\Builder\Builders;
+namespace ModulesGarden\GGSModule\Components\Form\Builder\Builders;
 
-use ModulesGarden\ggsmodule\Components\Span\Span;
-use ModulesGarden\ggsmodule\Components\Tooltip\Tooltip;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\FormFieldInterface;
+use ModulesGarden\GGSModule\Components\Span\Span;
+use ModulesGarden\GGSModule\Components\Tooltip\Tooltip;
+use ModulesGarden\GGSModule\Core\Contracts\Components\FormFieldInterface;
 
 class SwitcherFactory extends AbstractFormFieldFactory
 {

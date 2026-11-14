@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\StaticAjaxData;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\StaticAjaxData;
 
-use ModulesGarden\ggsmodule\Components\Modal\ModalSuccess;
+use ModulesGarden\GGSModule\Components\Modal\ModalSuccess;
 
 class Modal extends ModalSuccess
 {

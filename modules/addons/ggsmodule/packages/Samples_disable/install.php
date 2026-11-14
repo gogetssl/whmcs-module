@@ -78,7 +78,7 @@ return [
     ],
     'controllers' => [
         'admin'  => [
-            \ModulesGarden\ggsmodule\Packages\Samples\Http\Admin\Samples::class,
+            \ModulesGarden\GGSModule\Packages\Samples\Http\Admin\Samples::class,
         ],
         'client' => [
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\DataTable\Modifiers;
+namespace ModulesGarden\GGSModule\Components\DataTable\Modifiers;
 
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\RelatedItem;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\RelatedItem;
 
 class RelatedItemModifier extends RelatedItem
 {

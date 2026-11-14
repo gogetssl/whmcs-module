@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Database\Patches\Source;
+namespace ModulesGarden\GGSModule\Packages\Product\Database\Patches\Source;
 
 interface PatchInterface
 {

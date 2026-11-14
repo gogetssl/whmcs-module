@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\FormFields;
+namespace ModulesGarden\GGSModule\Core\Components\FormFields;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\FormFieldInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\FormFieldInterface;
 
 class AbstractDecorator implements FormFieldInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptions;
+namespace ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptions;
 
 class Radio extends AbstractConfigurableOption
 {

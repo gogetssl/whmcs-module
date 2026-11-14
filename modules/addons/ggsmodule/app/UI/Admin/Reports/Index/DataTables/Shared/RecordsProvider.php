@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\Shared;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\Shared;
 
-use ModulesGarden\ggsmodule\App\Libs\Edition;
+use ModulesGarden\GGSModule\App\Libs\Edition;
 
 
-use ModulesGarden\ggsmodule\App\Libs\AcmeHelpers;
-use ModulesGarden\ggsmodule\App\Libs\AisHelpers;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Models\AcmeSubscription;
-use ModulesGarden\ggsmodule\App\Models\AisSubscription;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Service;
+use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
+use ModulesGarden\GGSModule\App\Libs\AisHelpers;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Models\AcmeSubscription;
+use ModulesGarden\GGSModule\App\Models\AisSubscription;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Service;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 class RecordsProvider
@@ -61,7 +61,7 @@ class RecordsProvider
                             $join->on($requests . '.invoiceid', '=', 'tblinvoiceitems.invoiceid');
                         })
                         ->where('tblinvoiceitems.type', 'Hosting')
-                        ->where('tblproducts.servertype', 'ggsmodule');
+                        ->where('tblproducts.servertype', 'GGSModule');
 
         if($onlyPaid)
         {
@@ -69,7 +69,7 @@ class RecordsProvider
         }
 
         // the CSV forms pass their data as a container object
-        if($filters instanceof \ModulesGarden\ggsmodule\Core\Data\Container)
+        if($filters instanceof \ModulesGarden\GGSModule\Core\Data\Container)
         {
             $filters = $filters->toArray();
         }
@@ -251,7 +251,7 @@ class RecordsProvider
         if(!isset($productTypes[$item->productId]))
         {
             $productTypes[$item->productId] = AcmeHelpers::isAcmeWhmcsProduct($item->productId) ? 'acme' : (AisHelpers::isAisWhmcsProduct($item->productId) ? 'ais'
-                : (\ModulesGarden\ggsmodule\App\Libs\GatewayOrderService::typeOfProduct($item->productId) ?: 'ssl'));
+                : (\ModulesGarden\GGSModule\App\Libs\GatewayOrderService::typeOfProduct($item->productId) ?: 'ssl'));
         }
         $type = $productTypes[$item->productId];
 
@@ -269,7 +269,7 @@ class RecordsProvider
             return $value ? date('Y-m-d', strtotime((string)$value)) : '-';
         };
 
-        if($type !== 'ssl' && is_subclass_of($type, \ModulesGarden\ggsmodule\App\Libs\GatewayOrderService::class))
+        if($type !== 'ssl' && is_subclass_of($type, \ModulesGarden\GGSModule\App\Libs\GatewayOrderService::class))
         {
             $stored         = $type::stored($serviceId);
             $orderStatus    = !empty($stored['status']) ? ucfirst($stored['status']) : $orderStatus;

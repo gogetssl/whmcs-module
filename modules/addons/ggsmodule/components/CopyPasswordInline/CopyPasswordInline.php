@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\CopyPasswordInline;
+namespace ModulesGarden\GGSModule\Components\CopyPasswordInline;
 
-use ModulesGarden\ggsmodule\Components\CopyTextInline\CopyTextInline;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ActionOnClickTrait;
+use ModulesGarden\GGSModule\Components\CopyTextInline\CopyTextInline;
+use ModulesGarden\GGSModule\Core\Components\Traits\ActionOnClickTrait;
 
 class CopyPasswordInline extends CopyTextInline
 {

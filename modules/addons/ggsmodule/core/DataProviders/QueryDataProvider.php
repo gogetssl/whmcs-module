@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\DataProviders;
+namespace ModulesGarden\GGSModule\Core\DataProviders;
 
 use Illuminate\Database\Capsule\Manager as DB;
 use Illuminate\Database\Query\Builder;
-use ModulesGarden\ggsmodule\Core\Contracts\DataSetInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\QueryProviderInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\QueryDataProvider\ColumnName;
+use ModulesGarden\GGSModule\Core\Contracts\DataSetInterface;
+use ModulesGarden\GGSModule\Core\Contracts\QueryProviderInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\QueryDataProvider\ColumnName;
 
 class QueryDataProvider extends AbstractRecordsListDataProvider implements QueryProviderInterface
 {
-    use \ModulesGarden\ggsmodule\Core\Components\FallbackTraits\QueryDataProvider;
+    use \ModulesGarden\GGSModule\Core\Components\FallbackTraits\QueryDataProvider;
 
     private $fullDataLength = 0;
     protected $query = null;
@@ -27,7 +27,7 @@ class QueryDataProvider extends AbstractRecordsListDataProvider implements Query
         return $this;
     }
 
-    public function getData()/*: \ModulesGarden\ggsmodule\Core\Contracts\DataSetInterface*/
+    public function getData()/*: \ModulesGarden\GGSModule\Core\Contracts\DataSetInterface*/
     {
         $this->setupGlobalSearch();
         $this->setupFilersSearch();

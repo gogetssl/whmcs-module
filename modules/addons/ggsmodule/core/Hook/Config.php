@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Hook;
+namespace ModulesGarden\GGSModule\Core\Hook;
 
 use Illuminate\Support\Arr;
-use ModulesGarden\ggsmodule\Core\FileReader\Reader;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\FileReader\Reader;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 /**
  * Description of Config
@@ -29,7 +29,7 @@ class Config
     {
         if (isset($this->data) && count($this->data) != 0)
         {
-            return (bool)\ModulesGarden\ggsmodule\Core\Support\Arr::get($this->data, $name, true);
+            return (bool)\ModulesGarden\GGSModule\Core\Support\Arr::get($this->data, $name, true);
         }
 
         return true;

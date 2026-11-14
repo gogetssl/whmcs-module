@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Traits;
+namespace ModulesGarden\GGSModule\Core\Components\Traits;
 
 trait DescriptionTrait
 {

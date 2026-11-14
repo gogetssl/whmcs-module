@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared;
 
-use ModulesGarden\ggsmodule\App\Libs\Edition;
+use ModulesGarden\GGSModule\App\Libs\Edition;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\Shared\RecordsProvider;
+use ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\Shared\RecordsProvider;
 
 /**
  * Last month's sales figures; computed once per request (KPI tiles + Sales overview card)
@@ -59,7 +59,7 @@ class SalesSummary
             $requests         = Edition::table('Requests');
             $data['expiring'] = (int)\WHMCS\Database\Capsule::table('tblhosting')
                 ->join('tblproducts', 'tblproducts.id', '=', 'tblhosting.packageid')
-                ->where('tblproducts.servertype', 'ggsmodule')
+                ->where('tblproducts.servertype', 'GGSModule')
                 ->where('tblhosting.domainstatus', 'Active')
                 ->whereBetween('tblhosting.nextduedate', [date('Y-m-d'), date('Y-m-d', strtotime('+90 days'))])
                 ->whereExists(function($issued) use ($requests) {

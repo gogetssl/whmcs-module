@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Shared\Providers;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Configuration\Shared\Providers;
 
-use ModulesGarden\ggsmodule\App\Libs\Edition;
-use ModulesGarden\ggsmodule\App\Migration\Choice;
-use ModulesGarden\ggsmodule\App\Migration\Detector;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Redirect;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Routing\Url;
+use ModulesGarden\GGSModule\App\Libs\Edition;
+use ModulesGarden\GGSModule\App\Migration\Choice;
+use ModulesGarden\GGSModule\App\Migration\Detector;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\Core\Components\Actions\Redirect;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Routing\Url;
 
 /**
  * Saves the Migrate / Install standalone decision per legacy module. Vendors to configure in step 4 are the
@@ -47,7 +47,7 @@ class LegacyChoiceProvider extends CrudProvider
         (new AddonModuleRepository())->saveVendor(array_values(array_unique($vendors)));
 
         return (new Response())->setSuccess($this->translate('saved'))->setActions([new Redirect(Url::route('',
-            ['module' => 'ggsmodule', 'mg-page' => 'configuration', 'mg-action' => 'step4']
+            ['module' => 'GGSModule', 'mg-page' => 'configuration', 'mg-action' => 'step4']
         ))]);
     }
 }

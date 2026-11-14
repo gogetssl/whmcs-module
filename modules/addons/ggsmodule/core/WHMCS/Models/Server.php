@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models;
 
 /**
  * Description of Servers
@@ -42,12 +42,12 @@ class Server extends \WHMCS\Product\Server
 
     public function services()
     {
-        return $this->hasMany('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Service', "server");
+        return $this->hasMany('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Service', "server");
     }
 
     public function addons()
     {
-        return $this->hasMany('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\ServiceAddon', "server");
+        return $this->hasMany('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\ServiceAddon', "server");
     }
 
     public function serverRelationPivot()

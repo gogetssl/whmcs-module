@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Contracts;
+namespace ModulesGarden\GGSModule\Core\Contracts;
 
 interface QueryProviderInterface extends RecordsListProviderInterface
 {

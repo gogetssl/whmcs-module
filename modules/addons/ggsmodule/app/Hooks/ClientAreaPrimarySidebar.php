@@ -1,6 +1,6 @@
 <?php
 
-use ModulesGarden\ggsmodule\Packages\Product\Support\Facades\Sidebar;
+use ModulesGarden\GGSModule\Packages\Product\Support\Facades\Sidebar;
 
 $hookManager->register(
     function($sidebarWhmcs) {

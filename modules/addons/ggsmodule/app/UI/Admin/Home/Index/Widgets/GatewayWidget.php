@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\Libs\Edition;
-use ModulesGarden\ggsmodule\App\Libs\GatewayHealth;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\Card;
+use ModulesGarden\GGSModule\App\Libs\Edition;
+use ModulesGarden\GGSModule\App\Libs\GatewayHealth;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\Card;
 
 /**
  * API Gateway connection: reachability and response time of the gateway of this edition (GoGetSSL or TheSSLStore),
@@ -24,7 +24,7 @@ class GatewayWidget extends Card
         $vendor  = self::vendor();
         $results = GatewayHealth::check(isset($_GET['recheck']));
         $row     = $results[$vendor] ?? null;
-        $api     = 'addonmodules.php?module=ggsmodule&mg-page=settings&settings-page=apiSettings';
+        $api     = 'addonmodules.php?module=GGSModule&mg-page=settings&settings-page=apiSettings';
         $this->start('power-plug-outline', $this->translate('title'), '', $row && $row['ok'] ? 'ok' : 'bad');
 
         if($row === null)
@@ -43,6 +43,6 @@ class GatewayWidget extends Card
         $html .= Card::row('lock-outline', $this->translate('credentials'), $this->translate('credentials_detail'), Card::button($api, $this->translate('manage')));
         $this->addElement(Card::html('<div class="ggs-dcard__rows">' . $html . '</div>'));
 
-        $this->foot('addonmodules.php?module=ggsmodule&recheck=1', 'refresh', $this->translate('recheck'), false);
+        $this->foot('addonmodules.php?module=GGSModule&recheck=1', 'refresh', $this->translate('recheck'), false);
     }
 }

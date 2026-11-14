@@ -1,23 +1,23 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\SimpleForm\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\SimpleForm\Forms;
 
-use ModulesGarden\ggsmodule\Components\Button\ButtonSubmitSuccess;
-use ModulesGarden\ggsmodule\Components\Container\ContainerHalfPage;
-use ModulesGarden\ggsmodule\Components\Container\ContainerRow;
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Components\Form\FormBuilder;
-use ModulesGarden\ggsmodule\Components\FormInputGroup\FormInputGroup;
-use ModulesGarden\ggsmodule\Components\FormInputGroupLabel\FormInputGroupLabel;
-use ModulesGarden\ggsmodule\Components\FormInputText;
-use ModulesGarden\ggsmodule\Components\ListInfo\ListInfo;
-use ModulesGarden\ggsmodule\Components\ListInfo\ListInfoItem;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Actions\FormSubmit;
+use ModulesGarden\GGSModule\Components\Button\ButtonSubmitSuccess;
+use ModulesGarden\GGSModule\Components\Container\ContainerHalfPage;
+use ModulesGarden\GGSModule\Components\Container\ContainerRow;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Components\Form\FormBuilder;
+use ModulesGarden\GGSModule\Components\FormInputGroup\FormInputGroup;
+use ModulesGarden\GGSModule\Components\FormInputGroupLabel\FormInputGroupLabel;
+use ModulesGarden\GGSModule\Components\FormInputText;
+use ModulesGarden\GGSModule\Components\ListInfo\ListInfo;
+use ModulesGarden\GGSModule\Components\ListInfo\ListInfoItem;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Actions\FormSubmit;
 
 
-class WidgetInForm extends FormBuilder implements \ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface
+class WidgetInForm extends FormBuilder implements \ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface
 {
     public function loadHtml(): void
     {

@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models;
 
 class TicketDepartment extends \WHMCS\Support\Department
 {
     public function tickets()
     {
-        return $this->hasMany('ModulesGarden\ggsmodule\Core\WHMCS\Models\Ticket', "did");
+        return $this->hasMany('ModulesGarden\GGSModule\Core\WHMCS\Models\Ticket', "did");
     }
 }

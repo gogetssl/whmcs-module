@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Cron\WithoutThread;
+namespace ModulesGarden\GGSModule\App\Cron\WithoutThread;
 
-use ModulesGarden\ggsmodule\Core\FileReader\Validator;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\DependencyInjection;
-use ModulesGarden\ggsmodule\Core\FileReader\File;
+use ModulesGarden\GGSModule\Core\FileReader\Validator;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\DependencyInjection;
+use ModulesGarden\GGSModule\Core\FileReader\File;
 
 /**
  * Description of CronManager

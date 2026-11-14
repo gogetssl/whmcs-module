@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Tools;
+namespace ModulesGarden\GGSModule\Core\Components\Tools;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
 
 class IdGenerator
 {

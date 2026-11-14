@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\AppControllers;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\AppControllers;
 
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Http\AdminPageController;
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Http\ClientPageController;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AppControllerInterface;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\Http\AdminPageController;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\Http\ClientPageController;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AppControllerInterface;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
-class Http extends \ModulesGarden\ggsmodule\Core\App\Controllers\AppController implements AppControllerInterface
+class Http extends \ModulesGarden\GGSModule\Core\App\Controllers\AppController implements AppControllerInterface
 {
     public function getControllerInstanceClass($callerName, $params)
     {

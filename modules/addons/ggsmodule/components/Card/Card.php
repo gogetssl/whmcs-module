@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Card;
+namespace ModulesGarden\GGSModule\Components\Card;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\BorderTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ComponentsContainerTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ContentTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\CssContainerTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TitleTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\DescriptionTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ToolbarTrait;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\BorderTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\ComponentsContainerTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\ContentTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\CssContainerTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TitleTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\DescriptionTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\ToolbarTrait;
 
 class Card extends AbstractComponent
 {

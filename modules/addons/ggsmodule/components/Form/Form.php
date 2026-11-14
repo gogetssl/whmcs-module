@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Form;
+namespace ModulesGarden\GGSModule\Components\Form;
 
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ToolbarTrait;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Core\Components\Traits\ToolbarTrait;
 
 class Form extends AbstractForm
 {

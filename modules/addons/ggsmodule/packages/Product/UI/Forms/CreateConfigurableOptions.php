@@ -1,27 +1,27 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\UI\Forms;
+namespace ModulesGarden\GGSModule\Packages\Product\UI\Forms;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Container\ContainerColumn;
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Components\Row\Row;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Decorator\Decorator;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Packages\Product\Enums\ConfigSettings;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptions\AbstractConfigurableOption;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptionsGroups\ConfigurableOptionsGroup;
-use ModulesGarden\ggsmodule\Packages\Product\UI\Builders\ConfigurableOptionsBuilder;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Container\ContainerColumn;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\Row\Row;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Decorator\Decorator;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Packages\Product\Enums\ConfigSettings;
+use ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptions\AbstractConfigurableOption;
+use ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptionsGroups\ConfigurableOptionsGroup;
+use ModulesGarden\GGSModule\Packages\Product\UI\Builders\ConfigurableOptionsBuilder;
 
 class CreateConfigurableOptions extends Form implements AdminAreaInterface, AjaxComponentInterface
 {
-    protected string $provider = \ModulesGarden\ggsmodule\Packages\Product\UI\Providers\CreateConfigurableOptions::class;
+    protected string $provider = \ModulesGarden\GGSModule\Packages\Product\UI\Providers\CreateConfigurableOptions::class;
 
     public function __construct()
     {

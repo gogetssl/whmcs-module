@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Models\Whmcs;
+namespace ModulesGarden\GGSModule\App\Models\Whmcs;
 
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Product as CoreProduct;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Product as CoreProduct;
 
 
 class Product extends CoreProduct

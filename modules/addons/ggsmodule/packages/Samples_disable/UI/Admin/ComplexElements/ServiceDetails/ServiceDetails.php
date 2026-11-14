@@ -1,18 +1,18 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\ServiceDetails;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\ServiceDetails;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Grid\Grid;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButtonDelete;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButtonEdit;
-use ModulesGarden\ggsmodule\Components\Label\LabelDanger;
-use ModulesGarden\ggsmodule\Components\Link\Link;
-use ModulesGarden\ggsmodule\Components\ListInfo\ListInfo;
-use ModulesGarden\ggsmodule\Components\ListInfo\ListInfoItem;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalLoad;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Modals\UserDelete;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Grid\Grid;
+use ModulesGarden\GGSModule\Components\IconButton\IconButtonDelete;
+use ModulesGarden\GGSModule\Components\IconButton\IconButtonEdit;
+use ModulesGarden\GGSModule\Components\Label\LabelDanger;
+use ModulesGarden\GGSModule\Components\Link\Link;
+use ModulesGarden\GGSModule\Components\ListInfo\ListInfo;
+use ModulesGarden\GGSModule\Components\ListInfo\ListInfoItem;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalLoad;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Modals\UserDelete;
 
 class ServiceDetails extends Container
 {

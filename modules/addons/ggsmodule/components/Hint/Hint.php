@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Hint;
+namespace ModulesGarden\GGSModule\Components\Hint;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ComponentsContainerTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TitleTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\DescriptionTrait;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Support\Arr;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\ComponentsContainerTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TitleTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\DescriptionTrait;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Support\Arr;
 
 class Hint extends AbstractComponent implements AdminAreaInterface
 {

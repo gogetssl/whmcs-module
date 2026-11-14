@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\BoardItem;
+namespace ModulesGarden\GGSModule\Components\BoardItem;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Core\Components\Traits\BorderTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TextTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TitleTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ToolbarTrait;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Core\Components\Traits\BorderTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TextTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TitleTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\ToolbarTrait;
 
 class BoardItem extends Container
 {

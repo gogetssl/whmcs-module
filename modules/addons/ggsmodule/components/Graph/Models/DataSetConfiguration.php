@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Models;
+namespace ModulesGarden\GGSModule\Components\Graph\Models;
 
 use Illuminate\Contracts\Support\Arrayable;
-use ModulesGarden\ggsmodule\Components\Graph\Options\DataSetConfigs\Source\DataSetConfigInterface;
+use ModulesGarden\GGSModule\Components\Graph\Options\DataSetConfigs\Source\DataSetConfigInterface;
 
 /**
  * @deprecated

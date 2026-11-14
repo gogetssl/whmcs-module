@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\IconText;
+namespace ModulesGarden\GGSModule\Components\IconText;
 
-use ModulesGarden\ggsmodule\Components\Icon\Icon;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TextTrait;
+use ModulesGarden\GGSModule\Components\Icon\Icon;
+use ModulesGarden\GGSModule\Core\Components\Traits\TextTrait;
 
 /**
  * Class IconButton

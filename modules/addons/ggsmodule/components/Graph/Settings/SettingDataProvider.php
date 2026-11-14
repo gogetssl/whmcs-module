@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Widget\Graphs\Settings;
+namespace ModulesGarden\GGSModule\Core\UI\Widget\Graphs\Settings;
 
-use ModulesGarden\ggsmodule\Core\Models\ModuleSettings\ModuleSettings;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\UI\Widget\Forms\DataProviders\BaseModelDataProvider;
+use ModulesGarden\GGSModule\Core\Models\ModuleSettings\ModuleSettings;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\UI\Widget\Forms\DataProviders\BaseModelDataProvider;
 
 /**
  * Description of SettingDataProvider
@@ -13,7 +13,7 @@ class SettingDataProvider extends BaseModelDataProvider
 {
     public function __construct()
     {
-        parent::__construct('\ModulesGarden\ggsmodule\Core\Models\ModuleSettings\ModuleSettings');
+        parent::__construct('\ModulesGarden\GGSModule\Core\Models\ModuleSettings\ModuleSettings');
     }
 
     public function read()

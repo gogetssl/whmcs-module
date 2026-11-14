@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Events;
+namespace ModulesGarden\GGSModule\Core\Events;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Events\EventInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Events\EventInterface;
 
 abstract class Event implements EventInterface
 {

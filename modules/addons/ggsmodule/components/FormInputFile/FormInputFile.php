@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\FormInputFile;
+namespace ModulesGarden\GGSModule\Components\FormInputFile;
 
-use ModulesGarden\ggsmodule\Core\Components\FormFields\FormField;
+use ModulesGarden\GGSModule\Core\Components\FormFields\FormField;
 
 class FormInputFile extends FormField
 {

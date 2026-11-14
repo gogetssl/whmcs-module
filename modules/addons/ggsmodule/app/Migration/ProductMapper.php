@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Migration;
+namespace ModulesGarden\GGSModule\App\Migration;
 
-use ModulesGarden\ggsmodule\App\Models\RemoteProduct;
+use ModulesGarden\GGSModule\App\Models\RemoteProduct;
 
 /**
  * Finds the gateway product (the RemoteProducts table, synced in wizard step 4) for a legacy product reference:

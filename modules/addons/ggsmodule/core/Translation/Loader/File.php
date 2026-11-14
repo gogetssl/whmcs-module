@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Translation\Loader;
+namespace ModulesGarden\GGSModule\Core\Translation\Loader;
 
-use ModulesGarden\ggsmodule\Core\FileReader\Reader;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Support\Arr;
+use ModulesGarden\GGSModule\Core\FileReader\Reader;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Support\Arr;
 
 
 /**

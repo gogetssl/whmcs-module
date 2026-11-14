@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Formatters\Date;
+namespace ModulesGarden\GGSModule\Core\UI\Formatters\Date;
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
 
 abstract class BaseDate
 {

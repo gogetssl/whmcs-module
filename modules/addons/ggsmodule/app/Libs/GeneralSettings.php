@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
 
 /**
  * "General" settings page (client area, messages, logging, lifecycle) with their defaults

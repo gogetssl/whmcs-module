@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Contracts\Components;
+namespace ModulesGarden\GGSModule\Core\Contracts\Components;
 
 interface AjaxAutoReloadInterface extends AjaxComponentInterface
 {

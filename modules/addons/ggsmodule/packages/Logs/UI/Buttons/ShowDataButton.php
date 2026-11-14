@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Buttons;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Buttons;
 
-use ModulesGarden\ggsmodule\Components\IconButton\IconButtonEdit;
-use ModulesGarden\ggsmodule\Core\Components\Action;
-use ModulesGarden\ggsmodule\Packages\Logs\UI\Modals\ShowDataModal;
+use ModulesGarden\GGSModule\Components\IconButton\IconButtonEdit;
+use ModulesGarden\GGSModule\Core\Components\Action;
+use ModulesGarden\GGSModule\Packages\Logs\UI\Modals\ShowDataModal;
 
 class ShowDataButton extends IconButtonEdit
 {

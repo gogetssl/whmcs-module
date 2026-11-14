@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue\Buttons;
+namespace ModulesGarden\GGSModule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue\Buttons;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue\Modals\ResetTaskModal;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButtonWarning;
-use ModulesGarden\ggsmodule\Core\Components\Action;
+use ModulesGarden\GGSModule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue\Modals\ResetTaskModal;
+use ModulesGarden\GGSModule\Components\IconButton\IconButtonWarning;
+use ModulesGarden\GGSModule\Core\Components\Action;
 
 class ResetTaskButton extends IconButtonWarning
 {

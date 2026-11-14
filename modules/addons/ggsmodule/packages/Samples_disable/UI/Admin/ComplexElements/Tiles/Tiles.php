@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Tiles;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Tiles;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\TileButton\TileButton;
-use ModulesGarden\ggsmodule\Components\TilesBar\TilesBar;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalLoad;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Modals\UserDelete;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\TileButton\TileButton;
+use ModulesGarden\GGSModule\Components\TilesBar\TilesBar;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalLoad;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Modals\UserDelete;
 
 class Tiles extends Container
 {

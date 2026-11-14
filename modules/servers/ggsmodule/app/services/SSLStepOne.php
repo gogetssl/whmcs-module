@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\app\services;
+namespace ModulesGarden\Servers\GGSModule\app\services;
 
-use ModulesGarden\Servers\ggsmodule\core\Lang;
-use ModulesGarden\Servers\ggsmodule\core\Smarty;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\Servers\GGSModule\core\Lang;
+use ModulesGarden\Servers\GGSModule\core\Smarty;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
 
 class SSLStepOne
 {
     public function run($params)
     {
         // S/MIME is ordered on the service page of the module, not on the WHMCS SSL configuration page
-        if(\ModulesGarden\ggsmodule\App\Libs\GatewayOrderService::typeOfProduct($params['pid']))
+        if(\ModulesGarden\GGSModule\App\Libs\GatewayOrderService::typeOfProduct($params['pid']))
         {
             header('Location: clientarea.php?action=productdetails&id=' . (int)$params['serviceid']);
             exit;
@@ -83,7 +83,7 @@ class SSLStepOne
             'default_csr_country' => isset($configuration['sslSettings']['defaultCsrCountry']) ? $configuration['sslSettings']['defaultCsrCountry'] : false,
             'adminFormHidden' => isset($configuration['sslSettings']['autoDetailsForDvOrders']) ? $configuration['sslSettings']['autoDetailsForDvOrders'] : false,
             'domain' => $domain,
-            'ask_webserver' => !\ModulesGarden\ggsmodule\App\Libs\GeneralSettings::enabled('useDefaultWebServer'),
+            'ask_webserver' => !\ModulesGarden\GGSModule\App\Libs\GeneralSettings::enabled('useDefaultWebServer'),
             'client' => $clientData,
             'post' => $_POST
         ]);

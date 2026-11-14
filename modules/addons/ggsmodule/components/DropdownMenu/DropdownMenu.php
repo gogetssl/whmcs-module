@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\DropdownMenu;
+namespace ModulesGarden\GGSModule\Components\DropdownMenu;
 
-use ModulesGarden\ggsmodule\Core\Components\FormFields\FormField;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ComponentsContainerTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TranslatorTrait;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\DropdownMenuItemInterface;
+use ModulesGarden\GGSModule\Core\Components\FormFields\FormField;
+use ModulesGarden\GGSModule\Core\Components\Traits\ComponentsContainerTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TranslatorTrait;
+use ModulesGarden\GGSModule\Core\Contracts\Components\DropdownMenuItemInterface;
 
 class DropdownMenu extends FormField
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ImageText;
+namespace ModulesGarden\GGSModule\Components\ImageText;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TextTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\UrlTrait;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Core\Components\Traits\TextTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\UrlTrait;
 
 class ImageText extends Container
 {

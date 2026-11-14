@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\Alerts;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\Alerts;
 
-use ModulesGarden\ggsmodule\Components\Alert\AlertDanger;
-use ModulesGarden\ggsmodule\Components\Alert\AlertInfo;
-use ModulesGarden\ggsmodule\Components\Alert\AlertSuccess;
-use ModulesGarden\ggsmodule\Components\Alert\AlertWarning;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Components\Alert\AlertDanger;
+use ModulesGarden\GGSModule\Components\Alert\AlertInfo;
+use ModulesGarden\GGSModule\Components\Alert\AlertSuccess;
+use ModulesGarden\GGSModule\Components\Alert\AlertWarning;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
 
-class Alerts extends \ModulesGarden\ggsmodule\Components\Container\Container implements AdminAreaInterface
+class Alerts extends \ModulesGarden\GGSModule\Components\Container\Container implements AdminAreaInterface
 {
     public function loadHtml(): void
     {

@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\NotificationDropdown;
+namespace ModulesGarden\GGSModule\Components\NotificationDropdown;
 
-use ModulesGarden\ggsmodule\Components\NotificationDropdownItem\NotificationDropdownItem;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Action;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ComponentsContainerTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TranslatorTrait;
-use ModulesGarden\ggsmodule\Core\Contracts\ResponseInterface;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Components\NotificationDropdownItem\NotificationDropdownItem;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Action;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\ComponentsContainerTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TranslatorTrait;
+use ModulesGarden\GGSModule\Core\Contracts\ResponseInterface;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
 class NotificationDropdown extends AbstractComponent
 {

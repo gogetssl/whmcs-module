@@ -1,9 +1,9 @@
 <?php
 
 //boostrap
-use ModulesGarden\ggsmodule\Core\DependencyInjection\PackageServices;
-use ModulesGarden\ggsmodule\Core\DependencyInjection\Services;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\DependencyInjection\PackageServices;
+use ModulesGarden\GGSModule\Core\DependencyInjection\Services;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'functions.php';
@@ -22,4 +22,4 @@ new Services();
 /**
  * Boot packages
  */
-\ModulesGarden\ggsmodule\Core\make(PackageServices::class);
+\ModulesGarden\GGSModule\Core\make(PackageServices::class);

@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Traits;
+namespace ModulesGarden\GGSModule\Core\Traits;
 
 /**
  * @deprecated

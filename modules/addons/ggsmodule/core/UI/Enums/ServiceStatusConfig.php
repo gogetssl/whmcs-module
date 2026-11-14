@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Enums;
+namespace ModulesGarden\GGSModule\Core\UI\Enums;
 
-use ModulesGarden\ggsmodule\Core\WHMCS\Enums\HostingDomainStatus;
-use ModulesGarden\ggsmodule\Core\Components\Enums\Type;
-use ModulesGarden\ggsmodule\Components\Button\ButtonInfo;
-use ModulesGarden\ggsmodule\Components\Button\ButtonSuccess;
-use ModulesGarden\ggsmodule\Components\Button\ButtonWarning;
-use ModulesGarden\ggsmodule\Components\Button\ButtonDanger;
-use ModulesGarden\ggsmodule\Components\Button\ButtonBasic;
+use ModulesGarden\GGSModule\Core\WHMCS\Enums\HostingDomainStatus;
+use ModulesGarden\GGSModule\Core\Components\Enums\Type;
+use ModulesGarden\GGSModule\Components\Button\ButtonInfo;
+use ModulesGarden\GGSModule\Components\Button\ButtonSuccess;
+use ModulesGarden\GGSModule\Components\Button\ButtonWarning;
+use ModulesGarden\GGSModule\Components\Button\ButtonDanger;
+use ModulesGarden\GGSModule\Components\Button\ButtonBasic;
 
 class ServiceStatusConfig
 {

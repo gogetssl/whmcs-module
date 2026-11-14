@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\NotificationDropdownItem;
+namespace ModulesGarden\GGSModule\Components\NotificationDropdownItem;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ActionOnClickTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TitleTrait;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\ActionOnClickTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TitleTrait;
 
 class NotificationDropdownItem extends AbstractComponent
 {

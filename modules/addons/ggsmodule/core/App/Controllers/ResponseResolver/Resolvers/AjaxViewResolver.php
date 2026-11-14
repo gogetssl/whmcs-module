@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\ResponseResolver\Resolvers;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\ResponseResolver\Resolvers;
 
-use ModulesGarden\ggsmodule\Core\App\Controllers\ResponseResolver\ResolverInterface;
-use ModulesGarden\ggsmodule\Core\UI\ViewAjax;
+use ModulesGarden\GGSModule\Core\App\Controllers\ResponseResolver\ResolverInterface;
+use ModulesGarden\GGSModule\Core\UI\ViewAjax;
 
 class AjaxViewResolver implements ResolverInterface
 {

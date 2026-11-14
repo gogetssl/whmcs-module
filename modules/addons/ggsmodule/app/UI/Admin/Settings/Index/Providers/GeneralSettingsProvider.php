@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Providers;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Providers;
 
-use ModulesGarden\ggsmodule\App\Libs\GeneralSettings;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
 use WHMCS\Database\Capsule;
 
 class GeneralSettingsProvider extends CrudProvider
@@ -34,7 +34,7 @@ class GeneralSettingsProvider extends CrudProvider
         }
         $this->availableValues['sidebarTemplates'] = $pages;
 
-        $this->data['debugServices'] = implode(', ', \ModulesGarden\ggsmodule\App\Libs\LogPolicy::debugServices());
+        $this->data['debugServices'] = implode(', ', \ModulesGarden\GGSModule\App\Libs\LogPolicy::debugServices());
         $this->data['debugHours']    = 4;
         $this->availableValues['apiLogMode'] = self::apiModeOptions($this);
         $this->availableValues['debugHours'] = self::debugHourOptions($this);
@@ -84,7 +84,7 @@ class GeneralSettingsProvider extends CrudProvider
         // debug mode: the service list and for how long (the hours are not stored, only the end time)
         if(array_key_exists('debugServices', $data))
         {
-            $data = array_merge($data, \ModulesGarden\ggsmodule\App\Libs\LogPolicy::debugSettings($data['debugServices'], $data['debugHours'] ?? 0));
+            $data = array_merge($data, \ModulesGarden\GGSModule\App\Libs\LogPolicy::debugSettings($data['debugServices'], $data['debugHours'] ?? 0));
         }
 
         GeneralSettings::save($data);
@@ -93,7 +93,7 @@ class GeneralSettingsProvider extends CrudProvider
     public static function apiModeOptions($provider): array
     {
         $options = [];
-        foreach(\ModulesGarden\ggsmodule\App\Libs\LogPolicy::API_MODES as $mode)
+        foreach(\ModulesGarden\GGSModule\App\Libs\LogPolicy::API_MODES as $mode)
         {
             $options[$mode] = $provider->translate('apiMode_' . $mode, [], ['admin.log_policy']);
         }
@@ -104,7 +104,7 @@ class GeneralSettingsProvider extends CrudProvider
     public static function debugHourOptions($provider): array
     {
         $options = [];
-        foreach(\ModulesGarden\ggsmodule\App\Libs\LogPolicy::DEBUG_HOURS as $hours)
+        foreach(\ModulesGarden\GGSModule\App\Libs\LogPolicy::DEBUG_HOURS as $hours)
         {
             $options[(string)$hours] = $provider->translate('hours_' . $hours, [], ['admin.log_policy']);
         }

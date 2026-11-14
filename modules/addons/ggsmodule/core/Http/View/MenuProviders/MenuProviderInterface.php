@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Http\View\MenuProviders;
+namespace ModulesGarden\GGSModule\Core\Http\View\MenuProviders;
 
 interface MenuProviderInterface
 {

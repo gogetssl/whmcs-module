@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Configuration\Addon\Update;
+namespace ModulesGarden\GGSModule\App\Configuration\Addon\Update;
 
 /**
  * runs before module update actions
  */
-class Before extends \ModulesGarden\ggsmodule\Core\Configuration\Addon\Update\Before
+class Before extends \ModulesGarden\GGSModule\Core\Configuration\Addon\Update\Before
 {
     /**
      * @return array

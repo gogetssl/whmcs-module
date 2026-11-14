@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\FormInputPassword;
+namespace ModulesGarden\GGSModule\Components\FormInputPassword;
 
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
 
 /**
  * Class IconButton

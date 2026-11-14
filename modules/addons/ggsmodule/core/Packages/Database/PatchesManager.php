@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Packages\Database;
+namespace ModulesGarden\GGSModule\Core\Packages\Database;
 
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Support\Facades\LogActivity;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Support\Facades\LogActivity;
 
 abstract class PatchesManager
 {

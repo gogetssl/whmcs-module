@@ -1,19 +1,19 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Migration;
+namespace ModulesGarden\GGSModule\App\Migration;
 
 use WHMCS\Database\Capsule;
 
 /**
  * The admin's decision per legacy module ("migrate" or "skip"), taken in the wizard and stored with the
- * module configuration (tbladdonmodules, module configuration_ggsmodule, setting "migration").
+ * module configuration (tbladdonmodules, module configuration_GGSModule, setting "migration").
  */
 class Choice
 {
     const MIGRATE = 'migrate';
     const SKIP    = 'skip';
 
-    const MODULE  = 'configuration_ggsmodule';
+    const MODULE  = 'configuration_GGSModule';
     const SETTING = 'migration';
 
     public static function all(): array

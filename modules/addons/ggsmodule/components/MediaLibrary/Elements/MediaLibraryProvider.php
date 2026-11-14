@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\MediaLibrary\Elements;
+namespace ModulesGarden\GGSModule\Components\MediaLibrary\Elements;
 
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
 
 abstract class MediaLibraryProvider extends CrudProvider
 {

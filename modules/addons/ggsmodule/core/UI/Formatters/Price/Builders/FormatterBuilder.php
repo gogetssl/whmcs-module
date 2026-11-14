@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Formatters\Price\Builders;
+namespace ModulesGarden\GGSModule\Core\UI\Formatters\Price\Builders;
 
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Client;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Currency;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\Price\Formatter;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\Price\Whmcs\WhmcsFormats;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Client;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Currency;
+use ModulesGarden\GGSModule\Core\UI\Formatters\Price\Formatter;
+use ModulesGarden\GGSModule\Core\UI\Formatters\Price\Whmcs\WhmcsFormats;
 
 class FormatterBuilder
 {

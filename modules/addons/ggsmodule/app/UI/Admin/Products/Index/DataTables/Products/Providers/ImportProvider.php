@@ -1,21 +1,21 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Products\Index\DataTables\Products\Providers;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Products\Index\DataTables\Products\Providers;
 
-use ModulesGarden\ggsmodule\App\Libs\AcmeHelpers;
-use ModulesGarden\ggsmodule\App\Libs\FinancePolicy;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Models\RemoteProduct;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Currency;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Pricing;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Product;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\ProductGroup;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptions\Quantity;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptions\SubOption\SubOption;
-use ModulesGarden\ggsmodule\Packages\Product\Services\ConfigurableOptions;
+use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
+use ModulesGarden\GGSModule\App\Libs\FinancePolicy;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Models\RemoteProduct;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Currency;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Pricing;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Product;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\ProductGroup;
+use ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptions\Quantity;
+use ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptions\SubOption\SubOption;
+use ModulesGarden\GGSModule\Packages\Product\Services\ConfigurableOptions;
 
 class ImportProvider extends CrudProvider
 {
@@ -109,7 +109,7 @@ class ImportProvider extends CrudProvider
             $remoteProduct = RemoteProduct::find($localId);
 
             // an imported product is never created a second time (ticked again, or the form sent twice)
-            if(!$remoteProduct || !\ModulesGarden\ggsmodule\App\Libs\ProductCatalog::importable($remoteProduct) || $remoteProduct->getWhmcsProduct())
+            if(!$remoteProduct || !\ModulesGarden\GGSModule\App\Libs\ProductCatalog::importable($remoteProduct) || $remoteProduct->getWhmcsProduct())
             {
                 continue;
             }
@@ -152,7 +152,7 @@ class ImportProvider extends CrudProvider
                 {
                     $pricing[$currency->id][$billingPeriod] = FinancePolicy::sell($baseCost, $importMargin, (int)$remotePriceData['term'], $currency->id, true);
 
-                    if(\ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::isSubscriptionRemote($remoteProduct) && $billingPeriod == 'annually')
+                    if(\ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::isSubscriptionRemote($remoteProduct) && $billingPeriod == 'annually')
                     {
                         $pricing[$currency->id]['monthly'] = FinancePolicy::sell($baseCost, $importMargin, (int)$remotePriceData['term'], $currency->id, true);
                     }
@@ -187,9 +187,9 @@ class ImportProvider extends CrudProvider
             }
 
             // code signing: the "Certificate Delivery" option (token shipping as a one-time fee)
-            if(strtolower((string)$remoteProduct->category) === \ModulesGarden\ggsmodule\App\Libs\CodeSigningService::CATEGORY)
+            if(strtolower((string)$remoteProduct->category) === \ModulesGarden\GGSModule\App\Libs\CodeSigningService::CATEGORY)
             {
-                \ModulesGarden\ggsmodule\App\Libs\CodeSigningService::createDeliveryOption($productId, (array)$remoteProductData);
+                \ModulesGarden\GGSModule\App\Libs\CodeSigningService::createDeliveryOption($productId, (array)$remoteProductData);
             }
 
             //create configOptions
@@ -197,7 +197,7 @@ class ImportProvider extends CrudProvider
             $product = Product::find($productId);
 
             // subscriptions: one-time products, the module bills the yearly renewal (SubscriptionRenewals)
-            if(\ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::isSubscriptionProduct($productId))
+            if(\ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::isSubscriptionProduct($productId))
             {
                 $product->paytype = 'onetime';
                 $product->configoptionsupgrade = AcmeHelpers::isAcmeWhmcsProduct($productId) ? 1 : $product->configoptionsupgrade;
@@ -216,7 +216,7 @@ class ImportProvider extends CrudProvider
             {
                 $optionNames['single'] = [
                     'name'         => 'sans',
-                    'nameFriendly' => \ModulesGarden\ggsmodule\App\Libs\ProductCatalog::optionLabel('single', $includedSan),
+                    'nameFriendly' => \ModulesGarden\GGSModule\App\Libs\ProductCatalog::optionLabel('single', $includedSan),
                     'unit'         => 'SAN'
                 ];
             }
@@ -225,7 +225,7 @@ class ImportProvider extends CrudProvider
             {
                 $optionNames['wildcard'] = [
                     'name'         => 'sans_wildcard',
-                    'nameFriendly' => \ModulesGarden\ggsmodule\App\Libs\ProductCatalog::optionLabel('wildcard', $includedSanWildcard),
+                    'nameFriendly' => \ModulesGarden\GGSModule\App\Libs\ProductCatalog::optionLabel('wildcard', $includedSanWildcard),
                     'unit'         => 'SAN'
                 ];
             }
@@ -300,7 +300,7 @@ class ImportProvider extends CrudProvider
                         {
                             $pricingArray[$currency->id][$billingPeriod] = FinancePolicy::sell($baseCost, $importMargin, (int)$remotePriceData['term'], $currency->id, false);
 
-                            if(\ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::isSubscriptionRemote($remoteProduct) && $billingPeriod == 'annually')
+                            if(\ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::isSubscriptionRemote($remoteProduct) && $billingPeriod == 'annually')
                             {
                                 $pricingArray[$currency->id]['monthly'] = FinancePolicy::sell($baseCost, $importMargin, (int)$remotePriceData['term'], $currency->id, false);
                             }

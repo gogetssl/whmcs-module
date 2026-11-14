@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Models;
+namespace ModulesGarden\GGSModule\App\Models;
 
-use ModulesGarden\ggsmodule\App\Libs\SecretValue;
-use ModulesGarden\ggsmodule\Core\Models\ExtendedEloquentModel;
+use ModulesGarden\GGSModule\App\Libs\SecretValue;
+use ModulesGarden\GGSModule\Core\Models\ExtendedEloquentModel;
 
 class AcmeSubscription extends ExtendedEloquentModel
 {

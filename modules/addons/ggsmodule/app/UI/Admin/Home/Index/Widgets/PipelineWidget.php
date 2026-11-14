@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\Card;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\Pipeline;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\Card;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\Pipeline;
 
 /**
  * Certificate pipeline: how many of this module's orders wait for the client, are with the certificate authority,
@@ -20,7 +20,7 @@ class PipelineWidget extends Card
 
     public function loadHtml(): void
     {
-        $reports = 'addonmodules.php?module=ggsmodule&mg-page=reports';
+        $reports = 'addonmodules.php?module=GGSModule&mg-page=reports';
         $this->start('lock-outline', $this->translate('title'), '<a class="ggs-dcard__aside" href="' . Card::e($reports) . '">' . Card::e($this->translate('open')) . '</a>', 'dark', 'ggs-pipe');
 
         $data = Pipeline::get();

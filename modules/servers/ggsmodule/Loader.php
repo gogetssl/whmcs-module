@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule;
+namespace ModulesGarden\Servers\GGSModule;
 
 if(!defined('DS'))define('DS',DIRECTORY_SEPARATOR);
 
@@ -54,8 +54,8 @@ if(!class_exists(__NAMESPACE__.'\Loader')){
 
         static function loader($className){
 
-            if (strpos($className, 'ModulesGarden\\ggsmodule\\App\\\\') !== false) {
-                $addonFile = dirname(dirname(__DIR__)).DS.'addons'.DS.'ggsmodule'.DS.'app'.DS.'Configuration'.DS.'Addon'.DS.'base.php';
+            if (strpos($className, 'ModulesGarden\\GGSModule\\App\\\\') !== false) {
+                $addonFile = dirname(dirname(__DIR__)).DS.'addons'.DS.'GGSModule'.DS.'app'.DS.'Configuration'.DS.'Addon'.DS.'base.php';
                 if ($addonFile) {
                     require_once $addonFile;
                     return true;

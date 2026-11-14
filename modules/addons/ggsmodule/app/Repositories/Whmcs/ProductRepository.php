@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Repositories\Whmcs;
+namespace ModulesGarden\GGSModule\App\Repositories\Whmcs;
 
-use ModulesGarden\ggsmodule\App\Models\Whmcs\Product;
+use ModulesGarden\GGSModule\App\Models\Whmcs\Product;
 
 class ProductRepository
 {
@@ -47,7 +47,7 @@ class ProductRepository
 
     public function countProducts()
     {
-        return Product::where('servertype', 'ggsmodule')->count();
+        return Product::where('servertype', 'GGSModule')->count();
     }
 
     public function createProduct($name, $description, $gid, $pricing = [])
@@ -58,7 +58,7 @@ class ProductRepository
             'name' => $name,
             'description' => $description,
             'hidden' => '',
-            'module' => 'ggsmodule'
+            'module' => 'GGSModule'
         ];
 
         if(empty($pricing))

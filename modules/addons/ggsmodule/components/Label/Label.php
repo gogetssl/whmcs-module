@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Label;
+namespace ModulesGarden\GGSModule\Components\Label;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Enums\Size;
-use ModulesGarden\ggsmodule\Core\Components\Enums\Type;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TitleTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\CssContainerTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\SizeTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TextTrait;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Enums\Size;
+use ModulesGarden\GGSModule\Core\Components\Enums\Type;
+use ModulesGarden\GGSModule\Core\Components\Traits\TitleTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\CssContainerTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\SizeTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TextTrait;
 
 /**
  * Class Form

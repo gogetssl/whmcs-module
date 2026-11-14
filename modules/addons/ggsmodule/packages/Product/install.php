@@ -1,24 +1,24 @@
 <?php
 
-use ModulesGarden\ggsmodule\Core\Hook\HookManager;
-use ModulesGarden\ggsmodule\Packages\Product\Services\ProductDuplicate;
-use ModulesGarden\ggsmodule\Core\Events\Events\ConfigOptionsLoaded;
-use ModulesGarden\ggsmodule\Core\Events\Events\ModuleActivated;
-use ModulesGarden\ggsmodule\Core\Events\Events\ModuleUpgraded;
-use function ModulesGarden\ggsmodule\Core\listen;
+use ModulesGarden\GGSModule\Core\Hook\HookManager;
+use ModulesGarden\GGSModule\Packages\Product\Services\ProductDuplicate;
+use ModulesGarden\GGSModule\Core\Events\Events\ConfigOptionsLoaded;
+use ModulesGarden\GGSModule\Core\Events\Events\ModuleActivated;
+use ModulesGarden\GGSModule\Core\Events\Events\ModuleUpgraded;
+use function ModulesGarden\GGSModule\Core\listen;
 
 return [
     'bootstrap' => function() {
         HookManager::create(__DIR__, true);
         ProductDuplicate::checkAndInitDuplicateProcess();
 
-        listen(ModuleActivated::class,\ModulesGarden\ggsmodule\Packages\Product\Listeners\ModuleActivated::class);
-        listen(ModuleUpgraded::class,\ModulesGarden\ggsmodule\Packages\Product\Listeners\ModuleUpgraded::class);
-        listen(ConfigOptionsLoaded::class,\ModulesGarden\ggsmodule\Packages\Product\Listeners\ConfigOptionsLoaded::class);
+        listen(ModuleActivated::class,\ModulesGarden\GGSModule\Packages\Product\Listeners\ModuleActivated::class);
+        listen(ModuleUpgraded::class,\ModulesGarden\GGSModule\Packages\Product\Listeners\ModuleUpgraded::class);
+        listen(ConfigOptionsLoaded::class,\ModulesGarden\GGSModule\Packages\Product\Listeners\ConfigOptionsLoaded::class);
 
         //Register Configuration Service
-        \ModulesGarden\ggsmodule\Core\DependencyInjection\Container::getInstance()
-            ->singleton(\ModulesGarden\ggsmodule\Packages\Product\Services\Configuration::class);
+        \ModulesGarden\GGSModule\Core\DependencyInjection\Container::getInstance()
+            ->singleton(\ModulesGarden\GGSModule\Packages\Product\Services\Configuration::class);
     },
     'packages'    => [
         'ModuleSettings',

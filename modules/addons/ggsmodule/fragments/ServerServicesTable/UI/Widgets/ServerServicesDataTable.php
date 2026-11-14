@@ -1,25 +1,25 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Fragments\ServerServicesTable\UI\Widgets;
+namespace ModulesGarden\GGSModule\Fragments\ServerServicesTable\UI\Widgets;
 
-use ModulesGarden\ggsmodule\Components\DataTable\Column;
-use ModulesGarden\ggsmodule\Components\DataTable\DataTable;
-use ModulesGarden\ggsmodule\Components\Link\Link;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\AbstractRecordsListDataProvider;
-use ModulesGarden\ggsmodule\Core\DataProviders\QueryDataProvider;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\UI\Builders\ServiceStatusLabel;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\RelatedItem;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Client;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Product;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Server;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Service;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypes;
-use ModulesGarden\ggsmodule\Core\DataProviders\Column as ColumnDataProviders;
-use ModulesGarden\ggsmodule\Fragments\ServerServicesTable\UI\Buttons\ServiceRedirectButton;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\ProductGroup;
+use ModulesGarden\GGSModule\Components\DataTable\Column;
+use ModulesGarden\GGSModule\Components\DataTable\DataTable;
+use ModulesGarden\GGSModule\Components\Link\Link;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\AbstractRecordsListDataProvider;
+use ModulesGarden\GGSModule\Core\DataProviders\QueryDataProvider;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\UI\Builders\ServiceStatusLabel;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\RelatedItem;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Client;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Product;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Server;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Service;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypes;
+use ModulesGarden\GGSModule\Core\DataProviders\Column as ColumnDataProviders;
+use ModulesGarden\GGSModule\Fragments\ServerServicesTable\UI\Buttons\ServiceRedirectButton;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\ProductGroup;
 
 class ServerServicesDataTable extends DataTable implements AdminAreaInterface, AjaxComponentInterface
 {

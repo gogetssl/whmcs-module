@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\Libs\Edition;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Modals\ReportingModal;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\Card;
-use ModulesGarden\ggsmodule\Components\Button\Button;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalLoad;
+use ModulesGarden\GGSModule\App\Libs\Edition;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Modals\ReportingModal;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\Card;
+use ModulesGarden\GGSModule\Components\Button\Button;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalLoad;
 
 /**
  * Help: the support contacts and documentation of the edition (TheSSLStore: phone + e-mail, GoGetSSL: e-mail), the

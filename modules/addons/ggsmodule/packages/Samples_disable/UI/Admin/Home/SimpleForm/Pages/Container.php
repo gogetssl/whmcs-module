@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\SimpleForm\Pages;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\SimpleForm\Pages;
 
-use ModulesGarden\ggsmodule\Components\TextShowHide\TextShowHide;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\SimpleForm\Forms\SimpleAbstractForm;
+use ModulesGarden\GGSModule\Components\TextShowHide\TextShowHide;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\SimpleForm\Forms\SimpleAbstractForm;
 
-class Container extends \ModulesGarden\ggsmodule\Components\Container\Container implements AdminAreaInterface
+class Container extends \ModulesGarden\GGSModule\Components\Container\Container implements AdminAreaInterface
 {
     public function loadHtml(): void
     {

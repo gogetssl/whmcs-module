@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\TableSimple;
+namespace ModulesGarden\GGSModule\Components\TableSimple;
 
 class TableSimpleAlignedColumns extends TableSimple
 {

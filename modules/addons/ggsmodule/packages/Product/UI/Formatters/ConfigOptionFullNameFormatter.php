@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\UI\Formatters;
+namespace ModulesGarden\GGSModule\Packages\Product\UI\Formatters;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Span\Span;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Components\Text\TextBold;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Span\Span;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Components\Text\TextBold;
 
 class ConfigOptionFullNameFormatter
 {

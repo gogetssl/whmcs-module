@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Services;
+namespace ModulesGarden\GGSModule\Core\Services;
 
-use ModulesGarden\ggsmodule\Core\Data\Container;
+use ModulesGarden\GGSModule\Core\Data\Container;
 
 class Params extends Container
 {

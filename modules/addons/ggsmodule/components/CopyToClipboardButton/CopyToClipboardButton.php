@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\CopyToClipboardButton;
+namespace ModulesGarden\GGSModule\Components\CopyToClipboardButton;
 
-use ModulesGarden\ggsmodule\Components\IconButton\IconButton;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TranslatorTrait;
+use ModulesGarden\GGSModule\Components\IconButton\IconButton;
+use ModulesGarden\GGSModule\Core\Components\Traits\TranslatorTrait;
 
 class CopyToClipboardButton extends IconButton
 {

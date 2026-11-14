@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\DataProviders;
+namespace ModulesGarden\GGSModule\Core\DataProviders;
 
-use ModulesGarden\ggsmodule\Core\Data\Container;
-use ModulesGarden\ggsmodule\Core\Helper\Converter\ArrayFormat;
+use ModulesGarden\GGSModule\Core\Data\Container;
+use ModulesGarden\GGSModule\Core\Helper\Converter\ArrayFormat;
 
 class DataContainer extends Container
 {

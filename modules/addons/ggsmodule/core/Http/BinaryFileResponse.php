@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Http;
+namespace ModulesGarden\GGSModule\Core\Http;
 
-use ModulesGarden\ggsmodule\Core\Contracts\ResponseInterface;
+use ModulesGarden\GGSModule\Core\Contracts\ResponseInterface;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 
 /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
 /**
  * Certificate download formats built from the files the gateway returns (certificate + intermediates).

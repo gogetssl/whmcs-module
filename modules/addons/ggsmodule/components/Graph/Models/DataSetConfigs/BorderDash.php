@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Models\DataSetConfigs;
+namespace ModulesGarden\GGSModule\Components\Graph\Models\DataSetConfigs;
 
-use ModulesGarden\ggsmodule\Components\Graph\Models\DataSetConfigs\Source\ArrayDataSetConfig;
+use ModulesGarden\GGSModule\Components\Graph\Models\DataSetConfigs\Source\ArrayDataSetConfig;
 
 class BorderDash extends ArrayDataSetConfig
 {

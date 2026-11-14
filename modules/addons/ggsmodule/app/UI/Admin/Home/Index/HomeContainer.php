@@ -1,25 +1,25 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index;
 
-use ModulesGarden\ggsmodule\App\Libs\AutomatedSsl;
-use ModulesGarden\ggsmodule\App\Libs\Edition;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\Card;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\SalesSummary;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets\AnnouncementsWidget;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets\AttentionWidget;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets\AutomatedSslBanner;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets\GatewayWidget;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets\MigrationWidget;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets\NextStepsWidget;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets\OverviewWidget;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets\PipelineWidget;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets\SupportWidget;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets\SystemCheckWidget;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\App\Libs\AutomatedSsl;
+use ModulesGarden\GGSModule\App\Libs\Edition;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\Card;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\SalesSummary;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets\AnnouncementsWidget;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets\AttentionWidget;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets\AutomatedSslBanner;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets\GatewayWidget;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets\MigrationWidget;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets\NextStepsWidget;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets\OverviewWidget;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets\PipelineWidget;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets\SupportWidget;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets\SystemCheckWidget;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
 
 /**
  * Module dashboard: heading, setup strip (first 72 hours), KPI tiles, then rows of a wide and a narrow panel:

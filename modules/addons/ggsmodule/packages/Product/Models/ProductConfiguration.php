@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Models;
+namespace ModulesGarden\GGSModule\Packages\Product\Models;
 
-use ModulesGarden\ggsmodule\Core\Models\ExtendedEloquentModel;
+use ModulesGarden\GGSModule\Core\Models\ExtendedEloquentModel;
 
 class ProductConfiguration extends ExtendedEloquentModel
 {

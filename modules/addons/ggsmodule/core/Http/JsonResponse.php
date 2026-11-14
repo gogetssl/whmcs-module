@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Http;
+namespace ModulesGarden\GGSModule\Core\Http;
 
 use Exception;
 use InvalidArgumentException;
-use ModulesGarden\ggsmodule\Core\Helper\Converter\Json;
-use ModulesGarden\ggsmodule\Core\ServiceLocator;
+use ModulesGarden\GGSModule\Core\Helper\Converter\Json;
+use ModulesGarden\GGSModule\Core\ServiceLocator;
 use Symfony\Component\HttpFoundation\JsonResponse as SymfonyJsonResponse;
 
 /**

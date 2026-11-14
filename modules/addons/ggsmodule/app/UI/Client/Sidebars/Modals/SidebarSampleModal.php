@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Client\Sidebars\Modals;
+namespace ModulesGarden\GGSModule\App\UI\Client\Sidebars\Modals;
 
-use ModulesGarden\ggsmodule\Components\Modal\ModalInfo;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ClientAreaInterface;
+use ModulesGarden\GGSModule\Components\Modal\ModalInfo;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ClientAreaInterface;
 
 class SidebarSampleModal extends ModalInfo implements ClientAreaInterface, AjaxComponentInterface
 {

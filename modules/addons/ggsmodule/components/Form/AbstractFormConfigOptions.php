@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Form;
+namespace ModulesGarden\GGSModule\Components\Form;
 
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
 
 abstract class AbstractFormConfigOptions extends AbstractForm
 {

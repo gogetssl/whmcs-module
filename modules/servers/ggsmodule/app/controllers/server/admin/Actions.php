@@ -1,19 +1,19 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\app\controllers\server\admin;
+namespace ModulesGarden\Servers\GGSModule\app\controllers\server\admin;
 
 
-use ModulesGarden\Servers\ggsmodule\app\services\AdminServicesTabFields;
-use ModulesGarden\Servers\ggsmodule\app\services\CreateAccount;
-use ModulesGarden\Servers\ggsmodule\app\services\Renew;
-use ModulesGarden\Servers\ggsmodule\app\services\SSLStepOne;
-use ModulesGarden\Servers\ggsmodule\app\services\SSLStepTwo;
-use ModulesGarden\Servers\ggsmodule\app\services\SSLStepThree;
-use ModulesGarden\Servers\ggsmodule\app\services\SyncCertificate;
-use ModulesGarden\ggsmodule\App\Libs\CertificateBundle;
-use ModulesGarden\ggsmodule\App\Libs\CertificateService;
-use ModulesGarden\ggsmodule\App\Libs\GeneralSettings;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\Servers\GGSModule\app\services\AdminServicesTabFields;
+use ModulesGarden\Servers\GGSModule\app\services\CreateAccount;
+use ModulesGarden\Servers\GGSModule\app\services\Renew;
+use ModulesGarden\Servers\GGSModule\app\services\SSLStepOne;
+use ModulesGarden\Servers\GGSModule\app\services\SSLStepTwo;
+use ModulesGarden\Servers\GGSModule\app\services\SSLStepThree;
+use ModulesGarden\Servers\GGSModule\app\services\SyncCertificate;
+use ModulesGarden\GGSModule\App\Libs\CertificateBundle;
+use ModulesGarden\GGSModule\App\Libs\CertificateService;
+use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
 
 class Actions {
 
@@ -25,7 +25,7 @@ class Actions {
         }
 
         $data['mode'] = "advanced";
-        $data['content'] = '<div class="errorbox"><strong><span class="title">Module Information</span></strong><br>This module can only be managed from the ggsmodule addon module.</div>';
+        $data['content'] = '<div class="errorbox"><strong><span class="title">Module Information</span></strong><br>This module can only be managed from the GGSModule addon module.</div>';
         ob_clean();
         header('Content-Type: application/json');
 
@@ -63,15 +63,15 @@ class Actions {
     private function codeGuardState($params, $suspend)
     {
         $serviceId = (int)$params['serviceid'];
-        if(!\ModulesGarden\ggsmodule\App\Libs\CodeGuardService::isCodeGuardService($serviceId))
+        if(!\ModulesGarden\GGSModule\App\Libs\CodeGuardService::isCodeGuardService($serviceId))
         {
             return 'success';
         }
 
         return $this->run(function() use ($serviceId, $suspend) {
             $suspend
-                ? \ModulesGarden\ggsmodule\App\Libs\CodeGuardService::suspend($serviceId)
-                : \ModulesGarden\ggsmodule\App\Libs\CodeGuardService::activate($serviceId);
+                ? \ModulesGarden\GGSModule\App\Libs\CodeGuardService::suspend($serviceId)
+                : \ModulesGarden\GGSModule\App\Libs\CodeGuardService::activate($serviceId);
         });
     }
 
@@ -84,13 +84,13 @@ class Actions {
     public function ChangePackage($params)
     {
         $serviceId = (int)$params['serviceid'];
-        if(!\ModulesGarden\ggsmodule\App\Libs\CodeGuardService::isCodeGuardService($serviceId))
+        if(!\ModulesGarden\GGSModule\App\Libs\CodeGuardService::isCodeGuardService($serviceId))
         {
             return 'success';
         }
 
         return $this->run(function() use ($serviceId, $params) {
-            \ModulesGarden\ggsmodule\App\Libs\CodeGuardService::changePlan($serviceId, (int)$params['pid']);
+            \ModulesGarden\GGSModule\App\Libs\CodeGuardService::changePlan($serviceId, (int)$params['pid']);
         });
     }
 
@@ -374,7 +374,7 @@ class Actions {
     public function AdminCustomButtonArray($params = [])
     {
         $serviceId = isset($params['serviceid']) ? (int)$params['serviceid'] : 0;
-        $gatewayType = $serviceId ? \ModulesGarden\ggsmodule\App\Libs\GatewayOrderService::typeOfService($serviceId) : null;
+        $gatewayType = $serviceId ? \ModulesGarden\GGSModule\App\Libs\GatewayOrderService::typeOfService($serviceId) : null;
         if($gatewayType)
         {
             // nothing to refresh or cancel before the client orders the certificate

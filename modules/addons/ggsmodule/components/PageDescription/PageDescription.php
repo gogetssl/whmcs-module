@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\PageDescription;
+namespace ModulesGarden\GGSModule\Components\PageDescription;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ImageTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TitleTrait;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\ImageTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TitleTrait;
 
 /**
  * Class Form

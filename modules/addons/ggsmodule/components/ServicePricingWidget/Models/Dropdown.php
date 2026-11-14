@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ServicePricingWidget\Models;
+namespace ModulesGarden\GGSModule\Components\ServicePricingWidget\Models;
 
-use ModulesGarden\ggsmodule\Core\Components\Traits\OptionsTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\OptionsTrait;
 
 class Dropdown extends Input
 {

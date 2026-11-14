@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Constants;
+namespace ModulesGarden\GGSModule\Components\Graph\Constants;
 
 class Colors
 {

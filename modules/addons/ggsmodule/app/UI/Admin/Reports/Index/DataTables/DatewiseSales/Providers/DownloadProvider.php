@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\Providers;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\Providers;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\Forms\GetCsvForm;
-use ModulesGarden\ggsmodule\Core\Components\Actions\DownloadFileFromForm;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\Forms\GetCsvForm;
+use ModulesGarden\GGSModule\Core\Components\Actions\DownloadFileFromForm;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
 
 class DownloadProvider extends CrudProvider
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
 /**
  * Private keys generated for the client in the browser (CSR generator, manual enrollment) are never put in a URL or

@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\UI\FieldFactories;
+namespace ModulesGarden\GGSModule\Packages\Product\UI\FieldFactories;
 
-use ModulesGarden\ggsmodule\Components\Form\Builder\Builders\SwitcherFactory;
-use ModulesGarden\ggsmodule\Components\Span\Span;
-use ModulesGarden\ggsmodule\Components\Tooltip\Tooltip;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\FormFieldInterface;
-use ModulesGarden\ggsmodule\Packages\Product\UI\Formatters\ConfigOptionFullNameFormatter;
+use ModulesGarden\GGSModule\Components\Form\Builder\Builders\SwitcherFactory;
+use ModulesGarden\GGSModule\Components\Span\Span;
+use ModulesGarden\GGSModule\Components\Tooltip\Tooltip;
+use ModulesGarden\GGSModule\Core\Contracts\Components\FormFieldInterface;
+use ModulesGarden\GGSModule\Packages\Product\UI\Formatters\ConfigOptionFullNameFormatter;
 
 class ConfigOptionSwitcherFactory extends SwitcherFactory
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Decorator;
+namespace ModulesGarden\GGSModule\Core\Components\Decorator;
 
-use ModulesGarden\ggsmodule\Core\Components\Enums\FontStyles;
-use ModulesGarden\ggsmodule\Core\Components\Enums\FontTransforms;
-use ModulesGarden\ggsmodule\Core\Components\Enums\FontWeights;
+use ModulesGarden\GGSModule\Core\Components\Enums\FontStyles;
+use ModulesGarden\GGSModule\Core\Components\Enums\FontTransforms;
+use ModulesGarden\GGSModule\Core\Components\Enums\FontWeights;
 
 class Font extends AbstractDecorator
 {

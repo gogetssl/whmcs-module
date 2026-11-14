@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Badge;
+namespace ModulesGarden\GGSModule\Components\Badge;
 
-use ModulesGarden\ggsmodule\Core\Components\Enums\Color;
+use ModulesGarden\GGSModule\Core\Components\Enums\Color;
 
 /**
  * Class Form

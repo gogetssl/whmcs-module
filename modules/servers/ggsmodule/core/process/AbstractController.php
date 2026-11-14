@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\core\process;
+namespace ModulesGarden\Servers\GGSModule\core\process;
 
-use ModulesGarden\Servers\ggsmodule\core\Lang;
-use ModulesGarden\Servers\ggsmodule\core\Smarty;
+use ModulesGarden\Servers\GGSModule\core\Lang;
+use ModulesGarden\Servers\GGSModule\core\Smarty;
 
 abstract class AbstractController {
     public $mgToken = null;

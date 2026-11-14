@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\DataProviders;
+namespace ModulesGarden\GGSModule\Core\DataProviders;
 
 use Exception;
-use ModulesGarden\ggsmodule\Core\Contracts\CrudProviderInterface;
-use function ModulesGarden\ggsmodule\Core\make;
+use ModulesGarden\GGSModule\Core\Contracts\CrudProviderInterface;
+use function ModulesGarden\GGSModule\Core\make;
 
 class ProviderContainer implements CrudProviderInterface
 {

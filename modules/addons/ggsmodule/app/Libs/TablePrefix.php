@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
 use WHMCS\Database\Capsule;
 
@@ -19,7 +19,7 @@ class TablePrefix
      */
     protected static function oldPrefixes(): array
     {
-        return [basename(dirname(__DIR__, 2))];
+        return array_merge([Edition::folder()], Edition::legacyFolders());
     }
 
     /** Tables that changed their name with the Commissions -> Markups rename */

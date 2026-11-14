@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph;
+namespace ModulesGarden\GGSModule\Components\Graph;
 
-use ModulesGarden\ggsmodule\Components\Graph\Source\InlineGraph;
+use ModulesGarden\GGSModule\Components\Graph\Source\InlineGraph;
 
 class InlineGraphLine extends InlineGraph
 {

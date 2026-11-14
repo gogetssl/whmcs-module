@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Models\RemoteProduct;
+use ModulesGarden\GGSModule\App\Models\RemoteProduct;
 use WHMCS\Database\Capsule;
 
 /**
@@ -38,7 +38,7 @@ class AutomatedSsl
                 $caas = array_map('strval', AcmeHelpers::getProductIds());
 
                 $imported = Capsule::table('tblproducts')
-                    ->where('servertype', 'ggsmodule')
+                    ->where('servertype', 'GGSModule')
                     ->where('retired', 0)
                     ->whereIn('hidden', ['', 0, '0'])
                     ->pluck('configoption2');

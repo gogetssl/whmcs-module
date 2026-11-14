@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Models\AcmeSubscription;
-use ModulesGarden\ggsmodule\App\Models\AcmeSubscriptionDomain;
-use ModulesGarden\ggsmodule\App\Models\AisSubscription;
+use ModulesGarden\GGSModule\App\Models\AcmeSubscription;
+use ModulesGarden\GGSModule\App\Models\AcmeSubscriptionDomain;
+use ModulesGarden\GGSModule\App\Models\AisSubscription;
 use WHMCS\Database\Capsule;
 
 /**
@@ -227,7 +227,7 @@ class SubscriptionBilling
 
         // what each purchase bought, from the row the module wrote with the invoice (not from the invoice wording)
         $purchases = [];
-        foreach(\ModulesGarden\ggsmodule\App\Models\Request::where('serviceid', (int)$serviceId)->where('name', self::SLOT_PURCHASE)->get() as $row)
+        foreach(\ModulesGarden\GGSModule\App\Models\Request::where('serviceid', (int)$serviceId)->where('name', self::SLOT_PURCHASE)->get() as $row)
         {
             $data      = json_decode((string)$row->request, true) ?: [];
             $invoiceId = (int)($data['invoice'] ?? 0);
@@ -399,7 +399,7 @@ class SubscriptionBilling
 
     public static function slotPricing()
     {
-        $settings = (new \ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository())->getModuleConfiguration()['sslSettings'] ?? [];
+        $settings = (new \ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository())->getModuleConfiguration()['sslSettings'] ?? [];
 
         return ($settings['subscriptionSlotPricing'] ?? self::SLOT_PRICING_PRORATED) === self::SLOT_PRICING_FULL ? self::SLOT_PRICING_FULL : self::SLOT_PRICING_PRORATED;
     }
@@ -431,7 +431,7 @@ class SubscriptionBilling
     /** a purchase of domains of the service waits for its payment */
     public static function pendingSlotPurchase($serviceId)
     {
-        foreach(\ModulesGarden\ggsmodule\App\Models\Request::where('serviceid', (int)$serviceId)->where('name', self::SLOT_PURCHASE)->where('status', 'pending')->get() as $row)
+        foreach(\ModulesGarden\GGSModule\App\Models\Request::where('serviceid', (int)$serviceId)->where('name', self::SLOT_PURCHASE)->where('status', 'pending')->get() as $row)
         {
             $data   = json_decode((string)$row->request, true) ?: [];
             $status = (string)Capsule::table('tblinvoices')->where('id', (int)($data['invoice'] ?? 0))->value('status');
@@ -548,7 +548,7 @@ class SubscriptionBilling
         $invoiceId = (int)$result['invoiceid'];
         // the lines belong to the service (reports, refunds), not to a WHMCS upgrade order
         Capsule::table('tblinvoiceitems')->where('invoiceid', $invoiceId)->update(['type' => self::SLOT_PURCHASE, 'relid' => (int)$serviceId]);
-        \ModulesGarden\ggsmodule\App\Models\Request::insert([
+        \ModulesGarden\GGSModule\App\Models\Request::insert([
             'serviceid'  => (int)$serviceId,
             'name'       => self::SLOT_PURCHASE,
             'request'    => json_encode(['invoice' => $invoiceId, 'bought' => $bought, 'pricing' => self::slotPricing()]),
@@ -565,14 +565,14 @@ class SubscriptionBilling
     public static function applySlotPurchase($invoiceId)
     {
         $applied = 0;
-        foreach(\ModulesGarden\ggsmodule\App\Models\Request::where('name', self::SLOT_PURCHASE)->where('status', 'pending')->get() as $row)
+        foreach(\ModulesGarden\GGSModule\App\Models\Request::where('name', self::SLOT_PURCHASE)->where('status', 'pending')->get() as $row)
         {
             $data = json_decode((string)$row->request, true) ?: [];
             if((int)($data['invoice'] ?? 0) !== (int)$invoiceId)
             {
                 continue;
             }
-            \ModulesGarden\ggsmodule\App\Models\Request::where('id', (int)$row->id)->update(['status' => 'paid', 'updated_at' => date('Y-m-d H:i:s')]);
+            \ModulesGarden\GGSModule\App\Models\Request::where('id', (int)$row->id)->update(['status' => 'paid', 'updated_at' => date('Y-m-d H:i:s')]);
             self::addSlots((int)$row->serviceid, (array)($data['bought'] ?? []));
             $applied++;
         }

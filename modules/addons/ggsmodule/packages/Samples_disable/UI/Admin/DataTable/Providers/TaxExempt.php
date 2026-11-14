@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Providers;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Providers;
 
-use ModulesGarden\ggsmodule\Core\Components\Actions\ReloadParent;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Translator;
+use ModulesGarden\GGSModule\Core\Components\Actions\ReloadParent;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Support\Facades\Translator;
 use WHMCS\User\Client;
 
 class TaxExempt extends CrudProvider

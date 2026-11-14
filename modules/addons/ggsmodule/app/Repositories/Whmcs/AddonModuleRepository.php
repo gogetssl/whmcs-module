@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Repositories\Whmcs;
+namespace ModulesGarden\GGSModule\App\Repositories\Whmcs;
 
-use ModulesGarden\ggsmodule\App\Models\CronCheck;
-use ModulesGarden\ggsmodule\App\Models\Whmcs\AddonModule;
+use ModulesGarden\GGSModule\App\Models\CronCheck;
+use ModulesGarden\GGSModule\App\Models\Whmcs\AddonModule;
 
 class AddonModuleRepository
 {
     public function getModuleConfiguration()
     {
-        $settings = AddonModule::where('module', 'configuration_ggsmodule')
+        $settings = AddonModule::where('module', 'configuration_GGSModule')
                                ->whereIn('setting', ['vendors', 'credentials', 'test_connection', 'sslSettings', 'financeSettings', 'cronSettings', 'generalSettings', 'certificates_sync_last'])
                                ->get()->toArray();
 
@@ -27,8 +27,8 @@ class AddonModuleRepository
             if($setting['setting'] == 'vendors')
             {
                 // only the vendors of this edition (TheSSLStore Plugin: TheSSLStore only)
-                $vendors = array_values(array_intersect(explode(',', $setting['value']), \ModulesGarden\ggsmodule\App\Libs\Edition::vendors()));
-                $result[$setting['setting']] = $vendors ?: \ModulesGarden\ggsmodule\App\Libs\Edition::vendors();
+                $vendors = array_values(array_intersect(explode(',', $setting['value']), \ModulesGarden\GGSModule\App\Libs\Edition::vendors()));
+                $result[$setting['setting']] = $vendors ?: \ModulesGarden\GGSModule\App\Libs\Edition::vendors();
             }
             if($setting['setting'] == 'sslSettings')
             {
@@ -51,7 +51,7 @@ class AddonModuleRepository
         // credentials of vendors outside the edition stay stored but are not used
         if(isset($result['credentials']) && is_array($result['credentials']))
         {
-            $result['credentials'] = array_intersect_key($result['credentials'], array_flip(\ModulesGarden\ggsmodule\App\Libs\Edition::vendors()));
+            $result['credentials'] = array_intersect_key($result['credentials'], array_flip(\ModulesGarden\GGSModule\App\Libs\Edition::vendors()));
         }
 
         return $result;
@@ -60,14 +60,14 @@ class AddonModuleRepository
     public function updateLastCertificatesSync($timestamp)
     {
         AddonModule::updateOrInsert(
-            ['module' => 'configuration_ggsmodule', 'setting' => 'certificates_sync_last'],
+            ['module' => 'configuration_GGSModule', 'setting' => 'certificates_sync_last'],
             ['value' => $timestamp]
         );
     }
 
     public function getLastCertificatesSync()
     {
-        $lastSync = AddonModule::where('module', 'configuration_ggsmodule')
+        $lastSync = AddonModule::where('module', 'configuration_GGSModule')
                                ->where('setting', 'certificates_sync_last')
                                ->first();
 
@@ -77,7 +77,7 @@ class AddonModuleRepository
     public function finalize()
     {
         AddonModule::updateOrInsert(
-            ['module' => 'configuration_ggsmodule', 'setting' => 'test_connection'],
+            ['module' => 'configuration_GGSModule', 'setting' => 'test_connection'],
             ['value' => 'success']
         );
     }
@@ -85,7 +85,7 @@ class AddonModuleRepository
     public function saveVendor($vendors)
     {
         AddonModule::updateOrInsert(
-                ['module' => 'configuration_ggsmodule', 'setting' => 'vendors'],
+                ['module' => 'configuration_GGSModule', 'setting' => 'vendors'],
                 ['value' => implode(',', $vendors)]
             );
     }
@@ -126,7 +126,7 @@ class AddonModuleRepository
             return false;
         }
 
-        $setting = AddonModule::where('module', 'configuration_ggsmodule')->where('setting', 'cronSettings')->first();
+        $setting = AddonModule::where('module', 'configuration_GGSModule')->where('setting', 'cronSettings')->first();
         $cronSettings = isset($setting->value) && !empty($setting->value) ? (array)json_decode($setting->value, true) : [];
         $frequency = isset($cronSettings[$name]) && $cronSettings[$name] !== '' ? $cronSettings[$name] : $job[1];
 
@@ -177,11 +177,11 @@ class AddonModuleRepository
         ];
 
         // a vendor outside the edition has no fields on the settings page: keep what is stored for it
-        $stored = AddonModule::where('module', 'configuration_ggsmodule')->where('setting', 'credentials')->value('value');
+        $stored = AddonModule::where('module', 'configuration_GGSModule')->where('setting', 'credentials')->value('value');
         $stored = $stored ? (json_decode(\decrypt($stored), true) ?: []) : [];
         foreach(array_keys($credentials) as $vendor)
         {
-            if(!in_array($vendor, \ModulesGarden\ggsmodule\App\Libs\Edition::vendors(), true) && isset($stored[$vendor]))
+            if(!in_array($vendor, \ModulesGarden\GGSModule\App\Libs\Edition::vendors(), true) && isset($stored[$vendor]))
             {
                 $credentials[$vendor] = $stored[$vendor];
             }
@@ -190,7 +190,7 @@ class AddonModuleRepository
         $credentialsJson = json_encode($credentials);
 
         AddonModule::updateOrInsert(
-            ['module' => 'configuration_ggsmodule', 'setting' => 'credentials'],
+            ['module' => 'configuration_GGSModule', 'setting' => 'credentials'],
             ['value' => \encrypt($credentialsJson)]
         );
     }
@@ -203,7 +203,7 @@ class AddonModuleRepository
         $data          = json_encode(array_merge($stored, (array)$data));
 
         AddonModule::updateOrInsert(
-            ['module' => 'configuration_ggsmodule', 'setting' => 'sslSettings'],
+            ['module' => 'configuration_GGSModule', 'setting' => 'sslSettings'],
             ['value' => $data]
         );
     }
@@ -211,12 +211,12 @@ class AddonModuleRepository
     public function saveCronSettings($data)
     {
         // each job has its own small form: merged into the stored frequencies
-        $stored = AddonModule::where('module', 'configuration_ggsmodule')->where('setting', 'cronSettings')->value('value');
+        $stored = AddonModule::where('module', 'configuration_GGSModule')->where('setting', 'cronSettings')->value('value');
         $stored = $stored ? (array)json_decode($stored, true) : [];
         $data   = json_encode(array_merge($stored, array_intersect_key((array)$data, self::CRON_JOBS)));
 
         AddonModule::updateOrInsert(
-            ['module' => 'configuration_ggsmodule', 'setting' => 'cronSettings'],
+            ['module' => 'configuration_GGSModule', 'setting' => 'cronSettings'],
             ['value' => $data]
         );
     }
@@ -224,7 +224,7 @@ class AddonModuleRepository
     public function saveGeneralSettings($data)
     {
         AddonModule::updateOrInsert(
-            ['module' => 'configuration_ggsmodule', 'setting' => 'generalSettings'],
+            ['module' => 'configuration_GGSModule', 'setting' => 'generalSettings'],
             ['value' => json_encode($data)]
         );
     }
@@ -234,7 +234,7 @@ class AddonModuleRepository
         $data = json_encode($data);
 
         AddonModule::updateOrInsert(
-            ['module' => 'configuration_ggsmodule', 'setting' => 'financeSettings'],
+            ['module' => 'configuration_GGSModule', 'setting' => 'financeSettings'],
             ['value' => $data]
         );
     }

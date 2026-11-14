@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\app\services;
+namespace ModulesGarden\Servers\GGSModule\app\services;
 
 
-use ModulesGarden\ggsmodule\App\Helpers\EmailTemplates;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Invoice;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\InvoiceItem;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Service;
+use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Invoice;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\InvoiceItem;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Service;
 use WHMCS\Database\Capsule;
 
 class InvoiceRenew {
@@ -110,7 +110,7 @@ class InvoiceRenew {
             $message = 'This service is billed once and cannot be renewed here. Please place a new order.';
             try
             {
-                $translated = (string)\ModulesGarden\Servers\ggsmodule\core\Lang::absoluteT('renew_not_recurring');
+                $translated = (string)\ModulesGarden\Servers\GGSModule\core\Lang::absoluteT('renew_not_recurring');
                 $message    = $translated !== '' && $translated !== 'renew_not_recurring' ? $translated : $message;
             }
             catch(\Throwable $e)
@@ -146,7 +146,7 @@ class InvoiceRenew {
         }
         $invoiceId = $results['invoiceid'];
         EmailTemplates::sendRenewalInvoiceEmail($serviceId, $invoiceId);
-        \ModulesGarden\ggsmodule\App\Libs\ProductCatalog::noticeIfDiscontinued($serviceId);
+        \ModulesGarden\GGSModule\App\Libs\ProductCatalog::noticeIfDiscontinued($serviceId);
         InvoiceItem::where('invoiceid', $invoiceId)->update(['type' => 'Hosting', 'relid' => $serviceId]);
         $invoiceData = Invoice::where('id', $invoiceId)->first()->toArray();
 

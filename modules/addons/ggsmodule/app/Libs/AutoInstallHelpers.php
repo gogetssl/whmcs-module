@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Helpers\AutoInstallEmailTemplates;
-use ModulesGarden\ggsmodule\App\Models\Request;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\ggsmodule\Packages\Logs\Support\Facades\Logger;
+use ModulesGarden\GGSModule\App\Helpers\AutoInstallEmailTemplates;
+use ModulesGarden\GGSModule\App\Models\Request;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
+use ModulesGarden\GGSModule\Packages\Logs\Support\Facades\Logger;
 use WHMCS\Database\Capsule;
 
 /**

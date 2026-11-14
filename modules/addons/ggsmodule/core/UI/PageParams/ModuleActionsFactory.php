@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\PageParams;
+namespace ModulesGarden\GGSModule\Core\UI\PageParams;
 
-use ModulesGarden\ggsmodule\Core\UI\PageParams\ModuleActions\DefaultAction;
-use ModulesGarden\ggsmodule\Core\UI\PageParams\Source\ModuleActionInterface;
+use ModulesGarden\GGSModule\Core\UI\PageParams\ModuleActions\DefaultAction;
+use ModulesGarden\GGSModule\Core\UI\PageParams\Source\ModuleActionInterface;
 
 class ModuleActionsFactory
 {

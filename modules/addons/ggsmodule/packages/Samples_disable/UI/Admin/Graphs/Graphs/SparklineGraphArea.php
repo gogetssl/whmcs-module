@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs;
 
-use ModulesGarden\ggsmodule\Components\Graph\Models\DataSet;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Components\Graph\Models\DataSet;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
-class SparklineGraphArea extends \ModulesGarden\ggsmodule\Components\Graph\SparklineGraphArea implements AdminAreaInterface
+class SparklineGraphArea extends \ModulesGarden\GGSModule\Components\Graph\SparklineGraphArea implements AdminAreaInterface
 {
     public function loadHtml():void
     {

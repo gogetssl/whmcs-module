@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\LabelsBadgesButtons;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\LabelsBadgesButtons;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButtonDanger;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButtonEdit;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButtonInfo;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButtonPrimary;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButtonSuccess;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButtonWarning;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\IconButton\IconButtonDanger;
+use ModulesGarden\GGSModule\Components\IconButton\IconButtonEdit;
+use ModulesGarden\GGSModule\Components\IconButton\IconButtonInfo;
+use ModulesGarden\GGSModule\Components\IconButton\IconButtonPrimary;
+use ModulesGarden\GGSModule\Components\IconButton\IconButtonSuccess;
+use ModulesGarden\GGSModule\Components\IconButton\IconButtonWarning;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
 
 class IconButtons extends Widget implements AdminAreaInterface

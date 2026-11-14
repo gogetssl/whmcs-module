@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Data;
+namespace ModulesGarden\GGSModule\Core\Data;
 
 /**
  * Trait ToArrayTrait

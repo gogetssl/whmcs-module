@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\LabelsBadgesButtons;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\LabelsBadgesButtons;
 
-use ModulesGarden\ggsmodule\Components\DropdownMenu\DropdownMenu;
-use ModulesGarden\ggsmodule\Components\DropdownMenuItem\DropdownMenuItem;
-use ModulesGarden\ggsmodule\Components\Toolbar\Toolbar;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use function ModulesGarden\ggsmodule\Core\translator;
+use ModulesGarden\GGSModule\Components\DropdownMenu\DropdownMenu;
+use ModulesGarden\GGSModule\Components\DropdownMenuItem\DropdownMenuItem;
+use ModulesGarden\GGSModule\Components\Toolbar\Toolbar;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use function ModulesGarden\GGSModule\Core\translator;
 
 class BurgerButtons extends Widget implements AdminAreaInterface
 {

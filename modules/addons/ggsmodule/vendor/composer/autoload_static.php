@@ -4,37 +4,37 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit1dc9f4cb4f74d941c1dd0ae14ef40164
+class ComposerStaticInit7142355a765336f209746f0f52efaeb0
 {
     public static $prefixLengthsPsr4 = array (
         'M' => 
         array (
-            'ModulesGarden\\ggsmodule\\Packages\\' => 33,
-            'ModulesGarden\\ggsmodule\\Install\\' => 32,
-            'ModulesGarden\\ggsmodule\\Core\\' => 29,
-            'ModulesGarden\\ggsmodule\\Components\\' => 35,
-            'ModulesGarden\\ggsmodule\\App\\' => 28,
+            'ModulesGarden\\GGSModule\\Packages\\' => 33,
+            'ModulesGarden\\GGSModule\\Install\\' => 32,
+            'ModulesGarden\\GGSModule\\Core\\' => 29,
+            'ModulesGarden\\GGSModule\\Components\\' => 35,
+            'ModulesGarden\\GGSModule\\App\\' => 28,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'ModulesGarden\\ggsmodule\\Packages\\' =>
+        'ModulesGarden\\GGSModule\\Packages\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages',
         ),
-        'ModulesGarden\\ggsmodule\\Install\\' =>
+        'ModulesGarden\\GGSModule\\Install\\' =>
         array (
             0 => __DIR__ . '/../..' . '/install',
         ),
-        'ModulesGarden\\ggsmodule\\Core\\' =>
+        'ModulesGarden\\GGSModule\\Core\\' =>
         array (
             0 => __DIR__ . '/../..' . '/core',
         ),
-        'ModulesGarden\\ggsmodule\\Components\\' =>
+        'ModulesGarden\\GGSModule\\Components\\' =>
         array (
             0 => __DIR__ . '/../..' . '/components',
         ),
-        'ModulesGarden\\ggsmodule\\App\\' =>
+        'ModulesGarden\\GGSModule\\App\\' =>
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
@@ -47,9 +47,9 @@ class ComposerStaticInit1dc9f4cb4f74d941c1dd0ae14ef40164
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit1dc9f4cb4f74d941c1dd0ae14ef40164::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit1dc9f4cb4f74d941c1dd0ae14ef40164::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit1dc9f4cb4f74d941c1dd0ae14ef40164::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit7142355a765336f209746f0f52efaeb0::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit7142355a765336f209746f0f52efaeb0::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit7142355a765336f209746f0f52efaeb0::$classMap;
 
         }, null, ClassLoader::class);
     }

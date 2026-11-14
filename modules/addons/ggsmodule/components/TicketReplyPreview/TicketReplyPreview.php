@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\TicketReplyPreview;
+namespace ModulesGarden\GGSModule\Components\TicketReplyPreview;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Image\Image;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ActionOnChangeTrait;
-use ModulesGarden\ggsmodule\Core\WHMCS\URL\Admin;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Image\Image;
+use ModulesGarden\GGSModule\Core\Components\Traits\ActionOnChangeTrait;
+use ModulesGarden\GGSModule\Core\WHMCS\URL\Admin;
 
 class TicketReplyPreview extends Container
 {

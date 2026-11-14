@@ -1,19 +1,19 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\View;
+namespace ModulesGarden\GGSModule\Core\UI\View;
 
-use ModulesGarden\ggsmodule\Components\AppNavBar\AppNavBar;
-use ModulesGarden\ggsmodule\Components\NavBarItem\NavBarItem;
-use ModulesGarden\ggsmodule\Core\DependencyInjection;
-use ModulesGarden\ggsmodule\Core\Events\Events\NavBarBuilderBeforeCreateMenu;
-use ModulesGarden\ggsmodule\Core\Helper\BuildUrl;
-use ModulesGarden\ggsmodule\Core\Http\View\MainMenu;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Menu;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Router;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Translator;
-use function ModulesGarden\ggsmodule\Core\fire;
+use ModulesGarden\GGSModule\Components\AppNavBar\AppNavBar;
+use ModulesGarden\GGSModule\Components\NavBarItem\NavBarItem;
+use ModulesGarden\GGSModule\Core\DependencyInjection;
+use ModulesGarden\GGSModule\Core\Events\Events\NavBarBuilderBeforeCreateMenu;
+use ModulesGarden\GGSModule\Core\Helper\BuildUrl;
+use ModulesGarden\GGSModule\Core\Http\View\MainMenu;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\Support\Facades\Menu;
+use ModulesGarden\GGSModule\Core\Support\Facades\Router;
+use ModulesGarden\GGSModule\Core\Support\Facades\Translator;
+use function ModulesGarden\GGSModule\Core\fire;
 
 class NavBarBuilder
 {
@@ -52,12 +52,12 @@ class NavBarBuilder
 
     function configureNavbar(): void
     {
-        $icon = \ModulesGarden\ggsmodule\Core\Support\Facades\Config::get('configuration.moduleIcon', 'modulesgarden_base');
+        $icon = \ModulesGarden\GGSModule\Core\Support\Facades\Config::get('configuration.moduleIcon', 'modulesgarden_base');
         $this->navbar->setModuleLogo(BuildUrl::getAssetsURL('/img/products/' . $icon . '.png'), str_replace('_', '-', $icon));
         $this->navbar->setVendorLogo(BuildUrl::getAssetsURL('/img/modules-garden-logo.svg'));
         $this->navbar->setMainUrl(BuildUrl::getUrl());
         // the header shows the edition's name (GoGetSSL Module / TheSSLStore Plugin)
-        $this->navbar->setModuleName(\ModulesGarden\ggsmodule\App\Libs\Edition::name());
+        $this->navbar->setModuleName(\ModulesGarden\GGSModule\App\Libs\Edition::name());
         $this->navbar->setModuleVersion(Config::get('configuration.version'));
     }
 
@@ -72,7 +72,7 @@ class NavBarBuilder
         $more = null;
 
         /**
-         * @var \ModulesGarden\ggsmodule\Core\UI\Menu\Item $menuItem
+         * @var \ModulesGarden\GGSModule\Core\UI\Menu\Item $menuItem
          */
         foreach (Menu::getItems() as $menuItem)
         {
@@ -89,7 +89,7 @@ class NavBarBuilder
             if ($menuItem->hasItems())
             {
                 /**
-                 * @var \ModulesGarden\ggsmodule\Core\UI\Menu\Item $subMenuItem
+                 * @var \ModulesGarden\GGSModule\Core\UI\Menu\Item $subMenuItem
                  */
                 foreach ($menuItem->getItems() as $subMenuItem)
                 {

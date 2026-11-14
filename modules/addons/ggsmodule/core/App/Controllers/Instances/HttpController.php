@@ -1,25 +1,25 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\Instances;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\Instances;
 
-use ModulesGarden\ggsmodule\Core\App\Controllers\Exceptions\PageNotFound;
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Http\ErrorPage;
-use ModulesGarden\ggsmodule\Core\App\Controllers\ResponseResolver;
-use ModulesGarden\ggsmodule\Core\App\Controllers\Router;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\ClientAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\DefaultControllerInterface;
-use ModulesGarden\ggsmodule\Core\DependencyInjection;
-use ModulesGarden\ggsmodule\Core\Exceptions\UserException;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Routing\Middleware\Processors\Controller;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\Traits\AppParams;
-use ModulesGarden\ggsmodule\Core\Traits\ErrorCodesLibrary;
-use ModulesGarden\ggsmodule\Core\Traits\IsAdmin;
-use ModulesGarden\ggsmodule\Core\Traits\Lang;
-use ModulesGarden\ggsmodule\Core\Traits\OutputBuffer;
-use ModulesGarden\ggsmodule\Core\Traits\Params;
+use ModulesGarden\GGSModule\Core\App\Controllers\Exceptions\PageNotFound;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\Http\ErrorPage;
+use ModulesGarden\GGSModule\Core\App\Controllers\ResponseResolver;
+use ModulesGarden\GGSModule\Core\App\Controllers\Router;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\ClientAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\DefaultControllerInterface;
+use ModulesGarden\GGSModule\Core\DependencyInjection;
+use ModulesGarden\GGSModule\Core\Exceptions\UserException;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Routing\Middleware\Processors\Controller;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\Traits\AppParams;
+use ModulesGarden\GGSModule\Core\Traits\ErrorCodesLibrary;
+use ModulesGarden\GGSModule\Core\Traits\IsAdmin;
+use ModulesGarden\GGSModule\Core\Traits\Lang;
+use ModulesGarden\GGSModule\Core\Traits\OutputBuffer;
+use ModulesGarden\GGSModule\Core\Traits\Params;
 
 abstract class HttpController implements DefaultControllerInterface
 {
@@ -66,8 +66,8 @@ abstract class HttpController implements DefaultControllerInterface
     {
         try
         {
-            \ModulesGarden\ggsmodule\Core\Support\Facades\Params::createFrom($params);
-            $route = \ModulesGarden\ggsmodule\Core\Support\Facades\Router::find($this->level);
+            \ModulesGarden\GGSModule\Core\Support\Facades\Params::createFrom($params);
+            $route = \ModulesGarden\GGSModule\Core\Support\Facades\Router::find($this->level);
             if (!$route || !$this->hasProperContext($route->getController()))
             {
                 throw new PageNotFound();

@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\Providers;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\Providers;
 
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\WHMCS\Helper;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\WHMCS\Helper;
 
 class FilterProvider extends CrudProvider
 {

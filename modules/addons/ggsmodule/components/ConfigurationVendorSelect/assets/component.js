@@ -20,7 +20,7 @@ var component =
         methods: {
 
             selectVendor: function (){
-                fetch('addonmodules.php?module=ggsmodule&mg-page=configuration&mg-action=step3', {
+                fetch('addonmodules.php?module=GGSModule&mg-page=configuration&mg-action=step3', {
                     method: 'POST', // or PATCH or PUT or DELETE or GET
                     body: JSON.stringify({
                         test: 'test1',

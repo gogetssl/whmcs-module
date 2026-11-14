@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\IconButton;
+namespace ModulesGarden\GGSModule\Components\IconButton;
 
 /**
  * Class IconButton

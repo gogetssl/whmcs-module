@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\Card;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\Card;
 
 /**
  * Announcements published by the gateway (cached in the module's request table)

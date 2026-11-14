@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Views;
+namespace ModulesGarden\GGSModule\Core\UI\Views;
 
 class ServerModuleAdminArea extends AbstractView
 {

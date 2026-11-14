@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Storage;
+namespace ModulesGarden\GGSModule\Core\Storage;
 
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 class Storage
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models\Constants;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models\Constants;
 
 class InvoiceItem
 {

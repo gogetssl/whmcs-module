@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Formatters\Date;
+namespace ModulesGarden\GGSModule\Core\UI\Formatters\Date;
 
 class DateTime extends Date
 {

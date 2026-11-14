@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ProgressBars;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ProgressBars;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ProgressBars\Widgets\ProgressBarsWidgetBaseStyles;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ProgressBars\Widgets\ProgressBarsWidgetSmall;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ProgressBars\Widgets\ProgressBarsWidgetMedium;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ProgressBars\Widgets\ProgressBarsWidgetLarge;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ProgressBars\Widgets\ProgressBarsWidgetStyles;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ProgressBars\Widgets\ProgressBarsNoLabelWithMarks;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ProgressBars\Widgets\ProgressBarsWidgetBaseStyles;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ProgressBars\Widgets\ProgressBarsWidgetSmall;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ProgressBars\Widgets\ProgressBarsWidgetMedium;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ProgressBars\Widgets\ProgressBarsWidgetLarge;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ProgressBars\Widgets\ProgressBarsWidgetStyles;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ProgressBars\Widgets\ProgressBarsNoLabelWithMarks;
 
-class Container extends \ModulesGarden\ggsmodule\Components\Container\Container implements AdminAreaInterface
+class Container extends \ModulesGarden\GGSModule\Components\Container\Container implements AdminAreaInterface
 {
     public function loadHtml(): void
     {

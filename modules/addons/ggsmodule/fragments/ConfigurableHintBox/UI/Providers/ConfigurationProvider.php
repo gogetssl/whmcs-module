@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Fragments\ConfigurableHintBox\UI\Providers;
+namespace ModulesGarden\GGSModule\Fragments\ConfigurableHintBox\UI\Providers;
 
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalClose;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ReloadById;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalClose;
+use ModulesGarden\GGSModule\Core\Components\Actions\ReloadById;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
 
 class ConfigurationProvider extends CrudProvider
 {

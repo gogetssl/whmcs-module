@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Models\DataSetConfigs\Source;
+namespace ModulesGarden\GGSModule\Components\Graph\Models\DataSetConfigs\Source;
 
-use ModulesGarden\ggsmodule\Core\Helper\Color\Models\Color;
+use ModulesGarden\GGSModule\Core\Helper\Color\Models\Color;
 
 abstract class ColorDataSetConfig extends AbstractDataSetConfig
 {

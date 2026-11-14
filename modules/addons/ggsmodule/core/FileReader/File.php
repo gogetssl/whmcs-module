@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\FileReader;
+namespace ModulesGarden\GGSModule\Core\FileReader;
 
 /**
  * Description of File

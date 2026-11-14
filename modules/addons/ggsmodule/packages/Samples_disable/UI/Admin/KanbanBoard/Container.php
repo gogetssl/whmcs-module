@@ -1,24 +1,24 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\KanbanBoard;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\KanbanBoard;
 
-use ModulesGarden\ggsmodule\Components\BoardColumn\BoardColumn;
-use ModulesGarden\ggsmodule\Components\BoardItem\BoardItem;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButton;
-use ModulesGarden\ggsmodule\Components\Label\LabelDanger;
-use ModulesGarden\ggsmodule\Components\Label\LabelInfo;
-use ModulesGarden\ggsmodule\Components\Label\LabelPrimary;
-use ModulesGarden\ggsmodule\Components\Label\LabelSuccess;
-use ModulesGarden\ggsmodule\Components\Label\LabelWarning;
-use ModulesGarden\ggsmodule\Components\Toolbar\Toolbar;
-use ModulesGarden\ggsmodule\Core\Components\Enums\BorderColors;
-use ModulesGarden\ggsmodule\Core\Components\Enums\BorderWidths;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxOnLoadInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ElementsListComponent\Buttons\ButtonDelete;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\KanbanBoard\Providers\BoardProvider;
+use ModulesGarden\GGSModule\Components\BoardColumn\BoardColumn;
+use ModulesGarden\GGSModule\Components\BoardItem\BoardItem;
+use ModulesGarden\GGSModule\Components\IconButton\IconButton;
+use ModulesGarden\GGSModule\Components\Label\LabelDanger;
+use ModulesGarden\GGSModule\Components\Label\LabelInfo;
+use ModulesGarden\GGSModule\Components\Label\LabelPrimary;
+use ModulesGarden\GGSModule\Components\Label\LabelSuccess;
+use ModulesGarden\GGSModule\Components\Label\LabelWarning;
+use ModulesGarden\GGSModule\Components\Toolbar\Toolbar;
+use ModulesGarden\GGSModule\Core\Components\Enums\BorderColors;
+use ModulesGarden\GGSModule\Core\Components\Enums\BorderWidths;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxOnLoadInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ElementsListComponent\Buttons\ButtonDelete;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\KanbanBoard\Providers\BoardProvider;
 
-class Container extends \ModulesGarden\ggsmodule\Components\Board\Board implements AjaxOnLoadInterface, AdminAreaInterface
+class Container extends \ModulesGarden\GGSModule\Components\Board\Board implements AjaxOnLoadInterface, AdminAreaInterface
 {
     protected string $provider = BoardProvider::class;
 

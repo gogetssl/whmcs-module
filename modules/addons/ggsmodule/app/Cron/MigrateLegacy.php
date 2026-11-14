@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Cron;
+namespace ModulesGarden\GGSModule\App\Cron;
 
-use ModulesGarden\ggsmodule\App\Migration\Detector;
-use ModulesGarden\ggsmodule\App\Migration\Engine;
-use ModulesGarden\ggsmodule\App\Migration\Store;
-use ModulesGarden\ggsmodule\Core\CommandLine\AbstractCommand;
+use ModulesGarden\GGSModule\App\Migration\Detector;
+use ModulesGarden\GGSModule\App\Migration\Engine;
+use ModulesGarden\GGSModule\App\Migration\Store;
+use ModulesGarden\GGSModule\Core\CommandLine\AbstractCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -120,9 +120,9 @@ class MigrateLegacy extends AbstractCommand
     protected function source(InputInterface $input): string
     {
         $source = strtolower((string)$input->getOption('source'));
-        if(!in_array($source, [\ModulesGarden\ggsmodule\App\Libs\Edition::get()], true))
+        if(!in_array($source, [\ModulesGarden\GGSModule\App\Libs\Edition::get()], true))
         {
-            throw new \InvalidArgumentException('--source=' . \ModulesGarden\ggsmodule\App\Libs\Edition::get() . ' is required');
+            throw new \InvalidArgumentException('--source=' . \ModulesGarden\GGSModule\App\Libs\Edition::get() . ' is required');
         }
 
         return $source;

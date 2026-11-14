@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\StaticAjaxData;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\StaticAjaxData;
 
-use ModulesGarden\ggsmodule\Components\Grid\Grid;
+use ModulesGarden\GGSModule\Components\Grid\Grid;
 
-class Container extends \ModulesGarden\ggsmodule\Components\Container\Container
+class Container extends \ModulesGarden\GGSModule\Components\Container\Container
 {
     public function loadHtml(): void
     {

@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Providers;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Providers;
 
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Models\CronCheck;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Forms\DownloadLogForm;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\LogProvider;
-use ModulesGarden\ggsmodule\Core\Components\Actions\DownloadFileFromForm;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Models\CronCheck;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Forms\DownloadLogForm;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\LogProvider;
+use ModulesGarden\GGSModule\Core\Components\Actions\DownloadFileFromForm;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
 
 
 class ReportingProvider extends CrudProvider
@@ -85,9 +85,9 @@ class ReportingProvider extends CrudProvider
 
             $logProvider = new LogProvider();
             // each edition reports to its own vendor
-            $to          = \ModulesGarden\ggsmodule\App\Libs\Edition::get() === \ModulesGarden\ggsmodule\App\Libs\Edition::GGS ? 'support@gogetssl.com' : 'apisupport@thesslstore.com';
+            $to          = \ModulesGarden\GGSModule\App\Libs\Edition::get() === \ModulesGarden\GGSModule\App\Libs\Edition::GGS ? 'support@gogetssl.com' : 'apisupport@thesslstore.com';
             $message     = new \WHMCS\Mail\Message();
-            $subject     = 'NEW WHMCS ' . \ModulesGarden\ggsmodule\App\Libs\Edition::name() . ' issue reported';
+            $subject     = 'NEW WHMCS ' . \ModulesGarden\GGSModule\App\Libs\Edition::name() . ' issue reported';
             $body        = <<<BODY
                 Dear Support,<br><br>Here is a new issue reported from {$CONFIG['CompanyName']}.
 BODY;

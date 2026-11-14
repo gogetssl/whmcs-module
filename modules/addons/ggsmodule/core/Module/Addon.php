@@ -1,21 +1,21 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Module;
+namespace ModulesGarden\GGSModule\Core\Module;
 
-use ModulesGarden\ggsmodule\Core\Configuration\Addon\Activate\After;
-use ModulesGarden\ggsmodule\Core\Configuration\Addon\Activate\Before;
-use ModulesGarden\ggsmodule\Core\Configuration\Addon\Update\PatchManager;
-use ModulesGarden\ggsmodule\Core\Database\FileLoader;
-use ModulesGarden\ggsmodule\Core\Events\Events\AfterModuleActivated;
-use ModulesGarden\ggsmodule\Core\Events\Events\AfterModuleUpgraded;
-use ModulesGarden\ggsmodule\Core\Events\Events\ModuleActivated;
-use ModulesGarden\ggsmodule\Core\Events\Events\ModuleDeactivated;
-use ModulesGarden\ggsmodule\Core\Events\Events\ModuleUpgraded;
-use ModulesGarden\ggsmodule\Core\Events\Events\PreModuleActivated;
-use ModulesGarden\ggsmodule\Core\Events\Events\PreModuleUpgraded;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\ServiceLocator;
-use function ModulesGarden\ggsmodule\Core\fire;
+use ModulesGarden\GGSModule\Core\Configuration\Addon\Activate\After;
+use ModulesGarden\GGSModule\Core\Configuration\Addon\Activate\Before;
+use ModulesGarden\GGSModule\Core\Configuration\Addon\Update\PatchManager;
+use ModulesGarden\GGSModule\Core\Database\FileLoader;
+use ModulesGarden\GGSModule\Core\Events\Events\AfterModuleActivated;
+use ModulesGarden\GGSModule\Core\Events\Events\AfterModuleUpgraded;
+use ModulesGarden\GGSModule\Core\Events\Events\ModuleActivated;
+use ModulesGarden\GGSModule\Core\Events\Events\ModuleDeactivated;
+use ModulesGarden\GGSModule\Core\Events\Events\ModuleUpgraded;
+use ModulesGarden\GGSModule\Core\Events\Events\PreModuleActivated;
+use ModulesGarden\GGSModule\Core\Events\Events\PreModuleUpgraded;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\ServiceLocator;
+use function ModulesGarden\GGSModule\Core\fire;
 
 class Addon
 {
@@ -41,10 +41,10 @@ class Addon
     static function deactivate(array $params = []): void
     {
         // Before module deactivation
-        ServiceLocator::call(\ModulesGarden\ggsmodule\Core\Configuration\Addon\Deactivate\Before::class)->execute($params);
+        ServiceLocator::call(\ModulesGarden\GGSModule\Core\Configuration\Addon\Deactivate\Before::class)->execute($params);
 
         // After module deactivation
-        ServiceLocator::call(\ModulesGarden\ggsmodule\Core\Configuration\Addon\Deactivate\After::class)->execute($params);
+        ServiceLocator::call(\ModulesGarden\GGSModule\Core\Configuration\Addon\Deactivate\After::class)->execute($params);
 
         fire(ModuleDeactivated::class);
     }
@@ -54,7 +54,7 @@ class Addon
         fire(PreModuleUpgraded::class);
 
         // Before module upgrade
-        ServiceLocator::call(\ModulesGarden\ggsmodule\Core\Configuration\Addon\Update\Before::class)->execute($params);
+        ServiceLocator::call(\ModulesGarden\GGSModule\Core\Configuration\Addon\Update\Before::class)->execute($params);
 
         //Module Upgrade
         if (empty($params['version']))
@@ -65,7 +65,7 @@ class Addon
         (new PatchManager())->run($params['version'], $force);
 
         // After module upgrade
-        ServiceLocator::call(\ModulesGarden\ggsmodule\Core\Configuration\Addon\Update\After::class)->execute($params);
+        ServiceLocator::call(\ModulesGarden\GGSModule\Core\Configuration\Addon\Update\After::class)->execute($params);
 
         fire(ModuleUpgraded::class);
         fire(AfterModuleUpgraded::class);

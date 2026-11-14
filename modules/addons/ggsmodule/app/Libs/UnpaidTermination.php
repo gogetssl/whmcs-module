@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
 use WHMCS\Database\Capsule;
 
@@ -23,7 +23,7 @@ class UnpaidTermination
 
         $services = Capsule::table('tblhosting')
             ->join('tblproducts', 'tblproducts.id', '=', 'tblhosting.packageid')
-            ->where('tblproducts.servertype', 'ggsmodule')
+            ->where('tblproducts.servertype', 'GGSModule')
             ->whereIn('tblhosting.domainstatus', ['Active', 'Suspended'])
             ->whereNotIn('tblhosting.billingcycle', ['One Time', 'Free Account'])
             ->where('tblhosting.nextduedate', '>', '2000-01-01')

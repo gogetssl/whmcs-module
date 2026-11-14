@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Hooks;
+namespace ModulesGarden\GGSModule\Core\Components\Hooks;
 
 class Manager
 {

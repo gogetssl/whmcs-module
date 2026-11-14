@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\AppNavBar;
+namespace ModulesGarden\GGSModule\Components\AppNavBar;
 
-use ModulesGarden\ggsmodule\Components\NavBar\NavBar;
-use ModulesGarden\ggsmodule\Components\NavBarItem\NavBarItem;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Components\NavBar\NavBar;
+use ModulesGarden\GGSModule\Components\NavBarItem\NavBarItem;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
 
 /**
  * Class Form

@@ -2,7 +2,7 @@
 
 require_once dirname(__FILE__, 3) . '/vendor/autoload.php';
 
-\ModulesGarden\ggsmodule\Core\ModuleConstants::initialize();
+\ModulesGarden\GGSModule\Core\ModuleConstants::initialize();
 
 $files = [
     'products-icons.css',
@@ -31,7 +31,7 @@ header('Content-Type: text/css');
 
 foreach ($files as $file)
 {
-    $override = \ModulesGarden\ggsmodule\Core\ModuleConstants::getFullPath('overrides', 'assets', 'css', $file);
+    $override = \ModulesGarden\GGSModule\Core\ModuleConstants::getFullPath('overrides', 'assets', 'css', $file);
     if (file_exists($override))
     {
         echo "@import \"../../overrides/assets/css/$file\";\n";

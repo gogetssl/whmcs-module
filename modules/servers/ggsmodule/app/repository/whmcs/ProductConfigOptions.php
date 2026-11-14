@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\app\repository\whmcs;
+namespace ModulesGarden\Servers\GGSModule\app\repository\whmcs;
 
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\ProductConfigOption;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\ProductConfigOption;
 
 class ProductConfigOptions {
     public static function get($pid, $serviceid, $billingCycle)

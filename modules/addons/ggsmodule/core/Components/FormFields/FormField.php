@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\FormFields;
+namespace ModulesGarden\GGSModule\Core\Components\FormFields;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ActionOnChangeTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\CssContainerTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ValidatorRulesTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ValueTrait;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\FormFieldInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ValueInterface;
-use ModulesGarden\ggsmodule\Core\Helper\ModuleNamespace;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\ActionOnChangeTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\CssContainerTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\ValidatorRulesTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\ValueTrait;
+use ModulesGarden\GGSModule\Core\Contracts\Components\FormFieldInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ValueInterface;
+use ModulesGarden\GGSModule\Core\Helper\ModuleNamespace;
 
 /**
  * Class Form

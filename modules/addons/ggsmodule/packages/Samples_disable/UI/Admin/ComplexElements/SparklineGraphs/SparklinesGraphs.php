@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\SparklineGraphs;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\SparklineGraphs;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs\SparklineGraphArea;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs\SparklineGraphLine;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Components\Grid\Grid;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs\SparklineGraphArea;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs\SparklineGraphLine;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Components\Grid\Grid;
 
 class SparklinesGraphs extends Container implements AdminAreaInterface
 {

@@ -1,25 +1,25 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Fragments\ServiceLogsWidget\UI\Widgets;
+namespace ModulesGarden\GGSModule\Fragments\ServiceLogsWidget\UI\Widgets;
 
-use ModulesGarden\ggsmodule\Components\DataTable\Column;
-use ModulesGarden\ggsmodule\Components\DataTable\DataTable;
-use ModulesGarden\ggsmodule\Components\VisibilityWrapper\VisibilityWrapper;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ClientAreaInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\AbstractRecordsListDataProvider;
-use ModulesGarden\ggsmodule\Core\DataProviders\QueryDataProvider;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Params;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Packages\Logs\UI\Buttons\DeleteLogButton;
-use ModulesGarden\ggsmodule\Packages\Logs\UI\Buttons\MassDeleteButton;
-use ModulesGarden\ggsmodule\Packages\Logs\UI\Buttons\ShowDataButton;
-use ModulesGarden\ggsmodule\Packages\Logs\UI\Others\TypeLabel;
+use ModulesGarden\GGSModule\Components\DataTable\Column;
+use ModulesGarden\GGSModule\Components\DataTable\DataTable;
+use ModulesGarden\GGSModule\Components\VisibilityWrapper\VisibilityWrapper;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ClientAreaInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\AbstractRecordsListDataProvider;
+use ModulesGarden\GGSModule\Core\DataProviders\QueryDataProvider;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\Support\Facades\Params;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Packages\Logs\UI\Buttons\DeleteLogButton;
+use ModulesGarden\GGSModule\Packages\Logs\UI\Buttons\MassDeleteButton;
+use ModulesGarden\GGSModule\Packages\Logs\UI\Buttons\ShowDataButton;
+use ModulesGarden\GGSModule\Packages\Logs\UI\Others\TypeLabel;
 use WHMCS\Database\Capsule as DB;
-use ModulesGarden\ggsmodule\Packages\Logs\Models\Logs;
-use function ModulesGarden\ggsmodule\Core\Helper\isAdmin;
+use ModulesGarden\GGSModule\Packages\Logs\Models\Logs;
+use function ModulesGarden\GGSModule\Core\Helper\isAdmin;
 
 class ServiceLogsDataTable extends DataTable implements AdminAreaInterface, ClientAreaInterface, AjaxComponentInterface
 {

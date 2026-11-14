@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI;
+namespace ModulesGarden\GGSModule\Core\UI;
 
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\ServiceLocator;
-use ModulesGarden\ggsmodule\Core\Support\Facades\LogActivity;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\ServiceLocator;
+use ModulesGarden\GGSModule\Core\Support\Facades\LogActivity;
 
 /**
  * Smarty Wrapper

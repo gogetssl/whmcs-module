@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Services;
+namespace ModulesGarden\GGSModule\Packages\Product\Services;
 
-use ModulesGarden\ggsmodule\Packages\Product\Models\ProductConfiguration as Model;
+use ModulesGarden\GGSModule\Packages\Product\Models\ProductConfiguration as Model;
 
 class ProductConfiguration
 {

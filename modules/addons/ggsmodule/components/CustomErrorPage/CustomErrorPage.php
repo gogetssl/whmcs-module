@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\CustomErrorPage;
+namespace ModulesGarden\GGSModule\Components\CustomErrorPage;
 
-use ModulesGarden\ggsmodule\Components\BlockZeroData\BlockZeroData;
-use ModulesGarden\ggsmodule\Components\Button\ButtonPrimary;
-use ModulesGarden\ggsmodule\Core\Components\Actions\RedirectToPreviousPage;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ClientAreaInterface;
+use ModulesGarden\GGSModule\Components\BlockZeroData\BlockZeroData;
+use ModulesGarden\GGSModule\Components\Button\ButtonPrimary;
+use ModulesGarden\GGSModule\Core\Components\Actions\RedirectToPreviousPage;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ClientAreaInterface;
 
 class CustomErrorPage extends BlockZeroData implements ClientAreaInterface, AdminAreaInterface
 {

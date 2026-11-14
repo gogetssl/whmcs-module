@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Cron\WithoutThread;
+namespace ModulesGarden\GGSModule\App\Cron\WithoutThread;
 
 use Illuminate\Database\Capsule\Manager as DB;
-use ModulesGarden\ggsmodule\App\Helpers\ModuleSettings;
-use ModulesGarden\ggsmodule\App\Libs\ChildProcess;
-use ModulesGarden\ggsmodule\App\Models\DemonTask as DemonTaskModel;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Models\ModuleSettings as Model;
+use ModulesGarden\GGSModule\App\Helpers\ModuleSettings;
+use ModulesGarden\GGSModule\App\Libs\ChildProcess;
+use ModulesGarden\GGSModule\App\Models\DemonTask as DemonTaskModel;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Models\ModuleSettings as Model;
 
 /**
  * Description of DemonTask
@@ -14,7 +14,7 @@ use ModulesGarden\ggsmodule\Packages\ModuleSettings\Models\ModuleSettings as Mod
 class DemonTask extends AbstractCronControllerWithoutThread
 {
     /**
-     * @var \ModulesGarden\ggsmodule\App\Models\DemonTask
+     * @var \ModulesGarden\GGSModule\App\Models\DemonTask
      */
     protected $demonTask;
 

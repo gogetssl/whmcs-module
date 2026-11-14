@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ProgressBars\Widgets;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ProgressBars\Widgets;
 
-use ModulesGarden\ggsmodule\Components\ProgressBar\ProgressBar;
-use ModulesGarden\ggsmodule\Components\ProgressBar\ProgressBarDanger;
-use ModulesGarden\ggsmodule\Components\ProgressBar\ProgressBarInfo;
-use ModulesGarden\ggsmodule\Components\ProgressBar\ProgressBarSuccess;
-use ModulesGarden\ggsmodule\Components\ProgressBar\ProgressBarWarning;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Components\ProgressBar\ProgressBar;
+use ModulesGarden\GGSModule\Components\ProgressBar\ProgressBarDanger;
+use ModulesGarden\GGSModule\Components\ProgressBar\ProgressBarInfo;
+use ModulesGarden\GGSModule\Components\ProgressBar\ProgressBarSuccess;
+use ModulesGarden\GGSModule\Components\ProgressBar\ProgressBarWarning;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
 class ProgressBarsWidgetBaseStyles extends Widget implements AjaxComponentInterface, AdminAreaInterface
 {

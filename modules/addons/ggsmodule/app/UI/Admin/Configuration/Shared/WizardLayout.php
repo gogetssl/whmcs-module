@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Shared;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Configuration\Shared;
 
-use ModulesGarden\ggsmodule\App\Libs\Edition;
-use ModulesGarden\ggsmodule\App\Migration\Detector;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\App\Libs\Edition;
+use ModulesGarden\GGSModule\App\Migration\Detector;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
 
 /**
  * Installation wizard layout (design: github.com/gogetssl/ssl-plugin-refresh): module header with progress,
@@ -152,7 +152,7 @@ class WizardLayout
 
             // finished steps link back to their page
             $item = $i < $pos
-                ? '<a class="ggs-wizard__item" href="addonmodules.php?module=ggsmodule&amp;mg-page=configuration&amp;mg-action=step' . $page . '">' . $inner . '</a>'
+                ? '<a class="ggs-wizard__item" href="addonmodules.php?module=GGSModule&amp;mg-page=configuration&amp;mg-action=step' . $page . '">' . $inner . '</a>'
                 : '<span class="ggs-wizard__item"' . ($i === $pos ? ' aria-current="step"' : '') . '>' . $inner . '</span>';
 
             $html .= '<li class="' . $state . '">' . $item . '</li>';

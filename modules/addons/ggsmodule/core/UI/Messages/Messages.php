@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Messages;
+namespace ModulesGarden\GGSModule\Core\UI\Messages;
 
 class Messages
 {

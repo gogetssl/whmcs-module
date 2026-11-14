@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Validation;
+namespace ModulesGarden\GGSModule\Core\Validation;
 
-use ModulesGarden\ggsmodule\Core\Support\Bridges\IlluminateTranslator;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Translator;
+use ModulesGarden\GGSModule\Core\Support\Bridges\IlluminateTranslator;
+use ModulesGarden\GGSModule\Core\Support\Facades\Translator;
 
 class ValidatorService
 {

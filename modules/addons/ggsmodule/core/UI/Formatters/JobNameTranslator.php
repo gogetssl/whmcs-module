@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Formatters;
+namespace ModulesGarden\GGSModule\Core\UI\Formatters;
 
-use ModulesGarden\ggsmodule\Core\Components\Traits\TranslatorTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TranslatorTrait;
 
 class JobNameTranslator
 {

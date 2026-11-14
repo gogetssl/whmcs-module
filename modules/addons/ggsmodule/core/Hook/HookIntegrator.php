@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Hook;
+namespace ModulesGarden\GGSModule\Core\Hook;
 
-use ModulesGarden\ggsmodule\Core\DependencyInjection;
-use ModulesGarden\ggsmodule\Core\Hook\Integration\IntegrationChecker;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Params;
-use ModulesGarden\ggsmodule\Core\UI\View;
-use ModulesGarden\ggsmodule\Core\UI\ViewAjax;
-use function ModulesGarden\ggsmodule\Core\Helper\isAdmin;
-use function ModulesGarden\ggsmodule\Core\make;
+use ModulesGarden\GGSModule\Core\DependencyInjection;
+use ModulesGarden\GGSModule\Core\Hook\Integration\IntegrationChecker;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\Support\Facades\Params;
+use ModulesGarden\GGSModule\Core\UI\View;
+use ModulesGarden\GGSModule\Core\UI\ViewAjax;
+use function ModulesGarden\GGSModule\Core\Helper\isAdmin;
+use function ModulesGarden\GGSModule\Core\make;
 
 /**
  *  class HookIntegrator
@@ -201,7 +201,7 @@ class HookIntegrator
             $callbackData = $integration->getControllerCallback();
 
             /** @var
-             * $integrationResult \ModulesGarden\ggsmodule\Core\UI\View
+             * $integrationResult \ModulesGarden\GGSModule\Core\UI\View
              */
             $integrationResult = call_user_func([make($callbackData->getController()), $callbackData->getAction()]);
             if (!($integrationResult instanceof View) && !($integrationResult instanceof ViewAjax))

@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Exporters\DataModels;
+namespace ModulesGarden\GGSModule\Core\Exporters\DataModels;
 
-use ModulesGarden\ggsmodule\Core\Exporters\Source\BaseDataModel;
+use ModulesGarden\GGSModule\Core\Exporters\Source\BaseDataModel;
 use Stringable;
 
 class StringData extends BaseDataModel implements Stringable

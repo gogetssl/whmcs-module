@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\VncConsole;
+namespace ModulesGarden\GGSModule\Components\VncConsole;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
 
 class VncConsole extends AbstractComponent
 {

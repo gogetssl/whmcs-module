@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Container;
+namespace ModulesGarden\GGSModule\Components\Container;
 
-use ModulesGarden\ggsmodule\Core\Components\Enums\ColumnSize;
+use ModulesGarden\GGSModule\Core\Components\Enums\ColumnSize;
 
 /**
  * Class Form

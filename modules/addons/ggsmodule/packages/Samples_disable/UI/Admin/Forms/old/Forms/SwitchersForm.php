@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Forms;
 
-use ModulesGarden\ggsmodule\Components\Alert\AlertInfo;
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
-use ModulesGarden\ggsmodule\Components\TableSimple\Record\Record;
-use ModulesGarden\ggsmodule\Components\TableSimple\TableSimple;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Reload;
+use ModulesGarden\GGSModule\Components\Alert\AlertInfo;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Components\TableSimple\Record\Record;
+use ModulesGarden\GGSModule\Components\TableSimple\TableSimple;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Actions\Reload;
 
-class SwitchersForm extends \ModulesGarden\ggsmodule\Components\Form\Form
+class SwitchersForm extends \ModulesGarden\GGSModule\Components\Form\Form
 {
     public function loadHtml(): void
     {

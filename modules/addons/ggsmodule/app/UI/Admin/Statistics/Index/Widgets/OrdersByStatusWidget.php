@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Statistics\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Statistics\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Statistics\Index\Graphs\OrdersByStatusGraph;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\App\UI\Admin\Statistics\Index\Graphs\OrdersByStatusGraph;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
 
 
 class OrdersByStatusWidget extends Widget

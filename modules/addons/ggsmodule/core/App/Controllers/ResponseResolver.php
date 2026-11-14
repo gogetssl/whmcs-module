@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers;
+namespace ModulesGarden\GGSModule\Core\App\Controllers;
 
-use ModulesGarden\ggsmodule\Core\App\Controllers\ResponseResolver\Resolver;
-use ModulesGarden\ggsmodule\Core\Http\JsonResponse;
-use ModulesGarden\ggsmodule\Core\Http\RedirectResponse;
-use ModulesGarden\ggsmodule\Core\Traits\OutputBuffer;
-use ModulesGarden\ggsmodule\Core\Traits\Template;
-use ModulesGarden\ggsmodule\Core\UI\View;
-use ModulesGarden\ggsmodule\Core\UI\ViewAjax;
-use ModulesGarden\ggsmodule\Core\UI\Views\AbstractView;
+use ModulesGarden\GGSModule\Core\App\Controllers\ResponseResolver\Resolver;
+use ModulesGarden\GGSModule\Core\Http\JsonResponse;
+use ModulesGarden\GGSModule\Core\Http\RedirectResponse;
+use ModulesGarden\GGSModule\Core\Traits\OutputBuffer;
+use ModulesGarden\GGSModule\Core\Traits\Template;
+use ModulesGarden\GGSModule\Core\UI\View;
+use ModulesGarden\GGSModule\Core\UI\ViewAjax;
+use ModulesGarden\GGSModule\Core\UI\Views\AbstractView;
 
 class ResponseResolver
 {
@@ -98,7 +98,7 @@ class ResponseResolver
 
 
     /**
-     * resolve \ModulesGarden\ggsmodule\Core\Http\JsonResponse
+     * resolve \ModulesGarden\GGSModule\Core\Http\JsonResponse
      */
     public function resolveJson()
     {

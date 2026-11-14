@@ -1,18 +1,18 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Notifications\Components;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Notifications\Components;
 
-use ModulesGarden\ggsmodule\Components\Link\Link;
-use ModulesGarden\ggsmodule\Components\NotificationDropdown\NotificationDropdown;
-use ModulesGarden\ggsmodule\Components\NotificationDropdownItem\NotificationDropdownItem;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Redirect;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Reload;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItemLink;
-use ModulesGarden\ggsmodule\Packages\Notifier\Models\Notification;
-use ModulesGarden\ggsmodule\Packages\Notifier\Recipient\Administrator;
-use ModulesGarden\ggsmodule\Packages\Notifier\Support\Facades\Notifier;
+use ModulesGarden\GGSModule\Components\Link\Link;
+use ModulesGarden\GGSModule\Components\NotificationDropdown\NotificationDropdown;
+use ModulesGarden\GGSModule\Components\NotificationDropdownItem\NotificationDropdownItem;
+use ModulesGarden\GGSModule\Core\Components\Actions\Redirect;
+use ModulesGarden\GGSModule\Core\Components\Actions\Reload;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItemLink;
+use ModulesGarden\GGSModule\Packages\Notifier\Models\Notification;
+use ModulesGarden\GGSModule\Packages\Notifier\Recipient\Administrator;
+use ModulesGarden\GGSModule\Packages\Notifier\Support\Facades\Notifier;
 
 class Notifications extends NotificationDropdown implements AjaxComponentInterface, AdminAreaInterface
 {

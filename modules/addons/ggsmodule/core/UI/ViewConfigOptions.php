@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI;
+namespace ModulesGarden\GGSModule\Core\UI;
 
-use ModulesGarden\ggsmodule\Core\Exceptions\UserException;
-use ModulesGarden\ggsmodule\Core\Helper\BuildUrl;
-use ModulesGarden\ggsmodule\Core\UI\PageParams\ExtraParams;
-use ModulesGarden\ggsmodule\Core\Helper\RandomStringGenerator;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Store;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Messages;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\UI\View\AlertsBuilder;
-use ModulesGarden\ggsmodule\Core\UI\View\NavBarBuilder;
+use ModulesGarden\GGSModule\Core\Exceptions\UserException;
+use ModulesGarden\GGSModule\Core\Helper\BuildUrl;
+use ModulesGarden\GGSModule\Core\UI\PageParams\ExtraParams;
+use ModulesGarden\GGSModule\Core\Helper\RandomStringGenerator;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Support\Facades\Store;
+use ModulesGarden\GGSModule\Core\Support\Facades\Messages;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\UI\View\AlertsBuilder;
+use ModulesGarden\GGSModule\Core\UI\View\NavBarBuilder;
 
 /**
  * Integration Addon View Controller
@@ -36,7 +36,7 @@ class ViewConfigOptions extends View
                 }
             }
 
-            return \ModulesGarden\ggsmodule\Core\Support\Facades\Smarty::view($this->template, [
+            return \ModulesGarden\GGSModule\Core\Support\Facades\Smarty::view($this->template, [
                 'rootElements'    => json_encode([
                     'navbar' => $this->buildRootElements([(new NavBarBuilder())->createProductConfiguration()])[0],
                     //                'breadcrumb' => (new BreadcrumbsBuilder())->create(),//$this->buildRootElements([])[0],
@@ -51,7 +51,7 @@ class ViewConfigOptions extends View
                 'vueInstanceName' => (new RandomStringGenerator(32))->genRandomString(ModuleConstants::getModuleName()),
                 'vueStoreData'    => json_encode(Store::toArray()),
                 'moduleName'      => ModuleConstants::getModuleName(),
-                'moduleVersion'   => \ModulesGarden\ggsmodule\Core\Support\Facades\Config::get('configuration.version'),
+                'moduleVersion'   => \ModulesGarden\GGSModule\Core\Support\Facades\Config::get('configuration.version'),
             ], ModuleConstants::getTemplateDir() . '/controllers');
 
         }
@@ -60,7 +60,7 @@ class ViewConfigOptions extends View
 
             Messages::alert($ex->getMessage());
 
-            return \ModulesGarden\ggsmodule\Core\Support\Facades\Smarty::view($this->template, [
+            return \ModulesGarden\GGSModule\Core\Support\Facades\Smarty::view($this->template, [
                 'rootElements'    => json_encode([
                     'alerts' => (new AlertsBuilder())->create()
                 ]),
@@ -72,7 +72,7 @@ class ViewConfigOptions extends View
                 'vueInstanceName' => (new RandomStringGenerator(32))->genRandomString(ModuleConstants::getModuleName()),
                 'vueStoreData'    => json_encode(Store::toArray()),
                 'moduleName'      => ModuleConstants::getModuleName(),
-                'moduleVersion'   => \ModulesGarden\ggsmodule\Core\Support\Facades\Config::get('configuration.version'),
+                'moduleVersion'   => \ModulesGarden\GGSModule\Core\Support\Facades\Config::get('configuration.version'),
             ], ModuleConstants::getTemplateDir() . '/controllers');
         }
     }

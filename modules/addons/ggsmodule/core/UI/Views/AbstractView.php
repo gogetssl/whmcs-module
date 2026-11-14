@@ -1,19 +1,19 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Views;
+namespace ModulesGarden\GGSModule\Core\UI\Views;
 
-use ModulesGarden\ggsmodule\Core\Components\DataBuilder;
-use ModulesGarden\ggsmodule\Core\Helper\BuildUrl;
-use ModulesGarden\ggsmodule\Core\Helper\RandomStringGenerator;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Store;
-use ModulesGarden\ggsmodule\Core\UI\AbstractPartialView;
-use ModulesGarden\ggsmodule\Core\UI\PageParams\ExtraParams;
-use ModulesGarden\ggsmodule\Core\UI\View\AlertsBuilder;
-use ModulesGarden\ggsmodule\Core\UI\View\BreadcrumbsBuilder;
-use ModulesGarden\ggsmodule\Core\UI\View\FooterBuilder;
-use ModulesGarden\ggsmodule\Core\UI\View\NavBarBuilder;
-use function ModulesGarden\ggsmodule\Core\Helper\isAdmin;
+use ModulesGarden\GGSModule\Core\Components\DataBuilder;
+use ModulesGarden\GGSModule\Core\Helper\BuildUrl;
+use ModulesGarden\GGSModule\Core\Helper\RandomStringGenerator;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Support\Facades\Store;
+use ModulesGarden\GGSModule\Core\UI\AbstractPartialView;
+use ModulesGarden\GGSModule\Core\UI\PageParams\ExtraParams;
+use ModulesGarden\GGSModule\Core\UI\View\AlertsBuilder;
+use ModulesGarden\GGSModule\Core\UI\View\BreadcrumbsBuilder;
+use ModulesGarden\GGSModule\Core\UI\View\FooterBuilder;
+use ModulesGarden\GGSModule\Core\UI\View\NavBarBuilder;
+use function ModulesGarden\GGSModule\Core\Helper\isAdmin;
 
 class AbstractView
 {
@@ -48,7 +48,7 @@ class AbstractView
             'vueInstanceName' => (new RandomStringGenerator(32))->genRandomString(ModuleConstants::getModuleName()),
             'vueStoreData'    => json_encode(Store::toArray()),
             'moduleName'      => ModuleConstants::getModuleName(),
-            'moduleVersion'   => \ModulesGarden\ggsmodule\Core\Support\Facades\Config::get('configuration.version'),
+            'moduleVersion'   => \ModulesGarden\GGSModule\Core\Support\Facades\Config::get('configuration.version'),
             'integrationType' => 'module',
             'isAdminArea'     => isAdmin() ? 1 : 0,
         ];

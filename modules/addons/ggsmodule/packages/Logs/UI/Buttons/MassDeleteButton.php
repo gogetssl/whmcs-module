@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Buttons;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Buttons;
 
-use ModulesGarden\ggsmodule\Components\IconButton\IconButtonDelete;
-use ModulesGarden\ggsmodule\Core\Components\Action;
-use ModulesGarden\ggsmodule\Packages\Logs\UI\Modals\MassDeleteModal;
+use ModulesGarden\GGSModule\Components\IconButton\IconButtonDelete;
+use ModulesGarden\GGSModule\Core\Components\Action;
+use ModulesGarden\GGSModule\Packages\Logs\UI\Modals\MassDeleteModal;
 
 class MassDeleteButton extends IconButtonDelete
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Routing;
+namespace ModulesGarden\GGSModule\Core\Routing;
 
 class RouteNotFound extends Route
 {

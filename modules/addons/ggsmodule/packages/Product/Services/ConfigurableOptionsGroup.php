@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Services;
+namespace ModulesGarden\GGSModule\Packages\Product\Services;
 
-use ModulesGarden\ggsmodule\App\Http\Actions\MetaData;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TranslatorTrait;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Support\Arr;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Product;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\ProductConfigGroup;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\ProductConfigLink;
+use ModulesGarden\GGSModule\App\Http\Actions\MetaData;
+use ModulesGarden\GGSModule\Core\Components\Traits\TranslatorTrait;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Support\Arr;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Product;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\ProductConfigGroup;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\ProductConfigLink;
 
 class ConfigurableOptionsGroup
 {

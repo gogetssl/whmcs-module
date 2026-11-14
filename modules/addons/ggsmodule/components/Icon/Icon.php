@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Icon;
+namespace ModulesGarden\GGSModule\Components\Icon;
 
-use ModulesGarden\ggsmodule\App\Libs\Icons;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\CssContainerTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TitleTrait;
+use ModulesGarden\GGSModule\App\Libs\Icons;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\CssContainerTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TitleTrait;
 
 /**
  * Class Form

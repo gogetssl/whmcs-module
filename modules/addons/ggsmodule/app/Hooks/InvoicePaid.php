@@ -1,10 +1,10 @@
 <?php
 
 
-use ModulesGarden\ggsmodule\App\Helpers\EmailTemplates;
-use ModulesGarden\ggsmodule\App\Libs\AcmeHelpers;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Service;
+use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
+use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Service;
 
 $hookManager->register(
     function($args) {
@@ -12,7 +12,7 @@ $hookManager->register(
         try
         {
             // domains bought on the module's invoice ("Buy more domains")
-            \ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::applySlotPurchase((int)($args['invoiceid'] ?? 0));
+            \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::applySlotPurchase((int)($args['invoiceid'] ?? 0));
 
             $items = \WHMCS\Database\Capsule::table('tblinvoiceitems')
                 ->where('invoiceid', (int)($args['invoiceid'] ?? 0))
@@ -23,10 +23,10 @@ $hookManager->register(
             foreach($items as $item)
             {
                 // the same subscription carries on: its renewal and due date move one year on
-                \ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::renewalPaid((int)$item->relid, (int)($args['invoiceid'] ?? 0));
+                \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::renewalPaid((int)$item->relid, (int)($args['invoiceid'] ?? 0));
                 $service = Service::find((int)$item->relid);
 
-                if($service && \ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::isSubscriptionProduct($service->packageid))
+                if($service && \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::isSubscriptionProduct($service->packageid))
                 {
                     EmailTemplates::sendEmail(EmailTemplates::SUBSCRIPTION_RENEWAL_TEMPLATE, $service->id, []);
                 }

@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Forms;
 
-use ModulesGarden\ggsmodule\Components\Form\AbstractForm;
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
-use ModulesGarden\ggsmodule\Components\HiddenField\HiddenField;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Providers\UserProvider;
+use ModulesGarden\GGSModule\Components\Form\AbstractForm;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Components\HiddenField\HiddenField;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Providers\UserProvider;
 
 class UserEdit extends AbstractForm implements AjaxComponentInterface, AdminAreaInterface
 {

@@ -7,7 +7,7 @@
     {/if}
 
     <form method="get" action="index.php" class="form-inline ggs-domain-search" style="margin-bottom:15px;">
-        <input type="hidden" name="m" value="ggsmodule">
+        <input type="hidden" name="m" value="GGSModule">
         <input type="hidden" name="page" value="domains">
         <input type="text" name="search" value="{$search|escape}" class="form-control" placeholder="{$t.searchPlaceholder}">
         <select name="status" class="form-control">

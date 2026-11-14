@@ -1,33 +1,33 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Cron;
+namespace ModulesGarden\GGSModule\App\Cron;
 
 use Exception;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Libs\GeneralSettings;
-use ModulesGarden\ggsmodule\App\Libs\FinancePolicy;
-use ModulesGarden\ggsmodule\App\Libs\RenewalPrices;
-use ModulesGarden\ggsmodule\App\Libs\PricingService;
-use ModulesGarden\ggsmodule\App\Libs\ProductSettings;
-use ModulesGarden\ggsmodule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\ggsmodule\App\Models\CronCheck;
-use ModulesGarden\ggsmodule\App\Models\RemoteProduct;
-use ModulesGarden\ggsmodule\App\Models\Request;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\ggsmodule\Core\CommandLine\AbstractCommand;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Currency;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Pricing;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Service;
-use ModulesGarden\ggsmodule\Packages\Logs\Support\Facades\Logger;
-use ModulesGarden\ggsmodule\Packages\Product\Services\ConfigurableOptions;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
+use ModulesGarden\GGSModule\App\Libs\FinancePolicy;
+use ModulesGarden\GGSModule\App\Libs\RenewalPrices;
+use ModulesGarden\GGSModule\App\Libs\PricingService;
+use ModulesGarden\GGSModule\App\Libs\ProductSettings;
+use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
+use ModulesGarden\GGSModule\App\Models\CronCheck;
+use ModulesGarden\GGSModule\App\Models\RemoteProduct;
+use ModulesGarden\GGSModule\App\Models\Request;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
+use ModulesGarden\GGSModule\Core\CommandLine\AbstractCommand;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Currency;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Pricing;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Service;
+use ModulesGarden\GGSModule\Packages\Logs\Support\Facades\Logger;
+use ModulesGarden\GGSModule\Packages\Product\Services\ConfigurableOptions;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
 /**
  * Class Sample
- * @package ModulesGarden\ggsmodule\App\Cron
+ * @package ModulesGarden\GGSModule\App\Cron
  */
 class ProductPricingUpdate extends AbstractCommand
 {
@@ -181,9 +181,9 @@ class ProductPricingUpdate extends AbstractCommand
                 }
 
                 // code signing: token shipping fees of the "Certificate Delivery" option
-                if(strtolower((string)$remoteProduct->category) === \ModulesGarden\ggsmodule\App\Libs\CodeSigningService::CATEGORY)
+                if(strtolower((string)$remoteProduct->category) === \ModulesGarden\GGSModule\App\Libs\CodeSigningService::CATEGORY)
                 {
-                    \ModulesGarden\ggsmodule\App\Libs\CodeSigningService::syncDeliveryPrices($whmcsProduct->id, (array)$remoteProductData);
+                    \ModulesGarden\GGSModule\App\Libs\CodeSigningService::syncDeliveryPrices($whmcsProduct->id, (array)$remoteProductData);
                 }
 
                 $expectedOptionNames = [
@@ -281,7 +281,7 @@ class ProductPricingUpdate extends AbstractCommand
         }
         catch(\Throwable $exception)
         {
-            Logger::error('ProductPricingUpdate Cron Error: ' . $exception->getMessage(), \ModulesGarden\ggsmodule\App\Libs\LogContext::exception($exception));
+            Logger::error('ProductPricingUpdate Cron Error: ' . $exception->getMessage(), \ModulesGarden\GGSModule\App\Libs\LogContext::exception($exception));
             $errorToDB = $exception->getMessage();
         }
 

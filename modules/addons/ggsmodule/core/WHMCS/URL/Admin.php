@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\URL;
+namespace ModulesGarden\GGSModule\Core\WHMCS\URL;
 
 class Admin
 {
@@ -9,28 +9,28 @@ class Admin
         $parameters['action'] = 'manage';
         $parameters['id'] = $adminId;
 
-        return \ModulesGarden\ggsmodule\Core\Routing\Url::adminarea('configadmins.php', $parameters);
+        return \ModulesGarden\GGSModule\Core\Routing\Url::adminarea('configadmins.php', $parameters);
     }
 
     public static function clientSummary(int $clientId, array $parameters = [])
     {
         $parameters['userid'] = $clientId;
 
-        return \ModulesGarden\ggsmodule\Core\Routing\Url::adminarea('clientssummary.php', $parameters);
+        return \ModulesGarden\GGSModule\Core\Routing\Url::adminarea('clientssummary.php', $parameters);
     }
 
     public static function clientServices(int $clientId, array $parameters = [])
     {
         $parameters['userid'] = $clientId;
 
-        return \ModulesGarden\ggsmodule\Core\Routing\Url::adminarea('clientsservices.php', $parameters);
+        return \ModulesGarden\GGSModule\Core\Routing\Url::adminarea('clientsservices.php', $parameters);
     }
 
     public static function clientDomains(int $clientId, array $parameters = [])
     {
         $parameters['userid'] = $clientId;
 
-        return \ModulesGarden\ggsmodule\Core\Routing\Url::adminarea('clientsdomains.php', $parameters);
+        return \ModulesGarden\GGSModule\Core\Routing\Url::adminarea('clientsdomains.php', $parameters);
     }
 
     public static function invoices(int $invoiceId, array $parameters = [])
@@ -38,7 +38,7 @@ class Admin
         $parameters['action'] = 'edit';
         $parameters['id'] = $invoiceId;
 
-        return \ModulesGarden\ggsmodule\Core\Routing\Url::adminarea('invoices.php', $parameters);
+        return \ModulesGarden\GGSModule\Core\Routing\Url::adminarea('invoices.php', $parameters);
     }
 
     public static function tickets(int $ticketId, array $parameters = [])
@@ -46,7 +46,7 @@ class Admin
         $parameters['action'] = 'view';
         $parameters['id'] = $ticketId;
 
-        return \ModulesGarden\ggsmodule\Core\Routing\Url::adminarea('supporttickets.php', $parameters);
+        return \ModulesGarden\GGSModule\Core\Routing\Url::adminarea('supporttickets.php', $parameters);
     }
 
     public static function orders(int $orderId, array $parameters = [])
@@ -54,7 +54,7 @@ class Admin
         $parameters['action'] = 'view';
         $parameters['id'] = $orderId;
 
-        return \ModulesGarden\ggsmodule\Core\Routing\Url::adminarea('orders.php', $parameters);
+        return \ModulesGarden\GGSModule\Core\Routing\Url::adminarea('orders.php', $parameters);
     }
 
     public static function productConfig(int $productId, array $parameters = [])
@@ -62,7 +62,7 @@ class Admin
         $parameters['action'] = 'edit';
         $parameters['id'] = $productId;
 
-        return \ModulesGarden\ggsmodule\Core\Routing\Url::adminarea('configproducts.php', $parameters);
+        return \ModulesGarden\GGSModule\Core\Routing\Url::adminarea('configproducts.php', $parameters);
     }
 
     public static function productAddonConfig(int $productAddonId, array $parameters = [])
@@ -75,7 +75,7 @@ class Admin
 
     public static function downloadAttachmentUrl(string $type, int $id, int $index): string
     {
-        return \ModulesGarden\ggsmodule\Core\Routing\Url::clientarea('dl.php', [
+        return \ModulesGarden\GGSModule\Core\Routing\Url::clientarea('dl.php', [
             'type' => $type,
             'id' => $id,
             'i' => $index
@@ -84,7 +84,7 @@ class Admin
 
     public static function showAttachmentUrl(string $type, int $id, int $index): string
     {
-        return \ModulesGarden\ggsmodule\Core\Routing\Url::clientarea('includes/thumbnail.php', [
+        return \ModulesGarden\GGSModule\Core\Routing\Url::clientarea('includes/thumbnail.php', [
             "{$type}id" => $id,
             'i' => $index
         ]);
@@ -105,6 +105,6 @@ class Admin
             $params['type'] = $type;
         }
 
-        return \ModulesGarden\ggsmodule\Core\Routing\Url::generateUrl(\ModulesGarden\ggsmodule\Core\Routing\Url::getAdminFolderPath() . 'supporttickets.php', $params) . $token;
+        return \ModulesGarden\GGSModule\Core\Routing\Url::generateUrl(\ModulesGarden\GGSModule\Core\Routing\Url::getAdminFolderPath() . 'supporttickets.php', $params) . $token;
     }
 }

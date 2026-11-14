@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DynamicTabs\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DynamicTabs\Forms;
 
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DynamicTabs\Providers\EditTabsProvider;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DynamicTabs\Providers\EditTabsProvider;
 
 class EditTabsForm extends Form implements AdminAreaInterface, AjaxComponentInterface
 {

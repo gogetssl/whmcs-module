@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers;
+namespace ModulesGarden\GGSModule\Core\App\Controllers;
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\Params;
+use ModulesGarden\GGSModule\Core\Support\Facades\Params;
 
 abstract class AppController
 {

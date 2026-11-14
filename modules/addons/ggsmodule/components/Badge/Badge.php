@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Badge;
+namespace ModulesGarden\GGSModule\Components\Badge;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Enums\Color;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\OutlineTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TextTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TitleTrait;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Enums\Color;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\OutlineTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TextTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TitleTrait;
 
 /**
  * Class Form

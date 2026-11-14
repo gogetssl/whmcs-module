@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\PageParams\Source;
+namespace ModulesGarden\GGSModule\Core\UI\PageParams\Source;
 
 interface ModuleActionInterface
 {

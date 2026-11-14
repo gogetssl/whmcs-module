@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Actions;
+namespace ModulesGarden\GGSModule\Core\Components\Actions;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractActionInterface;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Traits\WithDataFromFormTrait;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Traits\WithParamsTrait;
+use ModulesGarden\GGSModule\Core\Components\AbstractActionInterface;
+use ModulesGarden\GGSModule\Core\Components\Actions\Traits\WithDataFromFormTrait;
+use ModulesGarden\GGSModule\Core\Components\Actions\Traits\WithParamsTrait;
 
 class ReloadById extends AbstractActionInterface
 {

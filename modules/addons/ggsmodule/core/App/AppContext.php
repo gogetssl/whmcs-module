@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App;
+namespace ModulesGarden\GGSModule\Core\App;
 
 use Exception;
-use ModulesGarden\ggsmodule\Core\Support\Facades\LogActivity;
+use ModulesGarden\GGSModule\Core\Support\Facades\LogActivity;
 
 class AppContext
 {

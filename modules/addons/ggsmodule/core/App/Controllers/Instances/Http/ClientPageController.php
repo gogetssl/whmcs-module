@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Http;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\Instances\Http;
 
-use ModulesGarden\ggsmodule\App\Hooks\InternalHooks\PreClientAreaPageLoad;
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\HttpController;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\ClientAreaInterface;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Routing\Url;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Breadcrumbs;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Translator;
-use ModulesGarden\ggsmodule\Core\UI\View;
-use ModulesGarden\ggsmodule\Core\UI\Views\AddonModuleClientArea;
+use ModulesGarden\GGSModule\App\Hooks\InternalHooks\PreClientAreaPageLoad;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\HttpController;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\ClientAreaInterface;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Routing\Url;
+use ModulesGarden\GGSModule\Core\Support\Facades\Breadcrumbs;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\Support\Facades\Translator;
+use ModulesGarden\GGSModule\Core\UI\View;
+use ModulesGarden\GGSModule\Core\UI\Views\AddonModuleClientArea;
 
 class ClientPageController extends HttpController implements ClientAreaInterface
 {
@@ -26,7 +26,7 @@ class ClientPageController extends HttpController implements ClientAreaInterface
             'requirelogin' => true,
             'forcessl'     => false,
             'vars'         => [
-                'content' => \ModulesGarden\ggsmodule\Core\Support\Facades\Smarty::view('clientarea', $vars, ModuleConstants::getTemplateDir() . '/controllers')
+                'content' => \ModulesGarden\GGSModule\Core\Support\Facades\Smarty::view('clientarea', $vars, ModuleConstants::getTemplateDir() . '/controllers')
             ]
         ];
     }

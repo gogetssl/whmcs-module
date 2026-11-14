@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Modals;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Modals;
 
-use ModulesGarden\ggsmodule\Components\Modal;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Components\Modal;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
 class UserCreate extends Modal\ModalEdit implements AdminAreaInterface, AjaxComponentInterface
 {
     public function loadHtml(): void
     {
-        $this->addElement(new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Forms\UserCreate());
+        $this->addElement(new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Forms\UserCreate());
     }
 }

@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared;
 
 
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Models\CronCheck;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Models\CronCheck;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
-use ModulesGarden\ggsmodule\Packages\Logs\Models\Logs;
+use ModulesGarden\GGSModule\Packages\Logs\Models\Logs;
 
 class LogProvider
 {

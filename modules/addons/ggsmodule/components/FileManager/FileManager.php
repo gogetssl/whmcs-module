@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\FileManager;
+namespace ModulesGarden\GGSModule\Components\FileManager;
 
-use ModulesGarden\ggsmodule\Components\DataTable\Column;
-use ModulesGarden\ggsmodule\Components\DataTable\DataTable;
-use ModulesGarden\ggsmodule\Components\FileManager\Providers\FileManagerProvider;
-use ModulesGarden\ggsmodule\Components\FileManager\Source\Item;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButton;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButtonInfo;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ReloadById;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Components\DataTable\Column;
+use ModulesGarden\GGSModule\Components\DataTable\DataTable;
+use ModulesGarden\GGSModule\Components\FileManager\Providers\FileManagerProvider;
+use ModulesGarden\GGSModule\Components\FileManager\Source\Item;
+use ModulesGarden\GGSModule\Components\IconButton\IconButton;
+use ModulesGarden\GGSModule\Components\IconButton\IconButtonInfo;
+use ModulesGarden\GGSModule\Core\Components\Actions\ReloadById;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
 abstract class FileManager extends DataTable implements AjaxComponentInterface, AdminAreaInterface
 {

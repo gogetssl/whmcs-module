@@ -1,7 +1,7 @@
 <?php
 // phpcs:ignoreFile
-use ModulesGarden\ggsmodule\App\Events\MyTestEvent;
-use ModulesGarden\ggsmodule\App\Listeners\MyTestListener;
+use ModulesGarden\GGSModule\App\Events\MyTestEvent;
+use ModulesGarden\GGSModule\App\Listeners\MyTestListener;
 
 return [
 //    MyTestEvent::class => [

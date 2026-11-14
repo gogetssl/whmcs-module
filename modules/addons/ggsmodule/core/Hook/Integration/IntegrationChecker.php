@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Hook\Integration;
+namespace ModulesGarden\GGSModule\Core\Hook\Integration;
 
-use ModulesGarden\ggsmodule\Core\Http\AbstractClientController;
-use ModulesGarden\ggsmodule\Core\Http\AbstractController;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\Http\AbstractClientController;
+use ModulesGarden\GGSModule\Core\Http\AbstractController;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
 class IntegrationChecker
 {

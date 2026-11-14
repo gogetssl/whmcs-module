@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Helper\Color\Models;
+namespace ModulesGarden\GGSModule\Core\Helper\Color\Models;
 
 class RgbaColor extends Color
 {

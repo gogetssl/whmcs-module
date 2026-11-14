@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem;
+namespace ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem;
 
 interface ItemTypeInterface
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\DataTable;
+namespace ModulesGarden\GGSModule\Components\DataTable;
 
-use ModulesGarden\ggsmodule\Core\Data\ToArrayTrait;
-use ModulesGarden\ggsmodule\Core\DataProviders\AbstractRecordsListDataProvider;
+use ModulesGarden\GGSModule\Core\Data\ToArrayTrait;
+use ModulesGarden\GGSModule\Core\DataProviders\AbstractRecordsListDataProvider;
 
-class Column extends \ModulesGarden\ggsmodule\Core\DataProviders\Column implements \JsonSerializable
+class Column extends \ModulesGarden\GGSModule\Core\DataProviders\Column implements \JsonSerializable
 {
     use ToArrayTrait;
 

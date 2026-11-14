@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\ModuleSettings\Models;
+namespace ModulesGarden\GGSModule\Packages\ModuleSettings\Models;
 
-use ModulesGarden\ggsmodule\Core\Models\ExtendedEloquentModel;
+use ModulesGarden\GGSModule\Core\Models\ExtendedEloquentModel;
 use Illuminate\Database\Capsule\Manager as DB;
 
 /**

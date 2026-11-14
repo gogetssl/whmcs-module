@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptions\SubOption;
+namespace ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptions\SubOption;
 
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Currency;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Pricing;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\ProductConfigOption;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\ProductConfigOptionSub;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Currency;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Pricing;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\ProductConfigOption;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\ProductConfigOptionSub;
 
 /**
  *

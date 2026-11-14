@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ServicePricingWidget\Models;
+namespace ModulesGarden\GGSModule\Components\ServicePricingWidget\Models;
 
 class Number extends Input
 {

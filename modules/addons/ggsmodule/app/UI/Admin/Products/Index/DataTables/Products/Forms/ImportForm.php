@@ -1,29 +1,29 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Products\Index\DataTables\Products\Forms;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Products\Index\DataTables\Products\Forms;
 
 
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\UI\Admin\Products\Index\DataTables\Products\Providers\ImportProvider;
-use ModulesGarden\ggsmodule\Components\Alert\Alert;
-use ModulesGarden\ggsmodule\Components\Alert\AlertInfo;
-use ModulesGarden\ggsmodule\Components\Alert\AlertWarning;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
-use ModulesGarden\ggsmodule\Components\Grid\Grid;
-use ModulesGarden\ggsmodule\Components\HiddenField\HiddenField;
-use ModulesGarden\ggsmodule\Components\Number\Number;
-use ModulesGarden\ggsmodule\Components\RadioButton\RadioButton;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
-use ModulesGarden\ggsmodule\Components\Tagger\Tagger;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Reload;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\UI\Admin\Products\Index\DataTables\Products\Providers\ImportProvider;
+use ModulesGarden\GGSModule\Components\Alert\Alert;
+use ModulesGarden\GGSModule\Components\Alert\AlertInfo;
+use ModulesGarden\GGSModule\Components\Alert\AlertWarning;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Components\Grid\Grid;
+use ModulesGarden\GGSModule\Components\HiddenField\HiddenField;
+use ModulesGarden\GGSModule\Components\Number\Number;
+use ModulesGarden\GGSModule\Components\RadioButton\RadioButton;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Components\Tagger\Tagger;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Core\Components\Actions\Reload;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
 
 class ImportForm extends Form implements AdminAreaInterface, AjaxComponentInterface

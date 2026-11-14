@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\Forms;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\Forms;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\Providers\GetCsvProvider;
-use ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\Providers\FilterProvider;
-use ModulesGarden\ggsmodule\Components\Button\ButtonPrimary;
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Components\Toolbar\Toolbar;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ReloadById;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\Providers\GetCsvProvider;
+use ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\Providers\FilterProvider;
+use ModulesGarden\GGSModule\Components\Button\ButtonPrimary;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\Toolbar\Toolbar;
+use ModulesGarden\GGSModule\Core\Components\Actions\ReloadById;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
 
 class GetCsvForm extends Form implements AdminAreaInterface, AjaxComponentInterface

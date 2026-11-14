@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Listeners;
+namespace ModulesGarden\GGSModule\Packages\Product\Listeners;
 
-use ModulesGarden\ggsmodule\Core\Database\FileLoader;
-use ModulesGarden\ggsmodule\Core\Events\Listener;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Support\Facades\LogActivity;
+use ModulesGarden\GGSModule\Core\Database\FileLoader;
+use ModulesGarden\GGSModule\Core\Events\Listener;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Support\Facades\LogActivity;
 
 class ModuleActivated extends Listener
 {

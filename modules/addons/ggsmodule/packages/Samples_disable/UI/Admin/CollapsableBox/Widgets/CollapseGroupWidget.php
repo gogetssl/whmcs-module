@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\CollapsableBox\Widgets;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\CollapsableBox\Widgets;
 
-use ModulesGarden\ggsmodule\Components\Accordion\CollapseGroup;
-use ModulesGarden\ggsmodule\Components\AccordionElement\AccordionElement;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Enums\BackgroundColor;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Components\Accordion\CollapseGroup;
+use ModulesGarden\GGSModule\Components\AccordionElement\AccordionElement;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Enums\BackgroundColor;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
 class CollapseGroupWidget extends Widget implements AjaxComponentInterface, AdminAreaInterface
 {

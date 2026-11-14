@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Form\Builder\Builders;
+namespace ModulesGarden\GGSModule\Components\Form\Builder\Builders;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Form\Builder\Builder;
-use ModulesGarden\ggsmodule\Components\FormGroup\FormGroup;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\FormFieldInterface;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Form\Builder\Builder;
+use ModulesGarden\GGSModule\Components\FormGroup\FormGroup;
+use ModulesGarden\GGSModule\Core\Contracts\Components\FormFieldInterface;
 
 abstract class AbstractFormFieldFactory
 {

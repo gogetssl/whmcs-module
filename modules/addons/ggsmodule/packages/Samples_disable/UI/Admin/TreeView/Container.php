@@ -1,37 +1,37 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView;
 
-use ModulesGarden\ggsmodule\Components\AppNavBar\Breadcrumb;
-use ModulesGarden\ggsmodule\Components\Button\ButtonSubmitSuccess;
-use ModulesGarden\ggsmodule\Components\Button\ButtonSuccess;
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
-use ModulesGarden\ggsmodule\Components\Toolbar\Toolbar;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Actions\FormSubmit;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalLoad;
-use ModulesGarden\ggsmodule\Core\Components\Actions\PassAjaxData;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ReloadById;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ClientAreaInterface;
-use ModulesGarden\ggsmodule\Core\Storage\Resources;
-use ModulesGarden\ggsmodule\Core\UI\Interfaces\ClientArea;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\CronTasks\CronTasks;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\Forms\AutoSaveForm;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\Forms\ReloadForm;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\Modal\Clients;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\Modals\Base;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\Modals\SwitchersModal;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\Overview\Overview;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\ServiceDetails\ServiceDetails;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\ServiceInformation\ServiceInformation;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\SubPages\DataTable\DataTable;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\Tabs\Tabs;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\Tiles\Tiles;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\TreeView\TreeView;
+use ModulesGarden\GGSModule\Components\AppNavBar\Breadcrumb;
+use ModulesGarden\GGSModule\Components\Button\ButtonSubmitSuccess;
+use ModulesGarden\GGSModule\Components\Button\ButtonSuccess;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Components\Toolbar\Toolbar;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Actions\FormSubmit;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalLoad;
+use ModulesGarden\GGSModule\Core\Components\Actions\PassAjaxData;
+use ModulesGarden\GGSModule\Core\Components\Actions\ReloadById;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ClientAreaInterface;
+use ModulesGarden\GGSModule\Core\Storage\Resources;
+use ModulesGarden\GGSModule\Core\UI\Interfaces\ClientArea;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\CronTasks\CronTasks;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\Forms\AutoSaveForm;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\Forms\ReloadForm;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\Modal\Clients;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\Modals\Base;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\Modals\SwitchersModal;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\Overview\Overview;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\ServiceDetails\ServiceDetails;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\ServiceInformation\ServiceInformation;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\SubPages\DataTable\DataTable;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\Tabs\Tabs;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\Tiles\Tiles;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\TreeView\TreeView;
 
-class Container extends \ModulesGarden\ggsmodule\Components\Container\Container implements AdminAreaInterface, ClientAreaInterface
+class Container extends \ModulesGarden\GGSModule\Components\Container\Container implements AdminAreaInterface, ClientAreaInterface
 {
     public function loadHtml(): void
     {
@@ -47,7 +47,7 @@ class Container extends \ModulesGarden\ggsmodule\Components\Container\Container 
     {
         $button = new ButtonSuccess();
         $button->setTitle('Click Me!');
-        $button->onClick(new ModalLoad( new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\Modals\Clients()));
+        $button->onClick(new ModalLoad( new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\Modals\Clients()));
 
         $toolbar = new Toolbar();
         $toolbar->addElement($button);

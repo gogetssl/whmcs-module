@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ColorPreview;
+namespace ModulesGarden\GGSModule\Components\ColorPreview;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
 
 class ColorPreview extends AbstractComponent
 {

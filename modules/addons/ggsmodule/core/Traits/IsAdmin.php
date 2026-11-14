@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Traits;
+namespace ModulesGarden\GGSModule\Core\Traits;
 
 /**
  * @deprecated
@@ -21,7 +21,7 @@ trait IsAdmin
     {
         if ($this->isAdminStatus === null)
         {
-            $this->isAdminStatus = \ModulesGarden\ggsmodule\Core\Helper\isAdmin();
+            $this->isAdminStatus = \ModulesGarden\GGSModule\Core\Helper\isAdmin();
         }
 
         return $this->isAdminStatus;

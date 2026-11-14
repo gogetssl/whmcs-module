@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Traits;
+namespace ModulesGarden\GGSModule\Core\Components\Traits;
 
-use ModulesGarden\ggsmodule\Core\Components\DataBuilder;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxAutoReloadInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxAutoSubmitInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxOnActionInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxOnLoadInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\ResponseInterface;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\Components\DataBuilder;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxAutoReloadInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxAutoSubmitInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxOnActionInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxOnLoadInterface;
+use ModulesGarden\GGSModule\Core\Contracts\ResponseInterface;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
 /**
  * Class AjaxComponent

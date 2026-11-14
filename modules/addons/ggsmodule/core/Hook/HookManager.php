@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Hook;
+namespace ModulesGarden\GGSModule\Core\Hook;
 
 class HookManager
 {

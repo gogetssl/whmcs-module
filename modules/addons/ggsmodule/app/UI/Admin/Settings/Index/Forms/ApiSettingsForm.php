@@ -1,24 +1,24 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Forms;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Forms;
 
 
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Concerns\SettingsLayout;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Providers\ApiSettingsProvider;
-use ModulesGarden\ggsmodule\Components\Button\ButtonPrimary;
-use ModulesGarden\ggsmodule\Components\Button\ButtonSuccess;
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Components\FormInputPassword\FormInputPassword;
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
-use ModulesGarden\ggsmodule\Components\Grid\Grid;
-use ModulesGarden\ggsmodule\Components\Toolbar\Toolbar;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Actions\FormSubmit;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Concerns\SettingsLayout;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Providers\ApiSettingsProvider;
+use ModulesGarden\GGSModule\Components\Button\ButtonPrimary;
+use ModulesGarden\GGSModule\Components\Button\ButtonSuccess;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\FormInputPassword\FormInputPassword;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Components\Grid\Grid;
+use ModulesGarden\GGSModule\Components\Toolbar\Toolbar;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Actions\FormSubmit;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
 
 class ApiSettingsForm extends Form implements AdminAreaInterface, AjaxComponentInterface

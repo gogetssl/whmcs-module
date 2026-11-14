@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Form\FieldBuilders;
+namespace ModulesGarden\GGSModule\Components\Form\FieldBuilders;
 
-use ModulesGarden\ggsmodule\Components\CopyToClipboardButton\CopyToClipboardButton;
-use ModulesGarden\ggsmodule\Components\FormPasswordGenerator\FormPasswordGenerator;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
+use ModulesGarden\GGSModule\Components\CopyToClipboardButton\CopyToClipboardButton;
+use ModulesGarden\GGSModule\Components\FormPasswordGenerator\FormPasswordGenerator;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
 
 class PasswordFieldBuilder
 {

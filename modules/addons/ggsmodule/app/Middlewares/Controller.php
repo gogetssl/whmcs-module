@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Middlewares;
+namespace ModulesGarden\GGSModule\App\Middlewares;
 
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\Core\Http\Request;
-use ModulesGarden\ggsmodule\Core\Helper;
-use ModulesGarden\ggsmodule\Core\Routing\Middleware\AbstractMiddleware;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request as RequestCore;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\Core\Http\Request;
+use ModulesGarden\GGSModule\Core\Helper;
+use ModulesGarden\GGSModule\Core\Routing\Middleware\AbstractMiddleware;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request as RequestCore;
 
 class Controller extends AbstractMiddleware
 {

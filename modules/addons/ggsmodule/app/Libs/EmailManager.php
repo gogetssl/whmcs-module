@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Helpers\EmailTemplates;
+use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
 use WHMCS\Database\Capsule;
 use WHMCS\Mail\Emailer;
 use WHMCS\Mail\Message;
@@ -217,7 +217,7 @@ class EmailManager
     public static function sampleServiceId()
     {
         return (int)Capsule::table('tblhosting')->join('tblproducts', 'tblproducts.id', '=', 'tblhosting.packageid')
-            ->where('tblproducts.servertype', 'ggsmodule')->orderBy('tblhosting.id', 'desc')->value('tblhosting.id');
+            ->where('tblproducts.servertype', 'GGSModule')->orderBy('tblhosting.id', 'desc')->value('tblhosting.id');
     }
 
     /**

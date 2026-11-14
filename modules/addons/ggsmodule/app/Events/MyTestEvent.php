@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Events;
+namespace ModulesGarden\GGSModule\App\Events;
 
-use ModulesGarden\ggsmodule\Core\Events\Event;
+use ModulesGarden\GGSModule\Core\Events\Event;
 
 /**
  * Class MyTestEvent

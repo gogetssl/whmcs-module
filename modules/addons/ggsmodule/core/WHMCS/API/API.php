@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\API;
+namespace ModulesGarden\GGSModule\Core\WHMCS\API;
 
-use ModulesGarden\ggsmodule\Core\HandlerError\Exceptions\Exception;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Admins;
+use ModulesGarden\GGSModule\Core\HandlerError\Exceptions\Exception;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Admins;
 
 class API
 {

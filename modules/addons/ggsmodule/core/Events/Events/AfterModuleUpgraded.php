@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Events\Events;
+namespace ModulesGarden\GGSModule\Core\Events\Events;
 
-use ModulesGarden\ggsmodule\Core\Events\Event;
+use ModulesGarden\GGSModule\Core\Events\Event;
 
 class AfterModuleUpgraded extends Event
 {

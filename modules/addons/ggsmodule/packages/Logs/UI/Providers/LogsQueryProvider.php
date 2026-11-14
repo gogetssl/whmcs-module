@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Providers;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Providers;
 
-use ModulesGarden\ggsmodule\Core\DataProviders\QueryDataProvider;
+use ModulesGarden\GGSModule\Core\DataProviders\QueryDataProvider;
 use WHMCS\Database\Capsule;
 
 /**

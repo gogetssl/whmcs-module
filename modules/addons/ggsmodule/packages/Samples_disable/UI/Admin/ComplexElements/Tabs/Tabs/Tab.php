@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\Tabs\Tabs;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\Tabs\Tabs;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxOnLoadInterface;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxOnLoadInterface;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
 
-class Tab extends \ModulesGarden\ggsmodule\Components\Tab\Tab implements \ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface, AjaxOnLoadInterface
+class Tab extends \ModulesGarden\GGSModule\Components\Tab\Tab implements \ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface, AjaxOnLoadInterface
 {
     public function loadData(): void
     {

@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Traits;
+namespace ModulesGarden\GGSModule\Core\Components\Traits;
 
-use ModulesGarden\ggsmodule\Core\Components\Enums\Border;
-use ModulesGarden\ggsmodule\Core\Components\Enums\BorderColors;
-use ModulesGarden\ggsmodule\Core\Components\Enums\BorderStyles;
-use ModulesGarden\ggsmodule\Core\Components\Enums\BorderWidths;
+use ModulesGarden\GGSModule\Core\Components\Enums\Border;
+use ModulesGarden\GGSModule\Core\Components\Enums\BorderColors;
+use ModulesGarden\GGSModule\Core\Components\Enums\BorderStyles;
+use ModulesGarden\GGSModule\Core\Components\Enums\BorderWidths;
 use ReflectionClass;
 
 trait BorderTrait

@@ -1,13 +1,13 @@
 <?php
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Packages\Product\Services\ProductConfiguration;
-use ModulesGarden\ggsmodule\Packages\Product\Helpers\RequiredCustomFieldsGenerator;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Packages\Product\Services\ProductConfiguration;
+use ModulesGarden\GGSModule\Packages\Product\Helpers\RequiredCustomFieldsGenerator;
 use Illuminate\Database\Capsule\Manager as DB;
 
 $hookManager->register(
     function($params) {
-        if (!\ModulesGarden\ggsmodule\Packages\Product\Helpers\ProductConfiguration::isSupportedInRequest())
+        if (!\ModulesGarden\GGSModule\Packages\Product\Helpers\ProductConfiguration::isSupportedInRequest())
         {
             return;
         }

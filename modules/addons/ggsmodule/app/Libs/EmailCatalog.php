@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Helpers\AutoInstallEmailTemplates;
-use ModulesGarden\ggsmodule\App\Helpers\EmailTemplates;
+use ModulesGarden\GGSModule\App\Helpers\AutoInstallEmailTemplates;
+use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
 
 /**
  * The client e-mails the module sends: key (WHMCS template name suffix), group, merge fields the code passes,

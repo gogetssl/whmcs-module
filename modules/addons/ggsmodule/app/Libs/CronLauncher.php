@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Models\CronCheck;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\CronStatus;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Models\ModuleSettings;
+use ModulesGarden\GGSModule\App\Models\CronCheck;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\CronStatus;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Models\ModuleSettings;
 
 /**
  * Resellers without shell access (or without the module's own cron entry) still get the module's jobs: WHMCS's system

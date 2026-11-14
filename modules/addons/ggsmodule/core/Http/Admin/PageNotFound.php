@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Http\Admin;
+namespace ModulesGarden\GGSModule\Core\Http\Admin;
 
-use ModulesGarden\ggsmodule\Core\Http\AbstractController;
+use ModulesGarden\GGSModule\Core\Http\AbstractController;
 
 class PageNotFound extends AbstractController
 {
     public function index()
     {
-        $pageControler = new \ModulesGarden\ggsmodule\Core\App\Controllers\Http\PageNotFound();
+        $pageControler = new \ModulesGarden\GGSModule\Core\App\Controllers\Http\PageNotFound();
 
         return $pageControler->execute();
     }

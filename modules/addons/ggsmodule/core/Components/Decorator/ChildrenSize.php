@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Decorator;
+namespace ModulesGarden\GGSModule\Core\Components\Decorator;
 
-use ModulesGarden\ggsmodule\Core\Components\Enums\DisplayTypes;
+use ModulesGarden\GGSModule\Core\Components\Enums\DisplayTypes;
 
 class ChildrenSize extends AbstractDecorator
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\FormGroup;
+namespace ModulesGarden\GGSModule\Components\FormGroup;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\FormFieldInterface;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Core\Contracts\Components\FormFieldInterface;
 
 class FormGroup extends Container implements FormFieldInterface
 {

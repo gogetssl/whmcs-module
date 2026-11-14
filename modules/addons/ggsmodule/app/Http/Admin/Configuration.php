@@ -1,19 +1,19 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Http\Admin;
+namespace ModulesGarden\GGSModule\App\Http\Admin;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Pages\ConfigurationStep1;
-use ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Pages\ConfigurationStep2;
-use ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Pages\ConfigurationStep3;
-use ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Pages\ConfigurationStep4;
-use ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Pages\ConfigurationStep5;
-use ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Pages\ConfigurationStep6;
-use ModulesGarden\ggsmodule\App\Libs\Edition;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Shared\WizardLayout;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Http\AbstractController;
-use ModulesGarden\ggsmodule\Core\Helper;
+use ModulesGarden\GGSModule\App\UI\Admin\Configuration\Pages\ConfigurationStep1;
+use ModulesGarden\GGSModule\App\UI\Admin\Configuration\Pages\ConfigurationStep2;
+use ModulesGarden\GGSModule\App\UI\Admin\Configuration\Pages\ConfigurationStep3;
+use ModulesGarden\GGSModule\App\UI\Admin\Configuration\Pages\ConfigurationStep4;
+use ModulesGarden\GGSModule\App\UI\Admin\Configuration\Pages\ConfigurationStep5;
+use ModulesGarden\GGSModule\App\UI\Admin\Configuration\Pages\ConfigurationStep6;
+use ModulesGarden\GGSModule\App\Libs\Edition;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\UI\Admin\Configuration\Shared\WizardLayout;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Http\AbstractController;
+use ModulesGarden\GGSModule\Core\Helper;
 
 class Configuration extends AbstractController implements AdminAreaInterface
 {

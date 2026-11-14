@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\FallbackTraits;
+namespace ModulesGarden\GGSModule\Core\Components\FallbackTraits;
 
 /**
  * Trait ElementsTrait

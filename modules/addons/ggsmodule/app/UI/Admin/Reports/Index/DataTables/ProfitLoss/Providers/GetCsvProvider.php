@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\ProfitLoss\Providers;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\ProfitLoss\Providers;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\Shared\RecordsProvider;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\Shared\RecordsProvider;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
 
 class GetCsvProvider extends CrudProvider
 {

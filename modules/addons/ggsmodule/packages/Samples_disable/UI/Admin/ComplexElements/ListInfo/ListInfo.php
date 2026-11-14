@@ -1,20 +1,20 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\ListInfo;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\ListInfo;
 
-use ModulesGarden\ggsmodule\Components\Badge\Badge;
-use ModulesGarden\ggsmodule\Components\Badge\BadgeDanger;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Grid\Grid;
-use ModulesGarden\ggsmodule\Components\ListInfo\ListInfoItem;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Components\Badge\Badge;
+use ModulesGarden\GGSModule\Components\Badge\BadgeDanger;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Grid\Grid;
+use ModulesGarden\GGSModule\Components\ListInfo\ListInfoItem;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
 
 class ListInfo extends Container
 {
     public function loadHtml(): void
     {
         //Invoice summary
-        $info = new \ModulesGarden\ggsmodule\Components\ListInfo\ListInfo();
+        $info = new \ModulesGarden\GGSModule\Components\ListInfo\ListInfo();
         $info->addItem(new ListInfoItem('Invoice Paid Last Week', (new Badge())->setText(3)->setOutline()));
         $info->addItem(new ListInfoItem('Invoice Paid Last Month', (new Badge())->setText(5)->setOutline()));
         $info->addItem(new ListInfoItem('Invoice Paid Last Quarter', (new Badge())->setText(6)->setOutline()));
@@ -26,7 +26,7 @@ class ListInfo extends Container
         $invoicesSummary->addElement($info);
 
         //Earning Summary
-        $info = new \ModulesGarden\ggsmodule\Components\ListInfo\ListInfo();
+        $info = new \ModulesGarden\GGSModule\Components\ListInfo\ListInfo();
         $info->addItem(new ListInfoItem('Last Week', (new Badge())->setText("$6.41 USD")->setOutline()));
         $info->addItem(new ListInfoItem('Last Month', (new Badge())->setText("$42.79 USD")->setOutline()));
         $info->addItem(new ListInfoItem('Last Quarter', (new Badge())->setText("$88.50 USD")->setOutline()));

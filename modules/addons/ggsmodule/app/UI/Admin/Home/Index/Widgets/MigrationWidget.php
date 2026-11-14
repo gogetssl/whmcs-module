@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\Migration\Choice;
-use ModulesGarden\ggsmodule\App\Migration\Detector;
-use ModulesGarden\ggsmodule\App\Migration\Store;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\Card;
+use ModulesGarden\GGSModule\App\Migration\Choice;
+use ModulesGarden\GGSModule\App\Migration\Detector;
+use ModulesGarden\GGSModule\App\Migration\Store;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\Card;
 
 /**
  * Legacy modules found, last migration run, backup expiry. Links to the Migration page.
@@ -78,6 +78,6 @@ class MigrationWidget extends Card
         }
         $this->addElement(Card::html('<div class="ggs-dcard__rows">' . $html . '</div>'));
 
-        $this->foot('addonmodules.php?module=ggsmodule&mg-page=migration&mg-action=index', 'database-outline', $this->translate('open'));
+        $this->foot('addonmodules.php?module=GGSModule&mg-page=migration&mg-action=index', 'database-outline', $this->translate('open'));
     }
 }

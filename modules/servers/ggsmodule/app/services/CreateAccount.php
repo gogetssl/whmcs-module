@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\app\services;
+namespace ModulesGarden\Servers\GGSModule\app\services;
 
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\SSL;
-use ModulesGarden\Servers\ggsmodule\app\repository\whmcs\Config;
-use ModulesGarden\Servers\ggsmodule\Configuration;
-use ModulesGarden\ggsmodule\App\Helpers\EmailTemplates;
-use ModulesGarden\ggsmodule\App\Libs\AcmeHelpers;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\SSL;
+use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Config;
+use ModulesGarden\Servers\GGSModule\Configuration;
+use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
+use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
 
 class CreateAccount {
 
@@ -38,10 +38,10 @@ class CreateAccount {
                 'status' => 'Awaiting Configuration'
             ]);
         }
-        if(isset($_SESSION['ggsmodule']['importedServices']) && is_array($_SESSION['ggsmodule']['importedServices']) && in_array($serviceId, $_SESSION['ggsmodule']['importedServices']))
+        if(isset($_SESSION['GGSModule']['importedServices']) && is_array($_SESSION['GGSModule']['importedServices']) && in_array($serviceId, $_SESSION['GGSModule']['importedServices']))
         {
-            $key = array_search($serviceId, $_SESSION['ggsmodule']['importedServices']);
-            unset($_SESSION['ggsmodule']['importedServices'][$key]);
+            $key = array_search($serviceId, $_SESSION['GGSModule']['importedServices']);
+            unset($_SESSION['GGSModule']['importedServices'][$key]);
             return 'success';
         }
 
@@ -54,23 +54,23 @@ class CreateAccount {
             return 'success';
         }
 
-        $gatewayType = \ModulesGarden\ggsmodule\App\Libs\GatewayOrderService::typeOfProduct($whmcsProductId);
+        $gatewayType = \ModulesGarden\GGSModule\App\Libs\GatewayOrderService::typeOfProduct($whmcsProductId);
 
         // CodeGuard has nothing for the client to fill in: the licence is ordered straight away from the client's own
         // name and e-mail address, and everything after that happens in the CodeGuard dashboard. A failed order leaves
         // the service waiting, and the client page offers to order again.
-        if($gatewayType === \ModulesGarden\ggsmodule\App\Libs\CodeGuardService::class)
+        if($gatewayType === \ModulesGarden\GGSModule\App\Libs\CodeGuardService::class)
         {
             $ordered = true;
             try
             {
                 // WHMCS sets the service to Active only after this function returns, hence the setup flag
-                \ModulesGarden\ggsmodule\App\Libs\CodeGuardService::create($serviceId, [], true);
+                \ModulesGarden\GGSModule\App\Libs\CodeGuardService::create($serviceId, [], true);
             }
             catch(\Throwable $e)
             {
                 $ordered = false;
-                \ModulesGarden\ggsmodule\App\Libs\CertificateService::event($serviceId, 'error', 'CodeGuard licence could not be ordered: ' . $e->getMessage());
+                \ModulesGarden\GGSModule\App\Libs\CertificateService::event($serviceId, 'error', 'CodeGuard licence could not be ordered: ' . $e->getMessage());
             }
 
             // "your licence is ready" only when it is; otherwise the client is pointed at the page, which offers to order

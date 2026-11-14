@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Widget\Graphs\Settings;
+namespace ModulesGarden\GGSModule\Core\UI\Widget\Graphs\Settings;
 
-use ModulesGarden\ggsmodule\Core\UI\Widget\Buttons\ButtonDatatableModalContextLang;
+use ModulesGarden\GGSModule\Core\UI\Widget\Buttons\ButtonDatatableModalContextLang;
 
 /**
  * Description of SettingButton

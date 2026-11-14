@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\CronTasks;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\CronTasks;
 
-use ModulesGarden\ggsmodule\Components\Alert\AlertInfo;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\FormGroup\FormGroup;
-use ModulesGarden\ggsmodule\Components\FormLabel\FormLabel;
-use ModulesGarden\ggsmodule\Components\PreBlock\PreBlock;
-use ModulesGarden\ggsmodule\Components\Tooltip\Tooltip;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Components\Alert\AlertInfo;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\FormGroup\FormGroup;
+use ModulesGarden\GGSModule\Components\FormLabel\FormLabel;
+use ModulesGarden\GGSModule\Components\PreBlock\PreBlock;
+use ModulesGarden\GGSModule\Components\Tooltip\Tooltip;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
 
 class CronTasks extends Container
 {

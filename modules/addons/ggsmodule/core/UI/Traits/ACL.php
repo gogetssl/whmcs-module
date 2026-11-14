@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Traits;
+namespace ModulesGarden\GGSModule\Core\UI\Traits;
 
 
-use ModulesGarden\ggsmodule\Core\UI\Interfaces\ClientArea;
+use ModulesGarden\GGSModule\Core\UI\Interfaces\ClientArea;
 
 /**
  * @deprecated
@@ -31,7 +31,7 @@ trait ACL
 
     protected function isCoreElementAcl($element)
     {
-        return strpos(get_class($element), 'ModulesGarden\ggsmodule\Core') !== false;
+        return strpos(get_class($element), 'ModulesGarden\GGSModule\Core') !== false;
     }
 
     protected function checkIsAdminArea($element)

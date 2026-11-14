@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Support\Facades;
+namespace ModulesGarden\GGSModule\Packages\Product\Support\Facades;
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\AbstractFacade;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\Configuration\ConfigurationContainer;
+use ModulesGarden\GGSModule\Core\Support\Facades\AbstractFacade;
+use ModulesGarden\GGSModule\Packages\Product\Libs\Configuration\ConfigurationContainer;
 
 /**
  * @method static ConfigurationContainer getConfiguration()
@@ -13,6 +13,6 @@ class Configuration extends AbstractFacade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \ModulesGarden\ggsmodule\Packages\Product\Services\Configuration::class;
+        return \ModulesGarden\GGSModule\Packages\Product\Services\Configuration::class;
     }
 }

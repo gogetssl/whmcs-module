@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\app\repository\whmcs;
+namespace ModulesGarden\Servers\GGSModule\app\repository\whmcs;
 
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\Service;
-use ModulesGarden\ggsmodule\App\Libs\AcmeHelpers;
-use ModulesGarden\ggsmodule\App\Libs\AisHelpers;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\Service;
+use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
+use ModulesGarden\GGSModule\App\Libs\AisHelpers;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
 use WHMCS\Database\Capsule as DataBase;
 
 class Config
@@ -20,7 +20,7 @@ class Config
             return $WHMCSUrl . '/clientarea.php?action=productdetails&id=' . $service->id . '&acmeconfig=1';
         }
 
-        if($service && \ModulesGarden\ggsmodule\App\Libs\GatewayOrderService::typeOfProduct($service->packageid))
+        if($service && \ModulesGarden\GGSModule\App\Libs\GatewayOrderService::typeOfProduct($service->packageid))
         {
             return $this->getBrandURL($serviceID) . '/clientarea.php?action=productdetails&id=' . $service->id . '&smimeconfig=1';
         }

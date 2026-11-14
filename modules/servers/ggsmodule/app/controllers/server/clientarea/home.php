@@ -1,44 +1,44 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\app\controllers\server\clientarea;
+namespace ModulesGarden\Servers\GGSModule\app\controllers\server\clientarea;
 
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\Client;
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\Order;
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\Product;
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\Service;
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\SSL;
-use ModulesGarden\Servers\ggsmodule\app\repository\whmcs\Config;
-use ModulesGarden\Servers\ggsmodule\app\repository\whmcs\Domain;
-use ModulesGarden\Servers\ggsmodule\app\repository\whmcs\ProductConfigOptions;
-use ModulesGarden\Servers\ggsmodule\app\services\InvoiceRenew;
-use ModulesGarden\Servers\ggsmodule\app\services\SSLStepThree;
-use ModulesGarden\Servers\ggsmodule\core\Lang;
-use ModulesGarden\Servers\ggsmodule\core\process\AbstractController;
-use ModulesGarden\Servers\ggsmodule\Server;
-use ModulesGarden\ggsmodule\App\Helpers\EmailTemplates;
-use ModulesGarden\ggsmodule\App\Libs\AcmeHelpers;
-use ModulesGarden\ggsmodule\App\Libs\AisHelpers;
-use ModulesGarden\ggsmodule\App\Libs\AutoInstallHelpers;
-use ModulesGarden\ggsmodule\App\Libs\CertificateBundle;
-use ModulesGarden\ggsmodule\App\Libs\CertificateService;
-use ModulesGarden\ggsmodule\App\Libs\CertificateSyncHelpers;
-use ModulesGarden\ggsmodule\App\Libs\Cpanel;
-use ModulesGarden\ggsmodule\App\Libs\GeneralSettings;
-use ModulesGarden\ggsmodule\App\Libs\ProductSettings;
-use ModulesGarden\ggsmodule\App\Libs\SmimeService;
-use ModulesGarden\ggsmodule\App\Libs\CodeSigningService;
-use ModulesGarden\ggsmodule\App\Libs\SslProductHelpers;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\ggsmodule\App\Models\AcmeSubscription;
-use ModulesGarden\ggsmodule\App\Models\AcmeSubscriptionDomain;
-use ModulesGarden\ggsmodule\App\Models\AisSubscription;
-use ModulesGarden\ggsmodule\App\Models\RemoteProduct;
-use ModulesGarden\ggsmodule\App\Models\Request;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\ggsmodule\Core\WHMCS\Helper;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Invoice;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\Client;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\Order;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\Product;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\Service;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\SSL;
+use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Config;
+use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Domain;
+use ModulesGarden\Servers\GGSModule\app\repository\whmcs\ProductConfigOptions;
+use ModulesGarden\Servers\GGSModule\app\services\InvoiceRenew;
+use ModulesGarden\Servers\GGSModule\app\services\SSLStepThree;
+use ModulesGarden\Servers\GGSModule\core\Lang;
+use ModulesGarden\Servers\GGSModule\core\process\AbstractController;
+use ModulesGarden\Servers\GGSModule\Server;
+use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
+use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
+use ModulesGarden\GGSModule\App\Libs\AisHelpers;
+use ModulesGarden\GGSModule\App\Libs\AutoInstallHelpers;
+use ModulesGarden\GGSModule\App\Libs\CertificateBundle;
+use ModulesGarden\GGSModule\App\Libs\CertificateService;
+use ModulesGarden\GGSModule\App\Libs\CertificateSyncHelpers;
+use ModulesGarden\GGSModule\App\Libs\Cpanel;
+use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
+use ModulesGarden\GGSModule\App\Libs\ProductSettings;
+use ModulesGarden\GGSModule\App\Libs\SmimeService;
+use ModulesGarden\GGSModule\App\Libs\CodeSigningService;
+use ModulesGarden\GGSModule\App\Libs\SslProductHelpers;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
+use ModulesGarden\GGSModule\App\Models\AcmeSubscription;
+use ModulesGarden\GGSModule\App\Models\AcmeSubscriptionDomain;
+use ModulesGarden\GGSModule\App\Models\AisSubscription;
+use ModulesGarden\GGSModule\App\Models\RemoteProduct;
+use ModulesGarden\GGSModule\App\Models\Request;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
+use ModulesGarden\GGSModule\Core\WHMCS\Helper;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Invoice;
 use WHMCS\Billing\Tax;
 use WHMCS\Database\Capsule;
 
@@ -77,12 +77,12 @@ class home extends AbstractController
                 return $this->indexCodeSigningHTML($input, $vars);
             }
 
-            if(\ModulesGarden\ggsmodule\App\Libs\CodeGuardService::isCodeGuardWhmcsProduct($service->packageid))
+            if(\ModulesGarden\GGSModule\App\Libs\CodeGuardService::isCodeGuardWhmcsProduct($service->packageid))
             {
                 return $this->indexCodeGuardHTML($input, $vars);
             }
 
-            if(\ModulesGarden\ggsmodule\App\Libs\DocumentSigningService::isDocumentSigningWhmcsProduct($service->packageid))
+            if(\ModulesGarden\GGSModule\App\Libs\DocumentSigningService::isDocumentSigningWhmcsProduct($service->packageid))
             {
                 return $this->indexDocumentSigningHTML($input, $vars);
             }
@@ -154,7 +154,7 @@ class home extends AbstractController
 
     private function requireCsrfToken()
     {
-        if($_SERVER['REQUEST_METHOD'] !== 'POST' || !\ModulesGarden\ggsmodule\App\Libs\CsrfToken::valid($_POST['token'] ?? ''))
+        if($_SERVER['REQUEST_METHOD'] !== 'POST' || !\ModulesGarden\GGSModule\App\Libs\CsrfToken::valid($_POST['token'] ?? ''))
         {
             throw new \Exception(Lang::absoluteT('invalidCsrfToken'));
         }

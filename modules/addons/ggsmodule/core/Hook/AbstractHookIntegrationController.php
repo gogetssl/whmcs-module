@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Hook;
+namespace ModulesGarden\GGSModule\Core\Hook;
 
-use ModulesGarden\ggsmodule\Core\Hook\Integration\Enums\IntegrationInsertTypes;
-use ModulesGarden\ggsmodule\Core\Hook\Integration\Enums\IntegrationTypes;
-use ModulesGarden\ggsmodule\Core\Hook\Integration\Integration;
-use ModulesGarden\ggsmodule\Core\Hook\Integration\Models\ControllerCallback;
+use ModulesGarden\GGSModule\Core\Hook\Integration\Enums\IntegrationInsertTypes;
+use ModulesGarden\GGSModule\Core\Hook\Integration\Enums\IntegrationTypes;
+use ModulesGarden\GGSModule\Core\Hook\Integration\Integration;
+use ModulesGarden\GGSModule\Core\Hook\Integration\Models\ControllerCallback;
 
 
 abstract class AbstractHookIntegrationController

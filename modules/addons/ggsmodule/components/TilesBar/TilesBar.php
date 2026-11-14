@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\TilesBar;
+namespace ModulesGarden\GGSModule\Components\TilesBar;
 
-use ModulesGarden\ggsmodule\Components\TileButton\TileButton;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ComponentsContainerTrait;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentContainerInterface;
+use ModulesGarden\GGSModule\Components\TileButton\TileButton;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\ComponentsContainerTrait;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentContainerInterface;
 
 class TilesBar extends AbstractComponent implements ComponentContainerInterface
 {

@@ -1,27 +1,27 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models;
 
 class Invoice extends \WHMCS\Billing\Invoice
 {
     public function client()
     {
-        return $this->belongsTo('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Client', 'userid');
+        return $this->belongsTo('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Client', 'userid');
     }
 
     public function items()
     {
-        return $this->hasMany('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\InvoiceItem', 'invoiceid');
+        return $this->hasMany('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\InvoiceItem', 'invoiceid');
     }
 
     public function order()
     {
-        return $this->belongsTo('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Order', 'id', 'invoiceid');
+        return $this->belongsTo('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Order', 'id', 'invoiceid');
     }
 
     public function transactions()
     {
-        return $this->hasMany('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Transaction', 'invoiceid');
+        return $this->hasMany('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Transaction', 'invoiceid');
     }
 
     public function getAmountpaidAttribute()

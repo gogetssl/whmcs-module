@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Libs\Edition;
+use ModulesGarden\GGSModule\App\Libs\Edition;
 
 use WHMCS\Database\Capsule;
 

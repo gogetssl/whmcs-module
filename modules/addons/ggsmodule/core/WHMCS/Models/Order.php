@@ -1,27 +1,27 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models;
 
 class Order extends \WHMCS\Order\Order
 {
     public function addons()
     {
-        return $this->hasMany('ModulesGarden\ggsmodule\Core\WHMCS\Models\HostingAddon', 'orderid');
+        return $this->hasMany('ModulesGarden\GGSModule\Core\WHMCS\Models\HostingAddon', 'orderid');
     }
 
     public function client()
     {
-        return $this->belongsTo('ModulesGarden\ggsmodule\Core\WHMCS\Models\Client', 'userid');
+        return $this->belongsTo('ModulesGarden\GGSModule\Core\WHMCS\Models\Client', 'userid');
     }
 
     public function domains()
     {
-        return $this->hasMany('ModulesGarden\ggsmodule\Core\WHMCS\Models\Domain', 'orderid');
+        return $this->hasMany('ModulesGarden\GGSModule\Core\WHMCS\Models\Domain', 'orderid');
     }
 
     public function services()
     {
-        return $this->hasMany('ModulesGarden\ggsmodule\Core\WHMCS\Models\Hosting', 'orderid');
+        return $this->hasMany('ModulesGarden\GGSModule\Core\WHMCS\Models\Hosting', 'orderid');
     }
 
     /**
@@ -29,21 +29,21 @@ class Order extends \WHMCS\Order\Order
      */
     public function hostings()
     {
-        return $this->hasMany('ModulesGarden\ggsmodule\Core\WHMCS\Models\Hosting', 'orderid');
+        return $this->hasMany('ModulesGarden\GGSModule\Core\WHMCS\Models\Hosting', 'orderid');
     }
 
     public function invoice()
     {
-        return $this->hasOne('ModulesGarden\ggsmodule\Core\WHMCS\Models\Invoice', 'id', 'invoiceid');
+        return $this->hasOne('ModulesGarden\GGSModule\Core\WHMCS\Models\Invoice', 'id', 'invoiceid');
     }
 
     public function upgrades(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany('ModulesGarden\ggsmodule\Core\WHMCS\Models\Upgrade', 'orderid');
+        return $this->hasMany('ModulesGarden\GGSModule\Core\WHMCS\Models\Upgrade', 'orderid');
     }
 
     public function promotion()
     {
-        return $this->hasOne('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Promotion', "code", "promocode");
+        return $this->hasOne('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Promotion', "code", "promocode");
     }
 }

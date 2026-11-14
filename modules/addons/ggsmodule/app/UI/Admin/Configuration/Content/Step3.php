@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Content;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Configuration\Content;
 
-use ModulesGarden\ggsmodule\App\Migration\Detector;
-use ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Shared\Forms\LegacyChoiceForm;
-use ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Shared\WizardLayout;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\App\Migration\Detector;
+use ModulesGarden\GGSModule\App\UI\Admin\Configuration\Shared\Forms\LegacyChoiceForm;
+use ModulesGarden\GGSModule\App\UI\Admin\Configuration\Shared\WizardLayout;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
 
 /**
  * Wizard step "Legacy modules found": what was detected and, per module, the decision Migrate / Install standalone.

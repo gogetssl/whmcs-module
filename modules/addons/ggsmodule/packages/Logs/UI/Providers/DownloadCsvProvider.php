@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Providers;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Providers;
 
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Http\BinaryFileResponse;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Http\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 
 class DownloadCsvProvider extends CrudProvider

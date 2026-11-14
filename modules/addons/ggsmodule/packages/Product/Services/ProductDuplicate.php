@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Services;
+namespace ModulesGarden\GGSModule\Packages\Product\Services;
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Product;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
-use ModulesGarden\ggsmodule\Packages\Product\Helpers\ProductConfiguration as ProductConfigurationSupport;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Product;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
+use ModulesGarden\GGSModule\Packages\Product\Helpers\ProductConfiguration as ProductConfigurationSupport;
 
 class ProductDuplicate
 {

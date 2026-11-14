@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\TreeView;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\TreeView;
 
-use ModulesGarden\ggsmodule\Components\TreeListContainer\TreeListContainer;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Components\TreeListContainer\TreeListContainer;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
 
 class TreeViewWidget extends Widget
 {
@@ -16,7 +16,7 @@ class TreeViewWidget extends Widget
 
         for ($i = 0; $i < 10; $i++)
         {
-            $item = new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\TreeView\TreeListItem();
+            $item = new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\TreeView\TreeListItem();
             $item->setTitle($i);
 
             $treeViewContainer->addElement($item);

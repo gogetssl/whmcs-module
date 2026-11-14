@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared;
 
-use ModulesGarden\ggsmodule\App\Libs\Icons;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Text\Text;
+use ModulesGarden\GGSModule\App\Libs\Icons;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Text\Text;
 
 /**
  * Dashboard panel: a header (icon tile, title, aside), then HTML blocks and, where needed, framework components

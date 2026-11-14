@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Button;
+namespace ModulesGarden\GGSModule\Components\Button;
 
-use ModulesGarden\ggsmodule\App\Libs\Icons;
-use ModulesGarden\ggsmodule\Core\Components\FallbackTraits\ButtonFallbackTrait;
-use ModulesGarden\ggsmodule\Core\Components\FormFields\FormField;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ActionOnClickTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\LayoutPropsTrait;
+use ModulesGarden\GGSModule\App\Libs\Icons;
+use ModulesGarden\GGSModule\Core\Components\FallbackTraits\ButtonFallbackTrait;
+use ModulesGarden\GGSModule\Core\Components\FormFields\FormField;
+use ModulesGarden\GGSModule\Core\Components\Traits\ActionOnClickTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\LayoutPropsTrait;
 
 class Button extends FormField
 {

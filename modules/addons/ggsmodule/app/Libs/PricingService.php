@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Libs\Edition;
+use ModulesGarden\GGSModule\App\Libs\Edition;
 
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
 use WHMCS\Database\Capsule;
 
 /**
@@ -47,7 +47,7 @@ class PricingService
         {
             return $this->products;
         }
-        $products = Capsule::table('tblproducts')->where('servertype', 'ggsmodule')->orderBy('name')
+        $products = Capsule::table('tblproducts')->where('servertype', 'GGSModule')->orderBy('name')
             ->get(['id', 'name', 'paytype', 'hidden', 'retired', 'configoption1', 'configoption2', 'configoption6']);
 
         // the gateway products and the SAN options of all products: one query each
@@ -83,7 +83,7 @@ class PricingService
             ->join('tblproducts', 'tblproducts.id', '=', 'tblproductconfiglinks.pid')
             ->join('tblproductconfigoptions', 'tblproductconfigoptions.gid', '=', 'tblproductconfiglinks.gid')
             ->join('tblproductconfigoptionssub', 'tblproductconfigoptionssub.configid', '=', 'tblproductconfigoptions.id')
-            ->where('tblproducts.servertype', 'ggsmodule')
+            ->where('tblproducts.servertype', 'GGSModule')
             ->get(['tblproductconfiglinks.pid', 'tblproductconfigoptions.optionname', 'tblproductconfigoptionssub.id as subId']);
 
         $options = [];
@@ -479,12 +479,12 @@ class PricingService
 
     protected function setting($name)
     {
-        return Capsule::table('tbladdonmodules')->where('module', 'configuration_ggsmodule')->where('setting', $name)->value('value');
+        return Capsule::table('tbladdonmodules')->where('module', 'configuration_GGSModule')->where('setting', $name)->value('value');
     }
 
     protected function saveSetting($name, $value)
     {
-        Capsule::table('tbladdonmodules')->updateOrInsert(['module' => 'configuration_ggsmodule', 'setting' => $name], ['value' => $value]);
+        Capsule::table('tbladdonmodules')->updateOrInsert(['module' => 'configuration_GGSModule', 'setting' => $name], ['value' => $value]);
     }
 
     // ---- CSV ---- //

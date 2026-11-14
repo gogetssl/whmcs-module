@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Migration\Readers;
+namespace ModulesGarden\GGSModule\App\Migration\Readers;
 
-use ModulesGarden\ggsmodule\App\Migration\ProductMapper;
-use ModulesGarden\ggsmodule\App\Migration\Support\Configdata;
-use ModulesGarden\ggsmodule\App\Migration\Support\Schema;
+use ModulesGarden\GGSModule\App\Migration\ProductMapper;
+use ModulesGarden\GGSModule\App\Migration\Support\Configdata;
+use ModulesGarden\GGSModule\App\Migration\Support\Schema;
 use WHMCS\Database\Capsule;
 
 /**

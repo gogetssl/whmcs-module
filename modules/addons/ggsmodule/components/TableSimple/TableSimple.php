@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\TableSimple;
+namespace ModulesGarden\GGSModule\Components\TableSimple;
 
-use ModulesGarden\ggsmodule\Components\TableSimple\Record\Record;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\CssContainerTrait;
+use ModulesGarden\GGSModule\Components\TableSimple\Record\Record;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\CssContainerTrait;
 
 class TableSimple extends AbstractComponent
 {

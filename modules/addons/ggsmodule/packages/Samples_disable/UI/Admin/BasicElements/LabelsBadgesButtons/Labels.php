@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\LabelsBadgesButtons;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\LabelsBadgesButtons;
 
-use ModulesGarden\ggsmodule\Components\Label\Label;
-use ModulesGarden\ggsmodule\Components\Label\LabelDanger;
-use ModulesGarden\ggsmodule\Components\Label\LabelInfo;
-use ModulesGarden\ggsmodule\Components\Label\LabelPrimary;
-use ModulesGarden\ggsmodule\Components\Label\LabelSecondary;
-use ModulesGarden\ggsmodule\Components\Label\LabelSuccess;
-use ModulesGarden\ggsmodule\Components\Label\LabelWarning;
-use ModulesGarden\ggsmodule\Components\Toolbar\Toolbar;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Components\Label\Label;
+use ModulesGarden\GGSModule\Components\Label\LabelDanger;
+use ModulesGarden\GGSModule\Components\Label\LabelInfo;
+use ModulesGarden\GGSModule\Components\Label\LabelPrimary;
+use ModulesGarden\GGSModule\Components\Label\LabelSecondary;
+use ModulesGarden\GGSModule\Components\Label\LabelSuccess;
+use ModulesGarden\GGSModule\Components\Label\LabelWarning;
+use ModulesGarden\GGSModule\Components\Toolbar\Toolbar;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
 
 class Labels extends Widget implements AdminAreaInterface

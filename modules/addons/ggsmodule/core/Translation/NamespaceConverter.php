@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Translation;
+namespace ModulesGarden\GGSModule\Core\Translation;
 
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 class NamespaceConverter
 {

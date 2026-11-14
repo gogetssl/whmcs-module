@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\PreBlocks;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\PreBlocks;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ClientAreaInterface;
-use ModulesGarden\ggsmodule\Core\UI\Interfaces\ClientArea;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ClientAreaInterface;
+use ModulesGarden\GGSModule\Core\UI\Interfaces\ClientArea;
 
-class PreBlocks extends \ModulesGarden\ggsmodule\Components\Container\Container implements AdminAreaInterface, ClientAreaInterface
+class PreBlocks extends \ModulesGarden\GGSModule\Components\Container\Container implements AdminAreaInterface, ClientAreaInterface
 {
     public function loadHtml(): void
     {

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App;
+namespace ModulesGarden\GGSModule\Core\App;
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\Smarty;
-use ModulesGarden\ggsmodule\Core\Traits\Lang;
+use ModulesGarden\GGSModule\Core\Support\Facades\Smarty;
+use ModulesGarden\GGSModule\Core\Traits\Lang;
 
 /**
  * Template Display Wrapper

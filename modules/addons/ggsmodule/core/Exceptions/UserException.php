@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Exceptions;
+namespace ModulesGarden\GGSModule\Core\Exceptions;
 
 class UserException extends \Exception
 {

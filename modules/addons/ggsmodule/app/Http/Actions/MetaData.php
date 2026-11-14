@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Http\Actions;
+namespace ModulesGarden\GGSModule\App\Http\Actions;
 
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\AddonController;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\AddonController;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
 
 class MetaData extends AddonController
 {

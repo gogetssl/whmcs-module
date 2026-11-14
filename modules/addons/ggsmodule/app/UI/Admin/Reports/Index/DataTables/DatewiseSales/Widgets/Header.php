@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\Widgets;
 
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\ArrayDataProvider\DataProvider;
-use ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\Shared\RecordsProvider;
-use ModulesGarden\ggsmodule\Components\Alert\Alert;
-use ModulesGarden\ggsmodule\Core\Components\Enums\Color;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Currency;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\DatewiseSales\ArrayDataProvider\DataProvider;
+use ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\Shared\RecordsProvider;
+use ModulesGarden\GGSModule\Components\Alert\Alert;
+use ModulesGarden\GGSModule\Core\Components\Enums\Color;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Currency;
 
 
 class Header extends Alert implements AjaxComponentInterface, AdminAreaInterface

@@ -1,7 +1,7 @@
 <?php
 
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
-use ModulesGarden\ggsmodule\Packages\Product\Services\ProductDuplicate;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
+use ModulesGarden\GGSModule\Packages\Product\Services\ProductDuplicate;
 
 $hookManager->register(
     function($params) {

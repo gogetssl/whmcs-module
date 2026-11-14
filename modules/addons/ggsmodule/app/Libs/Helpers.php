@@ -1,24 +1,24 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Models\RemoteProduct;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\ggsmodule\Components\Link\Link;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Translator;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Client;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Currency;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\PaymentGateway;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Pricing;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Product;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\ProductGroup;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Service;
-use ModulesGarden\ggsmodule\Core\WHMCS\URL\Admin;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptions\Quantity;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptions\SubOption\SubOption;
-use ModulesGarden\ggsmodule\Packages\Product\Services\ConfigurableOptions;
-use ModulesGarden\ggsmodule\Packages\Product\Services\ConfigurableOptionsGroup;
+use ModulesGarden\GGSModule\App\Models\RemoteProduct;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
+use ModulesGarden\GGSModule\Components\Link\Link;
+use ModulesGarden\GGSModule\Core\Support\Facades\Translator;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Client;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Currency;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\PaymentGateway;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Pricing;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Product;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\ProductGroup;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Service;
+use ModulesGarden\GGSModule\Core\WHMCS\URL\Admin;
+use ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptions\Quantity;
+use ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptions\SubOption\SubOption;
+use ModulesGarden\GGSModule\Packages\Product\Services\ConfigurableOptions;
+use ModulesGarden\GGSModule\Packages\Product\Services\ConfigurableOptionsGroup;
 use WHMCS\Database\Capsule;
 
 class Helpers
@@ -232,7 +232,7 @@ class Helpers
 
     public static function getProductOptions()
     {
-        $products       = Product::where('servertype', 'ggsmodule')->get();
+        $products       = Product::where('servertype', 'GGSModule')->get();
         $productOptions = [
             0 => 'all',
         ];
@@ -248,7 +248,7 @@ class Helpers
 
     public static function getBrandOptions()
     {
-        $products     = Product::where('servertype', 'ggsmodule')->get();
+        $products     = Product::where('servertype', 'GGSModule')->get();
         $brandOptions = [];
 
         foreach($products as $product)
@@ -327,14 +327,14 @@ class Helpers
     {
         $rootDirs = [
             dirname(__DIR__, 2),
-            dirname(__DIR__, 4) . '/servers/ggsmodule'
+            dirname(__DIR__, 4) . '/servers/GGSModule'
         ];
 
         $excludedDirs = [
-            'modules/addons/ggsmodule/langs',
-            'modules/addons/ggsmodule/storage',
-            'modules/servers/ggsmodule/langs',
-            'modules/servers/ggsmodule/storage'
+            'modules/addons/GGSModule/langs',
+            'modules/addons/GGSModule/storage',
+            'modules/servers/GGSModule/langs',
+            'modules/servers/GGSModule/storage'
         ];
 
         $checksumData = [];

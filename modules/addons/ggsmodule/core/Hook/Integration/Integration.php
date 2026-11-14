@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Hook\Integration;
+namespace ModulesGarden\GGSModule\Core\Hook\Integration;
 
-use ModulesGarden\ggsmodule\Core\Hook\Integration\Enums\IntegrationInsertTypes;
-use ModulesGarden\ggsmodule\Core\Hook\Integration\Enums\IntegrationTypes;
-use ModulesGarden\ggsmodule\Core\Hook\Integration\Models\ControllerCallback;
-use ModulesGarden\ggsmodule\Core\Hook\Integration\Models\RelatedField;
+use ModulesGarden\GGSModule\Core\Hook\Integration\Enums\IntegrationInsertTypes;
+use ModulesGarden\GGSModule\Core\Hook\Integration\Enums\IntegrationTypes;
+use ModulesGarden\GGSModule\Core\Hook\Integration\Models\ControllerCallback;
+use ModulesGarden\GGSModule\Core\Hook\Integration\Models\RelatedField;
 
 class Integration
 {

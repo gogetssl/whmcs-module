@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Alert;
+namespace ModulesGarden\GGSModule\Components\Alert;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\OutlineTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TextTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TitleTrait;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\OutlineTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TextTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TitleTrait;
 
 class Alert extends AbstractComponent
 {

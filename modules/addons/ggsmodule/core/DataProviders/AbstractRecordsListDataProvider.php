@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\DataProviders;
+namespace ModulesGarden\GGSModule\Core\DataProviders;
 
-use ModulesGarden\ggsmodule\Core\Contracts\RecordsListProviderInterface;
+use ModulesGarden\GGSModule\Core\Contracts\RecordsListProviderInterface;
 
 abstract class AbstractRecordsListDataProvider implements RecordsListProviderInterface
 {

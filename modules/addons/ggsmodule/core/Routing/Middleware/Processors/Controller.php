@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Routing\Middleware\Processors;
+namespace ModulesGarden\GGSModule\Core\Routing\Middleware\Processors;
 
-use ModulesGarden\ggsmodule\Core\Http\Request;
-use ModulesGarden\ggsmodule\Core\Routing\Route;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\Http\Request;
+use ModulesGarden\GGSModule\Core\Routing\Route;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
 
 class Controller
 {

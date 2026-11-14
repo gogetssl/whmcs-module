@@ -1,18 +1,18 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Forms;
 
-use ModulesGarden\ggsmodule\Components\Button\Button;
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
-use ModulesGarden\ggsmodule\Core\Components\Actions\PopulateValue;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Reload;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Components\Button\Button;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Core\Components\Actions\PopulateValue;
+use ModulesGarden\GGSModule\Core\Components\Actions\Reload;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
-class ReloadForm extends \ModulesGarden\ggsmodule\Components\Form\Form implements AjaxComponentInterface
+class ReloadForm extends \ModulesGarden\GGSModule\Components\Form\Form implements AjaxComponentInterface
 {
-    protected string $provider = \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Providers\ReloadForm::class;
+    protected string $provider = \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Providers\ReloadForm::class;
 
     public function reload()
     {

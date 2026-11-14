@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Content;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Configuration\Content;
 
-use ModulesGarden\ggsmodule\Components\Button\ButtonSuccess;
-use ModulesGarden\ggsmodule\Components\Row\Row;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Components\Action;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\Components\Button\ButtonSuccess;
+use ModulesGarden\GGSModule\Components\Row\Row;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Components\Action;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
 
 class Step1 extends Widget implements AjaxComponentInterface
 {
@@ -17,10 +17,10 @@ class Step1 extends Widget implements AjaxComponentInterface
 
     public function loadHtml(): void
     {
-        \ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Shared\WizardLayout::prepareStep($this, 1, $this->translate('step1_title'));
+        \ModulesGarden\GGSModule\App\UI\Admin\Configuration\Shared\WizardLayout::prepareStep($this, 1, $this->translate('step1_title'));
 
         $text = new Text();
-        $text->setText($this->translate('first_p', ['moduleName' => \ModulesGarden\ggsmodule\App\Libs\Edition::name()]).'<br><br>');
+        $text->setText($this->translate('first_p', ['moduleName' => \ModulesGarden\GGSModule\App\Libs\Edition::name()]).'<br><br>');
         $this->addElement($text);
 
         $row = new Row();
@@ -53,7 +53,7 @@ class Step1 extends Widget implements AjaxComponentInterface
 
         $nextStep = new ButtonSuccess();
         $nextStep->setCss('lu-btn lu-btn--success mt30_custom');
-        $nextStep->onClick(Action::redirect('addonmodules.php?module=ggsmodule&mg-page=configuration&mg-action=step2'));
+        $nextStep->onClick(Action::redirect('addonmodules.php?module=GGSModule&mg-page=configuration&mg-action=step2'));
         $nextStep->setTitle($this->translate('next_step_btn'));
         $this->addElement($nextStep);
 

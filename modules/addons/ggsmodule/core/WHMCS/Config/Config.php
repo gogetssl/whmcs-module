@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Config;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Config;
 
-use ModulesGarden\ggsmodule\Core\Data\Container;
+use ModulesGarden\GGSModule\Core\Data\Container;
 
 class Config extends Container
 {

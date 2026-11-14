@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Form\Data;
+namespace ModulesGarden\GGSModule\Components\Form\Data;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AvailableOptionsInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ValueInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\CrudProviderInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AvailableOptionsInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ValueInterface;
+use ModulesGarden\GGSModule\Core\Contracts\CrudProviderInterface;
 
 class Propagator
 {

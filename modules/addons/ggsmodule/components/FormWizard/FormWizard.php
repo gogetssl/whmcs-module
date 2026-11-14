@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\FormWizard;
+namespace ModulesGarden\GGSModule\Components\FormWizard;
 
-use ModulesGarden\ggsmodule\Components\Button\ButtonInfo;
-use ModulesGarden\ggsmodule\Components\Button\ButtonSuccess;
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Components\FormWizardStep\FormWizardStep;
-use ModulesGarden\ggsmodule\Components\Tab\Tab;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Actions\FormSubmit;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ActionInterface;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Components\Button\ButtonInfo;
+use ModulesGarden\GGSModule\Components\Button\ButtonSuccess;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\FormWizardStep\FormWizardStep;
+use ModulesGarden\GGSModule\Components\Tab\Tab;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Actions\FormSubmit;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ActionInterface;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
 class FormWizard extends Form
 {

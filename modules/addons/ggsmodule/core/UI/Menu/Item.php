@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Menu;
+namespace ModulesGarden\GGSModule\Core\UI\Menu;
 
-use ModulesGarden\ggsmodule\Core\Contracts\UI\MenuItem;
+use ModulesGarden\GGSModule\Core\Contracts\UI\MenuItem;
 
 class Item extends AbstractItemContainer implements MenuItem
 {

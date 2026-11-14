@@ -1,68 +1,68 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\Http\Admin;
+namespace ModulesGarden\GGSModule\Packages\Samples\Http\Admin;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Helper;
-use ModulesGarden\ggsmodule\Core\Http\AbstractController;
-use ModulesGarden\ggsmodule\Core\UI\View;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
-use ModulesGarden\ggsmodule\Packages\Notifier\UI\NotificationsForRecipients\NotificationsForCurrentAdmin;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\AjaxSearch\Forms\AjaxSearchForm;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Pages\DataTable;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\HintsBox\Components\HintsBox;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\HintsBox\Forms\SettingsForm;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\FileManager\Pages\FileManager;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\Tabs\Pages\TabsWidget;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Notifications\Widgets\NotificationWidget;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\OnOffSwitchers\Forms\OnOffSwitchersForm;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ProgressBars\Widgets\ProgressBarsWidget;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ReloadableDropdowns\Forms\ReloadableDropdownsForm;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Helper;
+use ModulesGarden\GGSModule\Core\Http\AbstractController;
+use ModulesGarden\GGSModule\Core\UI\View;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
+use ModulesGarden\GGSModule\Packages\Notifier\UI\NotificationsForRecipients\NotificationsForCurrentAdmin;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\AjaxSearch\Forms\AjaxSearchForm;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Pages\DataTable;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\HintsBox\Components\HintsBox;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\HintsBox\Forms\SettingsForm;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\FileManager\Pages\FileManager;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\Tabs\Pages\TabsWidget;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Notifications\Widgets\NotificationWidget;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\OnOffSwitchers\Forms\OnOffSwitchersForm;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ProgressBars\Widgets\ProgressBarsWidget;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ReloadableDropdowns\Forms\ReloadableDropdownsForm;
 
 class Samples extends AbstractController implements AdminAreaInterface
 {
     public function basicElements()
     {
         return Helper\view()
-            ->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\Container::class);
+            ->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\Container::class);
     }
 
     public function complexElements()
     {
         return Helper\view()
-            ->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Container::class);
+            ->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Container::class);
     }
 
     public function forms()
     {
         return Helper\view()
-            ->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Forms\Container::class);
+            ->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Forms\Container::class);
     }
 
 
     public function dataTable()
     {
         return Helper\view()
-            ->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Container::class);
+            ->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Container::class);
     }
 
 
     public function graphs()
     {
         return Helper\view()
-            ->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Container::class);
+            ->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Container::class);
     }
 
     public function kanbanBoard()
     {
         return Helper\view()
-            ->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\KanbanBoard\Container::class);
+            ->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\KanbanBoard\Container::class);
     }
 
     public function treeView()
     {
         return Helper\view()
-            ->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\Container::class);
+            ->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\Container::class);
     }
 
 
@@ -74,19 +74,19 @@ class Samples extends AbstractController implements AdminAreaInterface
     {
         return Helper\view();
         /*return Helper\view()
-            ->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Samples\Pages\HomePage::class);*/
+            ->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Samples\Pages\HomePage::class);*/
     }
 
 
     public function samplesIntegration()
     {
         return Helper\viewIntegrationAddon()
-            ->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\Container::class);
+            ->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\Container::class);
     }
 
     public function adaptiveTwoColumnsContainer()
     {
-        return Helper\view()->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\AdaptiveTwoColumnsContainer\Container::class);
+        return Helper\view()->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\AdaptiveTwoColumnsContainer\Container::class);
     }
 
     public function notifications()
@@ -128,42 +128,42 @@ class Samples extends AbstractController implements AdminAreaInterface
     public function progressBars()
     {
         $view = Helper\view();
-        return $view->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ProgressBars\Container::class);
+        return $view->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ProgressBars\Container::class);
     }
 
     public function collapsableBox()
     {
         $view = Helper\view();
-        return $view->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\CollapsableBox\Container::class);
+        return $view->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\CollapsableBox\Container::class);
     }
 
     public function componentActions()
     {
         $view = Helper\view();
-        return $view->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComponentActions\Container::class);
+        return $view->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComponentActions\Container::class);
     }
 
     public function copyToTargetComponent()
     {
         $view = Helper\view();
-        return $view->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\CopyToTarget\Container::class);
+        return $view->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\CopyToTarget\Container::class);
     }
 
     public function elementsListComponent()
     {
         $view = Helper\view();
-        return $view->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ElementsListComponent\Container::class);
+        return $view->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ElementsListComponent\Container::class);
     }
 
     public function ticketRepliesComponent()
     {
         $view = Helper\view();
-        return $view->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TicketReplies\Container::class);
+        return $view->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TicketReplies\Container::class);
     }
 
     public function dynamicTabs()
     {
         $view = Helper\view();
-        return $view->addElement(\ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DynamicTabs\Container::class);
+        return $view->addElement(\ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DynamicTabs\Container::class);
     }
 }

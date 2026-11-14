@@ -1,6 +1,6 @@
 <?php
 
-use ModulesGarden\ggsmodule\Core\Hook\HookIntegrator;
+use ModulesGarden\GGSModule\Core\Hook\HookIntegrator;
 
 
 $hookManager->register(

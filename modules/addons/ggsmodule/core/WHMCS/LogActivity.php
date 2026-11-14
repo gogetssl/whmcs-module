@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS;
+namespace ModulesGarden\GGSModule\Core\WHMCS;
 
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 use Psr\Log\LoggerInterface;
 
 

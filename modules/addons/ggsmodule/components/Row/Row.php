@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Row;
+namespace ModulesGarden\GGSModule\Components\Row;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ComponentsContainerTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\CssContainerTrait;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentContainerInterface;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\ComponentsContainerTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\CssContainerTrait;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentContainerInterface;
 
 class Row extends AbstractComponent implements ComponentContainerInterface
 {

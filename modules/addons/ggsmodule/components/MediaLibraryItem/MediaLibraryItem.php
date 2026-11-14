@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\MediaLibraryItem;
+namespace ModulesGarden\GGSModule\Components\MediaLibraryItem;
 
-use ModulesGarden\ggsmodule\Components\Button\Button;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ImageTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TranslatorTrait;
+use ModulesGarden\GGSModule\Components\Button\Button;
+use ModulesGarden\GGSModule\Core\Components\Traits\ImageTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TranslatorTrait;
 
 class MediaLibraryItem extends Button
 {

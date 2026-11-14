@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Integrations;
+namespace ModulesGarden\GGSModule\Packages\Product\Integrations;
 
-use ModulesGarden\ggsmodule\Core\Hook\AbstractHookIntegrationController;
-use ModulesGarden\ggsmodule\Packages\Product\Http\Admin\ServerConfig;
+use ModulesGarden\GGSModule\Core\Hook\AbstractHookIntegrationController;
+use ModulesGarden\GGSModule\Packages\Product\Http\Admin\ServerConfig;
 
 class ServerConfigurationIntegration extends AbstractHookIntegrationController
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Form\Builder\Builders;
+namespace ModulesGarden\GGSModule\Components\Form\Builder\Builders;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\FormFieldInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\FormFieldInterface;
 
 class HiddenFieldFactory extends AbstractFormFieldFactory
 {

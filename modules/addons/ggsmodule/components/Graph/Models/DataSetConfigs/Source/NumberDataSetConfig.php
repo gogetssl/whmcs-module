@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Models\DataSetConfigs\Source;
+namespace ModulesGarden\GGSModule\Components\Graph\Models\DataSetConfigs\Source;
 
 abstract class NumberDataSetConfig extends AbstractDataSetConfig
 {

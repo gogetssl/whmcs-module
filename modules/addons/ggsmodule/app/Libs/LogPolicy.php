@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
 /**
  * What the Module Log records. Three settings decide it (Settings > Logs, and Actions > Settings on the Logs page):

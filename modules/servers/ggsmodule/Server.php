@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule;
+namespace ModulesGarden\Servers\GGSModule;
 
-use ModulesGarden\Servers\ggsmodule\core\process\AbstractMainDriver;
-use ModulesGarden\Servers\ggsmodule\core\Lang;
-use ModulesGarden\Servers\ggsmodule\core\Smarty;
+use ModulesGarden\Servers\GGSModule\core\process\AbstractMainDriver;
+use ModulesGarden\Servers\GGSModule\core\Lang;
+use ModulesGarden\Servers\GGSModule\core\Smarty;
 
 class Server extends AbstractMainDriver {
 

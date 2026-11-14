@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\IconButton;
+namespace ModulesGarden\GGSModule\Components\IconButton;
 
-use ModulesGarden\ggsmodule\Components\Button\Button;
-use ModulesGarden\ggsmodule\Core\Components\Enums\Size;
+use ModulesGarden\GGSModule\Components\Button\Button;
+use ModulesGarden\GGSModule\Core\Components\Enums\Size;
 
 /**
  * Class IconButton

@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models;
 
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 
@@ -50,7 +50,7 @@ class HostingAddon extends EloquentModel
 
     public function addon()
     {
-        return $this->belongsTo('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Addon', 'addonid');
+        return $this->belongsTo('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Addon', 'addonid');
     }
 
     public function getBillingcycleFriendlyAttribute()
@@ -60,11 +60,11 @@ class HostingAddon extends EloquentModel
 
     public function hosting()
     {
-        return $this->belongsTo('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Hosting', 'hostingid');
+        return $this->belongsTo('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Hosting', 'hostingid');
     }
 
     public function order()
     {
-        return $this->belongsTo('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Order', 'orderid');
+        return $this->belongsTo('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Order', 'orderid');
     }
 }

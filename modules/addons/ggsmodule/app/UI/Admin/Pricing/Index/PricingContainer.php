@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Pricing\Index;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Pricing\Index;
 
-use ModulesGarden\ggsmodule\App\Http\Admin\Pricing as PricingController;
-use ModulesGarden\ggsmodule\App\Libs\Markups;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Libs\PricingService;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\App\Http\Admin\Pricing as PricingController;
+use ModulesGarden\GGSModule\App\Libs\Markups;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Libs\PricingService;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
 
 /**
  * Admin page "Pricing": one editable grid per currency (product + SAN options x 1/2/3 years) with the reseller cost,
@@ -19,7 +19,7 @@ class PricingContainer extends Container implements AdminAreaInterface
 {
     use TranslatorTrait;
 
-    const BASE = 'addonmodules.php?module=ggsmodule&mg-page=pricing';
+    const BASE = 'addonmodules.php?module=GGSModule&mg-page=pricing';
 
     public function loadHtml(): void
     {
@@ -34,7 +34,7 @@ class PricingContainer extends Container implements AdminAreaInterface
         // notes sit right under the page header, the grid in its own card
         $notes = new Text();
         $notes->setCss('ggs-html ggs-notes');
-        $notes->setText($this->notices($session) . $this->markupNote() . (\ModulesGarden\ggsmodule\App\Libs\GeneralSettings::enabled('hideInfoMessages') ? '' : '<div class="ggs-note">' . $this->e($this->t('grid_help')) . '</div>'));
+        $notes->setText($this->notices($session) . $this->markupNote() . (\ModulesGarden\GGSModule\App\Libs\GeneralSettings::enabled('hideInfoMessages') ? '' : '<div class="ggs-note">' . $this->e($this->t('grid_help')) . '</div>'));
         $this->addElement($notes);
         unset($_SESSION[PricingController::SESSION]['notice'], $_SESSION[PricingController::SESSION]['error']);
 
@@ -79,7 +79,7 @@ class PricingContainer extends Container implements AdminAreaInterface
         return '<div class="ggs-note">' . $this->e($this->t('markup_note', [
             'global' => $global === null ? '-' : ($global > 0 ? '+' : '') . rtrim(rtrim(number_format($global, 2, '.', ''), '0'), '.') . ' %',
             'count'  => $other,
-        ])) . ' <a href="addonmodules.php?module=ggsmodule&mg-page=markups">' . $this->e($this->t('markup_edit')) . '</a></div>';
+        ])) . ' <a href="addonmodules.php?module=GGSModule&mg-page=markups">' . $this->e($this->t('markup_edit')) . '</a></div>';
     }
 
     protected function notices(array $session)
@@ -100,7 +100,7 @@ class PricingContainer extends Container implements AdminAreaInterface
     protected function toolbar($currencies, $currencyId, $token)
     {
         $html = '<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin-bottom:14px;">'
-            . '<form method="get" action="addonmodules.php"><input type="hidden" name="module" value="ggsmodule"><input type="hidden" name="mg-page" value="pricing">'
+            . '<form method="get" action="addonmodules.php"><input type="hidden" name="module" value="GGSModule"><input type="hidden" name="mg-page" value="pricing">'
             . '<label style="display:block;font-weight:600">' . $this->e($this->t('currency')) . '</label><select name="currency" class="form-control" onchange="this.form.submit()">';
         foreach($currencies as $currency)
         {

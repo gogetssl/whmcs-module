@@ -1,18 +1,18 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\FileReader;
+namespace ModulesGarden\GGSModule\Core\FileReader;
 
 use Exception;
-use ModulesGarden\ggsmodule\Core\FileReader\Reader\AbstractType;
-use ModulesGarden\ggsmodule\Core\FileReader\Reader\Css;
-use ModulesGarden\ggsmodule\Core\FileReader\Reader\Html;
-use ModulesGarden\ggsmodule\Core\FileReader\Reader\Ini;
-use ModulesGarden\ggsmodule\Core\FileReader\Reader\Js;
-use ModulesGarden\ggsmodule\Core\FileReader\Reader\Json;
-use ModulesGarden\ggsmodule\Core\FileReader\Reader\Php;
-use ModulesGarden\ggsmodule\Core\FileReader\Reader\Sql;
-use ModulesGarden\ggsmodule\Core\FileReader\Reader\Xml;
-use ModulesGarden\ggsmodule\Core\FileReader\Reader\Yml;
+use ModulesGarden\GGSModule\Core\FileReader\Reader\AbstractType;
+use ModulesGarden\GGSModule\Core\FileReader\Reader\Css;
+use ModulesGarden\GGSModule\Core\FileReader\Reader\Html;
+use ModulesGarden\GGSModule\Core\FileReader\Reader\Ini;
+use ModulesGarden\GGSModule\Core\FileReader\Reader\Js;
+use ModulesGarden\GGSModule\Core\FileReader\Reader\Json;
+use ModulesGarden\GGSModule\Core\FileReader\Reader\Php;
+use ModulesGarden\GGSModule\Core\FileReader\Reader\Sql;
+use ModulesGarden\GGSModule\Core\FileReader\Reader\Xml;
+use ModulesGarden\GGSModule\Core\FileReader\Reader\Yml;
 
 /**
  * Description of Reader

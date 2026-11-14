@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\View;
+namespace ModulesGarden\GGSModule\Core\UI\View;
 
-use ModulesGarden\ggsmodule\Components\AppBreadcrumb\AppBreadcrumb;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Breadcrumbs;
+use ModulesGarden\GGSModule\Components\AppBreadcrumb\AppBreadcrumb;
+use ModulesGarden\GGSModule\Core\Support\Facades\Breadcrumbs;
 
 class BreadcrumbsBuilder
 {

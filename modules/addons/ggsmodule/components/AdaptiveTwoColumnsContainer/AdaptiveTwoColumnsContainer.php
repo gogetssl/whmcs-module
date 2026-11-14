@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\AdaptiveTwoColumnsContainer;
+namespace ModulesGarden\GGSModule\Components\AdaptiveTwoColumnsContainer;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Container\Container;
 
 class AdaptiveTwoColumnsContainer extends Container
 {

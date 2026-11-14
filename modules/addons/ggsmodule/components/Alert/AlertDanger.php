@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Alert;
+namespace ModulesGarden\GGSModule\Components\Alert;
 
-use ModulesGarden\ggsmodule\Core\Components\Enums\Color;
+use ModulesGarden\GGSModule\Core\Components\Enums\Color;
 
 class AlertDanger extends Alert
 {

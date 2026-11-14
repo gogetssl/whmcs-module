@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Http\Admin;
+namespace ModulesGarden\GGSModule\App\Http\Admin;
 
-use ModulesGarden\ggsmodule\App\Libs\Edition;
+use ModulesGarden\GGSModule\App\Libs\Edition;
 
-use ModulesGarden\ggsmodule\App\Libs\CsrfToken;
-use ModulesGarden\ggsmodule\App\Libs\ProductCatalog;
-use ModulesGarden\ggsmodule\App\UI\Admin\Products\Index\ProductsContainer;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Http\AbstractController;
-use ModulesGarden\ggsmodule\Core\Helper;
+use ModulesGarden\GGSModule\App\Libs\CsrfToken;
+use ModulesGarden\GGSModule\App\Libs\ProductCatalog;
+use ModulesGarden\GGSModule\App\UI\Admin\Products\Index\ProductsContainer;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Http\AbstractController;
+use ModulesGarden\GGSModule\Core\Helper;
 use WHMCS\Database\Capsule;
 
 /**
@@ -83,7 +83,7 @@ class Products extends AbstractController implements AdminAreaInterface
                 throw new \RuntimeException('Invalid or expired security token. Reload the page and try again.');
             }
             $pid    = (int)($_REQUEST['pid'] ?? 0);
-            $name   = (string)Capsule::table('tblproducts')->where('id', $pid)->where('servertype', 'ggsmodule')->value('name');
+            $name   = (string)Capsule::table('tblproducts')->where('id', $pid)->where('servertype', 'GGSModule')->value('name');
             if($name === '')
             {
                 throw new \RuntimeException('Product not found');

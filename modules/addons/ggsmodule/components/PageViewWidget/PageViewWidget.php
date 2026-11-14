@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\PageViewWidget;
+namespace ModulesGarden\GGSModule\Components\PageViewWidget;
 
-use ModulesGarden\ggsmodule\Components\Image\Image;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TitleTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ToolbarTrait;
+use ModulesGarden\GGSModule\Components\Image\Image;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\TitleTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\ToolbarTrait;
 
 class PageViewWidget extends AbstractComponent
 {

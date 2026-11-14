@@ -1,27 +1,27 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Forms\Forms\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Forms\Forms\Forms;
 
-use ModulesGarden\ggsmodule\Components\Alert\AlertDanger;
-use ModulesGarden\ggsmodule\Components\Container\ContainerQuarterPage;
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
-use ModulesGarden\ggsmodule\Components\FormGroup\FormGroup;
-use ModulesGarden\ggsmodule\Components\FormLabel\FormLabel;
-use ModulesGarden\ggsmodule\Components\PreBlock\PreBlock;
-use ModulesGarden\ggsmodule\Components\Row\Row;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
-use ModulesGarden\ggsmodule\Components\Tab\Tab;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Components\Widget\WidgetGrey;
-use ModulesGarden\ggsmodule\Core\Components\Actions\PopulateValue;
-use ModulesGarden\ggsmodule\Core\Components\Decorator\Decorator;
+use ModulesGarden\GGSModule\Components\Alert\AlertDanger;
+use ModulesGarden\GGSModule\Components\Container\ContainerQuarterPage;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Components\FormGroup\FormGroup;
+use ModulesGarden\GGSModule\Components\FormLabel\FormLabel;
+use ModulesGarden\GGSModule\Components\PreBlock\PreBlock;
+use ModulesGarden\GGSModule\Components\Row\Row;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Components\Tab\Tab;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Components\Widget\WidgetGrey;
+use ModulesGarden\GGSModule\Core\Components\Actions\PopulateValue;
+use ModulesGarden\GGSModule\Core\Components\Decorator\Decorator;
 
 class FormWithTabsElements extends AbstractFormElements
 {
     public function loadHtml(): void
     {
         //Create tabs container
-        $tabsContainer = new \ModulesGarden\ggsmodule\Components\TabsWidget\TabsWidget();
+        $tabsContainer = new \ModulesGarden\GGSModule\Components\TabsWidget\TabsWidget();
 //        $tabsContainer->setTitle('Container');
         $this->addElement($tabsContainer);
 

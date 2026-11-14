@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Store;
+namespace ModulesGarden\GGSModule\Core\UI\Store;
 
-use ModulesGarden\ggsmodule\Core\Data\Container;
+use ModulesGarden\GGSModule\Core\Data\Container;
 
 class Store extends Container
 {

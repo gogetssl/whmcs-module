@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\AjaxSearch\Fields;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\AjaxSearch\Fields;
 
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Client;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Client;
 
 class ClientsSearchField extends Dropdown
 {

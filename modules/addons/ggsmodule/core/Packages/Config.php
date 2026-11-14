@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Packages;
+namespace ModulesGarden\GGSModule\Core\Packages;
 
 use Exception;
-use ModulesGarden\ggsmodule\Core\Data\Container;
+use ModulesGarden\GGSModule\Core\Data\Container;
 
 class Config extends Container
 {

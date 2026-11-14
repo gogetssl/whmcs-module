@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components;
+namespace ModulesGarden\GGSModule\Core\Components;
 
 use JsonSerializable;
 
-class AbstractActionInterface implements JsonSerializable, \ModulesGarden\ggsmodule\Core\Contracts\Components\ActionInterface
+class AbstractActionInterface implements JsonSerializable, \ModulesGarden\GGSModule\Core\Contracts\Components\ActionInterface
 {
     #[\ReturnTypeWillChange]
     public function jsonSerialize(): array

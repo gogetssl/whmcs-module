@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\HintsBox\Providers;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\HintsBox\Providers;
 
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
 
 class SettingsProvider extends CrudProvider
 {

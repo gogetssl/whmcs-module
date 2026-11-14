@@ -1,19 +1,19 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components;
+namespace ModulesGarden\GGSModule\Core\Components;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Components\FallbackTraits\BackwardCompatibilityTrait;
-use ModulesGarden\ggsmodule\Core\Components\Tools\IdGenerator;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\SlotsTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TranslatorTrait;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
-use ModulesGarden\ggsmodule\Core\Events\Events\ComponentPreToArray;
-use ModulesGarden\ggsmodule\Core\Helper\ModuleNamespace;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Components\FallbackTraits\BackwardCompatibilityTrait;
+use ModulesGarden\GGSModule\Core\Components\Tools\IdGenerator;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\SlotsTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TranslatorTrait;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Core\Events\Events\ComponentPreToArray;
+use ModulesGarden\GGSModule\Core\Helper\ModuleNamespace;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 use ReflectionException;
-use function ModulesGarden\ggsmodule\Core\fire;
+use function ModulesGarden\GGSModule\Core\fire;
 
 abstract class AbstractComponent implements ComponentInterface
 {

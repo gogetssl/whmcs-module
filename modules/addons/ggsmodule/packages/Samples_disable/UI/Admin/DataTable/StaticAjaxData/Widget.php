@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\StaticAjaxData;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\StaticAjaxData;
 
-use ModulesGarden\ggsmodule\Components\Button\ButtonSubmitSuccess;
-use ModulesGarden\ggsmodule\Core\Components\Actions\FormSubmit;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Components\Button\ButtonSubmitSuccess;
+use ModulesGarden\GGSModule\Core\Components\Actions\FormSubmit;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
-class Widget extends \ModulesGarden\ggsmodule\Components\Widget\Widget implements AjaxComponentInterface, AdminAreaInterface
+class Widget extends \ModulesGarden\GGSModule\Components\Widget\Widget implements AjaxComponentInterface, AdminAreaInterface
 {
     protected string $cid = 'container-xxxx';
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\Pages;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\Pages;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\LoggerManager\Buttons\DeleteLoggerModalButton;
-use ModulesGarden\ggsmodule\Components\DataTable\Column;
-use ModulesGarden\ggsmodule\Components\DataTable\DataTable;
-use ModulesGarden\ggsmodule\Core\Components\Enums\Color;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\QueryDataProvider;
+use ModulesGarden\GGSModule\App\UI\Admin\LoggerManager\Buttons\DeleteLoggerModalButton;
+use ModulesGarden\GGSModule\Components\DataTable\Column;
+use ModulesGarden\GGSModule\Components\DataTable\DataTable;
+use ModulesGarden\GGSModule\Core\Components\Enums\Color;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\QueryDataProvider;
 use WHMCS\User\Client;
 
 class HomePage extends DataTable implements AdminAreaInterface

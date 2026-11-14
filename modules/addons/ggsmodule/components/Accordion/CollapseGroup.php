@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Accordion;
+namespace ModulesGarden\GGSModule\Components\Accordion;
 
 class CollapseGroup extends Accordion
 {

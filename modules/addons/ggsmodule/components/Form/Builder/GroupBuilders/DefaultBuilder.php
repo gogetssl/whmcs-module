@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Form\Builder\GroupBuilders;
+namespace ModulesGarden\GGSModule\Components\Form\Builder\GroupBuilders;
 
-use ModulesGarden\ggsmodule\Components\FormGroup\FormGroup;
-use ModulesGarden\ggsmodule\Core\Components\FormFields\FormField;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\FormFieldInterface;
-use function ModulesGarden\ggsmodule\Core\translator;
+use ModulesGarden\GGSModule\Components\FormGroup\FormGroup;
+use ModulesGarden\GGSModule\Core\Components\FormFields\FormField;
+use ModulesGarden\GGSModule\Core\Contracts\Components\FormFieldInterface;
+use function ModulesGarden\GGSModule\Core\translator;
 
 class DefaultBuilder
 {

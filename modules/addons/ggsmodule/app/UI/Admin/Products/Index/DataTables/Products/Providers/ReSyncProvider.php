@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Products\Index\DataTables\Products\Providers;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Products\Index\DataTables\Products\Providers;
 
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Models\RemoteProduct;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Pricing;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Product;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptions\Quantity;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptions\SubOption\SubOption;
-use ModulesGarden\ggsmodule\Packages\Product\Services\ConfigurableOptions;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Models\RemoteProduct;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Pricing;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Product;
+use ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptions\Quantity;
+use ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptions\SubOption\SubOption;
+use ModulesGarden\GGSModule\Packages\Product\Services\ConfigurableOptions;
 
 class ReSyncProvider extends CrudProvider
 {

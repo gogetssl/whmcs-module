@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App;
+namespace ModulesGarden\GGSModule\Core\App;
 
 class ErrorHandler
 {

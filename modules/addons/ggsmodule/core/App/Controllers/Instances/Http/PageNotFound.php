@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Http;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\Instances\Http;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ClientAreaInterface;
-use ModulesGarden\ggsmodule\Core\UI\View;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ClientAreaInterface;
+use ModulesGarden\GGSModule\Core\UI\View;
 
 //@todo refactor me
 class PageNotFound extends View implements AdminAreaInterface, ClientAreaInterface
@@ -13,7 +13,7 @@ class PageNotFound extends View implements AdminAreaInterface, ClientAreaInterfa
     {
         parent::__construct();
 
-        $zero = new \ModulesGarden\ggsmodule\Components\PageNotFound\PageNotFound();
+        $zero = new \ModulesGarden\GGSModule\Components\PageNotFound\PageNotFound();
         $this->addElement($zero);
     }
 }

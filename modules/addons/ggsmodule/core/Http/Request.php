@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Http;
+namespace ModulesGarden\GGSModule\Core\Http;
 
-use ModulesGarden\ggsmodule\Core\Helper\BuildUrl;
+use ModulesGarden\GGSModule\Core\Helper\BuildUrl;
 
 /**
  * Description of Request

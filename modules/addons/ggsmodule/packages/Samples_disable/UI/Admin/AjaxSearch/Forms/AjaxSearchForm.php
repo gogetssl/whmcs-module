@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\AjaxSearch\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\AjaxSearch\Forms;
 
-use ModulesGarden\ggsmodule\Components\Form\AbstractForm;
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\AjaxSearch\Fields\ClientsSearchField;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\AjaxSearch\Providers\AjaxSearchProvider;
+use ModulesGarden\GGSModule\Components\Form\AbstractForm;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\AjaxSearch\Fields\ClientsSearchField;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\AjaxSearch\Providers\AjaxSearchProvider;
 
 class AjaxSearchForm extends AbstractForm implements AdminAreaInterface
 {

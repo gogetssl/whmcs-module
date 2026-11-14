@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Formatters;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Formatters;
 
-use ModulesGarden\ggsmodule\Core\Components\Traits\TranslatorTrait;
-use ModulesGarden\ggsmodule\Core\Support\Arr;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Client;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Domain;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Hosting;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\HostingAddon;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Invoice;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Order;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Ticket;
-use ModulesGarden\ggsmodule\Core\WHMCS\URL;
+use ModulesGarden\GGSModule\Core\Components\Traits\TranslatorTrait;
+use ModulesGarden\GGSModule\Core\Support\Arr;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Client;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Domain;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Hosting;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\HostingAddon;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Invoice;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Order;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Ticket;
+use ModulesGarden\GGSModule\Core\WHMCS\URL;
 
 class RelatedItem
 {

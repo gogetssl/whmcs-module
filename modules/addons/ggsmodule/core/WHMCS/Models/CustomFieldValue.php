@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models;
 
 /**
  * Description of CustomFieldValue
@@ -13,18 +13,18 @@ class CustomFieldValue extends \WHMCS\CustomField\CustomFieldValue
 {
     public function customField()
     {
-        return $this->belongsTo('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\CustomField', "fieldid");
+        return $this->belongsTo('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\CustomField', "fieldid");
     }
     public function addon()
     {
-        return $this->belongsTo('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\ServiceAddon', "relid");
+        return $this->belongsTo('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\ServiceAddon', "relid");
     }
     public function client()
     {
-        return $this->belongsTo('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Client', "relid");
+        return $this->belongsTo('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Client', "relid");
     }
     public function service()
     {
-        return $this->belongsTo("WModulesGarden\ggsmodule\Core\WHMCS\Models\Service", "relid");
+        return $this->belongsTo("WModulesGarden\GGSModule\Core\WHMCS\Models\Service", "relid");
     }
 }

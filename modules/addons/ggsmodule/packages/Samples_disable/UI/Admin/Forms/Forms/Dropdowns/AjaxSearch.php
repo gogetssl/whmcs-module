@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Forms\Forms\Dropdowns;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Forms\Forms\Dropdowns;
 
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
 class AjaxSearch extends Dropdown
 {

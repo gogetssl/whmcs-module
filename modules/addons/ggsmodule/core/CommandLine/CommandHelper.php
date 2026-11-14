@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\CommandLine;
+namespace ModulesGarden\GGSModule\Core\CommandLine;
 
 class CommandHelper
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Support\Facades;
+namespace ModulesGarden\GGSModule\Core\Support\Facades;
 
-use ModulesGarden\ggsmodule\Core\Services\Translator as TranslatorService;
+use ModulesGarden\GGSModule\Core\Services\Translator as TranslatorService;
 
 
 /**

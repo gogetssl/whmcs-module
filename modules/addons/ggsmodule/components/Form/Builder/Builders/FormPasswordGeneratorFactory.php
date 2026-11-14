@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Form\Builder\Builders;
+namespace ModulesGarden\GGSModule\Components\Form\Builder\Builders;
 
 class FormPasswordGeneratorFactory extends FormInputGroupFactory
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Buttons;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Buttons;
 
-use ModulesGarden\ggsmodule\Components\Button\ButtonDanger;
-use ModulesGarden\ggsmodule\Core\Components\Action;
-use ModulesGarden\ggsmodule\Packages\Logs\UI\Modals\CleanLogModal;
+use ModulesGarden\GGSModule\Components\Button\ButtonDanger;
+use ModulesGarden\GGSModule\Core\Components\Action;
+use ModulesGarden\GGSModule\Packages\Logs\UI\Modals\CleanLogModal;
 
 class CleanLogButton extends ButtonDanger
 {

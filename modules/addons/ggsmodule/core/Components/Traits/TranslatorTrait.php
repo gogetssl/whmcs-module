@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Traits;
+namespace ModulesGarden\GGSModule\Core\Components\Traits;
 
 /**
  * Trait ElementsTrait
  */
 trait TranslatorTrait
 {
-    use \ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
+    use \ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
 
     protected function setTranslations(array $translations)
     {

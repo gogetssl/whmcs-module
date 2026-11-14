@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Configuration\Addon\Config;
+namespace ModulesGarden\GGSModule\Core\Configuration\Addon\Config;
 
-use ModulesGarden\ggsmodule\Core\Configuration\Addon\AbstractBefore;
+use ModulesGarden\GGSModule\Core\Configuration\Addon\AbstractBefore;
 
 /**
  * Runs before loading module configuration

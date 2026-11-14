@@ -1,12 +1,12 @@
 <?php
 
-use ModulesGarden\ggsmodule\Core\Components\Enums\Type;
-use ModulesGarden\ggsmodule\Core\DependencyInjection\Container;
-use ModulesGarden\ggsmodule\Packages\Logs\Enums\LogTypes;
-use ModulesGarden\ggsmodule\Packages\Logs\Listeners\ModuleActivated;
-use ModulesGarden\ggsmodule\Packages\Logs\Listeners\ModuleUpgraded;
-use ModulesGarden\ggsmodule\Packages\Logs\Services\Logs;
-use function ModulesGarden\ggsmodule\Core\listen;
+use ModulesGarden\GGSModule\Core\Components\Enums\Type;
+use ModulesGarden\GGSModule\Core\DependencyInjection\Container;
+use ModulesGarden\GGSModule\Packages\Logs\Enums\LogTypes;
+use ModulesGarden\GGSModule\Packages\Logs\Listeners\ModuleActivated;
+use ModulesGarden\GGSModule\Packages\Logs\Listeners\ModuleUpgraded;
+use ModulesGarden\GGSModule\Packages\Logs\Services\Logs;
+use function ModulesGarden\GGSModule\Core\listen;
 
 return [
     'menu'        => [
@@ -21,7 +21,7 @@ return [
     ],
     'controllers' => [
         'admin'  => [
-            \ModulesGarden\ggsmodule\Packages\Logs\Http\Admin\Logs::class,
+            \ModulesGarden\GGSModule\Packages\Logs\Http\Admin\Logs::class,
         ],
         'client' => [
 
@@ -33,62 +33,62 @@ return [
     'config'      => [
         'colors' => [
             LogTypes::EMERGENCY => [
-                'type'   => \ModulesGarden\ggsmodule\Core\Components\Enums\Type::DANGER,
+                'type'   => \ModulesGarden\GGSModule\Core\Components\Enums\Type::DANGER,
                 'icon'   => 'alert-triangle',
-                'button' => \ModulesGarden\ggsmodule\Components\Button\ButtonDanger::class,
+                'button' => \ModulesGarden\GGSModule\Components\Button\ButtonDanger::class,
             ],
             LogTypes::ALERT     => [
                 'type'   => Type::PRIMARY,
                 'icon'   => 'alert-circle-o',
-                'button' => \ModulesGarden\ggsmodule\Components\Button\ButtonDanger::class,
+                'button' => \ModulesGarden\GGSModule\Components\Button\ButtonDanger::class,
             ],
             LogTypes::CRITICAL  => [
                 'type'   => Type::DANGER,
                 'icon'   => 'alert-polygon',
-                'button' => \ModulesGarden\ggsmodule\Components\Button\ButtonDanger::class,
+                'button' => \ModulesGarden\GGSModule\Components\Button\ButtonDanger::class,
             ],
             LogTypes::ERROR     => [
                 'type'   => Type::DANGER,
                 'icon'   => 'alert-octagon',
-                'button' => \ModulesGarden\ggsmodule\Components\Button\ButtonDanger::class,
+                'button' => \ModulesGarden\GGSModule\Components\Button\ButtonDanger::class,
             ],
             LogTypes::WARNING   => [
                 'type'   => Type::WARNING,
                 'icon'   => 'alert-circle',
-                'button' => \ModulesGarden\ggsmodule\Components\Button\ButtonWarning::class,
+                'button' => \ModulesGarden\GGSModule\Components\Button\ButtonWarning::class,
             ],
             LogTypes::NOTICE    => [
                 'type'   => Type::INFO,
                 'icon'   => 'info',
-                'button' => \ModulesGarden\ggsmodule\Components\Button\ButtonInfo::class,
+                'button' => \ModulesGarden\GGSModule\Components\Button\ButtonInfo::class,
             ],
             LogTypes::INFO      => [
                 'type'   => Type::SUCCESS,
                 'icon'   => 'information-outline',
-                'button' => \ModulesGarden\ggsmodule\Components\Button\ButtonInfo::class,
+                'button' => \ModulesGarden\GGSModule\Components\Button\ButtonInfo::class,
             ],
             LogTypes::DEBUG     => [
                 'type'   => Type::DEFAULT,
                 'icon'   => 'bug',
-                'button' => \ModulesGarden\ggsmodule\Components\Button\ButtonBasic::class,
+                'button' => \ModulesGarden\GGSModule\Components\Button\ButtonBasic::class,
             ],
             'total'             => [
                 'type'   => Type::DEFAULT,
                 'icon'   => 'layers',
-                'button' => \ModulesGarden\ggsmodule\Components\Button\ButtonBasic::class,
+                'button' => \ModulesGarden\GGSModule\Components\Button\ButtonBasic::class,
             ],
         ],
     ],
     'bootstrap'   => function() {
-//        $oClass = new \ReflectionClass(\ModulesGarden\ggsmodule\Packages\Logs\Enums\LogTypes::class);
+//        $oClass = new \ReflectionClass(\ModulesGarden\GGSModule\Packages\Logs\Enums\LogTypes::class);
 //        foreach ($oClass->getConstants() as $type)
 //        {
-//            call_user_func([\ModulesGarden\ggsmodule\Packages\Logs\Support\Facades\Logger::class, $type], $type. '{adawd}', ['adawd' => $type]);
+//            call_user_func([\ModulesGarden\GGSModule\Packages\Logs\Support\Facades\Logger::class, $type], $type. '{adawd}', ['adawd' => $type]);
 //        }
 
-        \ModulesGarden\ggsmodule\Core\Hook\HookManager::create(__DIR__, true);
+        \ModulesGarden\GGSModule\Core\Hook\HookManager::create(__DIR__, true);
         Container::getInstance()->singleton(Logs::class);
-        listen(\ModulesGarden\ggsmodule\Core\Events\Events\ModuleActivated::class, ModuleActivated::class);
-        listen(\ModulesGarden\ggsmodule\Core\Events\Events\ModuleUpgraded::class, ModuleUpgraded::class);
+        listen(\ModulesGarden\GGSModule\Core\Events\Events\ModuleActivated::class, ModuleActivated::class);
+        listen(\ModulesGarden\GGSModule\Core\Events\Events\ModuleUpgraded::class, ModuleUpgraded::class);
     },
 ];

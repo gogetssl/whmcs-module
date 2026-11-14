@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\DataProviders\QueryDataProvider;
+namespace ModulesGarden\GGSModule\Core\DataProviders\QueryDataProvider;
 
 class ColumnName
 {

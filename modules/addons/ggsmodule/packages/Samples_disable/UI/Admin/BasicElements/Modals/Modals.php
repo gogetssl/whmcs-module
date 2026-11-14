@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\Modals;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\Modals;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
-class Modals extends \ModulesGarden\ggsmodule\Components\Container\Container implements AdminAreaInterface
+class Modals extends \ModulesGarden\GGSModule\Components\Container\Container implements AdminAreaInterface
 {
     public function loadHtml(): void
     {

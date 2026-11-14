@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Traits;
+namespace ModulesGarden\GGSModule\Core\Components\Traits;
 
-use ModulesGarden\ggsmodule\Components\Toolbar\Toolbar;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Components\Toolbar\Toolbar;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
 
 trait ToolbarTrait
 {

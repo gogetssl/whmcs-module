@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypes;
+namespace ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypes;
 
-use ModulesGarden\ggsmodule\Core\Components\Traits\TranslatorTrait;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypeWithModel;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\RelatedItem;
-use ModulesGarden\ggsmodule\Core\WHMCS\URL;
+use ModulesGarden\GGSModule\Core\Components\Traits\TranslatorTrait;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypeWithModel;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\RelatedItem;
+use ModulesGarden\GGSModule\Core\WHMCS\URL;
 
 class Invoice extends ItemTypeWithModel
 {
     use TranslatorTrait;
 
-    protected static string $modelClass = \ModulesGarden\ggsmodule\Core\WHMCS\Models\Invoice::class;
+    protected static string $modelClass = \ModulesGarden\GGSModule\Core\WHMCS\Models\Invoice::class;
 
     public function generateUrl(): string
     {

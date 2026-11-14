@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\Listeners;
+namespace ModulesGarden\GGSModule\Packages\Logs\Listeners;
 
 class ModuleUpgraded extends ModuleActivated
 {

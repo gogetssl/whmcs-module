@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Traits\Datatable;
+namespace ModulesGarden\GGSModule\Core\UI\Traits\Datatable;
 
-use ModulesGarden\ggsmodule\Core\UI\Helpers\ContainerElementsConstants;
-use ModulesGarden\ggsmodule\Core\UI\Widget\DataTable\Filters\Helpers\FilterInterface;
+use ModulesGarden\GGSModule\Core\UI\Helpers\ContainerElementsConstants;
+use ModulesGarden\GGSModule\Core\UI\Widget\DataTable\Filters\Helpers\FilterInterface;
 
 /**
  * Filters related functions

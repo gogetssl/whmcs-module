@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ElementsListComponent\Buttons;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ElementsListComponent\Buttons;
 
-use ModulesGarden\ggsmodule\Components\IconButton\IconButton;
+use ModulesGarden\GGSModule\Components\IconButton\IconButton;
 
 class ButtonDomain extends IconButton
 {

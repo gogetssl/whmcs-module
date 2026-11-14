@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components;
+namespace ModulesGarden\GGSModule\Core\Components;
 
-use ModulesGarden\ggsmodule\Core\Components\Hooks\Manager;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Core\Components\Hooks\Manager;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
 
 class DataBuilder
 {
@@ -23,7 +23,7 @@ class DataBuilder
     }
 
     /**
-     * @return \ModulesGarden\ggsmodule\Core\Contracts\ResponseInterface
+     * @return \ModulesGarden\GGSModule\Core\Contracts\ResponseInterface
      * @todo - do that better...
      */
     public function returnAjaxData()

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Fragments\ConfigurableHintBox\UI\Buttons;
+namespace ModulesGarden\GGSModule\Fragments\ConfigurableHintBox\UI\Buttons;
 
-use ModulesGarden\ggsmodule\Core\Components\Actions\ReloadById;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Components\Actions\ReloadById;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
 class HideButton extends ExpandButton implements AdminAreaInterface
 {

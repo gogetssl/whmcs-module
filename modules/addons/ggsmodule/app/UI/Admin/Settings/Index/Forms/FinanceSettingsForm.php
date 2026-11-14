@@ -1,24 +1,24 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Forms;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Forms;
 
 
-use ModulesGarden\ggsmodule\App\Libs\Markups;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Libs\PricingService;
-use ModulesGarden\ggsmodule\App\Libs\ProductSettings;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Concerns\SettingsLayout;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Providers\FinanceSettingsProvider;
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
-use ModulesGarden\ggsmodule\Components\Number\Number;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
-use ModulesGarden\ggsmodule\Components\TextArea\TextArea;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\App\Libs\Markups;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Libs\PricingService;
+use ModulesGarden\GGSModule\App\Libs\ProductSettings;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Concerns\SettingsLayout;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Providers\FinanceSettingsProvider;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Components\Number\Number;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Components\TextArea\TextArea;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
 /**
  * Settings > Finance: how prices are made from the reseller cost (App\Libs\FinancePolicy), what happens when a price
@@ -108,7 +108,7 @@ class FinanceSettingsForm extends Form implements AdminAreaInterface, AjaxCompon
         }
 
         $url  = function($page) {
-            return 'addonmodules.php?module=ggsmodule&mg-page=' . $page;
+            return 'addonmodules.php?module=GGSModule&mg-page=' . $page;
         };
         $item = function($key, array $vars, $page, $link) use ($url) {
             return '<li><b>' . htmlspecialchars($this->translate($key)) . '</b> ' . htmlspecialchars($this->translate($key . '_text', $vars))

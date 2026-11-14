@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\BaseSection;
+namespace ModulesGarden\GGSModule\Components\BaseSection;
 
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
 
 /**
  * Class BaseSection

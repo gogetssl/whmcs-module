@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Services;
+namespace ModulesGarden\GGSModule\Packages\Product\Services;
 
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Server as Model;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Server as Model;
 
 class ServerConfiguration
 {

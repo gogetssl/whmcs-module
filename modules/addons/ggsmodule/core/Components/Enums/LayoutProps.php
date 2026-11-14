@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Enums;
+namespace ModulesGarden\GGSModule\Core\Components\Enums;
 
 enum LayoutProps: string
 {

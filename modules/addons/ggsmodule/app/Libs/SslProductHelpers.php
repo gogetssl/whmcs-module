@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Models\RemoteProduct;
+use ModulesGarden\GGSModule\App\Models\RemoteProduct;
 
 class SslProductHelpers
 {

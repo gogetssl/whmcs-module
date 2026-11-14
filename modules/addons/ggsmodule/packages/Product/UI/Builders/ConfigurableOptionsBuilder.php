@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\UI\Builders;
+namespace ModulesGarden\GGSModule\Packages\Product\UI\Builders;
 
-use ModulesGarden\ggsmodule\Components\Container\ContainerColumn;
-use ModulesGarden\ggsmodule\Components\Form\AbstractForm;
-use ModulesGarden\ggsmodule\Components\Form\Builder\Builder;
-use ModulesGarden\ggsmodule\Components\FormGroup\FormGroup;
-use ModulesGarden\ggsmodule\Components\FormGroup\FormGroupFullWidth;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\FormFieldInterface;
-use ModulesGarden\ggsmodule\Packages\Product\UI\GroupBuilders\ConfigOptionSwitcherBuilder;
+use ModulesGarden\GGSModule\Components\Container\ContainerColumn;
+use ModulesGarden\GGSModule\Components\Form\AbstractForm;
+use ModulesGarden\GGSModule\Components\Form\Builder\Builder;
+use ModulesGarden\GGSModule\Components\FormGroup\FormGroup;
+use ModulesGarden\GGSModule\Components\FormGroup\FormGroupFullWidth;
+use ModulesGarden\GGSModule\Core\Contracts\Components\FormFieldInterface;
+use ModulesGarden\GGSModule\Packages\Product\UI\GroupBuilders\ConfigOptionSwitcherBuilder;
 
 class ConfigurableOptionsBuilder extends Builder
 {

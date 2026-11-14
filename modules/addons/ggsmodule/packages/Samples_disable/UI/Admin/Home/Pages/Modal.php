@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\Pages;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\Pages;
 
-use ModulesGarden\ggsmodule\Components\CancelButton;
-use ModulesGarden\ggsmodule\Components\FormBuilder;
-use ModulesGarden\ggsmodule\Components\SubmitButton;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxTrait;
+use ModulesGarden\GGSModule\Components\CancelButton;
+use ModulesGarden\GGSModule\Components\FormBuilder;
+use ModulesGarden\GGSModule\Components\SubmitButton;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxTrait;
 
 
-class Modal extends \ModulesGarden\ggsmodule\Components\Modal implements \ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface
+class Modal extends \ModulesGarden\GGSModule\Components\Modal implements \ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface
 {
     use AjaxTrait;
 

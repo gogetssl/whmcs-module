@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Actions;
+namespace ModulesGarden\GGSModule\Core\Components\Actions;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractActionInterface;
+use ModulesGarden\GGSModule\Core\Components\AbstractActionInterface;
 
 class SetFieldValueById extends AbstractActionInterface
 {

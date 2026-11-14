@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
 use WHMCS\Database\Capsule;
 
@@ -54,7 +54,7 @@ class Markups
     public static function set($clientId, $productId, $markup)
     {
         self::createTable();
-        if($productId && !Capsule::table('tblproducts')->where('id', (int)$productId)->where('servertype', 'ggsmodule')->exists())
+        if($productId && !Capsule::table('tblproducts')->where('id', (int)$productId)->where('servertype', 'GGSModule')->exists())
         {
             throw new \InvalidArgumentException('Unknown product');
         }
@@ -124,7 +124,7 @@ class Markups
     {
         $markup  = self::forProduct($clientId, $productId);
         $product    = Capsule::table('tblproducts')->where('id', (int)$productId)->first(['paytype', 'servertype']);
-        if($markup === null || !$product || $product->servertype !== 'ggsmodule' || $product->paytype === 'free')
+        if($markup === null || !$product || $product->servertype !== 'GGSModule' || $product->paytype === 'free')
         {
             return null;
         }

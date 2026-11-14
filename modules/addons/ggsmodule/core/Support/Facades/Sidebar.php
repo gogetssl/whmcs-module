@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Support\Facades;
+namespace ModulesGarden\GGSModule\Core\Support\Facades;
 
 /**
  *  @method static getByName(string $item)
@@ -10,6 +10,6 @@ class Sidebar extends AbstractFacade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \ModulesGarden\ggsmodule\Core\Services\Sidebar::class;
+        return \ModulesGarden\GGSModule\Core\Services\Sidebar::class;
     }
 }

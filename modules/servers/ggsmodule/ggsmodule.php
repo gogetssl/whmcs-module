@@ -1,20 +1,20 @@
 <?php
 
-use ModulesGarden\Servers\ggsmodule\app\controllers\server\admin\Actions;
-use ModulesGarden\Servers\ggsmodule\Server;
+use ModulesGarden\Servers\GGSModule\app\controllers\server\admin\Actions;
+use ModulesGarden\Servers\GGSModule\Server;
 
 if(!defined('DS'))define('DS',DIRECTORY_SEPARATOR);
 
 require_once __DIR__.DS.'Loader.php';
-new \ModulesGarden\Servers\ggsmodule\Loader();
+new \ModulesGarden\Servers\GGSModule\Loader();
 
 // Edition name (GoGetSSL Module / TheSSLStore Plugin) - loaded directly, without booting the addon framework
-if(file_exists(dirname(__DIR__, 2).DS.'addons'.DS.'ggsmodule'.DS.'app'.DS.'Libs'.DS.'Edition.php'))
+if(file_exists(dirname(__DIR__, 2).DS.'addons'.DS.'GGSModule'.DS.'app'.DS.'Libs'.DS.'Edition.php'))
 {
-    require_once dirname(__DIR__, 2).DS.'addons'.DS.'ggsmodule'.DS.'app'.DS.'Libs'.DS.'Edition.php';
+    require_once dirname(__DIR__, 2).DS.'addons'.DS.'GGSModule'.DS.'app'.DS.'Libs'.DS.'Edition.php';
 }
 
-\ModulesGarden\Servers\ggsmodule\Server::I();
+\ModulesGarden\Servers\GGSModule\Server::I();
 
 
 
@@ -22,114 +22,114 @@ if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
 }
 
-function ggsmodule_MetaData() {
+function GGSModule_MetaData() {
     return array(
-        'DisplayName' => class_exists('\ModulesGarden\ggsmodule\App\Libs\Edition', false) ? \ModulesGarden\ggsmodule\App\Libs\Edition::name() : 'GoGetSSL Module',
+        'DisplayName' => class_exists('\ModulesGarden\GGSModule\App\Libs\Edition', false) ? \ModulesGarden\GGSModule\App\Libs\Edition::name() : 'GoGetSSL Module',
         'APIVersion' => '1.0',
     );
 }
 
-function ggsmodule_ConfigOptions() {
+function GGSModule_ConfigOptions() {
     return (new Actions())->ConfigOptions();
 }
 
-function ggsmodule_CreateAccount($params) {
+function GGSModule_CreateAccount($params) {
     return (new Actions())->CreateAccount($params);
 }
 
-function ggsmodule_SuspendAccount($params) {
+function GGSModule_SuspendAccount($params) {
     return (new Actions())->SuspendAccount($params);
 }
 
-function ggsmodule_UnsuspendAccount($params) {
+function GGSModule_UnsuspendAccount($params) {
     return (new Actions())->UnsuspendAccount($params);
 }
 
-function ggsmodule_ChangePackage($params) {
+function GGSModule_ChangePackage($params) {
     return (new Actions())->ChangePackage($params);
 }
 
-function ggsmodule_SSLStepOne($params) {
+function GGSModule_SSLStepOne($params) {
     return (new Actions())->SSLStepOne($params);
 }
 
-function ggsmodule_SSLStepTwo($params) {
+function GGSModule_SSLStepTwo($params) {
     return (new Actions())->SSLStepTwo($params);
 }
 
-function ggsmodule_SSLStepThree($params) {
+function GGSModule_SSLStepThree($params) {
     return (new Actions())->SSLStepThree($params);
 }
 
-function ggsmodule_TerminateAccount($params) {
+function GGSModule_TerminateAccount($params) {
     return (new Actions())->TerminateAccount($params);
 }
 
-function ggsmodule_AdminCustomButtonArray($params = []) {
+function GGSModule_AdminCustomButtonArray($params = []) {
     return (new Actions())->AdminCustomButtonArray($params);
 }
 
-function ggsmodule_RecheckValidation($params) {
+function GGSModule_RecheckValidation($params) {
     return (new Actions())->RecheckValidation($params);
 }
 
-function ggsmodule_CancelOrder($params) {
+function GGSModule_CancelOrder($params) {
     return (new Actions())->CancelOrder($params);
 }
 
-function ggsmodule_DownloadAuthFile($params) {
+function GGSModule_DownloadAuthFile($params) {
     return (new Actions())->DownloadAuthFile($params);
 }
 
-function ggsmodule_ClientAreaCustomButtonArray($params = []) {
+function GGSModule_ClientAreaCustomButtonArray($params = []) {
     return (new Actions())->ClientAreaCustomButtonArray($params);
 }
 
-function ggsmodule_ClientAreaAllowedFunctions() {
+function GGSModule_ClientAreaAllowedFunctions() {
     return (new Actions())->ClientAreaAllowedFunctions();
 }
 
-function ggsmodule_ClientAreaCustomDownloadCertificate($params) {
+function GGSModule_ClientAreaCustomDownloadCertificate($params) {
     return (new Actions())->DownloadCertificate($params);
 }
 
-function ggsmodule_SyncCertificate($params) {
+function GGSModule_SyncCertificate($params) {
     return (new Actions())->SyncCertificate($params);
 }
 
-function ggsmodule_SSLAdminResendApproverEmail($params) {
+function GGSModule_SSLAdminResendApproverEmail($params) {
     return (new Actions())->ResendApproverEmail($params);
 }
 
-function ggsmodule_SSLAdminResendCertificate($params) {
+function GGSModule_SSLAdminResendCertificate($params) {
     return (new Actions())->ResendCertificate($params);
 }
 
-function ggsmodule_Renew($params) {
+function GGSModule_Renew($params) {
     return (new Actions())->Renew($params);
 }
 
-function ggsmodule_AdminServicesTabFields(array $params) {
+function GGSModule_AdminServicesTabFields(array $params) {
     return (new Actions())->AdminServicesTabFields($params);
 }
 
-function ggsmodule_AdminServicesTabFieldsSave(array $params) {
-    (new \ModulesGarden\Servers\ggsmodule\app\services\AdminServicesTabFields())->save($params);
+function GGSModule_AdminServicesTabFieldsSave(array $params) {
+    (new \ModulesGarden\Servers\GGSModule\app\services\AdminServicesTabFields())->save($params);
 }
 
-function ggsmodule_SSLAdminGetCertificate($params) {
+function GGSModule_SSLAdminGetCertificate($params) {
     return (new Actions())->GetCertificate($params);
 }
 
-function ggsmodule_ClientAreaCustomReissueCertificate($params) {
+function GGSModule_ClientAreaCustomReissueCertificate($params) {
     return (new Actions())->ReissueCertificate($params);
 }
 
-function ggsmodule_ClientAreaCustomContactDetails($params) {
+function GGSModule_ClientAreaCustomContactDetails($params) {
     return (new Actions())->ContactDetails($params);
 }
 
-function ggsmodule_ClientArea(array $params) {
+function GGSModule_ClientArea(array $params) {
     
     if(!empty($_REQUEST['json']))
     {

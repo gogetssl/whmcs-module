@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Contracts\Controllers;
+namespace ModulesGarden\GGSModule\Core\Contracts\Controllers;
 
 interface AdminAreaInterface
 {

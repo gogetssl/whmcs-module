@@ -1,31 +1,31 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Products\Index\DataTables\Products\ArrayDataProvider;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Products\Index\DataTables\Products\ArrayDataProvider;
 
 
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Libs\ProductCatalog;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Libs\ProductCatalog;
 
-use ModulesGarden\ggsmodule\App\Models\RemoteProduct;
-use ModulesGarden\ggsmodule\App\UI\Admin\Products\Index\DataTables\Products\Modals\ImportModal;
-use ModulesGarden\ggsmodule\App\UI\Admin\Products\Index\DataTables\Products\Modals\ConfigurationModal;
-use ModulesGarden\ggsmodule\App\UI\Admin\Products\Index\DataTables\Products\Modals\ReSyncModal;
-use ModulesGarden\ggsmodule\Components\Button\Button;
-use ModulesGarden\ggsmodule\Components\Button\ButtonPrimary;
-use ModulesGarden\ggsmodule\Components\Button\ButtonSuccess;
-use ModulesGarden\ggsmodule\Components\DataTable\Column;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButton;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButtonEdit;
-use ModulesGarden\ggsmodule\Components\Label\LabelSuccess;
-use ModulesGarden\ggsmodule\Components\VisibilityWrapper\VisibilityWrapper;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalLoad;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\ArrayDataProvider;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Product;
+use ModulesGarden\GGSModule\App\Models\RemoteProduct;
+use ModulesGarden\GGSModule\App\UI\Admin\Products\Index\DataTables\Products\Modals\ImportModal;
+use ModulesGarden\GGSModule\App\UI\Admin\Products\Index\DataTables\Products\Modals\ConfigurationModal;
+use ModulesGarden\GGSModule\App\UI\Admin\Products\Index\DataTables\Products\Modals\ReSyncModal;
+use ModulesGarden\GGSModule\Components\Button\Button;
+use ModulesGarden\GGSModule\Components\Button\ButtonPrimary;
+use ModulesGarden\GGSModule\Components\Button\ButtonSuccess;
+use ModulesGarden\GGSModule\Components\DataTable\Column;
+use ModulesGarden\GGSModule\Components\IconButton\IconButton;
+use ModulesGarden\GGSModule\Components\IconButton\IconButtonEdit;
+use ModulesGarden\GGSModule\Components\Label\LabelSuccess;
+use ModulesGarden\GGSModule\Components\VisibilityWrapper\VisibilityWrapper;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalLoad;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\ArrayDataProvider;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Product;
 use WHMCS\User\Client;
 
-class DataTable extends \ModulesGarden\ggsmodule\Components\DataTable\DataTable implements AdminAreaInterface, AjaxComponentInterface
+class DataTable extends \ModulesGarden\GGSModule\Components\DataTable\DataTable implements AdminAreaInterface, AjaxComponentInterface
 {
     public function loadHtml(): void
     {
@@ -108,7 +108,7 @@ class DataTable extends \ModulesGarden\ggsmodule\Components\DataTable\DataTable 
         ];
 
         // only the edition's own vendor (a catalogue copied from the other edition is not offered)
-        $vendors        = array_map('strtoupper', \ModulesGarden\ggsmodule\App\Libs\Edition::vendors());
+        $vendors        = array_map('strtoupper', \ModulesGarden\GGSModule\App\Libs\Edition::vendors());
         $remoteProducts = RemoteProduct::whereIn('vendor', $vendors)->get()->sortBy(function($product) use ($brandWeights) {
             return ($brandWeights[$product->brand] ?? 50) . $product->name;
         });
@@ -118,7 +118,7 @@ class DataTable extends \ModulesGarden\ggsmodule\Components\DataTable\DataTable 
             $whmcsProduct = $remoteProduct->getWhmcsProduct();
 
             // products the module can not sell yet are not offered for import (one imported earlier stays listed)
-            if(!$whmcsProduct && !\ModulesGarden\ggsmodule\App\Libs\ProductCatalog::importable($remoteProduct))
+            if(!$whmcsProduct && !\ModulesGarden\GGSModule\App\Libs\ProductCatalog::importable($remoteProduct))
             {
                 continue;
             }
@@ -171,7 +171,7 @@ class DataTable extends \ModulesGarden\ggsmodule\Components\DataTable\DataTable 
      */
     protected function manageLinks($whmcsProduct, $optionsNeedFix = false)
     {
-        $base    = 'addonmodules.php?module=ggsmodule&mg-page=products&pid=' . (int)$whmcsProduct->id . '&token=' . urlencode(function_exists('generate_token') ? \generate_token('plain') : '') . '&mg-action=';
+        $base    = 'addonmodules.php?module=GGSModule&mg-page=products&pid=' . (int)$whmcsProduct->id . '&token=' . urlencode(function_exists('generate_token') ? \generate_token('plain') : '') . '&mg-action=';
         $actions = [];
         if(!$whmcsProduct->retired)
         {

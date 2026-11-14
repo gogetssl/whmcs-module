@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ArrayTreeViewItem;
+namespace ModulesGarden\GGSModule\Components\ArrayTreeViewItem;
 
-use ModulesGarden\ggsmodule\Components\ArrayTreeView\Traits\ElementsExpanderTrait;
-use ModulesGarden\ggsmodule\Components\ArrayTreeView\Traits\ElementsPrefixTrait;
-use ModulesGarden\ggsmodule\Components\ArrayTreeView\Traits\ExpanderOnBeginningTrait;
-use ModulesGarden\ggsmodule\Components\ArrayTreeView\Traits\HiddenKeysModeTrait;
-use ModulesGarden\ggsmodule\Components\ArrayTreeView\Traits\KeyValueSeparatorTrait;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Components\ArrayTreeView\Traits\ElementsExpanderTrait;
+use ModulesGarden\GGSModule\Components\ArrayTreeView\Traits\ElementsPrefixTrait;
+use ModulesGarden\GGSModule\Components\ArrayTreeView\Traits\ExpanderOnBeginningTrait;
+use ModulesGarden\GGSModule\Components\ArrayTreeView\Traits\HiddenKeysModeTrait;
+use ModulesGarden\GGSModule\Components\ArrayTreeView\Traits\KeyValueSeparatorTrait;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
 
 class ArrayTreeViewItem extends AbstractComponent
 {

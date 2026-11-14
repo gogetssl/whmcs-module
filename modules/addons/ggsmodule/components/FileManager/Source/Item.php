@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\FileManager\Source;
+namespace ModulesGarden\GGSModule\Components\FileManager\Source;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ActionInterface;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ActionInterface;
 
 abstract class Item
 {

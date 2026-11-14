@@ -1,19 +1,19 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\app\services;
+namespace ModulesGarden\Servers\GGSModule\app\services;
 
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\Service;
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\SSL;
-use ModulesGarden\ggsmodule\App\Libs\CertificateService;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Libs\ProductSettings;
-use ModulesGarden\ggsmodule\App\Libs\SanUpgrade;
-use ModulesGarden\ggsmodule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\ggsmodule\App\Models\DemonTask;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\ggsmodule\App\Models\Request;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\InvoiceItem;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\Service;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\SSL;
+use ModulesGarden\GGSModule\App\Libs\CertificateService;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Libs\ProductSettings;
+use ModulesGarden\GGSModule\App\Libs\SanUpgrade;
+use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
+use ModulesGarden\GGSModule\App\Models\DemonTask;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
+use ModulesGarden\GGSModule\App\Models\Request;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\InvoiceItem;
 
 class SSLStepThree
 {
@@ -100,7 +100,7 @@ class SSLStepThree
             }
 
             // chosen by the admin (settings), the client is not asked
-            $webServer = trim((string)\ModulesGarden\ggsmodule\App\Libs\GeneralSettings::get('defaultWebServer'));
+            $webServer = trim((string)\ModulesGarden\GGSModule\App\Libs\GeneralSettings::get('defaultWebServer'));
             if($webServer !== '')
             {
                 $orderParams['webserver_type'] = $webServer;
@@ -173,7 +173,7 @@ class SSLStepThree
                 'api_ssl_order' => $newOrder,
                 'order_details' => $orderParams,
             ];
-            run_hook('ggsmodule_OrderPlaced', $hookParams);
+            run_hook('GGSModule_OrderPlaced', $hookParams);
             run_hook('SSLCenter_StepThree', $hookParams);
 
         } catch (\Exception $e) {

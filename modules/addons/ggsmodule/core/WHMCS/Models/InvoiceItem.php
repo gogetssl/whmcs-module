@@ -1,27 +1,27 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models;
 
 class InvoiceItem extends \WHMCS\Billing\Invoice\Item
 {
     public function client()
     {
-        return $this->hasOne('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Client', 'id', 'userid');
+        return $this->hasOne('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Client', 'id', 'userid');
     }
 
     public function domain()
     {
-        return $this->hasOne('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Domain', 'id', 'relid');
+        return $this->hasOne('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Domain', 'id', 'relid');
     }
 
     public function service()
     {
-        return $this->hasOne('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Service', 'id', 'relid');
+        return $this->hasOne('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Service', 'id', 'relid');
     }
 
     public function serviceAddon()
     {
-        return $this->hasOne('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\ServiceAddon', 'id', 'relid');
+        return $this->hasOne('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\ServiceAddon', 'id', 'relid');
     }
 
     /**
@@ -29,7 +29,7 @@ class InvoiceItem extends \WHMCS\Billing\Invoice\Item
      */
     public function hosting()
     {
-        return $this->hasOne('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Hosting', 'id', 'relid');
+        return $this->hasOne('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Hosting', 'id', 'relid');
     }
 
     /**
@@ -37,16 +37,16 @@ class InvoiceItem extends \WHMCS\Billing\Invoice\Item
      */
     public function hostingAddon()
     {
-        return $this->hasOne('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\HostingAddon', 'id', 'relid');
+        return $this->hasOne('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\HostingAddon', 'id', 'relid');
     }
 
     public function invoice()
     {
-        return $this->belongsTo('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Invoice', 'invoiceid');
+        return $this->belongsTo('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Invoice', 'invoiceid');
     }
 
     public function upgrade()
     {
-        return $this->hasOne('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Upgrade', 'id', 'relid');
+        return $this->hasOne('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Upgrade', 'id', 'relid');
     }
 }

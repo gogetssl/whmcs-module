@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph;
+namespace ModulesGarden\GGSModule\Components\Graph;
 
 class GraphBubble extends Graph
 {

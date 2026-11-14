@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\Http\Admin;
+namespace ModulesGarden\GGSModule\Packages\Logs\Http\Admin;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Helper;
-use ModulesGarden\ggsmodule\Core\Http\AbstractController;
-use ModulesGarden\ggsmodule\Core\UI\View;
-use ModulesGarden\ggsmodule\Packages\Logs\UI\Pages\LogsDataTable;
-use ModulesGarden\ggsmodule\Packages\Logs\UI\Widgets\Summary;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Helper;
+use ModulesGarden\GGSModule\Core\Http\AbstractController;
+use ModulesGarden\GGSModule\Core\UI\View;
+use ModulesGarden\GGSModule\Packages\Logs\UI\Pages\LogsDataTable;
+use ModulesGarden\GGSModule\Packages\Logs\UI\Widgets\Summary;
 
 class Logs extends AbstractController implements AdminAreaInterface
 {
@@ -18,9 +18,9 @@ class Logs extends AbstractController implements AdminAreaInterface
     /** Ends debug mode before its time runs out (link with the admin token) */
     public function stopDebug()
     {
-        if(\ModulesGarden\ggsmodule\App\Libs\CsrfToken::valid($_REQUEST['token'] ?? ''))
+        if(\ModulesGarden\GGSModule\App\Libs\CsrfToken::valid($_REQUEST['token'] ?? ''))
         {
-            \ModulesGarden\ggsmodule\App\Libs\GeneralSettings::save(['debugServices' => '', 'debugUntil' => 0]);
+            \ModulesGarden\GGSModule\App\Libs\GeneralSettings::save(['debugServices' => '', 'debugUntil' => 0]);
         }
 
         return Helper\redirect('logs', 'index');

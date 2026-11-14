@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core;
+namespace ModulesGarden\GGSModule\Core;
 
-use ModulesGarden\ggsmodule\Core\Events\Dispatcher;
-use ModulesGarden\ggsmodule\Core\Services\Translator;
-use ModulesGarden\ggsmodule\Core\Services\Validator;
+use ModulesGarden\GGSModule\Core\Events\Dispatcher;
+use ModulesGarden\GGSModule\Core\Services\Translator;
+use ModulesGarden\GGSModule\Core\Services\Validator;
 
 function make($class)
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Http;
+namespace ModulesGarden\GGSModule\Core\Http;
 
-use ModulesGarden\ggsmodule\Core\Traits\IsAdmin;
-use ModulesGarden\ggsmodule\Core\Traits\OutputBuffer;
+use ModulesGarden\GGSModule\Core\Traits\IsAdmin;
+use ModulesGarden\GGSModule\Core\Traits\OutputBuffer;
 
 /**
  * Description of AbstractController

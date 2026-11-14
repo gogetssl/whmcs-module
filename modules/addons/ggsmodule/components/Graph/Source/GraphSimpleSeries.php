@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Source;
+namespace ModulesGarden\GGSModule\Components\Graph\Source;
 
-use ModulesGarden\ggsmodule\Components\Graph\Models\DataSet;
-use ModulesGarden\ggsmodule\Components\Graph\Options\LabelsOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Series\SimpleSeries;
+use ModulesGarden\GGSModule\Components\Graph\Models\DataSet;
+use ModulesGarden\GGSModule\Components\Graph\Options\LabelsOptions;
+use ModulesGarden\GGSModule\Components\Graph\Series\SimpleSeries;
 
 abstract class GraphSimpleSeries extends BaseGraph
 {

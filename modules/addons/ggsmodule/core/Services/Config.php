@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Services;
+namespace ModulesGarden\GGSModule\Core\Services;
 
-class Config extends \ModulesGarden\ggsmodule\Core\App\Config\Config
+class Config extends \ModulesGarden\GGSModule\Core\App\Config\Config
 {
 
 }

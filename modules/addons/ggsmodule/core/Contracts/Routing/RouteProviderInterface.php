@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Contracts\Routing;
+namespace ModulesGarden\GGSModule\Core\Contracts\Routing;
 
-use ModulesGarden\ggsmodule\Core\Routing\Route;
+use ModulesGarden\GGSModule\Core\Routing\Route;
 
 interface RouteProviderInterface
 {

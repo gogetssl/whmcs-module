@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Traits;
+namespace ModulesGarden\GGSModule\Core\Components\Traits;
 
 use Exception;
-use ModulesGarden\ggsmodule\Core\Components\Action;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\Contracts\CrudProviderInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\ResponseInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Security\CsrfToken\CsrfToken;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\Components\Action;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\Contracts\CrudProviderInterface;
+use ModulesGarden\GGSModule\Core\Contracts\ResponseInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Security\CsrfToken\CsrfToken;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
 /**
  *  string $provider = CrudProvider::class

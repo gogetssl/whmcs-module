@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\AppFooter;
+namespace ModulesGarden\GGSModule\Components\AppFooter;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
 
 class AppFooter extends AbstractComponent
 {

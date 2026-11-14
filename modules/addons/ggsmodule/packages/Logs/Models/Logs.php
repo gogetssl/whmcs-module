@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\Models;
+namespace ModulesGarden\GGSModule\Packages\Logs\Models;
 
-use ModulesGarden\ggsmodule\Core\Models\ExtendedEloquentModel;
+use ModulesGarden\GGSModule\Core\Models\ExtendedEloquentModel;
 
 class Logs extends ExtendedEloquentModel
 {

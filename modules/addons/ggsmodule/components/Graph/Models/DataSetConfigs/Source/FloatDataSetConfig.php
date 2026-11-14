@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Models\DataSetConfigs\Source;
+namespace ModulesGarden\GGSModule\Components\Graph\Models\DataSetConfigs\Source;
 
-use ModulesGarden\ggsmodule\Components\Graph\Models\DataSetConfigs\Source\AbstractDataSetConfig;
+use ModulesGarden\GGSModule\Components\Graph\Models\DataSetConfigs\Source\AbstractDataSetConfig;
 
 abstract class FloatDataSetConfig extends AbstractDataSetConfig
 {

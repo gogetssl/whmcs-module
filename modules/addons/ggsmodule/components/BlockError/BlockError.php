@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\BlockError;
+namespace ModulesGarden\GGSModule\Components\BlockError;
 
-use ModulesGarden\ggsmodule\Components\Alert\AlertDanger;
-use ModulesGarden\ggsmodule\Components\Div\Div;
-use ModulesGarden\ggsmodule\Components\PreBlock\PreBlock;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ClientAreaInterface;
-use ModulesGarden\ggsmodule\Core\Exceptions\UserException;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Components\Alert\AlertDanger;
+use ModulesGarden\GGSModule\Components\Div\Div;
+use ModulesGarden\GGSModule\Components\PreBlock\PreBlock;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ClientAreaInterface;
+use ModulesGarden\GGSModule\Core\Exceptions\UserException;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
 
 class BlockError extends Div implements ClientAreaInterface, AdminAreaInterface
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Hook;
+namespace ModulesGarden\GGSModule\Core\Hook;
 
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Smarty;
-use ModulesGarden\ggsmodule\Core\Traits\IsAdmin;
-use ModulesGarden\ggsmodule\Core\Traits\Lang;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Support\Facades\Smarty;
+use ModulesGarden\GGSModule\Core\Traits\IsAdmin;
+use ModulesGarden\GGSModule\Core\Traits\Lang;
 
 class HookIntegrationsWrapper
 {

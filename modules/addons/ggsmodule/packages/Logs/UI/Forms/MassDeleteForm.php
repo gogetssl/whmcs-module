@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Forms;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Forms;
 
 class MassDeleteForm extends DeleteLogForm
 {

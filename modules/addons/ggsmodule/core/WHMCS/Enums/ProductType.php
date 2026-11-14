@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Enums;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Enums;
 
 final class ProductType
 {

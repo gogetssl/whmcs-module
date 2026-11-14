@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Formatters;
+namespace ModulesGarden\GGSModule\Core\UI\Formatters;
 
 /**
- * @deprecated  - use \ModulesGarden\ggsmodule\Core\UI\Formatters\Date\DateFormatter class instead
+ * @deprecated  - use \ModulesGarden\GGSModule\Core\UI\Formatters\Date\DateFormatter class instead
  */
-class DateFormatter extends \ModulesGarden\ggsmodule\Core\UI\Formatters\Date\DateFormatter
+class DateFormatter extends \ModulesGarden\GGSModule\Core\UI\Formatters\Date\DateFormatter
 {
 
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Libs\Configuration;
+namespace ModulesGarden\GGSModule\Packages\Product\Libs\Configuration;
 
-use ModulesGarden\ggsmodule\Core\Data\Container;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\Data\Container;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
 
 class ConfigurationContainer
 {

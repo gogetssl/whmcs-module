@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components;
+namespace ModulesGarden\GGSModule\Core\Components;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
 
 class ACL
 {

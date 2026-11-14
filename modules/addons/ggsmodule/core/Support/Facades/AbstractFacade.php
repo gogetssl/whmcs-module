@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Support\Facades;
+namespace ModulesGarden\GGSModule\Core\Support\Facades;
 
-use function ModulesGarden\ggsmodule\Core\make;
+use function ModulesGarden\GGSModule\Core\make;
 
 abstract class AbstractFacade
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\Renewal\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\Renewal\Widgets;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\Renewal\Forms\FilterForm;
-use ModulesGarden\ggsmodule\Components\Grid\Grid;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\Renewal\Forms\FilterForm;
+use ModulesGarden\GGSModule\Components\Grid\Grid;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
 
 class FilterWidget extends Widget
 {

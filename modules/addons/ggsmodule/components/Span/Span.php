@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Span;
+namespace ModulesGarden\GGSModule\Components\Span;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Container\Container;
 
 /**
  * @todo - change name to InlineContainer / ContainerInline

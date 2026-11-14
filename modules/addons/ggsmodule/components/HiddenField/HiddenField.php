@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\HiddenField;
+namespace ModulesGarden\GGSModule\Components\HiddenField;
 
-use ModulesGarden\ggsmodule\Core\Components\FormFields\FormField;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\FormFieldHiddenInterface;
+use ModulesGarden\GGSModule\Core\Components\FormFields\FormField;
+use ModulesGarden\GGSModule\Core\Contracts\Components\FormFieldHiddenInterface;
 
 class HiddenField extends FormField implements FormFieldHiddenInterface
 {

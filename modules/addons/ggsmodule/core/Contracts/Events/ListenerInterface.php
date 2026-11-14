@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Contracts\Events;
+namespace ModulesGarden\GGSModule\Core\Contracts\Events;
 
 interface ListenerInterface
 {

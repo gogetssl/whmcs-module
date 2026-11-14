@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\TextArea;
+namespace ModulesGarden\GGSModule\Components\TextArea;
 
-use ModulesGarden\ggsmodule\Core\Components\FormFields\FormField;
+use ModulesGarden\GGSModule\Core\Components\FormFields\FormField;
 
 /**
  * Class IconButton

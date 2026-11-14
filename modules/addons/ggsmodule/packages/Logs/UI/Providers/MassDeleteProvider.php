@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Providers;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Providers;
 
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Validator;
-use ModulesGarden\ggsmodule\Packages\Logs\Models\Logs;
-use ModulesGarden\ggsmodule\Packages\Logs\Support\Translations\LogsTypeTranslator;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\Support\Facades\Validator;
+use ModulesGarden\GGSModule\Packages\Logs\Models\Logs;
+use ModulesGarden\GGSModule\Packages\Logs\Support\Translations\LogsTypeTranslator;
 
 class MassDeleteProvider extends CrudProvider
 {

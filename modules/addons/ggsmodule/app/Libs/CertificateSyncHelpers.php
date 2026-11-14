@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
 use Exception;
-use ModulesGarden\ggsmodule\App\Models\Request;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Service;
-use ModulesGarden\ggsmodule\Packages\Logs\Support\Facades\Logger;
+use ModulesGarden\GGSModule\App\Models\Request;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Service;
+use ModulesGarden\GGSModule\Packages\Logs\Support\Facades\Logger;
 use WHMCS\Database\Capsule;
 
 /**
@@ -15,14 +15,14 @@ use WHMCS\Database\Capsule;
 class CertificateSyncHelpers
 {
     /**
-     * Services which can be synchronized: active, module ggsmodule, order submitted to the API
+     * Services which can be synchronized: active, module GGSModule, order submitted to the API
      */
     public static function getCertificatesQuery()
     {
         return Service::select(['tblhosting.*', 'tblsslorders.remoteid', 'tblproducts.configoption1', 'tblproducts.configoption9'])
             ->join('tblsslorders', 'tblsslorders.serviceid', '=', 'tblhosting.id')
             ->join('tblproducts', 'tblhosting.packageid', '=', 'tblproducts.id')
-            ->where('tblproducts.servertype', 'ggsmodule')
+            ->where('tblproducts.servertype', 'GGSModule')
             ->where('tblhosting.domainstatus', 'Active')
             ->where('tblsslorders.status', 'Configuration Submitted')
             // S/MIME and code signing orders have their own data and refresh (GatewayOrderService)
@@ -62,7 +62,7 @@ class CertificateSyncHelpers
             try {
                 $orderFiles = $api->getCertificateFiles($certificate['remoteid']);
             } catch (Exception $exception) {
-                Logger::error('Get Certificate Files Error:' . $exception->getMessage(), \ModulesGarden\ggsmodule\App\Libs\LogContext::exception($exception, ['service' => $certificate['id']]));
+                Logger::error('Get Certificate Files Error:' . $exception->getMessage(), \ModulesGarden\GGSModule\App\Libs\LogContext::exception($exception, ['service' => $certificate['id']]));
             }
         }
 

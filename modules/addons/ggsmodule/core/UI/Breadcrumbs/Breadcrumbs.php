@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Breadcrumbs;
+namespace ModulesGarden\GGSModule\Core\UI\Breadcrumbs;
 
 class Breadcrumbs
 {

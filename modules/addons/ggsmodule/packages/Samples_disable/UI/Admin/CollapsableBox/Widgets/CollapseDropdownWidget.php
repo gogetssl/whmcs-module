@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\CollapsableBox\Widgets;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\CollapsableBox\Widgets;
 
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\CollapsableBox\Forms\CollapsableDropdownForm;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\CollapsableBox\Forms\CollapsableDropdownForm;
 
 class CollapseDropdownWidget extends Widget implements AjaxComponentInterface, AdminAreaInterface
 {

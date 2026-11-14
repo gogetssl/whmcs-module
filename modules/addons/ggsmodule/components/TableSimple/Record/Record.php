@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\TableSimple\Record;
+namespace ModulesGarden\GGSModule\Components\TableSimple\Record;
 
 class Record
 {

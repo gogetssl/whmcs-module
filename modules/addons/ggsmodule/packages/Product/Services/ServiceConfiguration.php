@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Services;
+namespace ModulesGarden\GGSModule\Packages\Product\Services;
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\Params;
+use ModulesGarden\GGSModule\Core\Support\Facades\Params;
 
 class ServiceConfiguration
 {

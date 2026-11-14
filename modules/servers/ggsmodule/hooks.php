@@ -1,8 +1,8 @@
 <?php
 
 use WHMCS\Database\Capsule;
-use ModulesGarden\ggsmodule\App\Models\Request;
-use ModulesGarden\Servers\ggsmodule\core\Lang;
+use ModulesGarden\GGSModule\App\Models\Request;
+use ModulesGarden\Servers\GGSModule\core\Lang;
 
 // Loaded by WHMCS (ModuleHooks) and by the addon's hooks.php - WHMCS lists the server module in ModuleHooks only
 // after a product using it was saved in the admin area, so the addon makes sure the client hooks always run
@@ -15,8 +15,8 @@ define('GGSMODULE_SERVER_HOOKS', true);
 if(!defined('DS')) define('DS', DIRECTORY_SEPARATOR);
 
 require_once __DIR__ . DS . 'Loader.php';
-new \ModulesGarden\Servers\ggsmodule\Loader();
-\ModulesGarden\Servers\ggsmodule\Server::I();
+new \ModulesGarden\Servers\GGSModule\Loader();
+\ModulesGarden\Servers\GGSModule\Server::I();
 
 
 // Admin downloads (certificate ZIP, validation file) from the module tab of the service page: a normal request, not
@@ -34,7 +34,7 @@ add_hook('AdminAreaPage', 1, function($vars) {
         return; // another module's service (both editions can be installed side by side)
     }
     \check_token('WHMCS.admin.default');
-    \ModulesGarden\Servers\ggsmodule\app\controllers\server\admin\Actions::adminDownload($serviceId, (string)$_GET['ggs_download']);
+    \ModulesGarden\Servers\GGSModule\app\controllers\server\admin\Actions::adminDownload($serviceId, (string)$_GET['ggs_download']);
 });
 
 add_hook('ClientAreaPrimarySidebar', 1, function($primarySidebar) {
@@ -43,10 +43,10 @@ add_hook('ClientAreaPrimarySidebar', 1, function($primarySidebar) {
     if($_REQUEST['action'] == 'productdetails' && $_REQUEST['id'] > 0)
     {
         $serviceId = (int)$_REQUEST['id'];
-        $orderData = \ModulesGarden\ggsmodule\App\Libs\CertificateService::stored($serviceId);
+        $orderData = \ModulesGarden\GGSModule\App\Libs\CertificateService::stored($serviceId);
 
         // a cancelled / terminated service keeps "active" in its stored order: no downloads or reissue for it
-        $serviceOpen = \ModulesGarden\ggsmodule\App\Libs\CertificateService::serviceOpen($serviceId);
+        $serviceOpen = \ModulesGarden\GGSModule\App\Libs\CertificateService::serviceOpen($serviceId);
 
         if($serviceOpen && isset($orderData['orderData']['order']['status']) && $orderData['orderData']['order']['status'] == 'active')
         {
@@ -54,7 +54,7 @@ add_hook('ClientAreaPrimarySidebar', 1, function($primarySidebar) {
             if($myAccount)
             {
                 // only the formats the admin offers (Settings > General > Certificate Downloads)
-                $formats = \ModulesGarden\ggsmodule\App\Libs\CertificateBundle::enabledFormats();
+                $formats = \ModulesGarden\GGSModule\App\Libs\CertificateBundle::enabledFormats();
                 if(in_array('crt', $formats, true))
                 {
                     $myAccount->addChild('DownloadCRT', [
@@ -153,7 +153,7 @@ add_hook('ClientAreaHeadOutput', 1, function($params) {
     if($params['clientareaaction'] == 'services' || $params['clientareaaction'] == 'products')
     {
 
-        $moduleName = (new \ModulesGarden\Servers\ggsmodule\Configuration())->systemName;
+        $moduleName = (new \ModulesGarden\Servers\GGSModule\Configuration())->systemName;
         $services   = Capsule::table('tblhosting')
                              ->select(['tblhosting.id'])
                              ->join('tblproducts', 'tblproducts.id', '=', 'tblhosting.packageid')
@@ -194,14 +194,14 @@ add_hook('ClientAreaPage', 1, function($params) {
     if($page == 'upgrade.php' && isset($_GET['type']) && $_GET['type'] == 'configoptions')
     {
         $serviceId = (int)$_GET['id'];
-        $service   = \ModulesGarden\ggsmodule\Core\WHMCS\Models\Service::find($serviceId);
+        $service   = \ModulesGarden\GGSModule\Core\WHMCS\Models\Service::find($serviceId);
 
-        if(!$service || $service->product->servertype != 'ggsmodule')
+        if(!$service || $service->product->servertype != 'GGSModule')
         {
             return [];
         }
 
-        if(\ModulesGarden\ggsmodule\App\Libs\AcmeHelpers::isAcmeWhmcsProduct($service->product->id))
+        if(\ModulesGarden\GGSModule\App\Libs\AcmeHelpers::isAcmeWhmcsProduct($service->product->id))
         {
             header('Location: clientarea.php?action=productdetails&id=' . $serviceId);
             exit;
@@ -210,7 +210,7 @@ add_hook('ClientAreaPage', 1, function($params) {
         // SANs of an ordered certificate can only be added
         if(isset($_POST['step']) && $_POST['step'] == '2' && isset($_POST['configoption']) && is_array($_POST['configoption']))
         {
-            $error = \ModulesGarden\ggsmodule\App\Libs\SanUpgrade::downgradeError($serviceId, $_POST['configoption']);
+            $error = \ModulesGarden\GGSModule\App\Libs\SanUpgrade::downgradeError($serviceId, $_POST['configoption']);
             if($error !== '')
             {
                 $_SESSION['ggs_upgrade_error'] = $error;
@@ -235,11 +235,11 @@ add_hook('ClientAreaPage', 1, function($params) {
 add_hook('AfterConfigOptionsUpgrade', 1, function($vars) {
     try
     {
-        \ModulesGarden\ggsmodule\App\Libs\SanUpgrade::afterUpgrade(isset($vars['upgradeid']) ? (int)$vars['upgradeid'] : 0);
+        \ModulesGarden\GGSModule\App\Libs\SanUpgrade::afterUpgrade(isset($vars['upgradeid']) ? (int)$vars['upgradeid'] : 0);
     }
     catch(\Throwable $e)
     {
-        logActivity('ggsmodule: SAN upgrade failed - ' . $e->getMessage());
+        logActivity('GGSModule: SAN upgrade failed - ' . $e->getMessage());
     }
 });
 
@@ -247,23 +247,23 @@ add_hook('AfterConfigOptionsUpgrade', 1, function($vars) {
 add_hook('ClientAreaHomepagePanels', 1, function($homePagePanels) {
     try
     {
-        if(empty($_SESSION['uid']) || !\ModulesGarden\ggsmodule\App\Libs\GeneralSettings::enabled('clientSummary'))
+        if(empty($_SESSION['uid']) || !\ModulesGarden\GGSModule\App\Libs\GeneralSettings::enabled('clientSummary'))
         {
             return;
         }
 
-        $counts = (new \ModulesGarden\ggsmodule\App\Libs\ClientSslSummary($_SESSION['uid']))->counts();
+        $counts = (new \ModulesGarden\GGSModule\App\Libs\ClientSslSummary($_SESSION['uid']))->counts();
         if(!$counts['total'])
         {
             return;
         }
 
-        $t     = \ModulesGarden\ggsmodule\App\ClientArea\SslPages::texts();
+        $t     = \ModulesGarden\GGSModule\App\ClientArea\SslPages::texts();
         $icons = ['unpaid' => 'fa-credit-card', 'processing' => 'fa-cogs', 'expires_soon' => 'fa-hourglass-half'];
         $body  = '<div class="ggs-summary" style="display:flex;flex-wrap:wrap;text-align:center;">';
         foreach($icons as $type => $icon)
         {
-            $body .= '<a href="index.php?m=ggsmodule&amp;type=' . $type . '" style="flex:1 1 33%;padding:15px 5px;text-decoration:none;">'
+            $body .= '<a href="index.php?m=GGSModule&amp;type=' . $type . '" style="flex:1 1 33%;padding:15px 5px;text-decoration:none;">'
                 . '<i class="fas ' . $icon . '" style="font-size:22px;display:block;margin-bottom:6px;"></i>'
                 . '<span style="display:block;">' . $t[$type] . '</span><strong style="font-size:20px;">' . (int)$counts[$type] . '</strong></a>';
         }
@@ -275,17 +275,17 @@ add_hook('ClientAreaHomepagePanels', 1, function($homePagePanels) {
             'order'    => 60,
             'extras'   => [
                 'color'    => 'gold',
-                'btn-link' => 'index.php?m=ggsmodule&type=total',
+                'btn-link' => 'index.php?m=GGSModule&type=total',
                 'btn-text' => $t['viewAll'],
                 'btn-icon' => 'fas fa-arrow-right',
             ],
             'bodyHtml' => $body,
         ]);
-        unifiedSslLabelBlock($panel, $t['summaryTitle'], \ModulesGarden\ggsmodule\App\Libs\Edition::brand(), 'panel');
+        unifiedSslLabelBlock($panel, $t['summaryTitle'], \ModulesGarden\GGSModule\App\Libs\Edition::brand(), 'panel');
     }
     catch(\Throwable $e)
     {
-        logActivity('ggsmodule SSL summary panel: ' . $e->getMessage());
+        logActivity('GGSModule SSL summary panel: ' . $e->getMessage());
     }
 });
 
@@ -311,55 +311,55 @@ if(!function_exists('unifiedSslLabelBlock'))
 add_hook('ClientAreaSecondarySidebar', 1, function($secondarySidebar) {
     try
     {
-        if(empty($_SESSION['uid']) || !\ModulesGarden\ggsmodule\App\Libs\GeneralSettings::enabled('clientSummary'))
+        if(empty($_SESSION['uid']) || !\ModulesGarden\GGSModule\App\Libs\GeneralSettings::enabled('clientSummary'))
         {
             return;
         }
 
         global $smarty;
         $template = is_object($smarty) && isset($smarty->tpl_vars['templatefile']) ? (string)$smarty->tpl_vars['templatefile']->value : '';
-        $allowed  = array_filter(array_map('trim', explode(',', (string)\ModulesGarden\ggsmodule\App\Libs\GeneralSettings::get('sidebarTemplates'))));
+        $allowed  = array_filter(array_map('trim', explode(',', (string)\ModulesGarden\GGSModule\App\Libs\GeneralSettings::get('sidebarTemplates'))));
         if($allowed ? !in_array($template, $allowed, true) : $template === 'clientareahome')
         {
             return;
         }
 
-        $counts = (new \ModulesGarden\ggsmodule\App\Libs\ClientSslSummary($_SESSION['uid']))->counts();
+        $counts = (new \ModulesGarden\GGSModule\App\Libs\ClientSslSummary($_SESSION['uid']))->counts();
         if(!$counts['total'])
         {
             return;
         }
 
-        $t    = \ModulesGarden\ggsmodule\App\ClientArea\SslPages::texts();
+        $t    = \ModulesGarden\GGSModule\App\ClientArea\SslPages::texts();
         $menu = $secondarySidebar->addChild('ggsSslSummary', [
             'label' => $t['summaryTitle'],
             'icon'  => 'fa-lock',
             'order' => 99,
         ]);
-        unifiedSslLabelBlock($menu, $t['summaryTitle'], \ModulesGarden\ggsmodule\App\Libs\Edition::brand());
+        unifiedSslLabelBlock($menu, $t['summaryTitle'], \ModulesGarden\GGSModule\App\Libs\Edition::brand());
         $order = 10;
-        foreach(\ModulesGarden\ggsmodule\App\Libs\ClientSslSummary::TYPES as $type)
+        foreach(\ModulesGarden\GGSModule\App\Libs\ClientSslSummary::TYPES as $type)
         {
             $menu->addChild('ggsSsl_' . $type, [
                 'label' => $t[$type],
-                'uri'   => 'index.php?m=ggsmodule&type=' . $type,
+                'uri'   => 'index.php?m=GGSModule&type=' . $type,
                 'badge' => (int)$counts[$type],
                 'order' => $order++,
             ]);
         }
-        if(\ModulesGarden\ggsmodule\App\Libs\GeneralSettings::enabled('certificatesByDomain'))
+        if(\ModulesGarden\GGSModule\App\Libs\GeneralSettings::enabled('certificatesByDomain'))
         {
             $menu->addChild('ggsSsl_domains', [
                 'label' => $t['byDomain'],
-                'uri'   => 'index.php?m=ggsmodule&page=domains',
+                'uri'   => 'index.php?m=GGSModule&page=domains',
                 'order' => $order++,
             ]);
         }
-        if(\ModulesGarden\ggsmodule\App\Libs\GeneralSettings::enabled('sslTools'))
+        if(\ModulesGarden\GGSModule\App\Libs\GeneralSettings::enabled('sslTools'))
         {
             $menu->addChild('ggsSsl_tools', [
                 'label' => 'SSL Tools',
-                'uri'   => 'index.php?m=ggsmodule&page=tools',
+                'uri'   => 'index.php?m=GGSModule&page=tools',
                 'order' => $order,
             ]);
         }
@@ -390,7 +390,7 @@ add_hook('OrderProductPricingOverride', 1, function($vars) {
     try
     {
         list($clientId, $currencyId) = ggs_markup_client_currency();
-        $price = \ModulesGarden\ggsmodule\App\Libs\Markups::price($clientId, (int)$vars['pid'], $vars['proddata']['billingcycle'] ?? 'annually', $currencyId);
+        $price = \ModulesGarden\GGSModule\App\Libs\Markups::price($clientId, (int)$vars['pid'], $vars['proddata']['billingcycle'] ?? 'annually', $currencyId);
 
         return $price === null ? [] : ['recurring' => $price];
     }
@@ -406,8 +406,8 @@ add_hook('ClientAreaPageCart', 1, function($vars) {
     {
         list($clientId, $currencyId) = ggs_markup_client_currency();
         $scale = function($pricing, $pid) use ($clientId, $currencyId) {
-            $markup = \ModulesGarden\ggsmodule\App\Libs\Markups::forProduct($clientId, $pid);
-            if($markup === null || !is_array($pricing) || !Capsule::table('tblproducts')->where('id', (int)$pid)->where('servertype', 'ggsmodule')->exists())
+            $markup = \ModulesGarden\GGSModule\App\Libs\Markups::forProduct($clientId, $pid);
+            if($markup === null || !is_array($pricing) || !Capsule::table('tblproducts')->where('id', (int)$pid)->where('servertype', 'GGSModule')->exists())
             {
                 return $pricing;
             }
@@ -417,7 +417,7 @@ add_hook('ClientAreaPageCart', 1, function($vars) {
                 {
                     continue;
                 }
-                $new = \ModulesGarden\ggsmodule\App\Libs\Markups::apply($amount, $markup);
+                $new = \ModulesGarden\GGSModule\App\Libs\Markups::apply($amount, $markup);
                 $pricing['rawpricing'][$cycle] = number_format($new, 2, '.', '');
                 if(isset($pricing['cycles'][$cycle]))
                 {
@@ -468,9 +468,9 @@ add_hook('ClientAreaHeadOutput', 1, function($vars) {
     {
         list($clientId) = ggs_markup_client_currency();
         $markups = [];
-        foreach(Capsule::table('tblproducts')->where('servertype', 'ggsmodule')->pluck('id') as $pid)
+        foreach(Capsule::table('tblproducts')->where('servertype', 'GGSModule')->pluck('id') as $pid)
         {
-            $markup = \ModulesGarden\ggsmodule\App\Libs\Markups::forProduct($clientId, $pid);
+            $markup = \ModulesGarden\GGSModule\App\Libs\Markups::forProduct($clientId, $pid);
             if($markup !== null)
             {
                 $markups[(int)$pid] = 1 + $markup / 100;
@@ -538,14 +538,14 @@ add_hook('AfterModuleCreate', 1, function($vars) {
     {
         $params    = isset($vars['params']) && is_array($vars['params']) ? $vars['params'] : [];
         $serviceId = (int)($params['serviceid'] ?? 0);
-        if(!$serviceId || ($params['moduletype'] ?? 'ggsmodule') !== 'ggsmodule')
+        if(!$serviceId || ($params['moduletype'] ?? 'GGSModule') !== 'GGSModule')
         {
             return;
         }
 
         $service = Capsule::table('tblhosting as h')->join('tblproducts as p', 'p.id', '=', 'h.packageid')
             ->where('h.id', $serviceId)->first(['h.orderid', 'p.autosetup', 'p.servertype']);
-        if(!$service || $service->servertype !== 'ggsmodule' || !in_array($service->autosetup, ['order', 'payment'], true) || !(int)$service->orderid)
+        if(!$service || $service->servertype !== 'GGSModule' || !in_array($service->autosetup, ['order', 'payment'], true) || !(int)$service->orderid)
         {
             return;
         }
@@ -568,15 +568,15 @@ add_hook('AfterModuleCreate', 1, function($vars) {
         $result = localAPI('AcceptOrder', ['orderid' => $orderId, 'autosetup' => false, 'sendemail' => false]);
         if(($result['result'] ?? '') === 'success')
         {
-            \ModulesGarden\ggsmodule\App\Libs\GeneralSettings::activity('Order #' . $orderId . ' accepted automatically: service #' . $serviceId . ' was set up (automatic setup on ' . $service->autosetup . ')');
+            \ModulesGarden\GGSModule\App\Libs\GeneralSettings::activity('Order #' . $orderId . ' accepted automatically: service #' . $serviceId . ' was set up (automatic setup on ' . $service->autosetup . ')');
         }
         else
         {
-            \ModulesGarden\ggsmodule\App\Libs\GeneralSettings::activity('Order #' . $orderId . ' could not be accepted automatically: ' . ($result['message'] ?? 'unknown error'));
+            \ModulesGarden\GGSModule\App\Libs\GeneralSettings::activity('Order #' . $orderId . ' could not be accepted automatically: ' . ($result['message'] ?? 'unknown error'));
         }
     }
     catch(\Throwable $e)
     {
-        logActivity('ggsmodule order auto-accept: ' . $e->getMessage());
+        logActivity('GGSModule order auto-accept: ' . $e->getMessage());
     }
 });

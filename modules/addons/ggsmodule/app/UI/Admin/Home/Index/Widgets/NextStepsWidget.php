@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\Card;
-use ModulesGarden\ggsmodule\Components\Container\Container;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\Card;
+use ModulesGarden\GGSModule\Components\Container\Container;
 use WHMCS\Database\Capsule;
 
 /**
@@ -46,7 +46,7 @@ class NextStepsWidget extends Container
             }
             $done[] = $step;
             Capsule::table('tbladdonmodules')->updateOrInsert(
-                ['module' => 'configuration_ggsmodule', 'setting' => self::DONE],
+                ['module' => 'configuration_GGSModule', 'setting' => self::DONE],
                 ['value' => implode(',', $done)]
             );
             self::$done = $done;
@@ -61,7 +61,7 @@ class NextStepsWidget extends Container
     {
         if(self::$done === null)
         {
-            $value      = (string)Capsule::table('tbladdonmodules')->where('module', 'configuration_ggsmodule')->where('setting', self::DONE)->value('value');
+            $value      = (string)Capsule::table('tbladdonmodules')->where('module', 'configuration_GGSModule')->where('setting', self::DONE)->value('value');
             self::$done = $value === '' ? [] : explode(',', $value);
         }
 
@@ -74,7 +74,7 @@ class NextStepsWidget extends Container
         return Capsule::table('tblpricing')
             ->join('tblproducts', 'tblproducts.id', '=', 'tblpricing.relid')
             ->where('tblpricing.type', 'product')
-            ->where('tblproducts.servertype', 'ggsmodule')
+            ->where('tblproducts.servertype', 'GGSModule')
             ->where(function($q) {
                 foreach(['monthly', 'quarterly', 'semiannually', 'annually', 'biennially', 'triennially'] as $column)
                 {
@@ -87,11 +87,11 @@ class NextStepsWidget extends Container
     /** [number, icon, text key, url, done] */
     protected static function steps(): array
     {
-        $base = 'addonmodules.php?module=ggsmodule&mg-page=';
+        $base = 'addonmodules.php?module=GGSModule&mg-page=';
         $done = self::done();
 
         return [
-            [1, 'package-variant-closed', 'step_products', $base . 'products', (int)Capsule::table('tblproducts')->where('servertype', 'ggsmodule')->count() > 0],
+            [1, 'package-variant-closed', 'step_products', $base . 'products', (int)Capsule::table('tblproducts')->where('servertype', 'GGSModule')->count() > 0],
             [2, 'tag-outline', 'step_pricing', $base . 'pricing', in_array(self::STEP_PRICING, $done, true) || self::priced()],
             [3, 'sync', 'step_renewals', $base . 'settings&settings-page=sslSettings', in_array(self::STEP_RENEWALS, $done, true)],
         ];

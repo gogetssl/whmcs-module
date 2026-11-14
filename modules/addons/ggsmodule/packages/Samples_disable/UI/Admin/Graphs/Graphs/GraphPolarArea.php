@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs;
 
-use ModulesGarden\ggsmodule\Components\Graph\Series\SimpleSeries;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Components\Graph\Series\SimpleSeries;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
-class GraphPolarArea extends \ModulesGarden\ggsmodule\Components\Graph\GraphPolarArea implements AdminAreaInterface
+class GraphPolarArea extends \ModulesGarden\GGSModule\Components\Graph\GraphPolarArea implements AdminAreaInterface
 {
     public function loadHtml(): void
     {

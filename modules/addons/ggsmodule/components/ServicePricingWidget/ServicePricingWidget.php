@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ServicePricingWidget;
+namespace ModulesGarden\GGSModule\Components\ServicePricingWidget;
 
-use ModulesGarden\ggsmodule\Components\ServicePricingWidget\Models\DataSet;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Traits\OptionsTrait;
+use ModulesGarden\GGSModule\Components\ServicePricingWidget\Models\DataSet;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Traits\OptionsTrait;
 
 class ServicePricingWidget extends Widget
 {

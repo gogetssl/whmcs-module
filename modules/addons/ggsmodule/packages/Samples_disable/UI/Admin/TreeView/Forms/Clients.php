@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\Forms;
 
-use ModulesGarden\ggsmodule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\Form\Form;
 
 class Clients extends Form
 {
     public function loadHtml(): void
     {
-        $this->builder->addField(new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\Dropdowns\Clients());
-        $this->builder->addField(new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\Dropdowns\Services());
+        $this->builder->addField(new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\Dropdowns\Clients());
+        $this->builder->addField(new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\Dropdowns\Services());
     }
 }

@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Support\Facades;
+namespace ModulesGarden\GGSModule\Core\Support\Facades;
 
 
 /**
- * @method static getCurrentRoute : \ModulesGarden\ggsmodule\Core\Routing\Route
+ * @method static getCurrentRoute : \ModulesGarden\GGSModule\Core\Routing\Route
  */
 class Router extends AbstractFacade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \ModulesGarden\ggsmodule\Core\Services\Router::class;
+        return \ModulesGarden\GGSModule\Core\Services\Router::class;
     }
 }

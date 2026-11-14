@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Hook\Integration\Enums;
+namespace ModulesGarden\GGSModule\Core\Hook\Integration\Enums;
 
 enum IntegrationTypes: string
 {

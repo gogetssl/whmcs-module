@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Tagger;
+namespace ModulesGarden\GGSModule\Components\Tagger;
 
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
 
 class Tagger extends Dropdown
 {

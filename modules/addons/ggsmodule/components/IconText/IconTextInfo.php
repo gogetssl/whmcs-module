@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\IconText;
+namespace ModulesGarden\GGSModule\Components\IconText;
 
-use ModulesGarden\ggsmodule\Core\Components\Enums\Type;
+use ModulesGarden\GGSModule\Core\Components\Enums\Type;
 
 class IconTextInfo extends IconText
 {

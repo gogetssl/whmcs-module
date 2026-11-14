@@ -1,23 +1,23 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Models;
+namespace ModulesGarden\GGSModule\Components\Graph\Models;
 
-use ModulesGarden\ggsmodule\Components\Graph\Options\ChartOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Options\ColorsOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Options\DataLabelsOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Options\FillOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Options\LabelsOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Options\LegendOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Options\PlotOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Options\ResponsiveOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Options\StatesOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Options\StrokeOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Options\SubTitleOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Options\TitleOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Options\TooltipOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Options\XaxisOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Options\YaxisOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Source\SeriesInterface;
+use ModulesGarden\GGSModule\Components\Graph\Options\ChartOptions;
+use ModulesGarden\GGSModule\Components\Graph\Options\ColorsOptions;
+use ModulesGarden\GGSModule\Components\Graph\Options\DataLabelsOptions;
+use ModulesGarden\GGSModule\Components\Graph\Options\FillOptions;
+use ModulesGarden\GGSModule\Components\Graph\Options\LabelsOptions;
+use ModulesGarden\GGSModule\Components\Graph\Options\LegendOptions;
+use ModulesGarden\GGSModule\Components\Graph\Options\PlotOptions;
+use ModulesGarden\GGSModule\Components\Graph\Options\ResponsiveOptions;
+use ModulesGarden\GGSModule\Components\Graph\Options\StatesOptions;
+use ModulesGarden\GGSModule\Components\Graph\Options\StrokeOptions;
+use ModulesGarden\GGSModule\Components\Graph\Options\SubTitleOptions;
+use ModulesGarden\GGSModule\Components\Graph\Options\TitleOptions;
+use ModulesGarden\GGSModule\Components\Graph\Options\TooltipOptions;
+use ModulesGarden\GGSModule\Components\Graph\Options\XaxisOptions;
+use ModulesGarden\GGSModule\Components\Graph\Options\YaxisOptions;
+use ModulesGarden\GGSModule\Components\Graph\Source\SeriesInterface;
 
 class Options
 {

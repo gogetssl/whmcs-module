@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Services;
+namespace ModulesGarden\GGSModule\Core\Services;
 
-use ModulesGarden\ggsmodule\Core\Translation\Loader;
-use ModulesGarden\ggsmodule\Core\Translation\Selector;
+use ModulesGarden\GGSModule\Core\Translation\Loader;
+use ModulesGarden\GGSModule\Core\Translation\Selector;
 
-class Translator extends \ModulesGarden\ggsmodule\Core\Translation\Translator
+class Translator extends \ModulesGarden\GGSModule\Core\Translation\Translator
 {
 }

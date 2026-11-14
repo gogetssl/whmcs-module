@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Buttons;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Buttons;
 
-use ModulesGarden\ggsmodule\Components\IconButton;
-use ModulesGarden\ggsmodule\Core\Components\Action;
+use ModulesGarden\GGSModule\Components\IconButton;
+use ModulesGarden\GGSModule\Core\Components\Action;
 
 class UserDelete extends IconButton\IconButtonDelete
 {
@@ -11,6 +11,6 @@ class UserDelete extends IconButton\IconButtonDelete
     {
         parent::loadHtml();
 
-        $this->onClick(Action::modalOpen(new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Modals\UserDelete()));
+        $this->onClick(Action::modalOpen(new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Modals\UserDelete()));
     }
 }

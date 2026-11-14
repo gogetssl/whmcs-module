@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\DropdownMenuItem;
+namespace ModulesGarden\GGSModule\Components\DropdownMenuItem;
 
-use ModulesGarden\ggsmodule\Components\Button\Button;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\DropdownMenuItemInterface;
+use ModulesGarden\GGSModule\Components\Button\Button;
+use ModulesGarden\GGSModule\Core\Contracts\Components\DropdownMenuItemInterface;
 
 class DropdownMenuItem extends Button implements DropdownMenuItemInterface
 {

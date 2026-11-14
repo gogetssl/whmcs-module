@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\URL;
+namespace ModulesGarden\GGSModule\Core\WHMCS\URL;
 
 class Client
 {
@@ -9,6 +9,6 @@ class Client
         $parameters['action'] = 'productdetails';
         $parameters['id'] = $hostingId;
 
-        return \ModulesGarden\ggsmodule\Core\Routing\Url::clientarea('clientarea.php', $parameters);
+        return \ModulesGarden\GGSModule\Core\Routing\Url::clientarea('clientarea.php', $parameters);
     }
 }

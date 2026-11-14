@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Statistics\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Statistics\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\Components\TableSimple\Column\Column;
-use ModulesGarden\ggsmodule\Components\TableSimple\Record\Record;
-use ModulesGarden\ggsmodule\Components\TableSimple\TableSimple;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\Components\TableSimple\Column\Column;
+use ModulesGarden\GGSModule\Components\TableSimple\Record\Record;
+use ModulesGarden\GGSModule\Components\TableSimple\TableSimple;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 class ResellersWidget extends Widget
@@ -30,7 +30,7 @@ class ResellersWidget extends Widget
                        ->join('tblhosting', 'tblhosting.id', '=', 'tblinvoiceitems.relid')
                        ->join('tblproducts', 'tblhosting.packageid', '=', 'tblproducts.id')
                        ->where('tblinvoiceitems.type', 'Hosting')
-                       ->where('tblproducts.servertype', 'ggsmodule')
+                       ->where('tblproducts.servertype', 'GGSModule')
                        ->select(Capsule::raw('tblinvoiceitems.userid as clientId, SUM(`firstpaymentamount`) as paid'))
                        ->groupBy('tblinvoiceitems.userid')
                        ->get();

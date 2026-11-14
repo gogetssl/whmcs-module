@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\CommandLine\Exceptions;
+namespace ModulesGarden\GGSModule\Core\CommandLine\Exceptions;
 
 class CommandMustCalledViaCli extends \Exception
 {

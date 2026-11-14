@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Helpers\EmailTemplates;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Product;
-use ModulesGarden\ggsmodule\Packages\Product\Services\ConfigurableOptionsGroup;
+use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Product;
+use ModulesGarden\GGSModule\Packages\Product\Services\ConfigurableOptionsGroup;
 use WHMCS\Database\Capsule;
 
 /**
@@ -396,7 +396,7 @@ class CodeSigningService extends GatewayOrderService
      */
     protected static function oneTimeFee($cost, $currencyId)
     {
-        $rate = (float)((new \ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository())->getModuleConfiguration()['financeSettings']['rate'] ?? 1) ?: 1;
+        $rate = (float)((new \ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository())->getModuleConfiguration()['financeSettings']['rate'] ?? 1) ?: 1;
         $fee  = number_format(FinancePolicy::toCurrency((float)$cost * $rate, $currencyId), 2, '.', '');
 
         $pricing = [];

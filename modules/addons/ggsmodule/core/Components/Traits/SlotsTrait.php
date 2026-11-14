@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Traits;
+namespace ModulesGarden\GGSModule\Core\Components\Traits;
 
-use ModulesGarden\ggsmodule\Core\Support\Arr;
-use ModulesGarden\ggsmodule\Core\Support\Text;
+use ModulesGarden\GGSModule\Core\Support\Arr;
+use ModulesGarden\GGSModule\Core\Support\Text;
 
 trait SlotsTrait
 {

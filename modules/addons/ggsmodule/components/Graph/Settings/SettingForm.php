@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Widget\Graphs\Settings;
+namespace ModulesGarden\GGSModule\Core\UI\Widget\Graphs\Settings;
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\UI\Widget\Forms\BaseForm;
-use ModulesGarden\ggsmodule\Core\UI\Widget\Forms\Fields\ColorPicker;
-use ModulesGarden\ggsmodule\Core\UI\Widget\Forms\Fields\Hidden;
-use ModulesGarden\ggsmodule\Core\UI\Widget\Forms\Fields\Number;
-use ModulesGarden\ggsmodule\Core\UI\Widget\Forms\Fields\Select2vueByValueOnly;
-use ModulesGarden\ggsmodule\Core\UI\Widget\Forms\FormConstants;
-use ModulesGarden\ggsmodule\Core\UI\Widget\Graphs\EmptyGraph;
-use function ModulesGarden\ggsmodule\Core\Helper\sl;
-use function ModulesGarden\ggsmodule\Core\request;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\UI\Widget\Forms\BaseForm;
+use ModulesGarden\GGSModule\Core\UI\Widget\Forms\Fields\ColorPicker;
+use ModulesGarden\GGSModule\Core\UI\Widget\Forms\Fields\Hidden;
+use ModulesGarden\GGSModule\Core\UI\Widget\Forms\Fields\Number;
+use ModulesGarden\GGSModule\Core\UI\Widget\Forms\Fields\Select2vueByValueOnly;
+use ModulesGarden\GGSModule\Core\UI\Widget\Forms\FormConstants;
+use ModulesGarden\GGSModule\Core\UI\Widget\Graphs\EmptyGraph;
+use function ModulesGarden\GGSModule\Core\Helper\sl;
+use function ModulesGarden\GGSModule\Core\request;
 
 /**
  * Description of SettingForm
@@ -21,7 +21,7 @@ class SettingForm extends BaseForm
     protected $configFields = [];
     protected $id = 'settingForm';
     protected $name = 'settingForm';
-    protected $providerClass = 'ModulesGarden\ggsmodule\Core\UI\Widget\Graphs\Settings\SettingDataProvider';
+    protected $providerClass = 'ModulesGarden\GGSModule\Core\UI\Widget\Graphs\Settings\SettingDataProvider';
     protected $title = 'settingForm';
 
     public function initContent()

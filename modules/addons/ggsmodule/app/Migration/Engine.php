@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Migration;
+namespace ModulesGarden\GGSModule\App\Migration;
 
-use ModulesGarden\ggsmodule\App\Libs\Markups;
-use ModulesGarden\ggsmodule\App\Libs\Cpanel;
-use ModulesGarden\ggsmodule\App\Libs\EmailCatalog;
-use ModulesGarden\ggsmodule\App\Libs\EmailManager;
-use ModulesGarden\ggsmodule\App\Libs\LegacyEmailImport;
-use ModulesGarden\ggsmodule\App\Migration\Readers\LegacyReaderInterface;
-use ModulesGarden\ggsmodule\App\Migration\Support\Schema;
+use ModulesGarden\GGSModule\App\Libs\Markups;
+use ModulesGarden\GGSModule\App\Libs\Cpanel;
+use ModulesGarden\GGSModule\App\Libs\EmailCatalog;
+use ModulesGarden\GGSModule\App\Libs\EmailManager;
+use ModulesGarden\GGSModule\App\Libs\LegacyEmailImport;
+use ModulesGarden\GGSModule\App\Migration\Readers\LegacyReaderInterface;
+use ModulesGarden\GGSModule\App\Migration\Support\Schema;
 use WHMCS\Database\Capsule;
 
 /**

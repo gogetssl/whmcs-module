@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Helpers;
+namespace ModulesGarden\GGSModule\Packages\Product\Helpers;
 
 class ConfigurableOptionHelper
 {

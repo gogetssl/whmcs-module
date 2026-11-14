@@ -1,18 +1,18 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\AutomationQueue\Index;
+namespace ModulesGarden\GGSModule\App\UI\Admin\AutomationQueue\Index;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue\DataTable;
-use ModulesGarden\ggsmodule\App\Libs\Icons;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue\DataTable;
+use ModulesGarden\GGSModule\App\Libs\Icons;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
 class AutomationQueueContainer extends Container implements AdminAreaInterface
 {
     public function loadHtml(): void
     {
-        if(!\ModulesGarden\ggsmodule\App\Libs\GeneralSettings::enabled('hideInfoMessages'))
+        if(!\ModulesGarden\GGSModule\App\Libs\GeneralSettings::enabled('hideInfoMessages'))
         {
             $text = new Text();
             $text->setCss('ggs-html');

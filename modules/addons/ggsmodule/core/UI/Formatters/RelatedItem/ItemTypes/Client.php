@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypes;
+namespace ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypes;
 
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypeWithModel;
-use ModulesGarden\ggsmodule\Core\WHMCS\URL;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypeWithModel;
+use ModulesGarden\GGSModule\Core\WHMCS\URL;
 
 class Client extends ItemTypeWithModel
 {
-    protected static string $modelClass = \ModulesGarden\ggsmodule\Core\WHMCS\Models\Client::class;
+    protected static string $modelClass = \ModulesGarden\GGSModule\Core\WHMCS\Models\Client::class;
 
     public function generateUrl(): string
     {

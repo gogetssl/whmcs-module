@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\KanbanBoard\Providers;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\KanbanBoard\Providers;
 
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
 
 class BoardProvider extends CrudProvider
 {

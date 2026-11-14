@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Container;
+namespace ModulesGarden\GGSModule\Components\Container;
 
 class ContainerContentCentered extends Container
 {

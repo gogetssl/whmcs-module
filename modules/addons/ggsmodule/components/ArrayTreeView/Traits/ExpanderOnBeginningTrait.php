@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ArrayTreeView\Traits;
+namespace ModulesGarden\GGSModule\Components\ArrayTreeView\Traits;
 
 trait ExpanderOnBeginningTrait
 {

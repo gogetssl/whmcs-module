@@ -1,18 +1,18 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Providers;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Providers;
 
-use ModulesGarden\ggsmodule\Core\Components\Actions\DownloadFileFromForm;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalClose;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Exporters\CsvExporter;
-use ModulesGarden\ggsmodule\Core\Exporters\DataModels\Query;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
-use ModulesGarden\ggsmodule\Packages\Logs\Models\Logs;
-use ModulesGarden\ggsmodule\Packages\Logs\Support\Translations\LogsTypeTranslator;
-use ModulesGarden\ggsmodule\Packages\Logs\UI\Forms\DownloadCsvForm;
-use ModulesGarden\ggsmodule\Packages\Logs\UI\Modals\ExportCsvModal;
+use ModulesGarden\GGSModule\Core\Components\Actions\DownloadFileFromForm;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalClose;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Exporters\CsvExporter;
+use ModulesGarden\GGSModule\Core\Exporters\DataModels\Query;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\Packages\Logs\Models\Logs;
+use ModulesGarden\GGSModule\Packages\Logs\Support\Translations\LogsTypeTranslator;
+use ModulesGarden\GGSModule\Packages\Logs\UI\Forms\DownloadCsvForm;
+use ModulesGarden\GGSModule\Packages\Logs\UI\Modals\ExportCsvModal;
 
 class ExportProvider extends CrudProvider
 {

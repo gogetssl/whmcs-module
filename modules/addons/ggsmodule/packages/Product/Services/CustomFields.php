@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Services;
+namespace ModulesGarden\GGSModule\Packages\Product\Services;
 
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\CustomField as CustomFieldModel;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\CustomFields\AbstractCustomField;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\CustomField as CustomFieldModel;
+use ModulesGarden\GGSModule\Packages\Product\Libs\CustomFields\AbstractCustomField;
 
 class CustomFields
 {

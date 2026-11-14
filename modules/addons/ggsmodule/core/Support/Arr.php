@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Support;
+namespace ModulesGarden\GGSModule\Core\Support;
 
 use mysql_xdevapi\Statement;
 

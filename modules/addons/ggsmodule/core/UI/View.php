@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI;
+namespace ModulesGarden\GGSModule\Core\UI;
 
-use ModulesGarden\ggsmodule\Components\AppNavBar\Breadcrumb;
-use ModulesGarden\ggsmodule\Components\OverlayComponents\OverlayComponents;
-use ModulesGarden\ggsmodule\Core\Helper\BuildUrl;
-use ModulesGarden\ggsmodule\Core\Helper\RandomStringGenerator;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\UI\View\AlertsBuilder;
-use ModulesGarden\ggsmodule\Core\UI\View\BreadcrumbsBuilder;
-use ModulesGarden\ggsmodule\Core\UI\View\NavBarBuilder;
-use function ModulesGarden\ggsmodule\Core\Helper\isAdmin;
+use ModulesGarden\GGSModule\Components\AppNavBar\Breadcrumb;
+use ModulesGarden\GGSModule\Components\OverlayComponents\OverlayComponents;
+use ModulesGarden\GGSModule\Core\Helper\BuildUrl;
+use ModulesGarden\GGSModule\Core\Helper\RandomStringGenerator;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\UI\View\AlertsBuilder;
+use ModulesGarden\GGSModule\Core\UI\View\BreadcrumbsBuilder;
+use ModulesGarden\GGSModule\Core\UI\View\NavBarBuilder;
+use function ModulesGarden\GGSModule\Core\Helper\isAdmin;
 
 /**
  *

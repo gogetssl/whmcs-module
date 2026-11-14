@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ChangelogModal;
+namespace ModulesGarden\GGSModule\Components\ChangelogModal;
 
-use ModulesGarden\ggsmodule\Components\Modal\ModalInfo;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TranslatorTrait;
+use ModulesGarden\GGSModule\Components\Modal\ModalInfo;
+use ModulesGarden\GGSModule\Core\Components\Traits\TranslatorTrait;
 
 class ChangelogModal extends ModalInfo
 {

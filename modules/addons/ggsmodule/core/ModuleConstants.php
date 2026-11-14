@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core;
+namespace ModulesGarden\GGSModule\Core;
 
-use function ModulesGarden\ggsmodule\Core\Helper\isAdmin;
+use function ModulesGarden\GGSModule\Core\Helper\isAdmin;
 
 class ModuleConstants
 {
@@ -20,7 +20,7 @@ class ModuleConstants
 
     protected static $mgCoreConfig = null;
     protected static $mgDevConfig = null;
-    protected static $mgModuleNamespace = 'ModulesGarden\\ggsmodule';
+    protected static $mgModuleNamespace = 'ModulesGarden\\GGSModule';
     protected static $mgModuleRootDir = null;
     protected static $mgTemplateDir = null;
     protected static $prefixDataBase = '';
@@ -120,7 +120,7 @@ class ModuleConstants
         {
             require_once $edition;
 
-            return \ModulesGarden\ggsmodule\App\Libs\Edition::tablePrefix();
+            return \ModulesGarden\GGSModule\App\Libs\Edition::tablePrefix();
         }
 
         return self::getModuleName();

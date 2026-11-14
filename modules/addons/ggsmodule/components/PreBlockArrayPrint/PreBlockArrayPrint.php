@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\PreBlockArrayPrint;
+namespace ModulesGarden\GGSModule\Components\PreBlockArrayPrint;
 
-use ModulesGarden\ggsmodule\Core\Components\FormFields\FormField;
+use ModulesGarden\GGSModule\Core\Components\FormFields\FormField;
 
 /**
  * Class IconButton

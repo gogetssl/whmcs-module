@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Form\Builder;
+namespace ModulesGarden\GGSModule\Components\Form\Builder;
 
-use ModulesGarden\ggsmodule\Components\Button\Button;
-use ModulesGarden\ggsmodule\Components\Button\ButtonCancel;
-use ModulesGarden\ggsmodule\Components\Button\ButtonSubmitSuccess;
-use ModulesGarden\ggsmodule\Components\Form\AbstractForm;
-use ModulesGarden\ggsmodule\Components\Form\Builder\GroupBuilders\DefaultBuilder;
-use ModulesGarden\ggsmodule\Components\FormGroup\FormGroup;
-use ModulesGarden\ggsmodule\Core\Components\Actions\FormSubmit;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentContainerInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\FormFieldInterface;
-use function ModulesGarden\ggsmodule\Core\translator;
+use ModulesGarden\GGSModule\Components\Button\Button;
+use ModulesGarden\GGSModule\Components\Button\ButtonCancel;
+use ModulesGarden\GGSModule\Components\Button\ButtonSubmitSuccess;
+use ModulesGarden\GGSModule\Components\Form\AbstractForm;
+use ModulesGarden\GGSModule\Components\Form\Builder\GroupBuilders\DefaultBuilder;
+use ModulesGarden\GGSModule\Components\FormGroup\FormGroup;
+use ModulesGarden\GGSModule\Core\Components\Actions\FormSubmit;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentContainerInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\FormFieldInterface;
+use function ModulesGarden\GGSModule\Core\translator;
 
 class Builder
 {

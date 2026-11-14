@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\FileReader\Includer;
+namespace ModulesGarden\GGSModule\Core\FileReader\Includer;
 
 
 /**

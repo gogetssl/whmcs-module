@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Helper\Converter;
+namespace ModulesGarden\GGSModule\Core\Helper\Converter;
 
 class Json
 {

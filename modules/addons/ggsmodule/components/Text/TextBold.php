@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Text;
+namespace ModulesGarden\GGSModule\Components\Text;
 
-use ModulesGarden\ggsmodule\Core\Components\Decorator\Decorator;
+use ModulesGarden\GGSModule\Core\Components\Decorator\Decorator;
 
 class TextBold extends Text
 {

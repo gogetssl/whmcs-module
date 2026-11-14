@@ -1,9 +1,9 @@
 <?php
 
 
-namespace ModulesGarden\ggsmodule\Packages\ModuleSettings\Support\Facades;
+namespace ModulesGarden\GGSModule\Packages\ModuleSettings\Support\Facades;
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\AbstractFacade;
+use ModulesGarden\GGSModule\Core\Support\Facades\AbstractFacade;
 
 /**
  * @method static get(string $setting, $default = null)
@@ -15,6 +15,6 @@ class ModuleSettings extends AbstractFacade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \ModulesGarden\ggsmodule\Packages\ModuleSettings\Services\ModuleSettings::class;
+        return \ModulesGarden\GGSModule\Packages\ModuleSettings\Services\ModuleSettings::class;
     }
 }

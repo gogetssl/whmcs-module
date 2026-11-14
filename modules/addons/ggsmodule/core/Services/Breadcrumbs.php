@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Services;
+namespace ModulesGarden\GGSModule\Core\Services;
 
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Routing\Url;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Translator;
-use ModulesGarden\ggsmodule\Core\UI\Breadcrumbs\Item;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Routing\Url;
+use ModulesGarden\GGSModule\Core\Support\Facades\Translator;
+use ModulesGarden\GGSModule\Core\UI\Breadcrumbs\Item;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
-class Breadcrumbs extends \ModulesGarden\ggsmodule\Core\UI\Breadcrumbs\Breadcrumbs
+class Breadcrumbs extends \ModulesGarden\GGSModule\Core\UI\Breadcrumbs\Breadcrumbs
 {
     public function __construct()
     {
@@ -17,7 +17,7 @@ class Breadcrumbs extends \ModulesGarden\ggsmodule\Core\UI\Breadcrumbs\Breadcrum
 
     protected function addDefault()
     {
-        $route = \ModulesGarden\ggsmodule\Core\Support\Facades\Router::getCurrentRoute();
+        $route = \ModulesGarden\GGSModule\Core\Support\Facades\Router::getCurrentRoute();
         if (!$route)
         {
             return;

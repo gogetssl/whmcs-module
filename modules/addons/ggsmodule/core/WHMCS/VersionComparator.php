@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS;
+namespace ModulesGarden\GGSModule\Core\WHMCS;
 
 class VersionComparator
 {

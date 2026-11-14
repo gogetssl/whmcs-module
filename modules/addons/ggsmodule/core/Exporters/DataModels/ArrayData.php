@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Exporters\DataModels;
+namespace ModulesGarden\GGSModule\Core\Exporters\DataModels;
 
-use ModulesGarden\ggsmodule\Core\Exporters\Source\DataModelWithHeadersInterface;
-use ModulesGarden\ggsmodule\Core\Exporters\Source\BaseDataModel;
+use ModulesGarden\GGSModule\Core\Exporters\Source\DataModelWithHeadersInterface;
+use ModulesGarden\GGSModule\Core\Exporters\Source\BaseDataModel;
 use \Illuminate\Contracts\Support\Arrayable;
 use Traversable;
 use ArrayIterator;

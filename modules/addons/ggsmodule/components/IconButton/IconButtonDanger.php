@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\IconButton;
+namespace ModulesGarden\GGSModule\Components\IconButton;
 
-use ModulesGarden\ggsmodule\Core\Components\Enums\Color;
+use ModulesGarden\GGSModule\Core\Components\Enums\Color;
 
 /**
  * Class IconButton

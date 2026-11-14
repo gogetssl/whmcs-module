@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
 /**
  * Secrets kept in the database (EAB HMAC keys, SSO links) and secrets that must never reach the module log.

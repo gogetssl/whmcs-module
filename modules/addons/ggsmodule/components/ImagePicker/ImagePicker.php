@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ImagePicker;
+namespace ModulesGarden\GGSModule\Components\ImagePicker;
 
-use ModulesGarden\ggsmodule\Components\MediaLibrary\MediaLibrary;
-use ModulesGarden\ggsmodule\Core\Components\FormFields\FormField;
-use ModulesGarden\ggsmodule\Packages\MediaLibrary\Helpers\ContentUrlGenerator;
+use ModulesGarden\GGSModule\Components\MediaLibrary\MediaLibrary;
+use ModulesGarden\GGSModule\Core\Components\FormFields\FormField;
+use ModulesGarden\GGSModule\Packages\MediaLibrary\Helpers\ContentUrlGenerator;
 
 class ImagePicker extends FormField
 {

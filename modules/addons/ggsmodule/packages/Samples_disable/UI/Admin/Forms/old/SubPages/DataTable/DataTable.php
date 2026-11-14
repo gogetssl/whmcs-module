@@ -1,24 +1,24 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\SubPages\DataTable;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\SubPages\DataTable;
 
-use ModulesGarden\ggsmodule\Components\CopyPasswordInline\CopyPasswordInline;
-use ModulesGarden\ggsmodule\Components\DataTable\Column;
-use ModulesGarden\ggsmodule\Components\DropdownMenu\DropdownMenu;
-use ModulesGarden\ggsmodule\Components\DropdownMenuItem\DropdownMenuItem;
-use ModulesGarden\ggsmodule\Components\FormLabel\FormLabel;
-use ModulesGarden\ggsmodule\Components\Label\LabelSuccess;
-use ModulesGarden\ggsmodule\Components\ListSimple\ListSimple;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\QueryDataProvider;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Buttons\UserCreate;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Buttons\UserDelete;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Buttons\UserEdit;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Switchers\TaxExempt;
+use ModulesGarden\GGSModule\Components\CopyPasswordInline\CopyPasswordInline;
+use ModulesGarden\GGSModule\Components\DataTable\Column;
+use ModulesGarden\GGSModule\Components\DropdownMenu\DropdownMenu;
+use ModulesGarden\GGSModule\Components\DropdownMenuItem\DropdownMenuItem;
+use ModulesGarden\GGSModule\Components\FormLabel\FormLabel;
+use ModulesGarden\GGSModule\Components\Label\LabelSuccess;
+use ModulesGarden\GGSModule\Components\ListSimple\ListSimple;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\QueryDataProvider;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Buttons\UserCreate;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Buttons\UserDelete;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Buttons\UserEdit;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Switchers\TaxExempt;
 use WHMCS\User\Client;
 
-class DataTable extends \ModulesGarden\ggsmodule\Components\DataTable\DataTable implements AdminAreaInterface, AjaxComponentInterface
+class DataTable extends \ModulesGarden\GGSModule\Components\DataTable\DataTable implements AdminAreaInterface, AjaxComponentInterface
 {
     public function loadHtml(): void
     {

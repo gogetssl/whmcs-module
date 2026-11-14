@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\UI\Providers;
+namespace ModulesGarden\GGSModule\Packages\Product\UI\Providers;
 
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalClose;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Redirect;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalClose;
+use ModulesGarden\GGSModule\Core\Components\Actions\Redirect;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
 
 class ServerConfiguration extends CrudProvider
 {
@@ -15,7 +15,7 @@ class ServerConfiguration extends CrudProvider
 
     public function read()
     {
-        $data = (new \ModulesGarden\ggsmodule\Packages\Product\Services\ServerConfiguration(Request::get('id', 0)))
+        $data = (new \ModulesGarden\GGSModule\Packages\Product\Services\ServerConfiguration(Request::get('id', 0)))
             ->get();
 
         foreach ($data as $setting => $value)
@@ -34,7 +34,7 @@ class ServerConfiguration extends CrudProvider
 
     public function create()
     {
-        (new \ModulesGarden\ggsmodule\Packages\Product\Services\ServerConfiguration(Request::get('id', 0)))
+        (new \ModulesGarden\GGSModule\Packages\Product\Services\ServerConfiguration(Request::get('id', 0)))
             ->save($this->formData['serverconfig']);
 
         return (new Response())

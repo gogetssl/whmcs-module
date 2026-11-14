@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Forms;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Forms;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Providers\DownloadLogProvider;
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Providers\DownloadLogProvider;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
 
 class DownloadLogForm extends Form implements AdminAreaInterface, AjaxComponentInterface

@@ -6,9 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'ModulesGarden\\ggsmodule\\Packages\\' => array($baseDir . '/packages'),
-    'ModulesGarden\\ggsmodule\\Install\\' => array($baseDir . '/install'),
-    'ModulesGarden\\ggsmodule\\Core\\' => array($baseDir . '/core'),
-    'ModulesGarden\\ggsmodule\\Components\\' => array($baseDir . '/components'),
-    'ModulesGarden\\ggsmodule\\App\\' => array($baseDir . '/app'),
+    'ModulesGarden\\GGSModule\\Packages\\' => array($baseDir . '/packages'),
+    'ModulesGarden\\GGSModule\\Install\\' => array($baseDir . '/install'),
+    'ModulesGarden\\GGSModule\\Core\\' => array($baseDir . '/core'),
+    'ModulesGarden\\GGSModule\\Components\\' => array($baseDir . '/components'),
+    'ModulesGarden\\GGSModule\\App\\' => array($baseDir . '/app'),
 );

@@ -1,20 +1,20 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Cron;
+namespace ModulesGarden\GGSModule\App\Cron;
 
 use Exception;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Models\CronCheck;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\Core\CommandLine\AbstractCommand;
-use ModulesGarden\ggsmodule\Packages\Logs\Support\Facades\Logger;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Models\CronCheck;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\Core\CommandLine\AbstractCommand;
+use ModulesGarden\GGSModule\Packages\Logs\Support\Facades\Logger;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
 /**
  * Class Sample
- * @package ModulesGarden\ggsmodule\App\Cron
+ * @package ModulesGarden\GGSModule\App\Cron
  */
 class ReSyncProducts extends AbstractCommand
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ModulesGardenConnectionButton;
+namespace ModulesGarden\GGSModule\Components\ModulesGardenConnectionButton;
 
-use ModulesGarden\ggsmodule\Core\Components\Traits\TextTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\UrlTrait;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ActionOnClickTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TextTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\UrlTrait;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Core\Components\Traits\ActionOnClickTrait;
 
 class ModulesGardenConnectionButton extends Container
 {

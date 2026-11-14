@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\Modals;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\Modals;
 
-use ModulesGarden\ggsmodule\Components\Alert\AlertEdit;
-use ModulesGarden\ggsmodule\Components\Alert\AlertSuccess;
-use ModulesGarden\ggsmodule\Components\Button\ButtonEdit;
-use ModulesGarden\ggsmodule\Components\Button\ButtonPrimary;
-use ModulesGarden\ggsmodule\Components\Modal\ModalEdit;
-use ModulesGarden\ggsmodule\Core\Components\Action;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\Modals\Forms\Confirm;
+use ModulesGarden\GGSModule\Components\Alert\AlertEdit;
+use ModulesGarden\GGSModule\Components\Alert\AlertSuccess;
+use ModulesGarden\GGSModule\Components\Button\ButtonEdit;
+use ModulesGarden\GGSModule\Components\Button\ButtonPrimary;
+use ModulesGarden\GGSModule\Components\Modal\ModalEdit;
+use ModulesGarden\GGSModule\Core\Components\Action;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\Modals\Forms\Confirm;
 
 
 class EditModals extends AbstractModals

@@ -1,20 +1,20 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Import\Index\Providers;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Import\Index\Providers;
 
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Service;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Service;
 use WHMCS\Database\Capsule;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\ggsmodule\App\Models\RemoteProduct;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\Support\Facades\WhmcsApi;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Client;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\PaymentGateway;
-use ModulesGarden\ggsmodule\Packages\Logs\Support\Facades\Logger;
-use ModulesGarden\ggsmodule\App\Models\Request as RequestModel;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
+use ModulesGarden\GGSModule\App\Models\RemoteProduct;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\Support\Facades\WhmcsApi;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Client;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\PaymentGateway;
+use ModulesGarden\GGSModule\Packages\Logs\Support\Facades\Logger;
+use ModulesGarden\GGSModule\App\Models\Request as RequestModel;
 
 
 class ImportProvider extends CrudProvider
@@ -169,7 +169,7 @@ class ImportProvider extends CrudProvider
             {
                 // Attach the order to an existing service of the client (e.g. created by hand or by another module)
                 $service = Service::find($mapToService);
-                if(!$service || (int)$service->userid !== $clientId || $service->product->servertype !== 'ggsmodule')
+                if(!$service || (int)$service->userid !== $clientId || $service->product->servertype !== 'GGSModule')
                 {
                     Logger::error('invalidServiceToMap', $localOrderData);
                     $errorsCount++;
@@ -204,7 +204,7 @@ class ImportProvider extends CrudProvider
                 }
                 catch(\Throwable $e)
                 {
-                    Logger::error($e->getMessage(), \ModulesGarden\ggsmodule\App\Libs\LogContext::exception($e, $localOrderData));
+                    Logger::error($e->getMessage(), \ModulesGarden\GGSModule\App\Libs\LogContext::exception($e, $localOrderData));
                     $errorsCount++;
                     continue;
                 }
@@ -230,7 +230,7 @@ class ImportProvider extends CrudProvider
                 $service->save();
             }
 
-            $_SESSION['ggsmodule']['importedServices'][] = $serviceId;
+            $_SESSION['GGSModule']['importedServices'][] = $serviceId;
 
             // A mapped service usually has its SSL order row already - ModuleCreate refuses to run twice
             if(!Capsule::table('tblsslorders')->where('serviceid', $serviceId)->exists())
@@ -243,7 +243,7 @@ class ImportProvider extends CrudProvider
                 }
                 catch(\Throwable $e)
                 {
-                    Logger::error($e->getMessage(), \ModulesGarden\ggsmodule\App\Libs\LogContext::exception($e, $localOrderData));
+                    Logger::error($e->getMessage(), \ModulesGarden\GGSModule\App\Libs\LogContext::exception($e, $localOrderData));
                     $errorsCount++;
                     continue;
                 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Migration\Readers;
+namespace ModulesGarden\GGSModule\App\Migration\Readers;
 
-use ModulesGarden\ggsmodule\App\Migration\ProductMapper;
-use ModulesGarden\ggsmodule\App\Migration\Support\Configdata;
-use ModulesGarden\ggsmodule\App\Migration\Support\Schema;
+use ModulesGarden\GGSModule\App\Migration\ProductMapper;
+use ModulesGarden\GGSModule\App\Migration\Support\Configdata;
+use ModulesGarden\GGSModule\App\Migration\Support\Schema;
 use WHMCS\Database\Capsule;
 
 /**
@@ -266,7 +266,7 @@ class TssReader extends AbstractReader
     /** Hardware code signing products the unified module sells through the gateway */
     public function isCodeSigningCode(string $code): bool
     {
-        return in_array($code, \ModulesGarden\ggsmodule\App\Libs\CodeSigningService::SUPPORTED_PRODUCTS['TSS'], true);
+        return in_array($code, \ModulesGarden\GGSModule\App\Libs\CodeSigningService::SUPPORTED_PRODUCTS['TSS'], true);
     }
 
     /** CodeGuard products (website backup): the gateway category decides, the code prefix is the fallback */
@@ -275,7 +275,7 @@ class TssReader extends AbstractReader
         $remote = $this->mapper && $code !== '' ? $this->mapper->forTss($code) : null;
         if($remote)
         {
-            return strtolower((string)$remote->category) === \ModulesGarden\ggsmodule\App\Libs\CodeGuardService::CATEGORY;
+            return strtolower((string)$remote->category) === \ModulesGarden\GGSModule\App\Libs\CodeGuardService::CATEGORY;
         }
 
         // without a mapped gateway product the code itself decides: TheSSLStore sells them as cg_basic, cg_professional,
@@ -613,7 +613,7 @@ class TssReader extends AbstractReader
      */
     protected function readCodeSigning(array $rec, array $svc, array $order, string $code): array
     {
-        $cs          = \ModulesGarden\ggsmodule\App\Libs\CodeSigningService::class;
+        $cs          = \ModulesGarden\GGSModule\App\Libs\CodeSigningService::class;
         $rec['kind'] = 'codesigning';
         $remote      = $this->mapper ? $this->mapper->forTss($code) : null;
         $rec['remote_product_id'] = $remote ? (string)$remote->remoteId : $code;

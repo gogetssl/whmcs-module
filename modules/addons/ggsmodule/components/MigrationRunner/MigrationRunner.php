@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\MigrationRunner;
+namespace ModulesGarden\GGSModule\Components\MigrationRunner;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
 
 /**
  * Drives a running legacy migration from the browser: calls the batch endpoint until the run is finished

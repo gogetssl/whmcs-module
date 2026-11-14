@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models;
 
 /**
  * Description of Addon
@@ -35,6 +35,6 @@ class Admins extends \WHMCS\User\Admin
 {
     public function flaggedTickets()
     {
-        return $this->hasMany('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Ticket', "flag");
+        return $this->hasMany('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Ticket', "flag");
     }
 }

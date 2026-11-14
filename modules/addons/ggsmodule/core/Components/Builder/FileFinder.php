@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Builder;
+namespace ModulesGarden\GGSModule\Core\Components\Builder;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 class FileFinder
 {

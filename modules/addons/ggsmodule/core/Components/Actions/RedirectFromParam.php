@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Actions;
+namespace ModulesGarden\GGSModule\Core\Components\Actions;
 
 class RedirectFromParam extends Redirect
 {

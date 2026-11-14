@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Forms\ApiSettingsForm;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Forms\SslSettingsForm;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Forms\ApiSettingsForm;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Forms\SslSettingsForm;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
 
 class AutomatedSettingsWidget extends Widget
 {

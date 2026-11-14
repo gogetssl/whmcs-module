@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\ModuleSettings\Services;
+namespace ModulesGarden\GGSModule\Packages\ModuleSettings\Services;
 
-use ModulesGarden\ggsmodule\Core\Data\Container;
-use ModulesGarden\ggsmodule\Core\Support\Arr;
+use ModulesGarden\GGSModule\Core\Data\Container;
+use ModulesGarden\GGSModule\Core\Support\Arr;
 use Psr\Log\LoggerInterface;
 
 class ModuleSettings extends Container
 {
     public function __construct()
     {
-        $this->data = Arr::undot(\ModulesGarden\ggsmodule\Packages\ModuleSettings\Models\ModuleSettings::get()->pluck('value', 'setting')->toArray());
+        $this->data = Arr::undot(\ModulesGarden\GGSModule\Packages\ModuleSettings\Models\ModuleSettings::get()->pluck('value', 'setting')->toArray());
     }
 
     public function store()
@@ -21,12 +21,12 @@ class ModuleSettings extends Container
 
     public function wipe()
     {
-        \ModulesGarden\ggsmodule\Packages\ModuleSettings\Models\ModuleSettings::delete();
+        \ModulesGarden\GGSModule\Packages\ModuleSettings\Models\ModuleSettings::delete();
     }
 
     public function delete($name): self
     {
-        \ModulesGarden\ggsmodule\Packages\ModuleSettings\Models\ModuleSettings::where('setting', $name)->delete();
+        \ModulesGarden\GGSModule\Packages\ModuleSettings\Models\ModuleSettings::where('setting', $name)->delete();
 
         return parent::delete($name);
     }
@@ -42,14 +42,14 @@ class ModuleSettings extends Container
 
     public function update($setting, $value)
     {
-        $model = new \ModulesGarden\ggsmodule\Packages\ModuleSettings\Models\ModuleSettings();
+        $model = new \ModulesGarden\GGSModule\Packages\ModuleSettings\Models\ModuleSettings();
 
         if ($model->hasDuplicatedSetting($setting))
         {
             $model->ofSetting($setting)->delete();
         }
 
-        \ModulesGarden\ggsmodule\Packages\ModuleSettings\Models\ModuleSettings::updateOrCreate([
+        \ModulesGarden\GGSModule\Packages\ModuleSettings\Models\ModuleSettings::updateOrCreate([
             'setting' => $setting,
         ], [
             'value' => $value

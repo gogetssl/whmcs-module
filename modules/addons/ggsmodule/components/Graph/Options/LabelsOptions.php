@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Options;
+namespace ModulesGarden\GGSModule\Components\Graph\Options;
 
 use Illuminate\Contracts\Support\Arrayable;
 

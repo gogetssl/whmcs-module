@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\FileReader\Reader;
+namespace ModulesGarden\GGSModule\Core\FileReader\Reader;
 
 use Piwik\Ini\IniReader;
 use Piwik\Ini\IniReadingException;

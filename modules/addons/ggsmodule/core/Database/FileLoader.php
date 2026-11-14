@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Database;
+namespace ModulesGarden\GGSModule\Core\Database;
 
 use Illuminate\Database\Capsule\Manager;
-use ModulesGarden\ggsmodule\Core\FileReader\Reader;
+use ModulesGarden\GGSModule\Core\FileReader\Reader;
 
 /**
  * Autometes some of database queries

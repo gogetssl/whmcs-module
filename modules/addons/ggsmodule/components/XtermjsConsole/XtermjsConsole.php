@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\XtermjsConsole;
+namespace ModulesGarden\GGSModule\Components\XtermjsConsole;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
 
 class XtermjsConsole extends AbstractComponent
 {

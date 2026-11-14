@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Sidebar;
+namespace ModulesGarden\GGSModule\Components\Sidebar;
 
-use ModulesGarden\ggsmodule\Components\SidebarItem\SidebarItem;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TitleTrait;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Router;
+use ModulesGarden\GGSModule\Components\SidebarItem\SidebarItem;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\TitleTrait;
+use ModulesGarden\GGSModule\Core\Support\Facades\Router;
 
 class Sidebar extends AbstractComponent
 {

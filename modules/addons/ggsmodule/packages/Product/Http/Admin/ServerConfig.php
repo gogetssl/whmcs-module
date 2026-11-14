@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Http\Admin;
+namespace ModulesGarden\GGSModule\Packages\Product\Http\Admin;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Helper;
-use ModulesGarden\ggsmodule\Core\Http\AbstractController;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Server;
-use ModulesGarden\ggsmodule\Packages\Product\Enums\ConfigSettings;
-use function ModulesGarden\ggsmodule\Core\Helper;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Helper;
+use ModulesGarden\GGSModule\Core\Http\AbstractController;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Server;
+use ModulesGarden\GGSModule\Packages\Product\Enums\ConfigSettings;
+use function ModulesGarden\GGSModule\Core\Helper;
 
 class ServerConfig extends AbstractController implements AdminAreaInterface
 {
@@ -31,6 +31,6 @@ class ServerConfig extends AbstractController implements AdminAreaInterface
         }
 
         return Helper\viewIntegrationAddon()
-            ->addElement(\ModulesGarden\ggsmodule\Packages\Product\UI\Buttons\ServerConfiguration::class);
+            ->addElement(\ModulesGarden\GGSModule\Packages\Product\UI\Buttons\ServerConfiguration::class);
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComponentActions\DownloadFile\Widgets;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComponentActions\DownloadFile\Widgets;
 
-use ModulesGarden\ggsmodule\Components\Button\ButtonSubmitSuccess;
-use ModulesGarden\ggsmodule\Core\Components\Actions\DownloadFileFromForm;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComponentActions\DownloadFile\Forms\Form;
+use ModulesGarden\GGSModule\Components\Button\ButtonSubmitSuccess;
+use ModulesGarden\GGSModule\Core\Components\Actions\DownloadFileFromForm;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComponentActions\DownloadFile\Forms\Form;
 
-class Widget extends \ModulesGarden\ggsmodule\Components\Widget\Widget
+class Widget extends \ModulesGarden\GGSModule\Components\Widget\Widget
 {
     public function loadHtml(): void
     {

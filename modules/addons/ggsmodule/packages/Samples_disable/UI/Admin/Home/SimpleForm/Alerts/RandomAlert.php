@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\SimpleForm\Alerts;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\SimpleForm\Alerts;
 
-use ModulesGarden\ggsmodule\Components\Alert\Alert;
-use ModulesGarden\ggsmodule\Core\Components\Enums\Color;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Components\Alert\Alert;
+use ModulesGarden\GGSModule\Core\Components\Enums\Color;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
 
 class RandomAlert extends Alert implements AdminAreaInterface

@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Statistics\Index\Graphs;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Statistics\Index\Graphs;
 
 
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\Shared\RecordsProvider;
-use ModulesGarden\ggsmodule\Components\Graph\GraphArea;
-use ModulesGarden\ggsmodule\Components\Graph\GraphLine;
-use ModulesGarden\ggsmodule\Components\Graph\Models\DataSet;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\Shared\RecordsProvider;
+use ModulesGarden\GGSModule\Components\Graph\GraphArea;
+use ModulesGarden\GGSModule\Components\Graph\GraphLine;
+use ModulesGarden\GGSModule\Components\Graph\Models\DataSet;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 

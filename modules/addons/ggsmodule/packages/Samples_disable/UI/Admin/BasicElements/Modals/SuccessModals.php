@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\Modals;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\Modals;
 
-use ModulesGarden\ggsmodule\Components\Alert\AlertSuccess;
-use ModulesGarden\ggsmodule\Components\Button\ButtonSuccess;
-use ModulesGarden\ggsmodule\Components\Modal\ModalSuccess;
-use ModulesGarden\ggsmodule\Core\Components\Action;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\Modals\Forms\Confirm;
+use ModulesGarden\GGSModule\Components\Alert\AlertSuccess;
+use ModulesGarden\GGSModule\Components\Button\ButtonSuccess;
+use ModulesGarden\GGSModule\Components\Modal\ModalSuccess;
+use ModulesGarden\GGSModule\Core\Components\Action;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\Modals\Forms\Confirm;
 
 
 class SuccessModals extends AbstractModals

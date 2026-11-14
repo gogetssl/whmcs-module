@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Configuration\Addon\Config;
+namespace ModulesGarden\GGSModule\App\Configuration\Addon\Config;
 
 /**
  * Runs after loading module configuration
  */
-class After extends \ModulesGarden\ggsmodule\Core\Configuration\Addon\Config\After
+class After extends \ModulesGarden\GGSModule\Core\Configuration\Addon\Config\After
 {
     /**
      * @param array $params

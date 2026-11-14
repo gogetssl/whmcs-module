@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\MediaLibrary\Elements;
+namespace ModulesGarden\GGSModule\Components\MediaLibrary\Elements;
 
-use ModulesGarden\ggsmodule\Components\Modal\ModalDanger;
+use ModulesGarden\GGSModule\Components\Modal\ModalDanger;
 
 abstract class RemoveModal extends ModalDanger
 {

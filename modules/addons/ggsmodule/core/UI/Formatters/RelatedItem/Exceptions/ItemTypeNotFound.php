@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\Exceptions;
+namespace ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\Exceptions;
 
 class ItemTypeNotFound extends \Exception
 {

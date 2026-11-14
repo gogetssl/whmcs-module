@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Import\Index\Providers;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Import\Index\Providers;
 
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
 
 class GetCsvProvider extends CrudProvider
 {

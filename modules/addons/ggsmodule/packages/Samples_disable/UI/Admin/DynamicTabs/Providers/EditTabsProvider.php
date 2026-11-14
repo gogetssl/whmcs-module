@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DynamicTabs\Providers;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DynamicTabs\Providers;
 
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalClose;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Reload;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DynamicTabs\Pages\DynamicTabs;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalClose;
+use ModulesGarden\GGSModule\Core\Components\Actions\Reload;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DynamicTabs\Pages\DynamicTabs;
 
 class EditTabsProvider extends CrudProvider
 {

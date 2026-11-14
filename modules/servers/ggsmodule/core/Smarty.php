@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\core;
+namespace ModulesGarden\Servers\GGSModule\core;
 
-use ModulesGarden\Servers\ggsmodule\Server;
+use ModulesGarden\Servers\GGSModule\Server;
 
 class Smarty {
     static private $_instance;

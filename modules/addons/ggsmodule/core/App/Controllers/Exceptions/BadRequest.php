@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\Exceptions;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\Exceptions;
 
 class BadRequest extends \Exception
 {

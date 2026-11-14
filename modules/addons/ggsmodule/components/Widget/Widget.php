@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Widget;
+namespace ModulesGarden\GGSModule\Components\Widget;
 
-use ModulesGarden\ggsmodule\App\Libs\Icons;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TitleTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ToolbarTrait;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentContainerInterface;
+use ModulesGarden\GGSModule\App\Libs\Icons;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Core\Components\Traits\TitleTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\ToolbarTrait;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentContainerInterface;
 
 class Widget extends Container implements ComponentContainerInterface
 {

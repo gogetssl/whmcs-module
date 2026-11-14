@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Products\Index\DataTables\Products\Modals;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Products\Index\DataTables\Products\Modals;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Products\Index\DataTables\Products\Forms\ImportForm;
-use ModulesGarden\ggsmodule\App\UI\Admin\Products\Index\DataTables\Products\Forms\ReSyncForm;
-use ModulesGarden\ggsmodule\Components\Modal\Modal;
-use ModulesGarden\ggsmodule\Components\Modal\ModalEdit;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\App\UI\Admin\Products\Index\DataTables\Products\Forms\ImportForm;
+use ModulesGarden\GGSModule\App\UI\Admin\Products\Index\DataTables\Products\Forms\ReSyncForm;
+use ModulesGarden\GGSModule\Components\Modal\Modal;
+use ModulesGarden\GGSModule\Components\Modal\ModalEdit;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
 class ReSyncModal extends ModalEdit implements AdminAreaInterface, AjaxComponentInterface
 {

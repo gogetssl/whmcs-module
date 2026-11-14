@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\CollapsableBox;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\CollapsableBox;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\CollapsableBox\Widgets\AccordionWidget;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\CollapsableBox\Widgets\BaseWidget;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\CollapsableBox\Widgets\CollapseDropdownWidget;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\CollapsableBox\Widgets\CollapseGroupWidget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\CollapsableBox\Widgets\AccordionWidget;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\CollapsableBox\Widgets\BaseWidget;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\CollapsableBox\Widgets\CollapseDropdownWidget;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\CollapsableBox\Widgets\CollapseGroupWidget;
 
-class Container extends \ModulesGarden\ggsmodule\Components\Container\Container implements AdminAreaInterface, AjaxComponentInterface
+class Container extends \ModulesGarden\GGSModule\Components\Container\Container implements AdminAreaInterface, AjaxComponentInterface
 {
     public function loadHtml(): void
     {

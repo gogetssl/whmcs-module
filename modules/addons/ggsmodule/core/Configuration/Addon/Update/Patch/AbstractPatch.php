@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Configuration\Addon\Update\Patch;
+namespace ModulesGarden\GGSModule\Core\Configuration\Addon\Update\Patch;
 
-use ModulesGarden\ggsmodule\Core\Database\FileLoader;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Database\FileLoader;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 /**
  * Description of AbstractPatch

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\Card;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\CronStatus;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\Card;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\CronStatus;
 
 /**
  * System health: one row per scheduled task with its state; the error texts are listed under "Needs your attention"
@@ -58,7 +58,7 @@ class SystemCheckWidget extends Card
         }
         $this->addElement(Card::html('<div class="ggs-dcard__rows" id="ggs-health">' . $html . '</div>'));
 
-        $this->foot('addonmodules.php?module=ggsmodule&mg-page=settings&settings-page=cronSettings', 'cog-outline', $this->translate('review'));
+        $this->foot('addonmodules.php?module=GGSModule&mg-page=settings&settings-page=cronSettings', 'cog-outline', $this->translate('review'));
     }
 
     /** "17:00" today, "Yesterday 13:30", "1 Nov 13:30" this year, "1 Nov 2025 13:30" before */

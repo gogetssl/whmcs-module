@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\DataProviders;
+namespace ModulesGarden\GGSModule\Core\DataProviders;
 
 class Column
 {

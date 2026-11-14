@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Database\Patches;
+namespace ModulesGarden\GGSModule\Packages\Product\Database\Patches;
 
-use ModulesGarden\ggsmodule\Core\ServiceLocator;
-use ModulesGarden\ggsmodule\Packages\Product\Database\Patches\Source\PatchInterface as ProductPatchInterface;
+use ModulesGarden\GGSModule\Core\ServiceLocator;
+use ModulesGarden\GGSModule\Packages\Product\Database\Patches\Source\PatchInterface as ProductPatchInterface;
 
 class PatchesManager
 {

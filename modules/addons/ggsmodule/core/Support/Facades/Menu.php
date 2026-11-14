@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Support\Facades;
+namespace ModulesGarden\GGSModule\Core\Support\Facades;
 
 
-use ModulesGarden\ggsmodule\Core\Contracts\UI\MenuItem;
+use ModulesGarden\GGSModule\Core\Contracts\UI\MenuItem;
 
 /**
  *  @method static addItem(MenuItem $item)
@@ -15,6 +15,6 @@ class Menu extends AbstractFacade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \ModulesGarden\ggsmodule\Core\Services\Menu::class;
+        return \ModulesGarden\GGSModule\Core\Services\Menu::class;
     }
 }

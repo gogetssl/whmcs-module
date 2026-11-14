@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 use WHMCS\Database\Capsule;
 
 /**
@@ -73,7 +73,7 @@ class Cpanel
                 }
                 catch(\Throwable $e)
                 {
-                    \logActivity('ggsmodule cPanel: ' . $e->getMessage(), 0);
+                    \logActivity('GGSModule cPanel: ' . $e->getMessage(), 0);
                 }
             }
         }
@@ -167,7 +167,7 @@ class Cpanel
         $replacements = array_values(array_filter((array)$replacements, function($value) {
             return is_string($value) && trim($value) !== '';
         }));
-        logModuleCall('ggsmodule_cpanel', $action, SecretValue::redact($request), SecretValue::redact($response),
+        logModuleCall('GGSModule_cpanel', $action, SecretValue::redact($request), SecretValue::redact($response),
             SecretValue::redact($this->logData($processed)), $replacements);
     }
 

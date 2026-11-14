@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue\Providers;
+namespace ModulesGarden\GGSModule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue\Providers;
 
-use ModulesGarden\ggsmodule\App\Libs\AutoInstallQueue;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\App\Libs\AutoInstallQueue;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
 
 class ResetTaskProvider extends CrudProvider
 {

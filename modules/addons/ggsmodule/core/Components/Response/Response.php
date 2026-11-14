@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Response;
+namespace ModulesGarden\GGSModule\Core\Components\Response;
 
-use ModulesGarden\ggsmodule\Core\Contracts\ResponseInterface;
+use ModulesGarden\GGSModule\Core\Contracts\ResponseInterface;
 
 /**
  *  Ajax Response Model

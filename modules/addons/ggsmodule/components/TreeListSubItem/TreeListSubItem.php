@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\TreeListSubItem;
+namespace ModulesGarden\GGSModule\Components\TreeListSubItem;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TitleTrait;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Core\Components\Traits\TitleTrait;
 
 class TreeListSubItem extends Container
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Providers;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Providers;
 
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Packages\Logs\Models\Logs;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Packages\Logs\Models\Logs;
 
 class DeleteLogProvider extends CrudProvider
 {

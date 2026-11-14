@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\CommandLine\LoadCommands;
+namespace ModulesGarden\GGSModule\Core\CommandLine\LoadCommands;
 
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 class LoadCommandsControllers implements LoadCommandsControllersInterface
 {

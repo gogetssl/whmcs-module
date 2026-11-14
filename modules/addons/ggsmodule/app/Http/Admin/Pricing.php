@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Http\Admin;
+namespace ModulesGarden\GGSModule\App\Http\Admin;
 
-use ModulesGarden\ggsmodule\App\Libs\PricingService;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets\NextStepsWidget;
-use ModulesGarden\ggsmodule\App\UI\Admin\Pricing\Index\PricingContainer;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Http\AbstractController;
-use ModulesGarden\ggsmodule\Core\Helper;
+use ModulesGarden\GGSModule\App\Libs\PricingService;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets\NextStepsWidget;
+use ModulesGarden\GGSModule\App\UI\Admin\Pricing\Index\PricingContainer;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Http\AbstractController;
+use ModulesGarden\GGSModule\Core\Helper;
 
 /**
  * Pricing grid: save all, apply margin, CSV export / import (preview, confirm).
@@ -166,13 +166,13 @@ class Pricing extends AbstractController implements AdminAreaInterface
         }
 
         $currency = (int)($_POST['currency'] ?? 0);
-        header('Location: addonmodules.php?module=ggsmodule&mg-page=pricing' . ($currency ? '&currency=' . $currency : ''));
+        header('Location: addonmodules.php?module=GGSModule&mg-page=pricing' . ($currency ? '&currency=' . $currency : ''));
         exit;
     }
 
     protected function requireToken(): void
     {
-        if(!\ModulesGarden\ggsmodule\App\Libs\CsrfToken::valid($_REQUEST['token'] ?? ''))
+        if(!\ModulesGarden\GGSModule\App\Libs\CsrfToken::valid($_REQUEST['token'] ?? ''))
         {
             throw new \RuntimeException('Invalid or expired security token. Reload the page and try again.');
         }

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\Modals\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\Modals\Forms;
 
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
 
 class Confirm extends Form
 {

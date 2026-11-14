@@ -1,33 +1,33 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\Renewal\ArrayDataProvider;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\Renewal\ArrayDataProvider;
 
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\Renewal\Forms\DownloadForm;
-use ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\Renewal\Forms\GetCsvForm;
-use ModulesGarden\ggsmodule\App\UI\Admin\Reports\Index\DataTables\Shared\RecordsProvider;
-use ModulesGarden\ggsmodule\Components\Button\Button;
-use ModulesGarden\ggsmodule\Components\Button\ButtonPrimary;
-use ModulesGarden\ggsmodule\Components\DataTable\Column;
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Components\FormLabel\FormLabel;
-use ModulesGarden\ggsmodule\Components\Label\Label;
-use ModulesGarden\ggsmodule\Components\Label\LabelDanger;
-use ModulesGarden\ggsmodule\Components\Label\LabelInfo;
-use ModulesGarden\ggsmodule\Components\Label\LabelSuccess;
-use ModulesGarden\ggsmodule\Components\Label\LabelWarning;
-use ModulesGarden\ggsmodule\Core\Components\Actions\DownloadFileFromForm;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Reload;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\ArrayDataProvider;
+use ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\Renewal\Forms\DownloadForm;
+use ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\Renewal\Forms\GetCsvForm;
+use ModulesGarden\GGSModule\App\UI\Admin\Reports\Index\DataTables\Shared\RecordsProvider;
+use ModulesGarden\GGSModule\Components\Button\Button;
+use ModulesGarden\GGSModule\Components\Button\ButtonPrimary;
+use ModulesGarden\GGSModule\Components\DataTable\Column;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\FormLabel\FormLabel;
+use ModulesGarden\GGSModule\Components\Label\Label;
+use ModulesGarden\GGSModule\Components\Label\LabelDanger;
+use ModulesGarden\GGSModule\Components\Label\LabelInfo;
+use ModulesGarden\GGSModule\Components\Label\LabelSuccess;
+use ModulesGarden\GGSModule\Components\Label\LabelWarning;
+use ModulesGarden\GGSModule\Core\Components\Actions\DownloadFileFromForm;
+use ModulesGarden\GGSModule\Core\Components\Actions\Reload;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\ArrayDataProvider;
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Service;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Service;
 use WHMCS\User\Client;
 
-class DataTable extends \ModulesGarden\ggsmodule\Components\DataTable\DataTable implements AdminAreaInterface, AjaxComponentInterface
+class DataTable extends \ModulesGarden\GGSModule\Components\DataTable\DataTable implements AdminAreaInterface, AjaxComponentInterface
 {
     public function loadHtml(): void
     {

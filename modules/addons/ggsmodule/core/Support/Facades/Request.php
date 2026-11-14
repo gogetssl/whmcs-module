@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Support\Facades;
+namespace ModulesGarden\GGSModule\Core\Support\Facades;
 
 
 /**
@@ -16,6 +16,6 @@ class Request extends AbstractFacade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \ModulesGarden\ggsmodule\Core\Services\Request::class;
+        return \ModulesGarden\GGSModule\Core\Services\Request::class;
     }
 }

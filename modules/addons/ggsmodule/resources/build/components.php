@@ -1,17 +1,17 @@
 <?php
 
-use ModulesGarden\ggsmodule\Core\Components\AssetsBuilder;
-use ModulesGarden\ggsmodule\Core\UI\View\JavaScriptLoader;
+use ModulesGarden\GGSModule\Core\Components\AssetsBuilder;
+use ModulesGarden\GGSModule\Core\UI\View\JavaScriptLoader;
 
 require_once dirname(__FILE__, 3) . '/vendor/autoload.php';
 
-\ModulesGarden\ggsmodule\Core\ModuleConstants::initialize();
+\ModulesGarden\GGSModule\Core\ModuleConstants::initialize();
 
 header('Content-Type: application/javascript');
 
 $builder          = new AssetsBuilder();
 $javascriptLoader = new JavaScriptLoader();
-$moduleName       = \ModulesGarden\ggsmodule\Core\ModuleConstants::getModuleName();
+$moduleName       = \ModulesGarden\GGSModule\Core\ModuleConstants::getModuleName();
 
 echo "{" . PHP_EOL;
 echo sprintf("const rootElements = %s.rootElements;", $moduleName) . PHP_EOL;

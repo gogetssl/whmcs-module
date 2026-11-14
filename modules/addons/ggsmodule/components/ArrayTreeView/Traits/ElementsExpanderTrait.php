@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ArrayTreeView\Traits;
+namespace ModulesGarden\GGSModule\Components\ArrayTreeView\Traits;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
 
 trait ElementsExpanderTrait
 {

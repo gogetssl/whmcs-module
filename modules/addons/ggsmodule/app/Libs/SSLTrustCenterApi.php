@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Models\Request;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Packages\Logs\Support\Facades\Logger;
+use ModulesGarden\GGSModule\App\Models\Request;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Packages\Logs\Support\Facades\Logger;
 use stdClass;
 
 class SSLTrustCenterApi
@@ -38,7 +38,7 @@ class SSLTrustCenterApi
     public static function credentialsOf($vendor)
     {
         $vendor      = strtolower((string)$vendor);
-        $credentials = (new \ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository())->getModuleConfiguration()['credentials'][$vendor] ?? [];
+        $credentials = (new \ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository())->getModuleConfiguration()['credentials'][$vendor] ?? [];
         $sandbox     = $vendor === 'tss' && ($credentials['OperationMode'] ?? '') === 'sandbox';
         $code        = trim((string)($credentials[$sandbox ? 'TestPartnerCode' : 'PartnerCode'] ?? ''));
         $token       = (string)($credentials[$sandbox ? 'TestAuthToken' : 'AuthToken'] ?? '');
@@ -845,7 +845,7 @@ class SSLTrustCenterApi
         global $CONFIG;
 
         $versionModule = Config::get('version', '1.0.0');
-        $moduleName    = str_replace(' ', '', Config::get('systemName', 'ggsmodule'));
+        $moduleName    = str_replace(' ', '', Config::get('systemName', 'GGSModule'));
 
         $url = $this->apiUrl . $uri;
 

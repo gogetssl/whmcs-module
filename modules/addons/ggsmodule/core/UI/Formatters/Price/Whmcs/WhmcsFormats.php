@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Formatters\Price\Whmcs;
+namespace ModulesGarden\GGSModule\Core\UI\Formatters\Price\Whmcs;
 
-use ModulesGarden\ggsmodule\Core\UI\Formatters\Price\Models\Format;
+use ModulesGarden\GGSModule\Core\UI\Formatters\Price\Models\Format;
 
 class WhmcsFormats
 {

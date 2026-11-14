@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models;
 
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 
@@ -51,11 +51,11 @@ class HostingConfigOption extends EloquentModel
 
     public function configOption()
     {
-        return $this->belongsTo('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\ProductConfigOption', 'configid');
+        return $this->belongsTo('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\ProductConfigOption', 'configid');
     }
 
     public function subOption()
     {
-        return $this->belongsTo('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\ProductConfigOption', 'optionid');
+        return $this->belongsTo('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\ProductConfigOption', 'optionid');
     }
 }

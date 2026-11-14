@@ -1,26 +1,26 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Forms;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Forms;
 
 
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Modals\ReportingModal;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Providers\ReportingProvider;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Components\RevertSwitcher;
-use ModulesGarden\ggsmodule\Components\Button\ButtonCancel;
-use ModulesGarden\ggsmodule\Components\Button\ButtonSuccess;
-use ModulesGarden\ggsmodule\Components\DatePicker\DatePicker;
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
-use ModulesGarden\ggsmodule\Components\Icon\Icon;
-use ModulesGarden\ggsmodule\Components\TextArea\TextArea;
-use ModulesGarden\ggsmodule\Components\Toolbar\Toolbar;
-use ModulesGarden\ggsmodule\Core\Components\Actions\FormSubmit;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalClose;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Modals\ReportingModal;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Providers\ReportingProvider;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Components\RevertSwitcher;
+use ModulesGarden\GGSModule\Components\Button\ButtonCancel;
+use ModulesGarden\GGSModule\Components\Button\ButtonSuccess;
+use ModulesGarden\GGSModule\Components\DatePicker\DatePicker;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Components\Icon\Icon;
+use ModulesGarden\GGSModule\Components\TextArea\TextArea;
+use ModulesGarden\GGSModule\Components\Toolbar\Toolbar;
+use ModulesGarden\GGSModule\Core\Components\Actions\FormSubmit;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalClose;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
 
 class ReportingForm extends Form implements AdminAreaInterface, AjaxComponentInterface

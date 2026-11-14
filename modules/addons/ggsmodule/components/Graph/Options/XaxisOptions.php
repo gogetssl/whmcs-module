@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Options;
+namespace ModulesGarden\GGSModule\Components\Graph\Options;
 
-use ModulesGarden\ggsmodule\Components\Graph\Source\AbstractOption;
+use ModulesGarden\GGSModule\Components\Graph\Source\AbstractOption;
 
 class XaxisOptions extends AbstractOption
 {

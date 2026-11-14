@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Routing;
+namespace ModulesGarden\GGSModule\Core\Routing;
 
-use ModulesGarden\ggsmodule\Core\Routing\RoutesProviders\DefaultdParameters;
-use ModulesGarden\ggsmodule\Core\Routing\RoutesProviders\Standard;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\Routing\RoutesProviders\DefaultdParameters;
+use ModulesGarden\GGSModule\Core\Routing\RoutesProviders\Standard;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
 class Router
 {

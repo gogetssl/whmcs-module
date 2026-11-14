@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\AppBreadcrumb;
+namespace ModulesGarden\GGSModule\Components\AppBreadcrumb;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\UI\Breadcrumbs\Item;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\UI\Breadcrumbs\Item;
 
 /**
  * Class Form
@@ -18,7 +18,7 @@ class AppBreadcrumb extends AbstractComponent
         parent::__construct();
         $this->setSlot('items');
         // the trail starts with the edition's name, like the dashboard heading
-        $this->setSlot('module', \ModulesGarden\ggsmodule\App\Libs\Edition::name());
+        $this->setSlot('module', \ModulesGarden\GGSModule\App\Libs\Edition::name());
     }
 
     /**

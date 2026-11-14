@@ -3,7 +3,7 @@
 //return [
 //    'related_item' => [
 //        'show'      => true,
-//        'formatter' => new \ModulesGarden\ggsmodule\Packages\Logs\UI\Formatters\RelatedItem()
+//        'formatter' => new \ModulesGarden\GGSModule\Packages\Logs\UI\Formatters\RelatedItem()
 //    ],
 //    'delete_logs'  => [
 //        'enabled' => false

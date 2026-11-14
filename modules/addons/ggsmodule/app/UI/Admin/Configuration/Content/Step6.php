@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Content;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Configuration\Content;
 
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Shared\Forms\FinalizeForm;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
+use ModulesGarden\GGSModule\App\UI\Admin\Configuration\Shared\Forms\FinalizeForm;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
 
 class Step6 extends Widget implements AjaxComponentInterface
 {
@@ -17,7 +17,7 @@ class Step6 extends Widget implements AjaxComponentInterface
     {
         $countProducts = (new ProductRepository())->countProducts();
 
-        \ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Shared\WizardLayout::prepareStep($this, 6, $this->translate('step6_title'));
+        \ModulesGarden\GGSModule\App\UI\Admin\Configuration\Shared\WizardLayout::prepareStep($this, 6, $this->translate('step6_title'));
 
         $text = new Text();
         $text->setCss('title_alert');

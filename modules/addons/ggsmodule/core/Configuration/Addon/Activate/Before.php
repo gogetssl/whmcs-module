@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Configuration\Addon\Activate;
+namespace ModulesGarden\GGSModule\Core\Configuration\Addon\Activate;
 
-use ModulesGarden\ggsmodule\Core\Configuration\Addon\AbstractBefore;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\ServiceLocator;
+use ModulesGarden\GGSModule\Core\Configuration\Addon\AbstractBefore;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\ServiceLocator;
 
 /**
  * Runs before module activation actions

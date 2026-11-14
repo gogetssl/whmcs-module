@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\PageParams;
+namespace ModulesGarden\GGSModule\Core\UI\PageParams;
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\Params;
+use ModulesGarden\GGSModule\Core\Support\Facades\Params;
 
 class ExtraParams
 {

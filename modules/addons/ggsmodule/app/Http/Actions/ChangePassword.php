@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Http\Actions;
+namespace ModulesGarden\GGSModule\App\Http\Actions;
 
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Server\Action;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\Server\Action;
 
 class ChangePassword extends Action
 {

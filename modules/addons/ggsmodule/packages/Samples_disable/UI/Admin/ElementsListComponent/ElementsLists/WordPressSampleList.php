@@ -1,35 +1,35 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ElementsListComponent\ElementsLists;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ElementsListComponent\ElementsLists;
 
-use ModulesGarden\ggsmodule\Components\Badge\BadgeDanger;
-use ModulesGarden\ggsmodule\Components\Badge\BadgeInfo;
-use ModulesGarden\ggsmodule\Components\Badge\BadgeSuccess;
-use ModulesGarden\ggsmodule\Components\Badge\BadgeWarning;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\ElementsList\ElementsList as ElementsListComponent;
-use ModulesGarden\ggsmodule\Components\Image\Image;
-use ModulesGarden\ggsmodule\Components\ListInfo\ListInfo;
-use ModulesGarden\ggsmodule\Components\ListInfo\ListInfoItem;
-use ModulesGarden\ggsmodule\Components\PageViewWidget\PageViewWidget;
-use ModulesGarden\ggsmodule\Components\Row\Row;
-use ModulesGarden\ggsmodule\Components\TableSimple\Record\Record;
-use ModulesGarden\ggsmodule\Components\TableSimple\TableSimple;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Components\Text\TextBold;
-use ModulesGarden\ggsmodule\Components\Toolbar\Toolbar;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\QueryDataProvider;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Client;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Labels\Status;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ElementsListComponent\Buttons\ButtonDelete;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ElementsListComponent\Buttons\ButtonDomain;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ElementsListComponent\Buttons\ButtonEdit;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ElementsListComponent\Buttons\ButtonSettings;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ElementsListComponent\Buttons\ButtonTime;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ElementsListComponent\Components\WordPressPageViewWidget;
+use ModulesGarden\GGSModule\Components\Badge\BadgeDanger;
+use ModulesGarden\GGSModule\Components\Badge\BadgeInfo;
+use ModulesGarden\GGSModule\Components\Badge\BadgeSuccess;
+use ModulesGarden\GGSModule\Components\Badge\BadgeWarning;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\ElementsList\ElementsList as ElementsListComponent;
+use ModulesGarden\GGSModule\Components\Image\Image;
+use ModulesGarden\GGSModule\Components\ListInfo\ListInfo;
+use ModulesGarden\GGSModule\Components\ListInfo\ListInfoItem;
+use ModulesGarden\GGSModule\Components\PageViewWidget\PageViewWidget;
+use ModulesGarden\GGSModule\Components\Row\Row;
+use ModulesGarden\GGSModule\Components\TableSimple\Record\Record;
+use ModulesGarden\GGSModule\Components\TableSimple\TableSimple;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Components\Text\TextBold;
+use ModulesGarden\GGSModule\Components\Toolbar\Toolbar;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\QueryDataProvider;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Client;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Labels\Status;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ElementsListComponent\Buttons\ButtonDelete;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ElementsListComponent\Buttons\ButtonDomain;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ElementsListComponent\Buttons\ButtonEdit;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ElementsListComponent\Buttons\ButtonSettings;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ElementsListComponent\Buttons\ButtonTime;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ElementsListComponent\Components\WordPressPageViewWidget;
 
 class WordPressSampleList extends ElementsListComponent implements AdminAreaInterface, AjaxComponentInterface
 {
@@ -39,8 +39,8 @@ class WordPressSampleList extends ElementsListComponent implements AdminAreaInte
 
         $dataProv = new QueryDataProvider($clients);
         $dataProv->setColumns([
-            (new \ModulesGarden\ggsmodule\Core\DataProviders\Column('id'))->setSearchable(true),
-            (new \ModulesGarden\ggsmodule\Core\DataProviders\Column('firstname'))->setSearchable(true),
+            (new \ModulesGarden\GGSModule\Core\DataProviders\Column('id'))->setSearchable(true),
+            (new \ModulesGarden\GGSModule\Core\DataProviders\Column('firstname'))->setSearchable(true),
         ]);
         $dataProv->setDefaultSorting('tblclients.id', 'DESC');
         $this->setDataProvider($dataProv);
@@ -62,7 +62,7 @@ class WordPressSampleList extends ElementsListComponent implements AdminAreaInte
     protected function getImage($record): Image
     {
         $images = [
-            "../modules/addons/ggsmodule/resources/assets//img/logo.png",
+            "../modules/addons/GGSModule/resources/assets//img/logo.png",
             "templates/blend/images/logo.png",
         ];
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Formatters\Price\Models;
+namespace ModulesGarden\GGSModule\Core\UI\Formatters\Price\Models;
 
 class Format
 {

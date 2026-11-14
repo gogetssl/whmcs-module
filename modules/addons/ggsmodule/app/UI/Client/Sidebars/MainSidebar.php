@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Client\Sidebars;
+namespace ModulesGarden\GGSModule\App\UI\Client\Sidebars;
 
-use ModulesGarden\ggsmodule\App\UI\Client\Sidebars\Buttons\SidebarSampleButton;
-use ModulesGarden\ggsmodule\Components\Sidebar\Sidebar;
-use ModulesGarden\ggsmodule\Components\SidebarItem\SidebarItem;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ClientAreaInterface;
+use ModulesGarden\GGSModule\App\UI\Client\Sidebars\Buttons\SidebarSampleButton;
+use ModulesGarden\GGSModule\Components\Sidebar\Sidebar;
+use ModulesGarden\GGSModule\Components\SidebarItem\SidebarItem;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ClientAreaInterface;
 
 class MainSidebar extends Sidebar implements ClientAreaInterface
 {
@@ -13,9 +13,9 @@ class MainSidebar extends Sidebar implements ClientAreaInterface
     {
         $this->setTitle("Useless sidebar");
 
-        $item = new SidebarItem("Logs Data Table", "https://whmcs.docker/index.php?mg-page=Home&m=ggsmodule");
-        $item2 = new SidebarItem("Service Information", "https://whmcs.docker/index.php?mg-page=Home&mg-action=ServiceInformation&m=ggsmodule");
-        $item3 = new SidebarItem("Industrial Disk", "https://whmcs.docker/index.php?mg-page=Home&m=ggsmodule");
+        $item = new SidebarItem("Logs Data Table", "https://whmcs.docker/index.php?mg-page=Home&m=GGSModule");
+        $item2 = new SidebarItem("Service Information", "https://whmcs.docker/index.php?mg-page=Home&mg-action=ServiceInformation&m=GGSModule");
+        $item3 = new SidebarItem("Industrial Disk", "https://whmcs.docker/index.php?mg-page=Home&m=GGSModule");
         $item4 = new SidebarItem("Servers Information");
 
         $item4->addElement(new SidebarSampleButton());

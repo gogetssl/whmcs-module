@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\News;
+namespace ModulesGarden\GGSModule\Components\News;
 
 class NewsItem
 {

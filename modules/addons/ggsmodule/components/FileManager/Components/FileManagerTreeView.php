@@ -1,21 +1,21 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\FileManager\Components;
+namespace ModulesGarden\GGSModule\Components\FileManager\Components;
 
-use ModulesGarden\ggsmodule\Components\FileManager\Providers\FileManagerProvider;
-use ModulesGarden\ggsmodule\Components\TreeListContainer\TreeListContainer;
-use ModulesGarden\ggsmodule\Components\TreeListItem\TreeListItem;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ReloadById;
-use ModulesGarden\ggsmodule\Core\Components\DataBuilder;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\ResponseInterface;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\FileManager\Components\FileManagerSampleBreadcrumbs;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\FileManager\Components\FileManagerSampleDataTable;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\FileManager\Components\FileManagerSampleTreeView;
+use ModulesGarden\GGSModule\Components\FileManager\Providers\FileManagerProvider;
+use ModulesGarden\GGSModule\Components\TreeListContainer\TreeListContainer;
+use ModulesGarden\GGSModule\Components\TreeListItem\TreeListItem;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Actions\ReloadById;
+use ModulesGarden\GGSModule\Core\Components\DataBuilder;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Contracts\ResponseInterface;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\FileManager\Components\FileManagerSampleBreadcrumbs;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\FileManager\Components\FileManagerSampleDataTable;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\FileManager\Components\FileManagerSampleTreeView;
 
 abstract class FileManagerTreeView extends TreeListContainer implements AjaxComponentInterface, AdminAreaInterface
 {

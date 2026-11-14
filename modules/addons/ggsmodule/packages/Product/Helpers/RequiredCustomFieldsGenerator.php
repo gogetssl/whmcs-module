@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Helpers;
+namespace ModulesGarden\GGSModule\Packages\Product\Helpers;
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Product;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Addon;
-use ModulesGarden\ggsmodule\Packages\Product\Enums\ConfigSettings;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\CustomFields\AbstractCustomField;
-use ModulesGarden\ggsmodule\Packages\Product\Services\CustomFields;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Product;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Addon;
+use ModulesGarden\GGSModule\Packages\Product\Enums\ConfigSettings;
+use ModulesGarden\GGSModule\Packages\Product\Libs\CustomFields\AbstractCustomField;
+use ModulesGarden\GGSModule\Packages\Product\Services\CustomFields;
 
 class RequiredCustomFieldsGenerator
 {

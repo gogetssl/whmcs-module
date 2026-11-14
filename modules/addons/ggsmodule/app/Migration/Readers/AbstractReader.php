@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Migration\Readers;
+namespace ModulesGarden\GGSModule\App\Migration\Readers;
 
-use ModulesGarden\ggsmodule\App\Migration\Support\Schema;
+use ModulesGarden\GGSModule\App\Migration\Support\Schema;
 use WHMCS\Database\Capsule;
 
 /**
@@ -11,7 +11,7 @@ use WHMCS\Database\Capsule;
 abstract class AbstractReader implements LegacyReaderInterface
 {
     /** SSL modules of other vendors found in tblsslorders.module, reported as "not touched" */
-    const KNOWN_OTHER_MODULES = ['gogetssl', 'enomssl', 'resellerclubssl', 'globalsignssl', 'marketconnect', 'ggsmodule'];
+    const KNOWN_OTHER_MODULES = ['gogetssl', 'enomssl', 'resellerclubssl', 'globalsignssl', 'marketconnect', 'GGSModule'];
 
     const STATUS_AWAITING  = 'Awaiting Configuration';
     const STATUS_SUBMITTED = 'Configuration Submitted';
@@ -173,7 +173,7 @@ abstract class AbstractReader implements LegacyReaderInterface
 
     protected function otherSslModules(): array
     {
-        $own    = array_merge($this->orderModules(), ['ggsmodule']);
+        $own    = array_merge($this->orderModules(), ['GGSModule']);
         $result = [];
         foreach(Capsule::table('tblsslorders')->selectRaw('module, COUNT(*) AS c')->whereNotIn('module', $own)->groupBy('module')->get() as $row)
         {

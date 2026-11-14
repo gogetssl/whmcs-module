@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Source;
+namespace ModulesGarden\GGSModule\Components\Graph\Source;
 
-use ModulesGarden\ggsmodule\Components\Graph\Models\DataSet;
-use ModulesGarden\ggsmodule\Components\Graph\Series\ExtendedSeries;
+use ModulesGarden\GGSModule\Components\Graph\Models\DataSet;
+use ModulesGarden\GGSModule\Components\Graph\Series\ExtendedSeries;
 
 abstract class GraphExtendedSeries extends BaseGraph
 {

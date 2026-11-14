@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Providers;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Providers;
 
-use ModulesGarden\ggsmodule\App\Libs\AutoInstallHelpers;
-use ModulesGarden\ggsmodule\App\Libs\GeneralSettings;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets\NextStepsWidget;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Validator;
+use ModulesGarden\GGSModule\App\Libs\AutoInstallHelpers;
+use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets\NextStepsWidget;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Support\Facades\Validator;
 
 
 class SslSettingsProvider extends CrudProvider
@@ -38,7 +38,7 @@ class SslSettingsProvider extends CrudProvider
         }
         if(empty($this->data['subscriptionSlotPricing']))
         {
-            $this->data['subscriptionSlotPricing'] = \ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::SLOT_PRICING_PRORATED;
+            $this->data['subscriptionSlotPricing'] = \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::SLOT_PRICING_PRORATED;
         }
 
         if(!isset($this->data['wildcardDnsTimeoutMinutes']) || $this->data['wildcardDnsTimeoutMinutes'] === '')
@@ -65,8 +65,8 @@ class SslSettingsProvider extends CrudProvider
         $this->availableValues['autoReissueDaysBeforeExpire']           = array_combine($reissueDays, $reissueDays);
         $this->availableValues['recurringDaysBeforeExpirySubscription'] = Helpers::getDaysOptions(true);
         $this->availableValues['subscriptionSlotPricing']               = [
-            \ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::SLOT_PRICING_PRORATED => $this->translate('subscriptionSlotPricing_prorated'),
-            \ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::SLOT_PRICING_FULL     => $this->translate('subscriptionSlotPricing_full'),
+            \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::SLOT_PRICING_PRORATED => $this->translate('subscriptionSlotPricing_prorated'),
+            \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::SLOT_PRICING_FULL     => $this->translate('subscriptionSlotPricing_full'),
         ];
         $this->availableValues['recurringDaysBeforeExpiry']             = Helpers::getDaysOptions();
         $this->availableValues['oneTimeDaysBeforeExpiry']               = Helpers::getDaysOptions();

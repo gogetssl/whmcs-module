@@ -1,21 +1,21 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
 
 use Illuminate\Database\Capsule\Manager as DB;
-use ModulesGarden\ggsmodule\App\Models\DemonTask;
-use ModulesGarden\ggsmodule\App\Models\DemonTask as DemonTaskModel;
-use ModulesGarden\ggsmodule\App\Models\Request;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Service;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Models\ModuleSettings;
+use ModulesGarden\GGSModule\App\Models\DemonTask;
+use ModulesGarden\GGSModule\App\Models\DemonTask as DemonTaskModel;
+use ModulesGarden\GGSModule\App\Models\Request;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Service;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Models\ModuleSettings;
 
 class ChildProcess
 {
     /**
-     * @var \ModulesGarden\ggsmodule\App\Models\DemonTask
+     * @var \ModulesGarden\GGSModule\App\Models\DemonTask
      */
     protected $demonTask;
     /**
@@ -44,7 +44,7 @@ class ChildProcess
     /**
      * DemonTask constructor.
      * @param DemonTaskModel $demonTask
-     * @param \ModulesGarden\ggsmodule\Packages\ModuleSettings\Models\ModuleSettings $moduleSettings
+     * @param \ModulesGarden\GGSModule\Packages\ModuleSettings\Models\ModuleSettings $moduleSettings
      */
     public function __construct(DemonTaskMOdel $demonTask, $waitingTasks, ModuleSettings $moduleSettings)
     {

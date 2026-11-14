@@ -1,18 +1,18 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\UI\Modals;
+namespace ModulesGarden\GGSModule\Packages\Product\UI\Modals;
 
-use ModulesGarden\ggsmodule\Components\Modal\ModalEdit;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Packages\Product\Enums\ConfigSettings;
+use ModulesGarden\GGSModule\Components\Modal\ModalEdit;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Packages\Product\Enums\ConfigSettings;
 
 class CreateConfigurableOptions extends ModalEdit implements AdminAreaInterface, AjaxComponentInterface
 {
     public function loadHtml(): void
     {
         $this->setSize(Config::get(ConfigSettings::CONFIG_OPTIONS_MODAL_SIZE, ""));
-        $this->addElement(new \ModulesGarden\ggsmodule\Packages\Product\UI\Forms\CreateConfigurableOptions());
+        $this->addElement(new \ModulesGarden\GGSModule\Packages\Product\UI\Forms\CreateConfigurableOptions());
     }
 }

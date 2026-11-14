@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TicketReplies\Providers;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TicketReplies\Providers;
 
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
 
 class TicketsReplyProvider extends CrudProvider
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Form;
+namespace ModulesGarden\GGSModule\Components\Form;
 
-use ModulesGarden\ggsmodule\Components\Toolbar\Toolbar;
+use ModulesGarden\GGSModule\Components\Toolbar\Toolbar;
 
 class FormWithToolbar extends Form
 {

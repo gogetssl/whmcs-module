@@ -1,10 +1,10 @@
 <?php
 
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\Support\Facades;
+namespace ModulesGarden\GGSModule\Packages\Logs\Support\Facades;
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\AbstractFacade;
-use ModulesGarden\ggsmodule\Packages\Logs\Services\Logs;
+use ModulesGarden\GGSModule\Core\Support\Facades\AbstractFacade;
+use ModulesGarden\GGSModule\Packages\Logs\Services\Logs;
 
 /**
  * @method static emergency($message, array $data = [])

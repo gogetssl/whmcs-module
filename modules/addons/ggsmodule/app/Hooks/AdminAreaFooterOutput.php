@@ -1,6 +1,6 @@
 <?php
 
-use ModulesGarden\ggsmodule\Core\Hook\HookIntegrator;
+use ModulesGarden\GGSModule\Core\Hook\HookIntegrator;
 
 
 $hookManager->register(
@@ -16,7 +16,7 @@ $hookManager->register(
 
         //===[modify product datatable]=================================================================================
         $page = basename($_SERVER['PHP_SELF']);
-        if($page == "addonmodules.php" && $_GET["module"] == "ggsmodule" && $_GET["mg-page"] == "products")
+        if($page == "addonmodules.php" && $_GET["module"] == "GGSModule" && $_GET["mg-page"] == "products")
         {
             $toReturn.= <<<SCRIPT
                 <script type="text/javascript">

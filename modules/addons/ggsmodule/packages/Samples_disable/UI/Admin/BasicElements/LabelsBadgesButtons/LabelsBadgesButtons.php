@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\LabelsBadgesButtons;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\LabelsBadgesButtons;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
-class LabelsBadgesButtons extends \ModulesGarden\ggsmodule\Components\Container\Container implements AdminAreaInterface
+class LabelsBadgesButtons extends \ModulesGarden\GGSModule\Components\Container\Container implements AdminAreaInterface
 {
     public function loadHtml(): void
     {

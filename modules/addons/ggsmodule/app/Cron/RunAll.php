@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Cron;
+namespace ModulesGarden\GGSModule\App\Cron;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\CronStatus;
-use ModulesGarden\ggsmodule\Core\CommandLine\AbstractCommand;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\CronStatus;
+use ModulesGarden\GGSModule\Core\CommandLine\AbstractCommand;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -14,7 +14,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
  * The one cron line of the module: starts every job; each job decides itself whether it is due (the frequency chosen
  * under Settings > CRON Settings, counted from its last run). Schedule this command every 5 minutes.
  *
- *   php -q {WHMCS}/modules/addons/ggsmodule/cron/cron.php RunAll
+ *   php -q {WHMCS}/modules/addons/GGSModule/cron/cron.php RunAll
  */
 class RunAll extends AbstractCommand
 {

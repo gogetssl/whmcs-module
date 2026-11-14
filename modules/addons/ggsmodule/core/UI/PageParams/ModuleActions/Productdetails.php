@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\PageParams\ModuleActions;
+namespace ModulesGarden\GGSModule\Core\UI\PageParams\ModuleActions;
 
-use ModulesGarden\ggsmodule\Core\UI\PageParams\Source\ModuleActionInterface;
+use ModulesGarden\GGSModule\Core\UI\PageParams\Source\ModuleActionInterface;
 
 class Productdetails implements ModuleActionInterface
 {

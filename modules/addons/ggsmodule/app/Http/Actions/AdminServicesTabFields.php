@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Http\Actions;
+namespace ModulesGarden\GGSModule\App\Http\Actions;
 
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Server\Action;
-use ModulesGarden\ggsmodule\Packages\Samples\Http\Admin\Samples;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\Server\Action;
+use ModulesGarden\GGSModule\Packages\Samples\Http\Admin\Samples;
 
 class AdminServicesTabFields extends Action
 {

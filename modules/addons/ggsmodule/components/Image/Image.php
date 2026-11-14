@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Image;
+namespace ModulesGarden\GGSModule\Components\Image;
 
-use ModulesGarden\ggsmodule\Core\Components\Traits\UrlTrait;
-use ModulesGarden\ggsmodule\Components\Container\Container;
+use ModulesGarden\GGSModule\Core\Components\Traits\UrlTrait;
+use ModulesGarden\GGSModule\Components\Container\Container;
 
 class Image extends Container
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Form\Data;
+namespace ModulesGarden\GGSModule\Components\Form\Data;
 
-use function ModulesGarden\ggsmodule\Core\validator;
+use function ModulesGarden\GGSModule\Core\validator;
 
 class Validate
 {
@@ -11,8 +11,8 @@ class Validate
         $validatableElementsBag = new ValidatableElementsBag($elements);
 
         $input = array_merge(
-            \ModulesGarden\ggsmodule\Core\Support\Facades\Request::get('formData', []),
-            \ModulesGarden\ggsmodule\Core\Support\Facades\Request::files()->get('formData', [])
+            \ModulesGarden\GGSModule\Core\Support\Facades\Request::get('formData', []),
+            \ModulesGarden\GGSModule\Core\Support\Facades\Request::files()->get('formData', [])
         );
 
         validator()->validate(

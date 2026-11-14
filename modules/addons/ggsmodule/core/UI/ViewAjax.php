@@ -1,18 +1,18 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI;
+namespace ModulesGarden\GGSModule\Core\UI;
 
-use ModulesGarden\ggsmodule\Core\Components\DataBuilder;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ClientAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\ResponseInterface;
-use ModulesGarden\ggsmodule\Core\DependencyInjection;
-use ModulesGarden\ggsmodule\Core\Helper;
-use ModulesGarden\ggsmodule\Core\Http\JsonResponse;
-use function ModulesGarden\ggsmodule\Core\Helper\isAdmin;
-use function ModulesGarden\ggsmodule\Core\make;
+use ModulesGarden\GGSModule\Core\Components\DataBuilder;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ClientAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Core\Contracts\ResponseInterface;
+use ModulesGarden\GGSModule\Core\DependencyInjection;
+use ModulesGarden\GGSModule\Core\Helper;
+use ModulesGarden\GGSModule\Core\Http\JsonResponse;
+use function ModulesGarden\GGSModule\Core\Helper\isAdmin;
+use function ModulesGarden\GGSModule\Core\make;
 
 /**
  * Main Vuew Controler
@@ -39,7 +39,7 @@ class ViewAjax extends AbstractPartialView
      */
     public function getResponse()
     {
-        $namespace = Helper\ModuleNamespace::convertStringToNamespace(\ModulesGarden\ggsmodule\Core\Support\Facades\Request::get('namespace'));
+        $namespace = Helper\ModuleNamespace::convertStringToNamespace(\ModulesGarden\GGSModule\Core\Support\Facades\Request::get('namespace'));
         if (!Helper\ModuleNamespace::isInRootNamespace($namespace))
         {
             return null;

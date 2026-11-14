@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Data;
+namespace ModulesGarden\GGSModule\Core\Data;
 
 use ArrayAccess;
 use Exception;
-use ModulesGarden\ggsmodule\Core\Support\Arr;
+use ModulesGarden\GGSModule\Core\Support\Arr;
 
 class Container implements ArrayAccess
 {

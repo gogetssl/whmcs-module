@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\FileReader\Reader;
+namespace ModulesGarden\GGSModule\Core\FileReader\Reader;
 
 /**
  * Description of Json

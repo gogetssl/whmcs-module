@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\DependencyInjection;
+namespace ModulesGarden\GGSModule\Core\DependencyInjection;
 
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 /**
  * Load all services from yml file and mark them as shared in DI container

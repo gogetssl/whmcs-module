@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Events;
+namespace ModulesGarden\GGSModule\Core\Events;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Events\ListenerInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Events\ListenerInterface;
 
 abstract class Listener implements ListenerInterface
 {

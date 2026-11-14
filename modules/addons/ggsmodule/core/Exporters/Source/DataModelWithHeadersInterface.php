@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Exporters\Source;
+namespace ModulesGarden\GGSModule\Core\Exporters\Source;
 
 interface DataModelWithHeadersInterface extends DataModelInterface
 {

@@ -1,35 +1,35 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\UI\Forms;
+namespace ModulesGarden\GGSModule\Packages\Product\UI\Forms;
 
-use ModulesGarden\ggsmodule\App\Http\Actions\MetaData;
-use ModulesGarden\ggsmodule\Components\Button\ButtonSuccess;
-use ModulesGarden\ggsmodule\Components\Container\ContainerContentCentered;
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
-use ModulesGarden\ggsmodule\Components\Row\Row;
-use ModulesGarden\ggsmodule\Components\TableSimple\Record\Record;
-use ModulesGarden\ggsmodule\Components\TableSimple\TableSimple;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalLoad;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Exceptions\UserException;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Support\Arr;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\ServersGroups;
-use ModulesGarden\ggsmodule\Packages\Product\Enums\ConfigSettings;
-use ModulesGarden\ggsmodule\Packages\Product\Helpers\ProductConfiguration as ProductConfigurationHelper;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptionsGroups\ConfigurableOptionsGroup;
-use ModulesGarden\ggsmodule\Packages\Product\UI\Formatters\ConfigOptionFullNameFormatter;
-use ModulesGarden\ggsmodule\Packages\Product\UI\Modals\CreateConfigurableOptions;
+use ModulesGarden\GGSModule\App\Http\Actions\MetaData;
+use ModulesGarden\GGSModule\Components\Button\ButtonSuccess;
+use ModulesGarden\GGSModule\Components\Container\ContainerContentCentered;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Components\Row\Row;
+use ModulesGarden\GGSModule\Components\TableSimple\Record\Record;
+use ModulesGarden\GGSModule\Components\TableSimple\TableSimple;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalLoad;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Exceptions\UserException;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Support\Arr;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\ServersGroups;
+use ModulesGarden\GGSModule\Packages\Product\Enums\ConfigSettings;
+use ModulesGarden\GGSModule\Packages\Product\Helpers\ProductConfiguration as ProductConfigurationHelper;
+use ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptionsGroups\ConfigurableOptionsGroup;
+use ModulesGarden\GGSModule\Packages\Product\UI\Formatters\ConfigOptionFullNameFormatter;
+use ModulesGarden\GGSModule\Packages\Product\UI\Modals\CreateConfigurableOptions;
 
-class ProductConfiguration extends \ModulesGarden\ggsmodule\Components\Form\AbstractForm implements AdminAreaInterface
+class ProductConfiguration extends \ModulesGarden\GGSModule\Components\Form\AbstractForm implements AdminAreaInterface
 {
     use TranslatorTrait;
 
-    protected string $provider = \ModulesGarden\ggsmodule\Packages\Product\UI\Providers\ProductConfiguration::class;
+    protected string $provider = \ModulesGarden\GGSModule\Packages\Product\UI\Providers\ProductConfiguration::class;
 
     public function preLoadHtml(): void
     {

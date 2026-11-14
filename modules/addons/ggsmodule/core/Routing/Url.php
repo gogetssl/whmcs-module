@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Routing;
+namespace ModulesGarden\GGSModule\Core\Routing;
 
-use ModulesGarden\ggsmodule\Core\Helper\BuildUrl;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use function ModulesGarden\ggsmodule\Core\Helper\isAdmin;
+use ModulesGarden\GGSModule\Core\Helper\BuildUrl;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use function ModulesGarden\GGSModule\Core\Helper\isAdmin;
 
 class Url
 {

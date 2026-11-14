@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Client\Home\ServiceInformation;
+namespace ModulesGarden\GGSModule\App\UI\Client\Home\ServiceInformation;
 
-use ModulesGarden\ggsmodule\App\UI\Client\Sidebars\MainSidebar;
-use ModulesGarden\ggsmodule\Components\LayoutWithSidebar\LayoutWithSidebar;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ClientAreaInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\ServiceInformation\ServiceInformation;
+use ModulesGarden\GGSModule\App\UI\Client\Sidebars\MainSidebar;
+use ModulesGarden\GGSModule\Components\LayoutWithSidebar\LayoutWithSidebar;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ClientAreaInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\ServiceInformation\ServiceInformation;
 
 class Container extends LayoutWithSidebar implements ClientAreaInterface
 {

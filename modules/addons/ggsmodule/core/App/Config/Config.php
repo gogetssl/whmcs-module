@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Config;
+namespace ModulesGarden\GGSModule\Core\App\Config;
 
-use ModulesGarden\ggsmodule\Core\Data\Container;
-use ModulesGarden\ggsmodule\Core\FileReader\Reader;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Support\Arr;
+use ModulesGarden\GGSModule\Core\Data\Container;
+use ModulesGarden\GGSModule\Core\FileReader\Reader;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Support\Arr;
 
 class Config
 {

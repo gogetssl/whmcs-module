@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Helpers;
+namespace ModulesGarden\GGSModule\Core\UI\Helpers;
 
 /**
  * Constants vars for container elements in UI

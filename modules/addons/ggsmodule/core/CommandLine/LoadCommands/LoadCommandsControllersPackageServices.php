@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\CommandLine\LoadCommands;
+namespace ModulesGarden\GGSModule\Core\CommandLine\LoadCommands;
 
-use ModulesGarden\ggsmodule\Core\DependencyInjection\PackageServices;
-use function ModulesGarden\ggsmodule\Core\make;
+use ModulesGarden\GGSModule\Core\DependencyInjection\PackageServices;
+use function ModulesGarden\GGSModule\Core\make;
 
 class LoadCommandsControllersPackageServices implements LoadCommandsControllersInterface
 {

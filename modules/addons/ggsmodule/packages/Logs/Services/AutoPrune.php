@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\Services;
+namespace ModulesGarden\GGSModule\Packages\Logs\Services;
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
 use WHMCS\Database\Capsule as DB;
 
 /**
@@ -15,7 +15,7 @@ class AutoPrune
     {
         if (Config::get('logs.auto_prune.enabled', true) && ModuleSettings::get('logs.auto_prune', 1))
         {
-            \ModulesGarden\ggsmodule\Packages\Logs\Models\Logs::where('date', '<', DB::raw('DATE_SUB(NOW(), INTERVAL ' . (max(1, (int)ModuleSettings::get('logs.auto_prune_older_than', 30))) . ' day)'))->delete();
+            \ModulesGarden\GGSModule\Packages\Logs\Models\Logs::where('date', '<', DB::raw('DATE_SUB(NOW(), INTERVAL ' . (max(1, (int)ModuleSettings::get('logs.auto_prune_older_than', 30))) . ' day)'))->delete();
         }
     }
 }

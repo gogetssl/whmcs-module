@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\SubPages\ContainerReload;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\SubPages\ContainerReload;
 
-use ModulesGarden\ggsmodule\Components\Alert\AlertInfo;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButton;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Reload;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Components\Alert\AlertInfo;
+use ModulesGarden\GGSModule\Components\IconButton\IconButton;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Actions\Reload;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
-class Container extends \ModulesGarden\ggsmodule\Components\Container\Container implements AdminAreaInterface
+class Container extends \ModulesGarden\GGSModule\Components\Container\Container implements AdminAreaInterface
 {
     /**
      * @return void

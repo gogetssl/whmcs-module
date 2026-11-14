@@ -1,7 +1,7 @@
 <?php
 // phpcs:ignoreFile
 
-use ModulesGarden\ggsmodule\Core\App\AppContext;
+use ModulesGarden\GGSModule\Core\App\AppContext;
 
 if (!defined('WHMCS'))
 {
@@ -10,49 +10,49 @@ if (!defined('WHMCS'))
 
 require_once dirname(__DIR__, 3) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'App' . DIRECTORY_SEPARATOR . 'AppContext.php';
 
-function ggsmodule_CreateAccount(array $params)
+function GGSModule_CreateAccount(array $params)
 {
     #MGLICENSE_CHECK_RETURN#
 
     return (new AppContext())->runServerModule(__FUNCTION__, $params);
 }
 
-function ggsmodule_SuspendAccount(array $params)
+function GGSModule_SuspendAccount(array $params)
 {
     #MGLICENSE_CHECK_RETURN#
 
     return (new AppContext())->runServerModule(__FUNCTION__, $params);
 }
 
-function ggsmodule_UnsuspendAccount(array $params)
+function GGSModule_UnsuspendAccount(array $params)
 {
     #MGLICENSE_CHECK_RETURN#
 
     return (new AppContext())->runServerModule(__FUNCTION__, $params);
 }
 
-function ggsmodule_TerminateAccount(array $params)
+function GGSModule_TerminateAccount(array $params)
 {
     #MGLICENSE_CHECK_RETURN#
 
     return (new AppContext())->runServerModule(__FUNCTION__, $params);
 }
 
-function ggsmodule_ChangePassword(array $params)
+function GGSModule_ChangePassword(array $params)
 {
     #MGLICENSE_CHECK_RETURN#
 
     return (new AppContext())->runServerModule(__FUNCTION__, $params);
 }
 
-function ggsmodule_ChangePackage(array $params)
+function GGSModule_ChangePackage(array $params)
 {
     #MGLICENSE_CHECK_RETURN#
 
     return (new AppContext())->runServerModule(__FUNCTION__, $params);
 }
 
-function ggsmodule_TestConnection(array $params)
+function GGSModule_TestConnection(array $params)
 {
     try
     {
@@ -68,39 +68,39 @@ function ggsmodule_TestConnection(array $params)
     return (new AppContext())->runServerModule(__FUNCTION__, $params);
 }
 
-function ggsmodule_UsageUpdate(array $params)
+function GGSModule_UsageUpdate(array $params)
 {
     return (new AppContext())->runServerModule(__FUNCTION__, $params);
 }
 
-function ggsmodule_ConfigOptions($params = [])
+function GGSModule_ConfigOptions($params = [])
 {
     return (new AppContext())->runServerModule(__FUNCTION__, $params);
 }
 
-function ggsmodule_ServiceSingleSignon($params)
+function GGSModule_ServiceSingleSignon($params)
 {
     return (new AppContext())->runServerModule(__FUNCTION__, $params);
 }
 
-function ggsmodule_MetaData()
+function GGSModule_MetaData()
 {
     return (new AppContext())->runServerModule(__FUNCTION__, []);
 }
 
-function ggsmodule_AdminSingleSignOn($params)
+function GGSModule_AdminSingleSignOn($params)
 {
     return (new AppContext())->runServerModule(__FUNCTION__, $params);
 }
 
-function ggsmodule_AdminServicesTabFields($params)
+function GGSModule_AdminServicesTabFields($params)
 {
     return (new AppContext())->runServerModule(__FUNCTION__, $params);
 }
 
 if (defined('CLIENTAREA'))
 {
-    function ggsmodule_ClientArea($params)
+    function GGSModule_ClientArea($params)
     {
         #MGLICENSE_CHECK_RETURN#
 

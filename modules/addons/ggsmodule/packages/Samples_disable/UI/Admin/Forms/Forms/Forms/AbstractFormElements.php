@@ -1,34 +1,34 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Forms\Forms\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Forms\Forms\Forms;
 
-use ModulesGarden\ggsmodule\Components\Button\ButtonSubmitSuccess;
-use ModulesGarden\ggsmodule\Components\ColorPicker\ColorPicker;
-use ModulesGarden\ggsmodule\Components\CopyToClipboardButton\CopyToClipboardButton;
-use ModulesGarden\ggsmodule\Components\DatePicker\DatePicker;
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Components\Form\Builder\Builder;
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Components\FormInputFile\FormInputFile;
-use ModulesGarden\ggsmodule\Components\FormInputGroup\FormInputGroup;
-use ModulesGarden\ggsmodule\Components\FormInputGroupLabel\FormInputGroupLabel;
-use ModulesGarden\ggsmodule\Components\FormInputLabel\FormInputLabel;
-use ModulesGarden\ggsmodule\Components\FormInputPassword\FormInputPassword;
-use ModulesGarden\ggsmodule\Components\FormInputText;
-use ModulesGarden\ggsmodule\Components\ImagePicker\ImagePicker;
-use ModulesGarden\ggsmodule\Components\ImageSelector\ImageSelector;
-use ModulesGarden\ggsmodule\Components\Number\Number;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
-use ModulesGarden\ggsmodule\Components\Tagger\Tagger;
-use ModulesGarden\ggsmodule\Components\TextArea\TextArea;
-use ModulesGarden\ggsmodule\Components\UploadField\UploadField;
-use ModulesGarden\ggsmodule\Core\Components\Actions\FormSubmit;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Packages\MediaLibrary\UI\Admin\Pages\MediaLibrary;
-use ModulesGarden\ggsmodule\Packages\MediaLibrary\UI\Admin\Pages\MediaLibrarySelectOnly;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Forms\Forms\Components\MediaLibraryPresentOnly;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Forms\Forms\Dropdowns\AjaxSearch;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\SimpleForm\Providers\SimpleFormProvider;
+use ModulesGarden\GGSModule\Components\Button\ButtonSubmitSuccess;
+use ModulesGarden\GGSModule\Components\ColorPicker\ColorPicker;
+use ModulesGarden\GGSModule\Components\CopyToClipboardButton\CopyToClipboardButton;
+use ModulesGarden\GGSModule\Components\DatePicker\DatePicker;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Components\Form\Builder\Builder;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\FormInputFile\FormInputFile;
+use ModulesGarden\GGSModule\Components\FormInputGroup\FormInputGroup;
+use ModulesGarden\GGSModule\Components\FormInputGroupLabel\FormInputGroupLabel;
+use ModulesGarden\GGSModule\Components\FormInputLabel\FormInputLabel;
+use ModulesGarden\GGSModule\Components\FormInputPassword\FormInputPassword;
+use ModulesGarden\GGSModule\Components\FormInputText;
+use ModulesGarden\GGSModule\Components\ImagePicker\ImagePicker;
+use ModulesGarden\GGSModule\Components\ImageSelector\ImageSelector;
+use ModulesGarden\GGSModule\Components\Number\Number;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Components\Tagger\Tagger;
+use ModulesGarden\GGSModule\Components\TextArea\TextArea;
+use ModulesGarden\GGSModule\Components\UploadField\UploadField;
+use ModulesGarden\GGSModule\Core\Components\Actions\FormSubmit;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Packages\MediaLibrary\UI\Admin\Pages\MediaLibrary;
+use ModulesGarden\GGSModule\Packages\MediaLibrary\UI\Admin\Pages\MediaLibrarySelectOnly;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Forms\Forms\Components\MediaLibraryPresentOnly;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Forms\Forms\Dropdowns\AjaxSearch;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\SimpleForm\Providers\SimpleFormProvider;
 
 class AbstractFormElements extends Form implements AdminAreaInterface
 {
@@ -204,7 +204,7 @@ class AbstractFormElements extends Form implements AdminAreaInterface
 
     protected function createPasswordGenerator()
     {
-        $passwordGenetator = new \ModulesGarden\ggsmodule\Components\FormPasswordGenerator\FormPasswordGenerator();
+        $passwordGenetator = new \ModulesGarden\GGSModule\Components\FormPasswordGenerator\FormPasswordGenerator();
         $passwordGenetator->setName('xxxxx');
 
         $copyToClipboard = new CopyToClipboardButton();

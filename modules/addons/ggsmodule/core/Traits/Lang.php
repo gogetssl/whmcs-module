@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Traits;
+namespace ModulesGarden\GGSModule\Core\Traits;
 
-use ModulesGarden\ggsmodule\Core\ServiceLocator;
+use ModulesGarden\GGSModule\Core\ServiceLocator;
 
 /**
  * @deprecated
@@ -10,7 +10,7 @@ use ModulesGarden\ggsmodule\Core\ServiceLocator;
 trait Lang
 {
     /**
-     * @var null|\ModulesGarden\ggsmodule\Core\Lang\Lang
+     * @var null|\ModulesGarden\GGSModule\Core\Lang\Lang
      */
     protected $lang = null;
 

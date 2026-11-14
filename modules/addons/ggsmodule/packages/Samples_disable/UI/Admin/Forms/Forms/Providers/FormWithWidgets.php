@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\Forms\Providers;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\Forms\Providers;
 
-class FormWithWidgets extends \ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider
+class FormWithWidgets extends \ModulesGarden\GGSModule\Core\DataProviders\CrudProvider
 {
     public function create()
     {
-        \ModulesGarden\ggsmodule\Core\validator()->validate(\ModulesGarden\ggsmodule\Core\Support\Facades\Request::getAll(), [
+        \ModulesGarden\GGSModule\Core\validator()->validate(\ModulesGarden\GGSModule\Core\Support\Facades\Request::getAll(), [
             'text'     => '',
             'dropdown' => 'required',
         ]);

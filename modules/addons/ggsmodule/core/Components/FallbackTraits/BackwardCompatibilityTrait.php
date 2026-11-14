@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\FallbackTraits;
+namespace ModulesGarden\GGSModule\Core\Components\FallbackTraits;
 
-use ModulesGarden\ggsmodule\Core\UI\Traits\ACL;
+use ModulesGarden\GGSModule\Core\UI\Traits\ACL;
 
 trait BackwardCompatibilityTrait
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\DatePicker;
+namespace ModulesGarden\GGSModule\Components\DatePicker;
 
-use ModulesGarden\ggsmodule\Components\DatePicker\Enums\Format;
-use ModulesGarden\ggsmodule\Components\DatePicker\Enums\Type;
-use ModulesGarden\ggsmodule\Components\DatePicker\Traits\DisableDateTrait;
-use ModulesGarden\ggsmodule\Components\DatePicker\Traits\DisableTimeTrait;
+use ModulesGarden\GGSModule\Components\DatePicker\Enums\Format;
+use ModulesGarden\GGSModule\Components\DatePicker\Enums\Type;
+use ModulesGarden\GGSModule\Components\DatePicker\Traits\DisableDateTrait;
+use ModulesGarden\GGSModule\Components\DatePicker\Traits\DisableTimeTrait;
 
 class DateTimePicker extends AbstractPicker
 {

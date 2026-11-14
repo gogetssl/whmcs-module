@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Translation\Source;
+namespace ModulesGarden\GGSModule\Core\Translation\Source;
 
 interface TranslationDataInterface
 {

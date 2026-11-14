@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Support\Facades;
+namespace ModulesGarden\GGSModule\Core\Support\Facades;
 
 
-use ModulesGarden\ggsmodule\Core\UI\Breadcrumbs\Item;
+use ModulesGarden\GGSModule\Core\UI\Breadcrumbs\Item;
 
 /**
  * @method static add(Item $item);
@@ -18,6 +18,6 @@ class Breadcrumbs extends AbstractFacade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \ModulesGarden\ggsmodule\Core\Services\Breadcrumbs::class;
+        return \ModulesGarden\GGSModule\Core\Services\Breadcrumbs::class;
     }
 }

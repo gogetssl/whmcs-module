@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Series;
+namespace ModulesGarden\GGSModule\Components\Graph\Series;
 
-use ModulesGarden\ggsmodule\Components\Graph\Source\SeriesInterface;
+use ModulesGarden\GGSModule\Components\Graph\Source\SeriesInterface;
 
 class ExtendedSeries implements SeriesInterface
 {

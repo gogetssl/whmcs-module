@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models;
 
 /**
  * Description of Domain Pricing
@@ -19,7 +19,7 @@ class DomainPricing extends \WHMCS\Domains\Extension
 {
     public function price()
     {
-        return $this->hasMany('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Pricing', "relid");
+        return $this->hasMany('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Pricing', "relid");
     }
 
     public function getExtensionNoDotAttribute()

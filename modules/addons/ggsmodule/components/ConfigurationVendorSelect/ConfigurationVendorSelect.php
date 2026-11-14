@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ConfigurationVendorSelect;
+namespace ModulesGarden\GGSModule\Components\ConfigurationVendorSelect;
 
-use ModulesGarden\ggsmodule\Core\Components\FormFields\FormField;
-use ModulesGarden\ggsmodule\Core\Components\Traits\OptionsTrait;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AvailableOptionsInterface;
+use ModulesGarden\GGSModule\Core\Components\FormFields\FormField;
+use ModulesGarden\GGSModule\Core\Components\Traits\OptionsTrait;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AvailableOptionsInterface;
 
 class ConfigurationVendorSelect extends FormField implements AvailableOptionsInterface
 {

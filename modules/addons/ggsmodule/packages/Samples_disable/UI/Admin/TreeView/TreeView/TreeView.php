@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\TreeView;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\TreeView;
 
-use ModulesGarden\ggsmodule\Components\Container\ContainerColumn;
-use ModulesGarden\ggsmodule\Components\Grid\Grid;
+use ModulesGarden\GGSModule\Components\Container\ContainerColumn;
+use ModulesGarden\GGSModule\Components\Grid\Grid;
 
 class TreeView extends ContainerColumn
 {

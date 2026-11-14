@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Lang;
+namespace ModulesGarden\GGSModule\Core\Lang;
 
 use ArrayAccess;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use function ModulesGarden\ggsmodule\Core\Helper\sl;
-use function ModulesGarden\ggsmodule\Core\translator;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use function ModulesGarden\GGSModule\Core\Helper\sl;
+use function ModulesGarden\GGSModule\Core\translator;
 
 /**
  * @deprecated - use trlanslator() function

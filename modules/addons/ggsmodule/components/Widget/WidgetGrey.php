@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Widget;
+namespace ModulesGarden\GGSModule\Components\Widget;
 
-use ModulesGarden\ggsmodule\Core\Components\Decorator\Decorator;
+use ModulesGarden\GGSModule\Core\Components\Decorator\Decorator;
 
 class WidgetGrey extends Widget
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Source;
+namespace ModulesGarden\GGSModule\Components\Graph\Source;
 
-use ModulesGarden\ggsmodule\Components\Graph\Options\SubTitleOptions;
-use ModulesGarden\ggsmodule\Components\Graph\Options\TitleOptions;
-use ModulesGarden\ggsmodule\Components\Graph\SparklineGraphLine;
+use ModulesGarden\GGSModule\Components\Graph\Options\SubTitleOptions;
+use ModulesGarden\GGSModule\Components\Graph\Options\TitleOptions;
+use ModulesGarden\GGSModule\Components\Graph\SparklineGraphLine;
 
 abstract class InlineGraph extends SparklineGraphLine
 {

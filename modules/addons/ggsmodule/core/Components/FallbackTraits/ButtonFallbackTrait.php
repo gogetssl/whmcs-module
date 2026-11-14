@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\FallbackTraits;
+namespace ModulesGarden\GGSModule\Core\Components\FallbackTraits;
 
-use ModulesGarden\ggsmodule\Core\Components\Actions\Redirect;
+use ModulesGarden\GGSModule\Core\Components\Actions\Redirect;
 
 
 /**

@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\UI\Providers;
+namespace ModulesGarden\GGSModule\Packages\Product\UI\Providers;
 
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Packages\Product\Helpers\ProductConfiguration as ProductConfigurationHelper;
-use \ModulesGarden\ggsmodule\Packages\Product\Services\ProductConfiguration as ProductConfigurationService;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Packages\Product\Helpers\ProductConfiguration as ProductConfigurationHelper;
+use \ModulesGarden\GGSModule\Packages\Product\Services\ProductConfiguration as ProductConfigurationService;
 
 class ProductConfiguration extends CrudProvider
 {

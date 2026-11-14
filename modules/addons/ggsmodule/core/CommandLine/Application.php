@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\CommandLine;
+namespace ModulesGarden\GGSModule\Core\CommandLine;
 
-use ModulesGarden\ggsmodule\Core\CommandLine\LoadCommands\LoadCommandsControllers;
-use ModulesGarden\ggsmodule\Core\CommandLine\LoadCommands\LoadCoreCommandsController;
-use ModulesGarden\ggsmodule\Core\CommandLine\LoadCommands\LoadCommandsControllersInterface;
-use ModulesGarden\ggsmodule\Core\CommandLine\LoadCommands\LoadCommandsControllersPackageServices;
+use ModulesGarden\GGSModule\Core\CommandLine\LoadCommands\LoadCommandsControllers;
+use ModulesGarden\GGSModule\Core\CommandLine\LoadCommands\LoadCoreCommandsController;
+use ModulesGarden\GGSModule\Core\CommandLine\LoadCommands\LoadCommandsControllersInterface;
+use ModulesGarden\GGSModule\Core\CommandLine\LoadCommands\LoadCommandsControllersPackageServices;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Http\Admin;
+namespace ModulesGarden\GGSModule\App\Http\Admin;
 
-use ModulesGarden\ggsmodule\App\Libs\AutoInstallQueue;
-use ModulesGarden\ggsmodule\App\UI\Admin\CertificateLog\Index\CertificateLogContainer;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Helper;
-use ModulesGarden\ggsmodule\Core\Http\AbstractController;
+use ModulesGarden\GGSModule\App\Libs\AutoInstallQueue;
+use ModulesGarden\GGSModule\App\UI\Admin\CertificateLog\Index\CertificateLogContainer;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Helper;
+use ModulesGarden\GGSModule\Core\Http\AbstractController;
 use WHMCS\Database\Capsule;
 
 /**
@@ -22,7 +22,7 @@ class CertificateLog extends AbstractController implements AdminAreaInterface
     /** GET older=<days>|all with the admin link token */
     public function clear()
     {
-        if(\ModulesGarden\ggsmodule\App\Libs\CsrfToken::valid($_REQUEST['token'] ?? ''))
+        if(\ModulesGarden\GGSModule\App\Libs\CsrfToken::valid($_REQUEST['token'] ?? ''))
         {
             AutoInstallQueue::createTables();
             $query = Capsule::table(AutoInstallQueue::logsTable());

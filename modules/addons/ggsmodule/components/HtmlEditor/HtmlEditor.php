@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\HtmlEditor;
+namespace ModulesGarden\GGSModule\Components\HtmlEditor;
 
-use ModulesGarden\ggsmodule\Core\Components\FormFields\FormField;
+use ModulesGarden\GGSModule\Core\Components\FormFields\FormField;
 
 class HtmlEditor extends FormField
 {

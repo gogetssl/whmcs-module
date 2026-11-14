@@ -1,19 +1,19 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Migration\Index;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Migration\Index;
 
-use ModulesGarden\ggsmodule\App\Http\Admin\Migration as MigrationController;
-use ModulesGarden\ggsmodule\App\Migration\Choice;
-use ModulesGarden\ggsmodule\App\Migration\Credentials;
-use ModulesGarden\ggsmodule\App\Migration\Detector;
-use ModulesGarden\ggsmodule\App\Migration\Engine;
-use ModulesGarden\ggsmodule\App\Migration\Store;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\MigrationRunner\MigrationRunner;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\App\Http\Admin\Migration as MigrationController;
+use ModulesGarden\GGSModule\App\Migration\Choice;
+use ModulesGarden\GGSModule\App\Migration\Credentials;
+use ModulesGarden\GGSModule\App\Migration\Detector;
+use ModulesGarden\GGSModule\App\Migration\Engine;
+use ModulesGarden\GGSModule\App\Migration\Store;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\MigrationRunner\MigrationRunner;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
 
 /**
  * Admin page "Migration": legacy modules found, dry-run summary, start / progress / result, backups and rollback.
@@ -112,8 +112,8 @@ class MigrationContainer extends Container implements AdminAreaInterface
         if($info['support']['supported'])
         {
             $token  = MigrationController::token();
-            $report = 'addonmodules.php?module=ggsmodule&mg-page=migration&mg-action=report&source=' . $source;
-            $base   = 'addonmodules.php?module=ggsmodule&mg-page=migration&source=' . $source . '&token=' . rawurlencode($token);
+            $report = 'addonmodules.php?module=GGSModule&mg-page=migration&mg-action=report&source=' . $source;
+            $base   = 'addonmodules.php?module=GGSModule&mg-page=migration&source=' . $source . '&token=' . rawurlencode($token);
             $html  .= '<p class="ggs-muted">' . htmlspecialchars($this->t('start_defaults')) . '</p>'
                 . '<div class="ggs-actions">'
                 . '<a class="lu-btn lu-btn--default" href="' . $report . '">' . htmlspecialchars($this->t('btn_report')) . '</a>'
@@ -152,7 +152,7 @@ class MigrationContainer extends Container implements AdminAreaInterface
         ];
         $runner = (new MigrationRunner())
             ->setRunId((int)$run['id'])
-            ->setBatchUrl('addonmodules.php?module=ggsmodule&mg-page=migration&mg-action=batch')
+            ->setBatchUrl('addonmodules.php?module=GGSModule&mg-page=migration&mg-action=batch')
             ->setToken(MigrationController::token())
             ->setInitial([
                 'id' => (int)$run['id'], 'status' => $run['status'], 'percent' => $status['percent'], 'jobs' => $status['jobs'],
@@ -186,7 +186,7 @@ class MigrationContainer extends Container implements AdminAreaInterface
         if(!empty($summary['cron_lines']) && $run['status'] === Store::RUN_COMPLETED)
         {
             $html .= '<details class="ggs-details"><summary>' . htmlspecialchars($this->t('cron_title')) . '</summary><p>' . htmlspecialchars($this->t('cron_remove')) . '</p><pre>' . htmlspecialchars(implode("\n", $summary['cron_lines'])) . '</pre>'
-                . '<p>' . htmlspecialchars($this->t('cron_add')) . '</p><pre>' . htmlspecialchars("*/5 * * * * php -q {WHMCS}/modules/addons/ggsmodule/cron/cron.php ProductPricingUpdate\n*/5 * * * * php -q {WHMCS}/modules/addons/ggsmodule/cron/cron.php SSLCertificates\n*/5 * * * * php -q {WHMCS}/modules/addons/ggsmodule/cron/cron.php RenewalNotifyCertificate\n*/5 * * * * php -q {WHMCS}/modules/addons/ggsmodule/cron/cron.php ReSyncProducts\n*/5 * * * * php -q {WHMCS}/modules/addons/ggsmodule/cron/cron.php SSLCertificatesProcessing\n*/5 * * * * php -q {WHMCS}/modules/addons/ggsmodule/cron/cron.php SSLAutoInstall") . '</pre></details>';
+                . '<p>' . htmlspecialchars($this->t('cron_add')) . '</p><pre>' . htmlspecialchars("*/5 * * * * php -q {WHMCS}/modules/addons/GGSModule/cron/cron.php ProductPricingUpdate\n*/5 * * * * php -q {WHMCS}/modules/addons/GGSModule/cron/cron.php SSLCertificates\n*/5 * * * * php -q {WHMCS}/modules/addons/GGSModule/cron/cron.php RenewalNotifyCertificate\n*/5 * * * * php -q {WHMCS}/modules/addons/GGSModule/cron/cron.php ReSyncProducts\n*/5 * * * * php -q {WHMCS}/modules/addons/GGSModule/cron/cron.php SSLCertificatesProcessing\n*/5 * * * * php -q {WHMCS}/modules/addons/GGSModule/cron/cron.php SSLAutoInstall") . '</pre></details>';
         }
         if(!empty($summary['legacy_deactivated']))
         {
@@ -195,9 +195,9 @@ class MigrationContainer extends Container implements AdminAreaInterface
         }
 
         $token   = MigrationController::token();
-        $runBase = 'addonmodules.php?module=ggsmodule&mg-page=migration&id=' . (int)$run['id'] . '&token=' . rawurlencode($token);
+        $runBase = 'addonmodules.php?module=GGSModule&mg-page=migration&id=' . (int)$run['id'] . '&token=' . rawurlencode($token);
         $html .= '<div class="ggs-actions">'
-            . '<a class="lu-btn lu-btn--default" href="addonmodules.php?module=ggsmodule&mg-page=migration&mg-action=log&id=' . (int)$run['id'] . '">' . htmlspecialchars($this->t('btn_log')) . '</a>';
+            . '<a class="lu-btn lu-btn--default" href="addonmodules.php?module=GGSModule&mg-page=migration&mg-action=log&id=' . (int)$run['id'] . '">' . htmlspecialchars($this->t('btn_log')) . '</a>';
         if($run['backup_prefix'])
         {
             $html .= '<span class="ggs-muted">' . htmlspecialchars($this->t('backups_until', ['date' => (string)$run['backup_expires_at']])) . '</span>'

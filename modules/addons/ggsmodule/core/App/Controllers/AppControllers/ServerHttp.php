@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\AppControllers;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\AppControllers;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AppControllerInterface;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AppControllerInterface;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
-class ServerHttp extends \ModulesGarden\ggsmodule\Core\App\Controllers\AppController implements AppControllerInterface
+class ServerHttp extends \ModulesGarden\GGSModule\Core\App\Controllers\AppController implements AppControllerInterface
 {
     public function getControllerInstanceClass($callerName, $params)
     {
@@ -15,8 +15,8 @@ class ServerHttp extends \ModulesGarden\ggsmodule\Core\App\Controllers\AppContro
         {
             case 'clientarea':
                 return $params['model'] instanceof \WHMCS\Service\Addon ?
-                    \ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Server\ClientPageProductAddonController::class :
-                    \ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Server\ClientPageController::class ;
+                    \ModulesGarden\GGSModule\Core\App\Controllers\Instances\Server\ClientPageProductAddonController::class :
+                    \ModulesGarden\GGSModule\Core\App\Controllers\Instances\Server\ClientPageController::class ;
             default:
                 throw new \Exception($functionName . ' is not implemented in ' . __CLASS__);
         }

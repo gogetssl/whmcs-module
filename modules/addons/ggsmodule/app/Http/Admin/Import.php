@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Http\Admin;
+namespace ModulesGarden\GGSModule\App\Http\Admin;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Import\Index\ImportContainer;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Http\AbstractController;
-use ModulesGarden\ggsmodule\Core\Helper;
+use ModulesGarden\GGSModule\App\UI\Admin\Import\Index\ImportContainer;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Http\AbstractController;
+use ModulesGarden\GGSModule\Core\Helper;
 
 class Import extends AbstractController implements AdminAreaInterface
 {

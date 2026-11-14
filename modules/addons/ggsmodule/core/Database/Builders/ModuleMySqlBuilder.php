@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Database\Builders;
+namespace ModulesGarden\GGSModule\Core\Database\Builders;
 
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 class ModuleMySqlBuilder extends \Illuminate\Database\Schema\MySqlBuilder
 {

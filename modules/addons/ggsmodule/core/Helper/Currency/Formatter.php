@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Helper\Currency;
+namespace ModulesGarden\GGSModule\Core\Helper\Currency;
 
-use ModulesGarden\ggsmodule\Core\Helper\Currency\Models\Format;
+use ModulesGarden\GGSModule\Core\Helper\Currency\Models\Format;
 
 /**
- * @deprecated - use \ModulesGarden\ggsmodule\Core\UI\Formatters\Price\Price instead
+ * @deprecated - use \ModulesGarden\GGSModule\Core\UI\Formatters\Price\Price instead
  */
 class Formatter
 {
@@ -23,11 +23,11 @@ class Formatter
     public function format(float $price, ?string $prefix = null, ?string $suffix  = null, ?Format $format  = null):string
     {
         $format = $format ?: $this->format;
-        $newFormat = new \ModulesGarden\ggsmodule\Core\UI\Formatters\Price\Models\Format(
+        $newFormat = new \ModulesGarden\GGSModule\Core\UI\Formatters\Price\Models\Format(
             $format->getDecimals(),$format->getDecimalSeparator(), $format->getThousandsSeparator()
         );
 
-        return \ModulesGarden\ggsmodule\Core\UI\Formatters\Price\Price::format($price, $prefix ?: $this->prefix, $suffix ?: $this->suffix, $newFormat);
+        return \ModulesGarden\GGSModule\Core\UI\Formatters\Price\Price::format($price, $prefix ?: $this->prefix, $suffix ?: $this->suffix, $newFormat);
     }
 
     /**

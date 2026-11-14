@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models;
 
 /**
  * Description of Category
@@ -16,6 +16,6 @@ class ClientGroup extends \WHMCS\User\Client\Group
 {
     public function clients()
     {
-        return $this->hasMany('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\Client', 'groupid');
+        return $this->hasMany('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\Client', 'groupid');
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\FormInputTextCopy;
+namespace ModulesGarden\GGSModule\Components\FormInputTextCopy;
 
-use ModulesGarden\ggsmodule\Components\CopyToClipboardButton\CopyToClipboardButton;
-use ModulesGarden\ggsmodule\Components\FormInputGroup\FormInputGroup;
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ValueInterface;
+use ModulesGarden\GGSModule\Components\CopyToClipboardButton\CopyToClipboardButton;
+use ModulesGarden\GGSModule\Components\FormInputGroup\FormInputGroup;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ValueInterface;
 
 class FormInputTextCopy extends FormInputGroup implements ValueInterface
 {

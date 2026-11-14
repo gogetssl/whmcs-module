@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Forms;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Forms;
 
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Components\HiddenField\HiddenField;
-use ModulesGarden\ggsmodule\Components\PreBlockArrayPrint\PreBlockArrayPrint;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Packages\Logs\UI\Providers\ShowDataProvider;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\HiddenField\HiddenField;
+use ModulesGarden\GGSModule\Components\PreBlockArrayPrint\PreBlockArrayPrint;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Packages\Logs\UI\Providers\ShowDataProvider;
 
 class ShowDataForm extends Form implements AjaxComponentInterface, AdminAreaInterface
 {

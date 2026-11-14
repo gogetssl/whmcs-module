@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Configuration\Addon\Config;
+namespace ModulesGarden\GGSModule\Core\Configuration\Addon\Config;
 
-use ModulesGarden\ggsmodule\Core\Configuration\Addon\AbstractAfter;
+use ModulesGarden\GGSModule\Core\Configuration\Addon\AbstractAfter;
 
 /**
  * Runs after loading module configuration

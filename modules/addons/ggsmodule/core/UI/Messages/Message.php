@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Messages;
+namespace ModulesGarden\GGSModule\Core\UI\Messages;
 
-use ModulesGarden\ggsmodule\Core\Components\Enums\Color;
+use ModulesGarden\GGSModule\Core\Components\Enums\Color;
 
 class Message
 {

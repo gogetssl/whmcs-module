@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Models\Whmcs\AddonModule;
+use ModulesGarden\GGSModule\App\Models\Whmcs\AddonModule;
 
 /**
  * Per-product settings of the Products page (stored in tbladdonmodules as "product_<pid>"):
@@ -22,7 +22,7 @@ class ProductSettings
         $productId = (int)$productId;
         if(!isset(self::$cache[$productId]))
         {
-            $value  = AddonModule::where('module', 'configuration_ggsmodule')->where('setting', 'product_' . $productId)->value('value');
+            $value  = AddonModule::where('module', 'configuration_GGSModule')->where('setting', 'product_' . $productId)->value('value');
             $stored = $value ? (json_decode($value, true) ?: []) : [];
             // installs before 1.3.0 kept the product margin under its old name
             if(!isset($stored['margin']) && isset($stored['commission']))
@@ -43,7 +43,7 @@ class ProductSettings
         $data['margin']     = trim((string)$data['margin']) === '' ? '' : (string)(float)$data['margin'];
 
         AddonModule::updateOrInsert(
-            ['module' => 'configuration_ggsmodule', 'setting' => 'product_' . (int)$productId],
+            ['module' => 'configuration_GGSModule', 'setting' => 'product_' . (int)$productId],
             ['value' => json_encode($data)]
         );
         unset(self::$cache[(int)$productId]);

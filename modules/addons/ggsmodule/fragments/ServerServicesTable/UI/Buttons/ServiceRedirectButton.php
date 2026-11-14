@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Fragments\ServerServicesTable\UI\Buttons;
+namespace ModulesGarden\GGSModule\Fragments\ServerServicesTable\UI\Buttons;
 
-use ModulesGarden\ggsmodule\Components\IconButton\IconButton;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Redirect;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Routing\Url;
+use ModulesGarden\GGSModule\Components\IconButton\IconButton;
+use ModulesGarden\GGSModule\Core\Components\Actions\Redirect;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Routing\Url;
 
 class ServiceRedirectButton extends IconButton implements AdminAreaInterface, AjaxComponentInterface
 {

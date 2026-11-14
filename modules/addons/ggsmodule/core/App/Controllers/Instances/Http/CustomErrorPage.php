@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Http;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\Instances\Http;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ClientAreaInterface;
-use ModulesGarden\ggsmodule\Core\UI\View;
-use function ModulesGarden\ggsmodule\Core\translate;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ClientAreaInterface;
+use ModulesGarden\GGSModule\Core\UI\View;
+use function ModulesGarden\GGSModule\Core\translate;
 
 class CustomErrorPage extends View implements AdminAreaInterface, ClientAreaInterface
 {
@@ -13,7 +13,7 @@ class CustomErrorPage extends View implements AdminAreaInterface, ClientAreaInte
     {
         parent::__construct();
 
-        $zeroBlock = new \ModulesGarden\ggsmodule\Components\CustomErrorPage\CustomErrorPage();
+        $zeroBlock = new \ModulesGarden\GGSModule\Components\CustomErrorPage\CustomErrorPage();
         $zeroBlock->setTitle(translate("customErrorMessages." . $message . '.title'));
         $zeroBlock->setDescription(translate("customErrorMessages." . $message . '.description'));
 

@@ -1,18 +1,18 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components;
+namespace ModulesGarden\GGSModule\Core\Components;
 
-use ModulesGarden\ggsmodule\Components\Form\AbstractForm;
-use ModulesGarden\ggsmodule\Core\Components\Actions\FormSubmit;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalClose;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalFormSubmit;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalLoad;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalOpen;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Redirect;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Reload;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ReloadById;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ReloadParent;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Components\Form\AbstractForm;
+use ModulesGarden\GGSModule\Core\Components\Actions\FormSubmit;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalClose;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalFormSubmit;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalLoad;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalOpen;
+use ModulesGarden\GGSModule\Core\Components\Actions\Redirect;
+use ModulesGarden\GGSModule\Core\Components\Actions\Reload;
+use ModulesGarden\GGSModule\Core\Components\Actions\ReloadById;
+use ModulesGarden\GGSModule\Core\Components\Actions\ReloadParent;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
 
 /**
  * @todo to na razie jest tylko wersja robocza, przerobić później na pod obiekty (factory)

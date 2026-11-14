@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Http;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\Instances\Http;
 
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\HttpController;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\ClientAreaInterface;
-use ModulesGarden\ggsmodule\Core\Http\JsonResponse;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Params;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\UI\View;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\HttpController;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\ClientAreaInterface;
+use ModulesGarden\GGSModule\Core\Http\JsonResponse;
+use ModulesGarden\GGSModule\Core\Support\Facades\Params;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\UI\View;
 
 //@todo refactor
 class ErrorPage extends HttpController implements AdminAreaInterface, ClientAreaInterface
@@ -28,7 +28,7 @@ class ErrorPage extends HttpController implements AdminAreaInterface, ClientArea
         }
         else
         {
-            $error = new \ModulesGarden\ggsmodule\Components\BlockError\BlockError();
+            $error = new \ModulesGarden\GGSModule\Components\BlockError\BlockError();
             $error->setException(Params::get('exception'));
 
             $view = new View();

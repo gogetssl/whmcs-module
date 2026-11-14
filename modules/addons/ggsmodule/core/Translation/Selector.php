@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Translation;
+namespace ModulesGarden\GGSModule\Core\Translation;
 
-use ModulesGarden\ggsmodule\Core\Support\Facades\Session;
-use ModulesGarden\ggsmodule\Core\WHMCS\Config\Config;
+use ModulesGarden\GGSModule\Core\Support\Facades\Session;
+use ModulesGarden\GGSModule\Core\WHMCS\Config\Config;
 
 class Selector
 {

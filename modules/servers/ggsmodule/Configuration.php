@@ -1,18 +1,18 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule;
+namespace ModulesGarden\Servers\GGSModule;
 
-use ModulesGarden\Servers\ggsmodule\core\process\AbstractConfiguration;
+use ModulesGarden\Servers\GGSModule\core\process\AbstractConfiguration;
 
 class Configuration extends AbstractConfiguration
 {
     public $debug = false;
-    public $systemName = 'ggsmodule';
+    public $systemName = 'GGSModule';
     public $name = 'GoGetSSL Module';
     public $description = '';
     public $clientareaName = 'GoGetSSL Module';
     public $encryptHash = 'uUc1Y8cWxDOGaby11lBwelqzo6PGMTA0dbHaKQ109olufoJgIFBOgmReKCZbpCYpASnrtfjmCIUyplaBJaUh40auDALprOHtj1g92ZRBS6S94IbZWaeZRYkG1f81h6qLMYEOr016RurCnmodFCWdMkTqrlVBvH249gzXPduKQVXpN9hooComaRPY5jZD6s8GdfR5E_BNP3v8Ui8RrdqMPST_8quMW48LhHY88xCvSWwDNjkC2tCAaK67Id2NjzIdoNTHUMISRg81nHX8ZGcbP74mxixo_ASd8YoWnDCAs8yiT4t0PwKRO_y3C1kDo69Nxz1YYt4tY1VzOD_DFBulAA5NCJLfogroo';
-    public $version = '1.3.0';
+    public $version = '1.4.0';
     public $author = 'ModulesGarden';
 
     /** Tables are named by the edition - see App\Libs\Edition::table() */
@@ -21,10 +21,10 @@ class Configuration extends AbstractConfiguration
 
     function __construct()
     {
-        // GoGetSSL Module / TheSSLStore Plugin - see modules/addons/ggsmodule/app/Config/edition.php
-        if(class_exists('\ModulesGarden\ggsmodule\App\Libs\Edition', false))
+        // GoGetSSL Module / TheSSLStore Plugin - see modules/addons/GGSModule/app/Config/edition.php
+        if(class_exists('\ModulesGarden\GGSModule\App\Libs\Edition', false))
         {
-            $this->name           = \ModulesGarden\ggsmodule\App\Libs\Edition::name();
+            $this->name           = \ModulesGarden\GGSModule\App\Libs\Edition::name();
             $this->clientareaName = $this->name;
         }
     }

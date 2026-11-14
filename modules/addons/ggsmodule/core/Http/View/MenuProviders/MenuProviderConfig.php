@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Http\View\MenuProviders;
+namespace ModulesGarden\GGSModule\Core\Http\View\MenuProviders;
 
-use ModulesGarden\ggsmodule\Core\FileReader\Reader;
-use ModulesGarden\ggsmodule\Core\Helper;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\FileReader\Reader;
+use ModulesGarden\GGSModule\Core\Helper;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 class MenuProviderConfig implements MenuProviderInterface
 {

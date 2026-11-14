@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Modal;
+namespace ModulesGarden\GGSModule\Components\Modal;
 
-use ModulesGarden\ggsmodule\Components\Button\ButtonCancel;
-use ModulesGarden\ggsmodule\Components\Button\ButtonSuccess;
-use ModulesGarden\ggsmodule\Core\Components\Action;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalClose;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalFormSubmit;
+use ModulesGarden\GGSModule\Components\Button\ButtonCancel;
+use ModulesGarden\GGSModule\Components\Button\ButtonSuccess;
+use ModulesGarden\GGSModule\Core\Components\Action;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalClose;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalFormSubmit;
 
 class ModalEdit extends ModalBase
 {

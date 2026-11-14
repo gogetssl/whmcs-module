@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypes;
+namespace ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypes;
 
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypeWithModel;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\ServiceAddon;
-use ModulesGarden\ggsmodule\Core\WHMCS\URL;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypeWithModel;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\ServiceAddon;
+use ModulesGarden\GGSModule\Core\WHMCS\URL;
 
 class Addon extends ItemTypeWithModel
 {

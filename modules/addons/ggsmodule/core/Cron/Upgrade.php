@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Cron;
+namespace ModulesGarden\GGSModule\Core\Cron;
 
-use ModulesGarden\ggsmodule\Core\CommandLine\AbstractCommand;
-use ModulesGarden\ggsmodule\Core\Configuration\Addon\Update\PatchManager;
-use ModulesGarden\ggsmodule\Core\Module\Addon;
+use ModulesGarden\GGSModule\Core\CommandLine\AbstractCommand;
+use ModulesGarden\GGSModule\Core\Configuration\Addon\Update\PatchManager;
+use ModulesGarden\GGSModule\Core\Module\Addon;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;

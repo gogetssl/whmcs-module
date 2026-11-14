@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Actions;
+namespace ModulesGarden\GGSModule\App\UI\Actions;
 
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
-use ModulesGarden\ggsmodule\Components\Row\Row;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Components\Row\Row;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
 
-class ConfigOptions extends \ModulesGarden\ggsmodule\Packages\Product\UI\Forms\ProductConfiguration
+class ConfigOptions extends \ModulesGarden\GGSModule\Packages\Product\UI\Forms\ProductConfiguration
 {
     public function loadHtml(): void
     {

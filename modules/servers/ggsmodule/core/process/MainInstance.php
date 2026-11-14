@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\core\process;
+namespace ModulesGarden\Servers\GGSModule\core\process;
 
 class MainInstance {
     static private $_instanceName;

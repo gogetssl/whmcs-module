@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\AdaptiveTwoColumnsContainer;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\AdaptiveTwoColumnsContainer;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\LabelsBadgesButtons\Labels;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\CronTasks\CronTasks;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Overview\Overview;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Tabs\TabsWidget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\LabelsBadgesButtons\Labels;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\CronTasks\CronTasks;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Overview\Overview;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Tabs\TabsWidget;
 
-class Container extends \ModulesGarden\ggsmodule\Components\AdaptiveTwoColumnsContainer\AdaptiveTwoColumnsContainer implements AdminAreaInterface
+class Container extends \ModulesGarden\GGSModule\Components\AdaptiveTwoColumnsContainer\AdaptiveTwoColumnsContainer implements AdminAreaInterface
 {
     public function loadHtml(): void
     {

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Traits;
+namespace ModulesGarden\GGSModule\Core\Traits;
 
-use ModulesGarden\ggsmodule\Core\HandlerError\ErrorCodes\ErrorCodes;
-use ModulesGarden\ggsmodule\Core\HandlerError\ErrorCodes\ErrorCodesLib;
+use ModulesGarden\GGSModule\Core\HandlerError\ErrorCodes\ErrorCodes;
+use ModulesGarden\GGSModule\Core\HandlerError\ErrorCodes\ErrorCodesLib;
 
 /**
  * @deprecated
@@ -41,7 +41,7 @@ trait ErrorCodesLibrary
 
         if ($this->errorCodesAppHandler === null)
         {
-            $this->errorCodesAppHandler = new \ModulesGarden\ggsmodule\App\Helpers\ErrorCodesLib();
+            $this->errorCodesAppHandler = new \ModulesGarden\GGSModule\App\Helpers\ErrorCodesLib();
         }
     }
 }

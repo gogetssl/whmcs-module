@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models;
 
 /**
  * Description of Addon
@@ -22,11 +22,11 @@ class Addon extends \WHMCS\Product\Addon
 {
     public function customFields()
     {
-        return $this->hasMany('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\CustomField', "relid")->where("type", "=", "addon")->orderBy("sortorder");
+        return $this->hasMany('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\CustomField', "relid")->where("type", "=", "addon")->orderBy("sortorder");
     }
 
     public function serviceAddons()
     {
-        return $this->hasMany('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\ServiceAddon', "addonid");
+        return $this->hasMany('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\ServiceAddon', "addonid");
     }
 }

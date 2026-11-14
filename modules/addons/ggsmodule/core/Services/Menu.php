@@ -1,7 +1,7 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Services;
+namespace ModulesGarden\GGSModule\Core\Services;
 
-class Menu extends \ModulesGarden\ggsmodule\Core\UI\Menu\Menu
+class Menu extends \ModulesGarden\GGSModule\Core\UI\Menu\Menu
 {
 }

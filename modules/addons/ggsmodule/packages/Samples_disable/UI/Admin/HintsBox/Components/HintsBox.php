@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\HintsBox\Components;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\HintsBox\Components;
 
-use ModulesGarden\ggsmodule\Components\Hint\Hint;
-use ModulesGarden\ggsmodule\Components\Hint\HintDanger;
-use ModulesGarden\ggsmodule\Components\Hint\HintDefault;
-use ModulesGarden\ggsmodule\Components\Hint\HintInfo;
-use ModulesGarden\ggsmodule\Components\Hint\HintSuccess;
-use ModulesGarden\ggsmodule\Components\Hint\HintWarning;
-use ModulesGarden\ggsmodule\Components\HintsBox\HintsBox as HintsBosComponent;
+use ModulesGarden\GGSModule\Components\Hint\Hint;
+use ModulesGarden\GGSModule\Components\Hint\HintDanger;
+use ModulesGarden\GGSModule\Components\Hint\HintDefault;
+use ModulesGarden\GGSModule\Components\Hint\HintInfo;
+use ModulesGarden\GGSModule\Components\Hint\HintSuccess;
+use ModulesGarden\GGSModule\Components\Hint\HintWarning;
+use ModulesGarden\GGSModule\Components\HintsBox\HintsBox as HintsBosComponent;
 
 class HintsBox extends HintsBosComponent
 {

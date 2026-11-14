@@ -1,7 +1,7 @@
 <?php
 
-use ModulesGarden\ggsmodule\App\Models\RemoteProduct;
-use ModulesGarden\ggsmodule\Core\Hook\HookIntegrator;
+use ModulesGarden\GGSModule\App\Models\RemoteProduct;
+use ModulesGarden\GGSModule\Core\Hook\HookIntegrator;
 
 
 $hookManager->register(

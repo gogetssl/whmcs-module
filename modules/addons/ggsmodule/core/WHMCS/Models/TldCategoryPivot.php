@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models;
 
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 
@@ -50,11 +50,11 @@ class TldCategoryPivot extends EloquentModel
 
     public function category()
     {
-        return $this->hasOne('ModulesGarden\ggsmodule\Core\WHMCS\Models\TldCategory', 'tld_id');
+        return $this->hasOne('ModulesGarden\GGSModule\Core\WHMCS\Models\TldCategory', 'tld_id');
     }
 
     public function tld()
     {
-        return $this->hasOne('ModulesGarden\ggsmodule\Core\WHMCS\Models\Tld', 'tld_id');
+        return $this->hasOne('ModulesGarden\GGSModule\Core\WHMCS\Models\Tld', 'tld_id');
     }
 }

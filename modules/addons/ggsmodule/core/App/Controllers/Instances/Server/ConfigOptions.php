@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Server;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\Instances\Server;
 
-use ModulesGarden\ggsmodule\Components\Alert\AlertDanger;
-use ModulesGarden\ggsmodule\Components\BlockError\BlockError;
-use ModulesGarden\ggsmodule\Components\PreBlock\PreBlock;
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\AddonController;
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Http\ConfigOptionsIntegration;
-use ModulesGarden\ggsmodule\Core\Events\Events\ConfigOptionsLoaded;
-use ModulesGarden\ggsmodule\Core\Helper\BuildUrl;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\UI\ViewConfigOptions;
-use function ModulesGarden\ggsmodule\Core\fire;
+use ModulesGarden\GGSModule\Components\Alert\AlertDanger;
+use ModulesGarden\GGSModule\Components\BlockError\BlockError;
+use ModulesGarden\GGSModule\Components\PreBlock\PreBlock;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\AddonController;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\Http\ConfigOptionsIntegration;
+use ModulesGarden\GGSModule\Core\Events\Events\ConfigOptionsLoaded;
+use ModulesGarden\GGSModule\Core\Helper\BuildUrl;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\UI\ViewConfigOptions;
+use function ModulesGarden\GGSModule\Core\fire;
 
 abstract class ConfigOptions extends AddonController
 {
@@ -21,7 +21,7 @@ abstract class ConfigOptions extends AddonController
         {
             fire(ConfigOptionsLoaded::class);
 
-            if (!\ModulesGarden\ggsmodule\Core\Support\Facades\Request::get('loadProductConfiguration', false))
+            if (!\ModulesGarden\GGSModule\Core\Support\Facades\Request::get('loadProductConfiguration', false))
             {
                 return [
                     'loading' => [
@@ -51,7 +51,7 @@ abstract class ConfigOptions extends AddonController
      */
     private function getJsCode()
     {
-        $dataQuery   = http_build_query(\ModulesGarden\ggsmodule\Core\Support\Facades\Request::getFacadeRoot()->request->all());
+        $dataQuery   = http_build_query(\ModulesGarden\GGSModule\Core\Support\Facades\Request::getFacadeRoot()->request->all());
         $serverGroup = (int)Request::get('servergroup', 0);
         $fullUrl     = BuildUrl::fullUrl();
 

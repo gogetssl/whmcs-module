@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Support\Facades;
+namespace ModulesGarden\GGSModule\Core\Support\Facades;
 
 
 /**
@@ -10,6 +10,6 @@ class Validator extends AbstractFacade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \ModulesGarden\ggsmodule\Core\Services\Validator::class;
+        return \ModulesGarden\GGSModule\Core\Services\Validator::class;
     }
 }

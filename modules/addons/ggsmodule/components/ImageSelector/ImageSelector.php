@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ImageSelector;
+namespace ModulesGarden\GGSModule\Components\ImageSelector;
 
-use ModulesGarden\ggsmodule\Core\Components\FormFields\FormField;
+use ModulesGarden\GGSModule\Core\Components\FormFields\FormField;
 
 class ImageSelector extends FormField
 {

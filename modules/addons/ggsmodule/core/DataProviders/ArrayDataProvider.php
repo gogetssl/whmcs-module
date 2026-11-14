@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\DataProviders;
+namespace ModulesGarden\GGSModule\Core\DataProviders;
 
 use Illuminate\Support\Collection;
-use ModulesGarden\ggsmodule\Core\Contracts\DataSetInterface;
+use ModulesGarden\GGSModule\Core\Contracts\DataSetInterface;
 
 class ArrayDataProvider extends AbstractRecordsListDataProvider //implements QueryProviderInterface
 {
@@ -22,7 +22,7 @@ class ArrayDataProvider extends AbstractRecordsListDataProvider //implements Que
         return $this;
     }
 
-    public function getData()/*: \ModulesGarden\ggsmodule\Core\Contracts\DataSetInterface*/
+    public function getData()/*: \ModulesGarden\GGSModule\Core\Contracts\DataSetInterface*/
     {
         $this->avalibleCols = [];
 

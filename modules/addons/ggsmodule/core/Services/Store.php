@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Services;
+namespace ModulesGarden\GGSModule\Core\Services;
 
-class Store extends \ModulesGarden\ggsmodule\Core\UI\Store\Store
+class Store extends \ModulesGarden\GGSModule\Core\UI\Store\Store
 {
 
 }

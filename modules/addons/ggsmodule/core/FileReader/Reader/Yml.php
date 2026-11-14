@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\FileReader\Reader;
+namespace ModulesGarden\GGSModule\Core\FileReader\Reader;
 
-use ModulesGarden\ggsmodule\Core\ServiceLocator;
+use ModulesGarden\GGSModule\Core\ServiceLocator;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
 

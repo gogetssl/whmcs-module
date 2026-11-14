@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Cron;
+namespace ModulesGarden\GGSModule\App\Cron;
 
-use ModulesGarden\ggsmodule\App\Libs\AutoInstallHelpers;
-use ModulesGarden\ggsmodule\App\Models\CronCheck;
-use ModulesGarden\ggsmodule\Core\CommandLine\AbstractCommand;
+use ModulesGarden\GGSModule\App\Libs\AutoInstallHelpers;
+use ModulesGarden\GGSModule\App\Models\CronCheck;
+use ModulesGarden\GGSModule\Core\CommandLine\AbstractCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
@@ -12,7 +12,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 /**
  * SSL AutoInstall (cPanel) queue: validation file upload, DNS -> email switch, installation and automatic reissue.
  * Recommended: every 5 minutes
- *   php -q {WHMCS}/modules/addons/ggsmodule/cron/cron.php SSLAutoInstall
+ *   php -q {WHMCS}/modules/addons/GGSModule/cron/cron.php SSLAutoInstall
  * The queue is also processed by SSLCertificatesProcessing, so it keeps working without this cron line.
  */
 class SSLAutoInstall extends AbstractCommand

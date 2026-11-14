@@ -1,21 +1,21 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Settings\Index;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Widgets\ApiSettingsWidget;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Widgets\AutomatedSettingsWidget;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Widgets\CronSettingsWidget;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Widgets\FinanceSettingsWidget;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Widgets\GeneralSettingsWidget;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Widgets\LogsSettingsWidget;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Widgets\Sidebar;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Widgets\SslSettingsWidget;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Grid\Grid;
-use ModulesGarden\ggsmodule\Components\Tab\Tab;
-use ModulesGarden\ggsmodule\Components\TabsWidget\TabsWidget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Widgets\ApiSettingsWidget;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Widgets\AutomatedSettingsWidget;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Widgets\CronSettingsWidget;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Widgets\FinanceSettingsWidget;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Widgets\GeneralSettingsWidget;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Widgets\LogsSettingsWidget;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Widgets\Sidebar;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Widgets\SslSettingsWidget;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Grid\Grid;
+use ModulesGarden\GGSModule\Components\Tab\Tab;
+use ModulesGarden\GGSModule\Components\TabsWidget\TabsWidget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
 class SettingsContainer extends Container implements AdminAreaInterface
 {

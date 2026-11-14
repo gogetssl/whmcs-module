@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\View;
+namespace ModulesGarden\GGSModule\Core\UI\View;
 
-use ModulesGarden\ggsmodule\Components\AppFooter\AppFooter;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Components\AppFooter\AppFooter;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
 
 class FooterBuilder
 {

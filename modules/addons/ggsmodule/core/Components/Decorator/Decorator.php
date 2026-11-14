@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Decorator;
+namespace ModulesGarden\GGSModule\Core\Components\Decorator;
 
 class Decorator extends AbstractDecorator
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components;
+namespace ModulesGarden\GGSModule\Core\Components;
 
-use ModulesGarden\ggsmodule\Core\Components\Builder\FileFinder;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Components\Builder\FileFinder;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 class AssetsBuilder
 {
@@ -25,7 +25,7 @@ class AssetsBuilder
                 continue;
             }
 
-            $this->components[] = '\ModulesGarden\ggsmodule\Components\\' . $file . '\\' . $file;
+            $this->components[] = '\ModulesGarden\GGSModule\Components\\' . $file . '\\' . $file;
         }
     }
 

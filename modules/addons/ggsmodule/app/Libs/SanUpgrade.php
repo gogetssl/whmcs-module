@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Models\Request;
+use ModulesGarden\GGSModule\App\Models\Request;
 use WHMCS\Database\Capsule;
 
 /**
@@ -319,7 +319,7 @@ class SanUpgrade
             ->value('tblproducts.servertype');
         $ssl = CertificateService::sslOrder($serviceId);
 
-        return $product === 'ggsmodule' && $ssl && !empty($ssl->remoteid)
+        return $product === 'GGSModule' && $ssl && !empty($ssl->remoteid)
             && CertificateService::category($serviceId) === CertificateService::CATEGORY_TLS;
     }
 }

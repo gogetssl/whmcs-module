@@ -1,21 +1,21 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Widgets;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Widgets;
 
-use ModulesGarden\ggsmodule\Components\Button\ButtonBasic;
-use ModulesGarden\ggsmodule\Components\Card\CardButton;
-use ModulesGarden\ggsmodule\App\Libs\GeneralSettings;
-use ModulesGarden\ggsmodule\App\Libs\Icons;
-use ModulesGarden\ggsmodule\App\Libs\LogPolicy;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Components\Grid\Grid;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ReloadById;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Packages\Logs\Enums\Status;
-use ModulesGarden\ggsmodule\Packages\Logs\Models\Job;
-use ModulesGarden\ggsmodule\Packages\Logs\Models\Logs;
+use ModulesGarden\GGSModule\Components\Button\ButtonBasic;
+use ModulesGarden\GGSModule\Components\Card\CardButton;
+use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
+use ModulesGarden\GGSModule\App\Libs\Icons;
+use ModulesGarden\GGSModule\App\Libs\LogPolicy;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Components\Grid\Grid;
+use ModulesGarden\GGSModule\Core\Components\Actions\ReloadById;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Packages\Logs\Enums\Status;
+use ModulesGarden\GGSModule\Packages\Logs\Models\Job;
+use ModulesGarden\GGSModule\Packages\Logs\Models\Logs;
 use WHMCS\Database\Capsule as DB;
 
 class Summary extends Container implements AdminAreaInterface
@@ -69,7 +69,7 @@ class Summary extends Container implements AdminAreaInterface
 
         $until = LogPolicy::debugUntil();
         $token = function_exists('generate_token') ? \generate_token('plain') : '';
-        $stop  = 'addonmodules.php?module=ggsmodule&mg-page=logs&mg-action=stopDebug&token=' . urlencode($token);
+        $stop  = 'addonmodules.php?module=GGSModule&mg-page=logs&mg-action=stopDebug&token=' . urlencode($token);
 
         return '<div class="ggs-note is-bad"><b>' . htmlspecialchars((string)$this->translate('debugTitle')) . '</b> '
             . htmlspecialchars((string)$this->translate('debugText', [

@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Forms\Pages;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Forms\Pages;
 
-use ModulesGarden\ggsmodule\Components\Form\AbstractFormConfigOptions;
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Forms\Forms\FormWithTabsElements;
+use ModulesGarden\GGSModule\Components\Form\AbstractFormConfigOptions;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Forms\Forms\FormWithTabsElements;
 
 class ConfigOptions extends AbstractFormConfigOptions implements AdminAreaInterface
 {

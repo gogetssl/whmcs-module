@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Providers;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Providers;
 
 use Exception;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\WHMCS\API\API;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\WHMCS\API\API;
 use WHMCS\User\Client;
 
 class UserProvider extends CrudProvider

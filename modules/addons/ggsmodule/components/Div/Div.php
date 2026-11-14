@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Div;
+namespace ModulesGarden\GGSModule\Components\Div;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Container\Container;
 
 class Div extends Container
 {

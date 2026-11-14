@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Http;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\Instances\Http;
 
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\HttpController;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Http\Response;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\HttpController;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Http\Response;
 
 class AdminServicesTabFieldsIntegration extends HttpController implements AdminAreaInterface
 {

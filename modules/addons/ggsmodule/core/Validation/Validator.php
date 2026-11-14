@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Validation;
+namespace ModulesGarden\GGSModule\Core\Validation;
 
-use ModulesGarden\ggsmodule\Core\Helper\Converter\ArrayFormat;
+use ModulesGarden\GGSModule\Core\Helper\Converter\ArrayFormat;
 
 class Validator extends \Illuminate\Validation\Validator
 {

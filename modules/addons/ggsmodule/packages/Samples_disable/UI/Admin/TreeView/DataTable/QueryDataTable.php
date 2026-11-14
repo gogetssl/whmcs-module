@@ -1,18 +1,18 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\DataTable;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\DataTable;
 
-use ModulesGarden\ggsmodule\Components\DataTable\Column;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButtonEdit;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalLoad;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxOnLoadInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\QueryDataProvider;
-use ModulesGarden\ggsmodule\Core\Http\Request;
+use ModulesGarden\GGSModule\Components\DataTable\Column;
+use ModulesGarden\GGSModule\Components\IconButton\IconButtonEdit;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalLoad;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxOnLoadInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\QueryDataProvider;
+use ModulesGarden\GGSModule\Core\Http\Request;
 use WHMCS\User\Client;
 
-class QueryDataTable extends \ModulesGarden\ggsmodule\Components\DataTable\DataTable implements AdminAreaInterface, AjaxComponentInterface, AjaxOnLoadInterface
+class QueryDataTable extends \ModulesGarden\GGSModule\Components\DataTable\DataTable implements AdminAreaInterface, AjaxComponentInterface, AjaxOnLoadInterface
 {
     public function __construct()
     {
@@ -39,8 +39,8 @@ class QueryDataTable extends \ModulesGarden\ggsmodule\Components\DataTable\DataT
 
         $this->setAjaxData([]);
         $button = new IconButtonEdit();
-        $button->onClick((new ModalLoad(new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Modals\UserEdit()))->withParams([
-            'xxx' => \ModulesGarden\ggsmodule\Core\Support\Facades\Request::get('ajaxData')['dupa'] ?? null
+        $button->onClick((new ModalLoad(new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Modals\UserEdit()))->withParams([
+            'xxx' => \ModulesGarden\GGSModule\Core\Support\Facades\Request::get('ajaxData')['dupa'] ?? null
         ]));
         $this->addActionButton($button);
 
@@ -53,8 +53,8 @@ class QueryDataTable extends \ModulesGarden\ggsmodule\Components\DataTable\DataT
 //
 //        $this->addActionButton($redirect);
 //$this->addActionButton(new UserEdit());
-//        $this->addActionButton(new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Buttons\UserDelete());
-//        $this->addMassActionButton((new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Buttons\UserDelete())->displayWithTitle("Delete"));
+//        $this->addActionButton(new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Buttons\UserDelete());
+//        $this->addMassActionButton((new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Buttons\UserDelete())->displayWithTitle("Delete"));
 //
 //
 //        $this->addActionButton(new  UserEdit());
@@ -77,8 +77,8 @@ class QueryDataTable extends \ModulesGarden\ggsmodule\Components\DataTable\DataT
 
         $dataProv = new QueryDataProvider($clients);
         $dataProv->setColumns([
-            new \ModulesGarden\ggsmodule\Core\DataProviders\Column('tblclients.id'),
-            new \ModulesGarden\ggsmodule\Core\DataProviders\Column('tblclients.firstname'),
+            new \ModulesGarden\GGSModule\Core\DataProviders\Column('tblclients.id'),
+            new \ModulesGarden\GGSModule\Core\DataProviders\Column('tblclients.firstname'),
         ]);
         $dataProv->setDefaultSorting('tblclients.id', 'DESC');
         $this->setDataProvider($dataProv);

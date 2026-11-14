@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\FormWizardStep;
+namespace ModulesGarden\GGSModule\Components\FormWizardStep;
 
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentContainerInterface;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentContainerInterface;
 
 class FormWizardStep extends Form implements ComponentContainerInterface
 {

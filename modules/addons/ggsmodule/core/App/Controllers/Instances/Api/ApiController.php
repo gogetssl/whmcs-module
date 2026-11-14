@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Api;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\Instances\Api;
 
 class ApiController implements DefaultController
 {

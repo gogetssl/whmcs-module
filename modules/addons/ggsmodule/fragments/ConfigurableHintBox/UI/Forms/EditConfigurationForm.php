@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Fragments\ConfigurableHintBox\UI\Forms;
+namespace ModulesGarden\GGSModule\Fragments\ConfigurableHintBox\UI\Forms;
 
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Components\HiddenField\HiddenField;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Fragments\ConfigurableHintBox\UI\Providers\ConfigurationProvider;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\HiddenField\HiddenField;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Fragments\ConfigurableHintBox\UI\Providers\ConfigurationProvider;
 
 class EditConfigurationForm extends Form implements AdminAreaInterface, AjaxComponentInterface
 {

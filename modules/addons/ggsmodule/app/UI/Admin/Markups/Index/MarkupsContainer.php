@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Markups\Index;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Markups\Index;
 
-use ModulesGarden\ggsmodule\App\Http\Admin\Markups as MarkupsController;
-use ModulesGarden\ggsmodule\App\Libs\Markups;
-use ModulesGarden\ggsmodule\Components\Alert\AlertInfo;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\App\Http\Admin\Markups as MarkupsController;
+use ModulesGarden\GGSModule\App\Libs\Markups;
+use ModulesGarden\GGSModule\Components\Alert\AlertInfo;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
 use WHMCS\Database\Capsule;
 
 /**
@@ -18,7 +18,7 @@ class MarkupsContainer extends Container implements AdminAreaInterface
 {
     use TranslatorTrait;
 
-    const BASE = 'addonmodules.php?module=ggsmodule&mg-page=markups';
+    const BASE = 'addonmodules.php?module=GGSModule&mg-page=markups';
 
     public function loadHtml(): void
     {
@@ -39,7 +39,7 @@ class MarkupsContainer extends Container implements AdminAreaInterface
 
         $html .= $this->form($token) . $this->table($token);
 
-        if(!\ModulesGarden\ggsmodule\App\Libs\GeneralSettings::enabled('hideInfoMessages'))
+        if(!\ModulesGarden\GGSModule\App\Libs\GeneralSettings::enabled('hideInfoMessages'))
         {
             $alert = new AlertInfo();
             $alert->setText($this->t('intro'));
@@ -63,7 +63,7 @@ class MarkupsContainer extends Container implements AdminAreaInterface
             $html .= '<option value="' . (int)$client->id . '">#' . (int)$client->id . ' ' . $this->e(trim($client->firstname . ' ' . $client->lastname) . ($client->companyname ? ' (' . $client->companyname . ')' : '')) . '</option>';
         }
         $html .= '</select></div><div><label style="display:block;font-weight:600">' . $this->e($this->t('product')) . '</label><select name="product_id" class="form-control" style="width:300px"><option value="0">' . $this->e($this->t('all_products')) . '</option>';
-        foreach(Capsule::table('tblproducts')->where('servertype', 'ggsmodule')->orderBy('name')->get(['id', 'name']) as $product)
+        foreach(Capsule::table('tblproducts')->where('servertype', 'GGSModule')->orderBy('name')->get(['id', 'name']) as $product)
         {
             $html .= '<option value="' . (int)$product->id . '">' . $this->e($product->name) . '</option>';
         }

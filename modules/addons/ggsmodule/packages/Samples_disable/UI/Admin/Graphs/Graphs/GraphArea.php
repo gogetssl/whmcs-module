@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs;
 
-use ModulesGarden\ggsmodule\Components\Graph\Models\DataSet;
-use ModulesGarden\ggsmodule\Components\Graph\Series\ExtendedSeries;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Components\Graph\Models\DataSet;
+use ModulesGarden\GGSModule\Components\Graph\Series\ExtendedSeries;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
-class GraphArea extends \ModulesGarden\ggsmodule\Components\Graph\GraphArea implements AdminAreaInterface
+class GraphArea extends \ModulesGarden\GGSModule\Components\Graph\GraphArea implements AdminAreaInterface
 {
     public function loadHtml(): void
     {

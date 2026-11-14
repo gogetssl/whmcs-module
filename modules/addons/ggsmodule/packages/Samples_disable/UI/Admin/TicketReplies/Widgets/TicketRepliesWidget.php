@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TicketReplies\Widgets;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TicketReplies\Widgets;
 
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Reload;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Ticket;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Buttons\UserDelete;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Buttons\UserEdit;
-use ModulesGarden\ggsmodule\Components\TicketReplyPreview\TicketReplyPreview;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Actions\Reload;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Ticket;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Buttons\UserDelete;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Buttons\UserEdit;
+use ModulesGarden\GGSModule\Components\TicketReplyPreview\TicketReplyPreview;
 
 class TicketRepliesWidget extends Widget implements AdminAreaInterface, AjaxComponentInterface
 {

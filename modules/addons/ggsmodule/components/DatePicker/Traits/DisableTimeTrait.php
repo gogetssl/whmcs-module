@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\DatePicker\Traits;
+namespace ModulesGarden\GGSModule\Components\DatePicker\Traits;
 
 trait DisableTimeTrait
 {

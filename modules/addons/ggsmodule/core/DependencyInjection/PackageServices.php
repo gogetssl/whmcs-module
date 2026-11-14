@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\DependencyInjection;
+namespace ModulesGarden\GGSModule\Core\DependencyInjection;
 
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Packages\Config;
-use ModulesGarden\ggsmodule\Core\Packages\Packages;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Packages\Config;
+use ModulesGarden\GGSModule\Core\Packages\Packages;
 
 class PackageServices
 {
@@ -62,7 +62,7 @@ class PackageServices
         $packages = [];
         foreach ($this->getFilesList() as $package => $file)
         {
-            if (\ModulesGarden\ggsmodule\Core\Support\Facades\Config::get('packages.' . $package, false))
+            if (\ModulesGarden\GGSModule\Core\Support\Facades\Config::get('packages.' . $package, false))
             {
                 $packages[$package] = new Config($file);
             }
@@ -128,7 +128,7 @@ class PackageServices
     {
         if ($config->get('config'))
         {
-            \ModulesGarden\ggsmodule\Core\Support\Facades\Config::push('install.' . lcfirst($package), $config->get('config'));
+            \ModulesGarden\GGSModule\Core\Support\Facades\Config::push('install.' . lcfirst($package), $config->get('config'));
         }
     }
 

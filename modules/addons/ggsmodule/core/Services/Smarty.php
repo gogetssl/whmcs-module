@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Services;
+namespace ModulesGarden\GGSModule\Core\Services;
 
-class Smarty extends \ModulesGarden\ggsmodule\Core\UI\Smarty
+class Smarty extends \ModulesGarden\GGSModule\Core\UI\Smarty
 {
 
 }

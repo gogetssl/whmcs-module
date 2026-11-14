@@ -1,21 +1,21 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Form;
+namespace ModulesGarden\GGSModule\Components\Form;
 
 use Exception;
-use ModulesGarden\ggsmodule\Components\HiddenField\HiddenField;
-use ModulesGarden\ggsmodule\Components\Form\Builder\Builder;
-use ModulesGarden\ggsmodule\Components\Form\Data\Propagator;
-use ModulesGarden\ggsmodule\Components\Form\Data\Validate;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ActionsTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxDataProviderTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ComponentsContainerTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\CssContainerTrait;
-use ModulesGarden\ggsmodule\Core\Contracts\ResponseInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Components\HiddenField\HiddenField;
+use ModulesGarden\GGSModule\Components\Form\Builder\Builder;
+use ModulesGarden\GGSModule\Components\Form\Data\Propagator;
+use ModulesGarden\GGSModule\Components\Form\Data\Validate;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\Components\Traits\ActionsTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxDataProviderTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\ComponentsContainerTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\CssContainerTrait;
+use ModulesGarden\GGSModule\Core\Contracts\ResponseInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
 abstract class AbstractForm extends AbstractComponent
 {
@@ -57,7 +57,7 @@ abstract class AbstractForm extends AbstractComponent
         return $this;
     }
 
-    public function onSubmit(\ModulesGarden\ggsmodule\Core\Contracts\Components\ActionInterface $action): self
+    public function onSubmit(\ModulesGarden\GGSModule\Core\Contracts\Components\ActionInterface $action): self
     {
         $this->addAction('onSubmit', $action);
 

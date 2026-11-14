@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Source;
+namespace ModulesGarden\GGSModule\Components\Graph\Source;
 
 abstract class SparklineGraph extends GraphExtendedSeries
 {

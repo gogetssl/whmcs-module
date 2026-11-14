@@ -1,20 +1,20 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\DataTable;
+namespace ModulesGarden\GGSModule\Components\DataTable;
 
 use Exception;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\DataBuilder;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxDataProviderTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ComponentsContainerTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TitleTrait;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\RecordsListProviderInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\ResponseInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\DataSet;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\DataBuilder;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxDataProviderTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\ComponentsContainerTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TitleTrait;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Core\Contracts\RecordsListProviderInterface;
+use ModulesGarden\GGSModule\Core\Contracts\ResponseInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\DataSet;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
 abstract class DataTable extends AbstractComponent
 {

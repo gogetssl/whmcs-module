@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Support\Bridges;
+namespace ModulesGarden\GGSModule\Core\Support\Bridges;
 
-use ModulesGarden\ggsmodule\Core\Translation\Translator;
+use ModulesGarden\GGSModule\Core\Translation\Translator;
 
 class IlluminateTranslator implements \Illuminate\Contracts\Translation\Translator
 {

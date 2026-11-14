@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Tooltip;
+namespace ModulesGarden\GGSModule\Components\Tooltip;
 
-use ModulesGarden\ggsmodule\Components\Icon\Icon;
+use ModulesGarden\GGSModule\Components\Icon\Icon;
 
 /**
  * Class Form

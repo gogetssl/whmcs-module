@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Content;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Configuration\Content;
 
-use ModulesGarden\ggsmodule\App\Migration\Credentials;
-use ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Shared\WizardLayout;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Forms\ApiSettingsForm;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Components\Button\ButtonSuccess;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Components\Action;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\App\Migration\Credentials;
+use ModulesGarden\GGSModule\App\UI\Admin\Configuration\Shared\WizardLayout;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Forms\ApiSettingsForm;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Components\Button\ButtonSuccess;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Components\Action;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
 
 class Step4 extends Widget implements AjaxComponentInterface
 {

@@ -15,11 +15,11 @@
   },
   "autoload": {
     "psr-4": {
-      "ModulesGarden\\ggsmodule\\Core\\": "./core",
-      "ModulesGarden\\ggsmodule\\App\\": "./app",
-      "ModulesGarden\\ggsmodule\\Packages\\": "./packages",
-      "ModulesGarden\\ggsmodule\\Components\\": "./components",
-      "ModulesGarden\\ggsmodule\\Install\\": "./install"
+      "ModulesGarden\\GGSModule\\Core\\": "./core",
+      "ModulesGarden\\GGSModule\\App\\": "./app",
+      "ModulesGarden\\GGSModule\\Packages\\": "./packages",
+      "ModulesGarden\\GGSModule\\Components\\": "./components",
+      "ModulesGarden\\GGSModule\\Install\\": "./install"
     }
   },
   "extra": {

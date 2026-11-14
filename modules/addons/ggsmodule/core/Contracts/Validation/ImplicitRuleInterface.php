@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Contracts\Validation;
+namespace ModulesGarden\GGSModule\Core\Contracts\Validation;
 
 interface ImplicitRuleInterface extends \Illuminate\Contracts\Validation\ImplicitRule
 {

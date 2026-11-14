@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Source;
+namespace ModulesGarden\GGSModule\Components\Graph\Source;
 
-use ModulesGarden\ggsmodule\Components\Form\AbstractForm;
-use ModulesGarden\ggsmodule\Components\Graph\Models\DataSet;
-use ModulesGarden\ggsmodule\Components\Graph\Models\Options;
-use ModulesGarden\ggsmodule\Components\Graph\Series\ExtendedSeries;
-use ModulesGarden\ggsmodule\Components\Graph\Toolbar\Toolbar;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ComponentsContainerTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\TitleTrait;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxOnLoadInterface;
+use ModulesGarden\GGSModule\Components\Form\AbstractForm;
+use ModulesGarden\GGSModule\Components\Graph\Models\DataSet;
+use ModulesGarden\GGSModule\Components\Graph\Models\Options;
+use ModulesGarden\GGSModule\Components\Graph\Series\ExtendedSeries;
+use ModulesGarden\GGSModule\Components\Graph\Toolbar\Toolbar;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\ComponentsContainerTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\TitleTrait;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxOnLoadInterface;
 
 abstract class BaseGraph extends AbstractComponent implements AjaxOnLoadInterface
 {

@@ -1,35 +1,35 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\SimpleForm\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\SimpleForm\Forms;
 
-use ModulesGarden\ggsmodule\Components\Button\ButtonSubmitSuccess;
-use ModulesGarden\ggsmodule\Components\ColorPicker\ColorPicker;
-use ModulesGarden\ggsmodule\Components\CopyToClipboardButton\CopyToClipboardButton;
-use ModulesGarden\ggsmodule\Components\DatePicker\DatePicker;
-use ModulesGarden\ggsmodule\Components\Dropdown\Dropdown;
-use ModulesGarden\ggsmodule\Components\Form\AbstractForm;
-use ModulesGarden\ggsmodule\Components\Form\Builder\BuilderCreator;
-use ModulesGarden\ggsmodule\Components\FormInputFile\FormInputFile;
-use ModulesGarden\ggsmodule\Components\FormInputGroup\FormInputGroup;
-use ModulesGarden\ggsmodule\Components\FormInputGroupLabel\FormInputGroupLabel;
-use ModulesGarden\ggsmodule\Components\FormInputPassword\FormInputPassword;
-use ModulesGarden\ggsmodule\Components\FormInputText;
-use ModulesGarden\ggsmodule\Components\Number\Number;
-use ModulesGarden\ggsmodule\Components\SubmitButton;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
-use ModulesGarden\ggsmodule\Components\Tagger\Tagger;
-use ModulesGarden\ggsmodule\Components\TextArea\TextArea;
-use ModulesGarden\ggsmodule\Core\Components\Actions\FormSubmit;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Validation\ImplicitRule;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\SimpleForm\Dropdowns\Clients;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\SimpleForm\Providers\SimpleFormProvider;
+use ModulesGarden\GGSModule\Components\Button\ButtonSubmitSuccess;
+use ModulesGarden\GGSModule\Components\ColorPicker\ColorPicker;
+use ModulesGarden\GGSModule\Components\CopyToClipboardButton\CopyToClipboardButton;
+use ModulesGarden\GGSModule\Components\DatePicker\DatePicker;
+use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
+use ModulesGarden\GGSModule\Components\Form\AbstractForm;
+use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
+use ModulesGarden\GGSModule\Components\FormInputFile\FormInputFile;
+use ModulesGarden\GGSModule\Components\FormInputGroup\FormInputGroup;
+use ModulesGarden\GGSModule\Components\FormInputGroupLabel\FormInputGroupLabel;
+use ModulesGarden\GGSModule\Components\FormInputPassword\FormInputPassword;
+use ModulesGarden\GGSModule\Components\FormInputText;
+use ModulesGarden\GGSModule\Components\Number\Number;
+use ModulesGarden\GGSModule\Components\SubmitButton;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Components\Tagger\Tagger;
+use ModulesGarden\GGSModule\Components\TextArea\TextArea;
+use ModulesGarden\GGSModule\Core\Components\Actions\FormSubmit;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Validation\ImplicitRule;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\SimpleForm\Dropdowns\Clients;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\SimpleForm\Providers\SimpleFormProvider;
 
 
 class SimpleAbstractForm extends AbstractForm implements AdminAreaInterface, AjaxComponentInterface
 {
-    protected \ModulesGarden\ggsmodule\Components\Form\Builder\Builder $builder;
+    protected \ModulesGarden\GGSModule\Components\Form\Builder\Builder $builder;
     protected string $provider = SimpleFormProvider::class;
 
     public function __construct($id = null)
@@ -104,7 +104,7 @@ class SimpleAbstractForm extends AbstractForm implements AdminAreaInterface, Aja
 //
 //        });
 
-        $this->builder->createField(FormInputText\FormInputText::class, 'configoptions[dupa]', true)->addValidator(new class implements \ModulesGarden\ggsmodule\Core\Contracts\Validation\ImplicitRuleInterface {
+        $this->builder->createField(FormInputText\FormInputText::class, 'configoptions[dupa]', true)->addValidator(new class implements \ModulesGarden\GGSModule\Core\Contracts\Validation\ImplicitRuleInterface {
             protected string $name = 'dupa_valid';
 
             public function passes($attribute, $value)
@@ -222,7 +222,7 @@ class SimpleAbstractForm extends AbstractForm implements AdminAreaInterface, Aja
 
     protected function createPasswordGenerator()
     {
-        $passwordGenetator = new \ModulesGarden\ggsmodule\Components\FormPasswordGenerator\FormPasswordGenerator();
+        $passwordGenetator = new \ModulesGarden\GGSModule\Components\FormPasswordGenerator\FormPasswordGenerator();
         $passwordGenetator->setName('xxxxxPasss');
 
         $copyToClipboard = new CopyToClipboardButton();

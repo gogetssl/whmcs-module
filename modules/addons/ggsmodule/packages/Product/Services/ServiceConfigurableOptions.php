@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Services;
+namespace ModulesGarden\GGSModule\Packages\Product\Services;
 
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\ServiceConfigOption;
-use ModulesGarden\ggsmodule\Packages\Product\Helpers\ConfigurableOptionHelper;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\ServiceConfigOption;
+use ModulesGarden\GGSModule\Packages\Product\Helpers\ConfigurableOptionHelper;
 
 class ServiceConfigurableOptions
 {

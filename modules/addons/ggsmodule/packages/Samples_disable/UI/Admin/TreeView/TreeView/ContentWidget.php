@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\TreeView;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\TreeView;
 
-use ModulesGarden\ggsmodule\Components\Alert\AlertDanger;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\DataTable\QueryDataTable;
+use ModulesGarden\GGSModule\Components\Alert\AlertDanger;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\DataTable\QueryDataTable;
 
 class ContentWidget extends Widget implements AjaxComponentInterface
 {
@@ -17,7 +17,7 @@ class ContentWidget extends Widget implements AjaxComponentInterface
 
     public function loadData(): void
     {
-        $ajaxContent = \ModulesGarden\ggsmodule\Core\Support\Facades\Request::get('ajaxData')['content'];
+        $ajaxContent = \ModulesGarden\GGSModule\Core\Support\Facades\Request::get('ajaxData')['content'];
 
         $this->addElement((new AlertDanger())->setText($ajaxContent.' '.time()));
         $this->addElement((new QueryDataTable())->setAjaxData([

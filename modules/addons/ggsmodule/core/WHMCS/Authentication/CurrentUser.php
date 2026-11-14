@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Authentication;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Authentication;
 
 use \WHMCS\Authentication\CurrentUser as CurrentUserWhmcs;
 

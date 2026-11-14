@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Helpers;
+namespace ModulesGarden\GGSModule\App\Helpers;
 
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\EmailTemplate;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\EmailTemplate;
 use WHMCS\Database\Capsule;
 
 /**

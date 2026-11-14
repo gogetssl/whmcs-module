@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Server;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\Instances\Server;
 
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\AddonController;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\AddonController;
 
 abstract class Action extends AddonController
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Hook;
+namespace ModulesGarden\GGSModule\Core\Hook;
 
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Http\Integration;
-use ModulesGarden\ggsmodule\Core\DependencyInjection;
-use ModulesGarden\ggsmodule\Core\Traits\Lang;
-use ModulesGarden\ggsmodule\Core\UI\View;
-use ModulesGarden\ggsmodule\Core\UI\ViewAjax;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\Http\Integration;
+use ModulesGarden\GGSModule\Core\DependencyInjection;
+use ModulesGarden\GGSModule\Core\Traits\Lang;
+use ModulesGarden\GGSModule\Core\UI\View;
+use ModulesGarden\GGSModule\Core\UI\ViewAjax;
 
 /**
  *  class HookIntegratorView

@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\LabelsBadgesButtons;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\LabelsBadgesButtons;
 
-use ModulesGarden\ggsmodule\Components\Badge\BadgeDanger;
-use ModulesGarden\ggsmodule\Components\Badge\BadgeInfo;
-use ModulesGarden\ggsmodule\Components\Badge\BadgeSuccess;
-use ModulesGarden\ggsmodule\Components\Badge\BadgeWarning;
-use ModulesGarden\ggsmodule\Components\Toolbar\Toolbar;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Components\Badge\BadgeDanger;
+use ModulesGarden\GGSModule\Components\Badge\BadgeInfo;
+use ModulesGarden\GGSModule\Components\Badge\BadgeSuccess;
+use ModulesGarden\GGSModule\Components\Badge\BadgeWarning;
+use ModulesGarden\GGSModule\Components\Toolbar\Toolbar;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
 
 class Badges extends Widget implements AdminAreaInterface

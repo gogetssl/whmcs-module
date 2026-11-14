@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Http;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\Instances\Http;
 
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\HttpController;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Http\Response;
-use ModulesGarden\ggsmodule\Core\UI\ViewConfigOptions;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\HttpController;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Http\Response;
+use ModulesGarden\GGSModule\Core\UI\ViewConfigOptions;
 use function json_encode;
 
 class ConfigOptionsIntegration extends HttpController implements AdminAreaInterface
@@ -30,7 +30,7 @@ class ConfigOptionsIntegration extends HttpController implements AdminAreaInterf
         catch (\Throwable $ex)
         {
             //todo - do that better
-            $error = new \ModulesGarden\ggsmodule\Components\BlockError\BlockError();
+            $error = new \ModulesGarden\GGSModule\Components\BlockError\BlockError();
             $error->setException($ex);
 
             $view = new ViewConfigOptions();

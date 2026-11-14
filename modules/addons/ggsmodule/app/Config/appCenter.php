@@ -11,7 +11,7 @@ return [
     //implements AppInterface
     'Apps'     => [
         //You
-        \ModulesGarden\ggsmodule\Packages\AppCenter\Libs\App\BaseApp::class
+        \ModulesGarden\GGSModule\Packages\AppCenter\Libs\App\BaseApp::class
     ],
     'LoadApps' => function() {
 

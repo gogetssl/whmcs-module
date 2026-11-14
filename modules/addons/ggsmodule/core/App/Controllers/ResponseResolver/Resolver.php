@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\ResponseResolver;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\ResponseResolver;
 
 use Exception;
 

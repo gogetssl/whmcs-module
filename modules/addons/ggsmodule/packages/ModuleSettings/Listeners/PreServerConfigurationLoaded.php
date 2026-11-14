@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\ModuleSettings\Listeners;
+namespace ModulesGarden\GGSModule\Packages\ModuleSettings\Listeners;
 
 class PreServerConfigurationLoaded extends ModuleActivated
 {

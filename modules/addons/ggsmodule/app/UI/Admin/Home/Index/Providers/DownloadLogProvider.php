@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Providers;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Providers;
 
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\LogProvider;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\LogProvider;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
 
 
 class DownloadLogProvider extends CrudProvider

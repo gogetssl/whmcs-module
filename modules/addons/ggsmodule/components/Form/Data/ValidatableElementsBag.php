@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Form\Data;
+namespace ModulesGarden\GGSModule\Components\Form\Data;
 
 class ValidatableElementsBag
 {

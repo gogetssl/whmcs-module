@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Traits;
+namespace ModulesGarden\GGSModule\Core\UI\Traits;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
 
 trait ToolbarElementsContainerTrait
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\PreBlocks;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\PreBlocks;
 
-use ModulesGarden\ggsmodule\Components\PreBLock\PreBlock;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Components\PreBLock\PreBlock;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
 
 class PreBlockStatic extends PreBlock implements AdminAreaInterface

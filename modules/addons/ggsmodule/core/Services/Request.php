@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Services;
+namespace ModulesGarden\GGSModule\Core\Services;
 
 
-class Request extends \ModulesGarden\ggsmodule\Core\Http\Request
+class Request extends \ModulesGarden\GGSModule\Core\Http\Request
 {
     public function getAll()
     {

@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\CommandLine;
+namespace ModulesGarden\GGSModule\Core\CommandLine;
 
 use Exception;
-use ModulesGarden\ggsmodule\Core\CommandLine\Exceptions\CommandMustCalledViaCli;
+use ModulesGarden\GGSModule\Core\CommandLine\Exceptions\CommandMustCalledViaCli;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use function ModulesGarden\ggsmodule\Core\translator;
+use function ModulesGarden\GGSModule\Core\translator;
 
 /**
  * Class Command
@@ -77,7 +77,7 @@ abstract class AbstractCommand extends \Symfony\Component\Console\Command\Comman
             // --force: the schedule check of the job (AddonModuleRepository::checkCron) lets it run
             if($input->getOption('force'))
             {
-                \ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository::$forceRun = true;
+                \ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository::$forceRun = true;
             }
 
             // one run of a job at a time: a run that is still going (or a second cron entry) makes the next one skip

@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Form\Builder;
+namespace ModulesGarden\GGSModule\Components\Form\Builder;
 
-use ModulesGarden\ggsmodule\Components\Container\ContainerColumn;
-use ModulesGarden\ggsmodule\Components\Form\AbstractForm;
-use ModulesGarden\ggsmodule\Components\FormGroup\FormGroup;
-use ModulesGarden\ggsmodule\Components\FormGroup\FormGroupFullWidth;
-use ModulesGarden\ggsmodule\Components\FormGroup\FormGroupHalfWidth;
-use ModulesGarden\ggsmodule\Components\FormGroup\FormGroupQuarterWidth;
-use ModulesGarden\ggsmodule\Components\FormGroup\FormGroupThirdWidth;
-use ModulesGarden\ggsmodule\Components\RowFluid\RowFluid;
-use ModulesGarden\ggsmodule\Core\Components\Decorator\Decorator;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentContainerInterface;
+use ModulesGarden\GGSModule\Components\Container\ContainerColumn;
+use ModulesGarden\GGSModule\Components\Form\AbstractForm;
+use ModulesGarden\GGSModule\Components\FormGroup\FormGroup;
+use ModulesGarden\GGSModule\Components\FormGroup\FormGroupFullWidth;
+use ModulesGarden\GGSModule\Components\FormGroup\FormGroupHalfWidth;
+use ModulesGarden\GGSModule\Components\FormGroup\FormGroupQuarterWidth;
+use ModulesGarden\GGSModule\Components\FormGroup\FormGroupThirdWidth;
+use ModulesGarden\GGSModule\Components\RowFluid\RowFluid;
+use ModulesGarden\GGSModule\Core\Components\Decorator\Decorator;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentContainerInterface;
 
 abstract class BuilderCreator
 {

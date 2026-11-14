@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Events;
+namespace ModulesGarden\GGSModule\Core\Events;
 
 use Closure;
-use ModulesGarden\ggsmodule\Core\DependencyInjection\Container;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\DependencyInjection\Container;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 class Dispatcher extends \Illuminate\Events\Dispatcher
 {

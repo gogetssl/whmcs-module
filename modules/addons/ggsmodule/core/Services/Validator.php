@@ -1,7 +1,7 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Services;
+namespace ModulesGarden\GGSModule\Core\Services;
 
-class Validator extends \ModulesGarden\ggsmodule\Core\Validation\ValidatorService
+class Validator extends \ModulesGarden\GGSModule\Core\Validation\ValidatorService
 {
 }

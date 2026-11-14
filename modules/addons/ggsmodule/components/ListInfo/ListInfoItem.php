@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ListInfo;
+namespace ModulesGarden\GGSModule\Components\ListInfo;
 
 class ListInfoItem
 {

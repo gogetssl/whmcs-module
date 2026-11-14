@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Database\Tables;
+namespace ModulesGarden\GGSModule\Packages\Product\Database\Tables;
 
-use ModulesGarden\ggsmodule\Core\Configuration\Addon\Update\PatchManager;
-use ModulesGarden\ggsmodule\Core\Database\FileLoader;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
-use ModulesGarden\ggsmodule\Packages\Product\Database\Patches\PatchesManager as DataBasePatches;
+use ModulesGarden\GGSModule\Core\Configuration\Addon\Update\PatchManager;
+use ModulesGarden\GGSModule\Core\Database\FileLoader;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
+use ModulesGarden\GGSModule\Packages\Product\Database\Patches\PatchesManager as DataBasePatches;
 
 class TablesManager
 {

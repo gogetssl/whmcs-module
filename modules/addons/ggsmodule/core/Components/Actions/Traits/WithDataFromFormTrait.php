@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Actions\Traits;
+namespace ModulesGarden\GGSModule\Core\Components\Actions\Traits;
 
 trait WithDataFromFormTrait
 {

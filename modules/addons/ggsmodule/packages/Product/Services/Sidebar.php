@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Services;
+namespace ModulesGarden\GGSModule\Packages\Product\Services;
 
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Services\Sidebar as CoreSidebarService;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\UI\Sidebar\Item as SidebarItem;
-use ModulesGarden\ggsmodule\Core\UI\Sidebar\Sidebar as SidebarContainer;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Hosting;
-use ModulesGarden\ggsmodule\Packages\Product\Enums\ConfigSettings;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Services\Sidebar as CoreSidebarService;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\UI\Sidebar\Item as SidebarItem;
+use ModulesGarden\GGSModule\Core\UI\Sidebar\Sidebar as SidebarContainer;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Hosting;
+use ModulesGarden\GGSModule\Packages\Product\Enums\ConfigSettings;
 
 class Sidebar extends CoreSidebarService
 {
@@ -31,7 +31,7 @@ class Sidebar extends CoreSidebarService
             return;
         }
 
-        $this->build(\ModulesGarden\ggsmodule\Core\Support\Facades\Config::get(ConfigSettings::SIDEBARS, []));
+        $this->build(\ModulesGarden\GGSModule\Core\Support\Facades\Config::get(ConfigSettings::SIDEBARS, []));
     }
 
     protected function build(array $data = [])

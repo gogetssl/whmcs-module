@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\AppControllers;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\AppControllers;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AppControllerInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AppControllerInterface;
 
 class Api implements AppControllerInterface
 {

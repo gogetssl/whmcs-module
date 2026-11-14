@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\MediaLibrary\Elements;
+namespace ModulesGarden\GGSModule\Components\MediaLibrary\Elements;
 
-use ModulesGarden\ggsmodule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\Form\Form;
 
 
 abstract class UploadForm extends Form

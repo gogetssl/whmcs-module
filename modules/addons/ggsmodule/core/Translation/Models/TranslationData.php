@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Translation\Models;
+namespace ModulesGarden\GGSModule\Core\Translation\Models;
 
-use ModulesGarden\ggsmodule\Core\Translation\Source\TranslationDataInterface;
+use ModulesGarden\GGSModule\Core\Translation\Source\TranslationDataInterface;
 
 class TranslationData implements TranslationDataInterface
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Traits;
+namespace ModulesGarden\GGSModule\Core\Components\Traits;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use function ModulesGarden\ggsmodule\Core\translator;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use function ModulesGarden\GGSModule\Core\translator;
 
 trait ValidatorTranslationsTrait
 {

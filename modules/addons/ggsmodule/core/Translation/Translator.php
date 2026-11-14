@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Translation;
+namespace ModulesGarden\GGSModule\Core\Translation;
 
-use ModulesGarden\ggsmodule\Core\Events\Events\MissingTranslationDetected;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Core\Translation\Loader\File;
-use function ModulesGarden\ggsmodule\Core\fire;
+use ModulesGarden\GGSModule\Core\Events\Events\MissingTranslationDetected;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\Translation\Loader\File;
+use function ModulesGarden\GGSModule\Core\fire;
 
 class Translator extends \Symfony\Component\Translation\Translator
 {

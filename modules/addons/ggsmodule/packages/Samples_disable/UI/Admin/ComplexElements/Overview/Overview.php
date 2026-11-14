@@ -1,18 +1,18 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Overview;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Overview;
 
-use ModulesGarden\ggsmodule\Components\Badge\Badge;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\Grid\Grid;
-use ModulesGarden\ggsmodule\Components\Icon\Icon;
-use ModulesGarden\ggsmodule\Components\ListInfo\ListInfo;
-use ModulesGarden\ggsmodule\Components\ListInfo\ListInfoItem;
-use ModulesGarden\ggsmodule\Components\PreBlock\PreBlock;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Components\TextParagraph\TextParagraph;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Components\Badge\Badge;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Grid\Grid;
+use ModulesGarden\GGSModule\Components\Icon\Icon;
+use ModulesGarden\GGSModule\Components\ListInfo\ListInfo;
+use ModulesGarden\GGSModule\Components\ListInfo\ListInfoItem;
+use ModulesGarden\GGSModule\Components\PreBlock\PreBlock;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Components\TextParagraph\TextParagraph;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
 class Overview extends Container implements AdminAreaInterface
 {
@@ -28,11 +28,11 @@ class Overview extends Container implements AdminAreaInterface
 
 
         //List info with icons
-        $row = new \ModulesGarden\ggsmodule\Components\Container\Container();
+        $row = new \ModulesGarden\GGSModule\Components\Container\Container();
         $row->addElement((new Icon())->setIcon('accounts-list-alt'));
         $row->addElement((new Text())->setText('Client\'s Passwords'));
 
-        $row2 = new \ModulesGarden\ggsmodule\Components\Container\Container();
+        $row2 = new \ModulesGarden\GGSModule\Components\Container\Container();
         $row2->addElement((new Icon())->setIcon('accounts-list-alt'));
         $row2->addElement((new Text())->setText('Client\'s Categories'));
 

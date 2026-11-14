@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Traits;
+namespace ModulesGarden\GGSModule\Core\Components\Traits;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ActionInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ActionInterface;
 
 /**
  * Trait ActionsTrait

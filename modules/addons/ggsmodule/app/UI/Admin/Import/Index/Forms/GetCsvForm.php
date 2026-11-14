@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Import\Index\Forms;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Import\Index\Forms;
 
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Import\Index\Providers\GetCsvProvider;
-use ModulesGarden\ggsmodule\Components\Form\Form;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\App\UI\Admin\Import\Index\Providers\GetCsvProvider;
+use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
 
 class GetCsvForm extends Form implements AdminAreaInterface, AjaxComponentInterface

@@ -1,25 +1,25 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue;
+namespace ModulesGarden\GGSModule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue;
 
-use ModulesGarden\ggsmodule\App\Libs\AutoInstallQueue;
-use ModulesGarden\ggsmodule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue\Buttons\ResetTaskButton;
-use ModulesGarden\ggsmodule\Components\DataTable\Column;
-use ModulesGarden\ggsmodule\Components\Label\Label;
-use ModulesGarden\ggsmodule\Components\Label\LabelDanger;
-use ModulesGarden\ggsmodule\Components\Label\LabelInfo;
-use ModulesGarden\ggsmodule\Components\Label\LabelSecondary;
-use ModulesGarden\ggsmodule\Components\Label\LabelSuccess;
-use ModulesGarden\ggsmodule\Components\Label\LabelWarning;
-use ModulesGarden\ggsmodule\Components\VisibilityWrapper\VisibilityWrapper;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\AbstractRecordsListDataProvider;
-use ModulesGarden\ggsmodule\Core\DataProviders\QueryDataProvider;
-use ModulesGarden\ggsmodule\Core\WHMCS\URL;
+use ModulesGarden\GGSModule\App\Libs\AutoInstallQueue;
+use ModulesGarden\GGSModule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue\Buttons\ResetTaskButton;
+use ModulesGarden\GGSModule\Components\DataTable\Column;
+use ModulesGarden\GGSModule\Components\Label\Label;
+use ModulesGarden\GGSModule\Components\Label\LabelDanger;
+use ModulesGarden\GGSModule\Components\Label\LabelInfo;
+use ModulesGarden\GGSModule\Components\Label\LabelSecondary;
+use ModulesGarden\GGSModule\Components\Label\LabelSuccess;
+use ModulesGarden\GGSModule\Components\Label\LabelWarning;
+use ModulesGarden\GGSModule\Components\VisibilityWrapper\VisibilityWrapper;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\AbstractRecordsListDataProvider;
+use ModulesGarden\GGSModule\Core\DataProviders\QueryDataProvider;
+use ModulesGarden\GGSModule\Core\WHMCS\URL;
 use WHMCS\Database\Capsule;
 
-class DataTable extends \ModulesGarden\ggsmodule\Components\DataTable\DataTable implements AdminAreaInterface, AjaxComponentInterface
+class DataTable extends \ModulesGarden\GGSModule\Components\DataTable\DataTable implements AdminAreaInterface, AjaxComponentInterface
 {
     public function loadHtml(): void
     {

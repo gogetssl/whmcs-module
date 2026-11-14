@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem;
+namespace ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem;
 
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\Exceptions\ItemNotFoundById;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\Exceptions\ItemTypeNotFound;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\Exceptions\WrongItemTypeFound;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\Exceptions\ItemNotFoundById;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\Exceptions\ItemTypeNotFound;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\Exceptions\WrongItemTypeFound;
 
 class RelatedItem
 {

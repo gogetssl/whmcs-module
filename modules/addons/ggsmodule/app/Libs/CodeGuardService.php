@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
 use WHMCS\Database\Capsule;
 
@@ -36,7 +36,7 @@ class CodeGuardService extends GatewayOrderService
     /** nothing has to be configured: the e-mail only points the client at the dashboard */
     public static function configurationTemplate()
     {
-        return \ModulesGarden\ggsmodule\App\Helpers\EmailTemplates::CODE_GUARD_READY_TEMPLATE;
+        return \ModulesGarden\GGSModule\App\Helpers\EmailTemplates::CODE_GUARD_READY_TEMPLATE;
     }
 
     /**

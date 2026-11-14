@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Cron;
+namespace ModulesGarden\GGSModule\App\Cron;
 
 use Exception;
-use ModulesGarden\ggsmodule\App\Libs\CertificateSyncHelpers;
-use ModulesGarden\ggsmodule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\ggsmodule\App\Models\CronCheck;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\Core\CommandLine\AbstractCommand;
-use ModulesGarden\ggsmodule\Packages\Logs\Support\Facades\Logger;
+use ModulesGarden\GGSModule\App\Libs\CertificateSyncHelpers;
+use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
+use ModulesGarden\GGSModule\App\Models\CronCheck;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\Core\CommandLine\AbstractCommand;
+use ModulesGarden\GGSModule\Packages\Logs\Support\Facades\Logger;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
@@ -16,7 +16,7 @@ use WHMCS\Database\Capsule;
 
 /**
  * Class Sample
- * @package ModulesGarden\ggsmodule\App\Cron
+ * @package ModulesGarden\GGSModule\App\Cron
  */
 class SSLCertificates extends AbstractCommand
 {
@@ -146,7 +146,7 @@ class SSLCertificates extends AbstractCommand
                 $failed[$certificate['id']] = $e->getMessage();
                 $io->write('Error: ' . $e->getMessage());
 
-                Logger::error($e->getMessage(), \ModulesGarden\ggsmodule\App\Libs\LogContext::exception($e, ['service' => $certificate['id']]));
+                Logger::error($e->getMessage(), \ModulesGarden\GGSModule\App\Libs\LogContext::exception($e, ['service' => $certificate['id']]));
 
                 continue;
 
@@ -156,7 +156,7 @@ class SSLCertificates extends AbstractCommand
         }
 
         // S/MIME and code signing orders (own order data, not in the /services/updates handling above)
-        foreach(\ModulesGarden\ggsmodule\App\Libs\GatewayOrderService::TYPES as $type)
+        foreach(\ModulesGarden\GGSModule\App\Libs\GatewayOrderService::TYPES as $type)
         {
             try
             {
@@ -175,7 +175,7 @@ class SSLCertificates extends AbstractCommand
         // one line that says how many orders failed and which, instead of the message of the last one
         if($failed)
         {
-            $errorToDB = \ModulesGarden\ggsmodule\App\Libs\CronErrors::summary($failed, count($toCheck));
+            $errorToDB = \ModulesGarden\GGSModule\App\Libs\CronErrors::summary($failed, count($toCheck));
         }
 
         CronCheck::updateOrCreate(

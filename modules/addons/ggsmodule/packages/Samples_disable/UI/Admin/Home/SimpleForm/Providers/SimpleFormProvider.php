@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\SimpleForm\Providers;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\SimpleForm\Providers;
 
-use ModulesGarden\ggsmodule\Core\Components\Actions\Redirect;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Packages\MediaLibrary\Helpers\LibraryPathHelper;
-use ModulesGarden\ggsmodule\Packages\MediaLibrary\Services\GalleryFileManager;
+use ModulesGarden\GGSModule\Core\Components\Actions\Redirect;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Packages\MediaLibrary\Helpers\LibraryPathHelper;
+use ModulesGarden\GGSModule\Packages\MediaLibrary\Services\GalleryFileManager;
 
 class SimpleFormProvider extends CrudProvider
 {

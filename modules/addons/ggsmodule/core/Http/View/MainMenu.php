@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Http\View;
+namespace ModulesGarden\GGSModule\Core\Http\View;
 
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\Core\Helper\BuildUrl;
-use ModulesGarden\ggsmodule\Core\Http\View\MenuProviders\MenuProviderConfig;
-use ModulesGarden\ggsmodule\Core\Http\View\MenuProviders\MenuProviderInterface;
-use ModulesGarden\ggsmodule\Core\Http\View\MenuProviders\MenuProviderPackages;
-use ModulesGarden\ggsmodule\Core\Support\Arr;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Menu;
-use ModulesGarden\ggsmodule\Core\UI\Menu\Item;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\Core\Helper\BuildUrl;
+use ModulesGarden\GGSModule\Core\Http\View\MenuProviders\MenuProviderConfig;
+use ModulesGarden\GGSModule\Core\Http\View\MenuProviders\MenuProviderInterface;
+use ModulesGarden\GGSModule\Core\Http\View\MenuProviders\MenuProviderPackages;
+use ModulesGarden\GGSModule\Core\Support\Arr;
+use ModulesGarden\GGSModule\Core\Support\Facades\Menu;
+use ModulesGarden\GGSModule\Core\UI\Menu\Item;
 
 /**
  * Description of MainMenu

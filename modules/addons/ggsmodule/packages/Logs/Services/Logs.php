@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\Services;
+namespace ModulesGarden\GGSModule\Packages\Logs\Services;
 
 use DateTime;
-use ModulesGarden\ggsmodule\App\Libs\GeneralSettings;
-use ModulesGarden\ggsmodule\App\Libs\LogPolicy;
-use ModulesGarden\ggsmodule\Packages\Logs\Models\Logs as Log;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
+use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
+use ModulesGarden\GGSModule\App\Libs\LogPolicy;
+use ModulesGarden\GGSModule\Packages\Logs\Models\Logs as Log;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
 use Psr\Log\LoggerInterface;
 
 class Logs implements LoggerInterface

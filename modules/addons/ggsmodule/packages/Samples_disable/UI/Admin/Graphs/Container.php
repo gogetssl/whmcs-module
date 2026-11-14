@@ -1,18 +1,18 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphArea;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphBar;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphBubble;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphDoughnut;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphLine;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphPie;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphPolarArea;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphRadar;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphArea;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphBar;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphBubble;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphDoughnut;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphLine;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphPie;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphPolarArea;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs\GraphRadar;
 
-class Container extends \ModulesGarden\ggsmodule\Components\Container\Container implements AdminAreaInterface
+class Container extends \ModulesGarden\GGSModule\Components\Container\Container implements AdminAreaInterface
 {
     public function loadHtml(): void
     {

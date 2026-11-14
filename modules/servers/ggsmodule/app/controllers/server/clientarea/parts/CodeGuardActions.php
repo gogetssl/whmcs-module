@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\app\controllers\server\clientarea\parts;
+namespace ModulesGarden\Servers\GGSModule\app\controllers\server\clientarea\parts;
 
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\Product;
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\SSL;
-use ModulesGarden\Servers\ggsmodule\core\Lang;
-use ModulesGarden\Servers\ggsmodule\Server;
-use ModulesGarden\ggsmodule\App\Libs\CodeGuardService;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\Product;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\SSL;
+use ModulesGarden\Servers\GGSModule\core\Lang;
+use ModulesGarden\Servers\GGSModule\Server;
+use ModulesGarden\GGSModule\App\Libs\CodeGuardService;
 use WHMCS\Database\Capsule;
 
 /**

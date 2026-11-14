@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Decorator;
+namespace ModulesGarden\GGSModule\Core\Components\Decorator;
 
-use ModulesGarden\ggsmodule\Core\Components\Enums\BackgroundColor;
+use ModulesGarden\GGSModule\Core\Components\Enums\BackgroundColor;
 
 class Background extends AbstractDecorator
 {

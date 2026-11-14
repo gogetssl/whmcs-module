@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Forms;
 
-use ModulesGarden\ggsmodule\Components\Container\ContainerQuarterPage;
-use ModulesGarden\ggsmodule\Components\Container\ContainerRow;
-use ModulesGarden\ggsmodule\Components\Switcher\Switcher;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Actions\CopyValueByClass;
+use ModulesGarden\GGSModule\Components\Container\ContainerQuarterPage;
+use ModulesGarden\GGSModule\Components\Container\ContainerRow;
+use ModulesGarden\GGSModule\Components\Switcher\Switcher;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Actions\CopyValueByClass;
 
-class Form extends \ModulesGarden\ggsmodule\Components\Form\Form
+class Form extends \ModulesGarden\GGSModule\Components\Form\Form
 {
     public function loadHtml(): void
     {

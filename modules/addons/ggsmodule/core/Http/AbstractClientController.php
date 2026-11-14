@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Http;
+namespace ModulesGarden\GGSModule\Core\Http;
 
 /**
  * Description of AbstractClientController

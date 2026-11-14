@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Helpers;
+namespace ModulesGarden\GGSModule\App\Helpers;
 
-use ModulesGarden\Servers\ggsmodule\app\repository\whmcs\Config;
-use ModulesGarden\ggsmodule\App\Libs\Edition;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\Core\WHMCS\Helper;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\EmailTemplate;
+use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Config;
+use ModulesGarden\GGSModule\App\Libs\Edition;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\Core\WHMCS\Helper;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\EmailTemplate;
 
 class EmailTemplates
 {

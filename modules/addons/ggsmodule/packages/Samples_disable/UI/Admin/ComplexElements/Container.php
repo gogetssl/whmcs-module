@@ -1,52 +1,52 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements;
 
-use ModulesGarden\ggsmodule\Components\AppNavBar\Breadcrumb;
-use ModulesGarden\ggsmodule\Components\Button\ButtonBasic;
-use ModulesGarden\ggsmodule\Components\Button\ButtonSubmitSuccess;
-use ModulesGarden\ggsmodule\Components\Checkbox\Checkbox;
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
-use ModulesGarden\ggsmodule\Components\NavBar\NavBar;
-use ModulesGarden\ggsmodule\Components\NavBarItem\NavBarItem;
-use ModulesGarden\ggsmodule\Components\TableSimple\Column\Column;
-use ModulesGarden\ggsmodule\Components\TableSimple\Record\Record;
-use ModulesGarden\ggsmodule\Components\TableSimple\TableSimple;
-use ModulesGarden\ggsmodule\Components\Toolbar\Toolbar;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Actions\FormSubmit;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalLoad;
-use ModulesGarden\ggsmodule\Core\Components\Actions\PassAjaxData;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Redirect;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ReloadById;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ClientAreaInterface;
-use ModulesGarden\ggsmodule\Core\Storage\Resources;
-use ModulesGarden\ggsmodule\Core\UI\Interfaces\ClientArea;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\CronTasks\CronTasks;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Forms\AutoSaveForm;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Forms\ReloadForm;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Modals\Base;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Modals\SwitchersModal;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Overview\Overview;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\ServiceDetails\ServiceDetails;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\ServiceInformation\ServiceInformation;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\SparklineGraphs\SparklinesGraphs;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\SubPages\DataTable\DataTable;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Tabs\Tabs;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Tiles\Tiles;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\TreeView\TreeView;
+use ModulesGarden\GGSModule\Components\AppNavBar\Breadcrumb;
+use ModulesGarden\GGSModule\Components\Button\ButtonBasic;
+use ModulesGarden\GGSModule\Components\Button\ButtonSubmitSuccess;
+use ModulesGarden\GGSModule\Components\Checkbox\Checkbox;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Components\NavBar\NavBar;
+use ModulesGarden\GGSModule\Components\NavBarItem\NavBarItem;
+use ModulesGarden\GGSModule\Components\TableSimple\Column\Column;
+use ModulesGarden\GGSModule\Components\TableSimple\Record\Record;
+use ModulesGarden\GGSModule\Components\TableSimple\TableSimple;
+use ModulesGarden\GGSModule\Components\Toolbar\Toolbar;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Actions\FormSubmit;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalLoad;
+use ModulesGarden\GGSModule\Core\Components\Actions\PassAjaxData;
+use ModulesGarden\GGSModule\Core\Components\Actions\Redirect;
+use ModulesGarden\GGSModule\Core\Components\Actions\ReloadById;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ClientAreaInterface;
+use ModulesGarden\GGSModule\Core\Storage\Resources;
+use ModulesGarden\GGSModule\Core\UI\Interfaces\ClientArea;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\CronTasks\CronTasks;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Forms\AutoSaveForm;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Forms\ReloadForm;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Modals\Base;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Modals\SwitchersModal;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Overview\Overview;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\ServiceDetails\ServiceDetails;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\ServiceInformation\ServiceInformation;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\SparklineGraphs\SparklinesGraphs;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\SubPages\DataTable\DataTable;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Tabs\Tabs;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Tiles\Tiles;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\TreeView\TreeView;
 
-class Container extends \ModulesGarden\ggsmodule\Components\Container\Container implements AdminAreaInterface, ClientAreaInterface
+class Container extends \ModulesGarden\GGSModule\Components\Container\Container implements AdminAreaInterface, ClientAreaInterface
 {
     public function loadHtml(): void
     {
         try
         {
             $this->addElement(new Overview());
-            $this->addElement(new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\ListInfo\ListInfo());
+            $this->addElement(new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\ListInfo\ListInfo());
             $this->addElement(new ServiceInformation());
-            $this->addElement(new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\PageDescription\PageDescription());
+            $this->addElement(new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\PageDescription\PageDescription());
             $this->addElement(new CronTasks());
             $this->addElement(new ServiceDetails());
             $this->addElement(new Tiles());
@@ -104,7 +104,7 @@ class Container extends \ModulesGarden\ggsmodule\Components\Container\Container 
 //        $button = new ButtonBasic();
 //        $button->onClick((new ReloadById($table->getId()))->withStaticParams(['xxxx' => 121212]));
 
-        $form = new \ModulesGarden\ggsmodule\Components\Form\Form();
+        $form = new \ModulesGarden\GGSModule\Components\Form\Form();
         $form->addElement((new FormInputText())->setName('dupa'));
         $form->addElement((new ButtonSubmitSuccess())->onClick(new FormSubmit($form)));
         //$form->onSubmit((new Alert('adadawd')));
@@ -123,12 +123,12 @@ class Container extends \ModulesGarden\ggsmodule\Components\Container\Container 
 
     protected function containerReload()
     {
-        $this->addElement(new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\SubPages\ContainerReload\Container());
+        $this->addElement(new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\SubPages\ContainerReload\Container());
     }
 
     protected function board()
     {
-        $board = new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Boards\Board();
+        $board = new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Boards\Board();
 
 
         $this->addElement($board);
@@ -218,7 +218,7 @@ class Container extends \ModulesGarden\ggsmodule\Components\Container\Container 
 
     protected function addWidgets()
     {
-        $form = new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Forms\Form();
+        $form = new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Forms\Form();
         $this->addElement($form);
     }
 

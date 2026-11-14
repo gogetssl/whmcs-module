@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Providers;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Providers;
 
-use ModulesGarden\ggsmodule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\ggsmodule\App\Migration\Credentials;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Redirect;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Routing\Url;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
+use ModulesGarden\GGSModule\App\Migration\Credentials;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\Core\Components\Actions\Redirect;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Routing\Url;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
 
 class ApiSettingsProvider extends CrudProvider
 {
@@ -82,7 +82,7 @@ class ApiSettingsProvider extends CrudProvider
         if($page === 'configuration')
         {
             return (new Response())->setSuccess($this->translate('successAPI'))->setActions([new Redirect(Url::route('',
-                ['module' => 'ggsmodule', 'mg-page' => 'configuration', 'mg-action' => 'step5']
+                ['module' => 'GGSModule', 'mg-page' => 'configuration', 'mg-action' => 'step5']
             ))]);
         }
 

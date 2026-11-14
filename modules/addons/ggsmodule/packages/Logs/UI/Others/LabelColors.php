@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Others;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Others;
 
 class LabelColors
 {

@@ -1,18 +1,18 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\ClientArea;
+namespace ModulesGarden\GGSModule\App\ClientArea;
 
-use ModulesGarden\Servers\ggsmodule\core\Lang;
-use ModulesGarden\ggsmodule\App\Libs\ClientSslSummary;
-use ModulesGarden\ggsmodule\App\Libs\GeneralSettings;
+use ModulesGarden\Servers\GGSModule\core\Lang;
+use ModulesGarden\GGSModule\App\Libs\ClientSslSummary;
+use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
 
 /**
- * Client area pages of the addon (index.php?m=ggsmodule): the client's SSL certificates filtered like the
+ * Client area pages of the addon (index.php?m=GGSModule): the client's SSL certificates filtered like the
  * summary panel, and "SSL Certificates by Domain". Plain Smarty templates in templates/clientarea/.
  */
 class SslPages
 {
-    const MODULE_URL = 'index.php?m=ggsmodule';
+    const MODULE_URL = 'index.php?m=GGSModule';
 
     public static function render(array $request)
     {
@@ -100,11 +100,11 @@ class SslPages
             $vars['form']     = array_merge($vars['form'], array_map('strval', array_filter($_POST, 'is_scalar')));
             try
             {
-                if(!\ModulesGarden\ggsmodule\App\Libs\CsrfToken::valid(isset($_POST['token']) ? $_POST['token'] : ''))
+                if(!\ModulesGarden\GGSModule\App\Libs\CsrfToken::valid(isset($_POST['token']) ? $_POST['token'] : ''))
                 {
                     throw new \Exception('The page expired - reload it and try again.');
                 }
-                $tools = '\ModulesGarden\ggsmodule\App\Libs\SslTools';
+                $tools = '\ModulesGarden\GGSModule\App\Libs\SslTools';
                 switch($action)
                 {
                     case 'decodeCsr':
@@ -181,16 +181,16 @@ class SslPages
 
     protected static function bootLang()
     {
-        if(!class_exists('\ModulesGarden\Servers\ggsmodule\Loader', false))
+        if(!class_exists('\ModulesGarden\Servers\GGSModule\Loader', false))
         {
-            require_once dirname(__DIR__, 4) . DIRECTORY_SEPARATOR . 'servers' . DIRECTORY_SEPARATOR . 'ggsmodule' . DIRECTORY_SEPARATOR . 'Loader.php';
-            new \ModulesGarden\Servers\ggsmodule\Loader();
+            require_once dirname(__DIR__, 4) . DIRECTORY_SEPARATOR . 'servers' . DIRECTORY_SEPARATOR . 'GGSModule' . DIRECTORY_SEPARATOR . 'Loader.php';
+            new \ModulesGarden\Servers\GGSModule\Loader();
         }
         if(!defined('DS'))
         {
             define('DS', DIRECTORY_SEPARATOR);
         }
         // The server module kernel loads its language files (english + client's language + langs/overrides)
-        \ModulesGarden\Servers\ggsmodule\Server::I();
+        \ModulesGarden\Servers\GGSModule\Server::I();
     }
 }

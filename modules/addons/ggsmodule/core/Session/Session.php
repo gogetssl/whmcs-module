@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Session;
+namespace ModulesGarden\GGSModule\Core\Session;
 
-use ModulesGarden\ggsmodule\Core\Support\Arr;
+use ModulesGarden\GGSModule\Core\Support\Arr;
 
 class Session
 {

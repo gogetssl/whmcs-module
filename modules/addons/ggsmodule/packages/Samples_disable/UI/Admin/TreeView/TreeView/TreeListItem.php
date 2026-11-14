@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\TreeView\TreeView;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\TreeView\TreeView;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\ListSimple\ListSimple;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ReloadById;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxOnActionInterface;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\ListSimple\ListSimple;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Core\Components\Actions\ReloadById;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxOnActionInterface;
 
-class TreeListItem extends \ModulesGarden\ggsmodule\Components\TreeListItem\TreeListItem implements AjaxOnActionInterface
+class TreeListItem extends \ModulesGarden\GGSModule\Components\TreeListItem\TreeListItem implements AjaxOnActionInterface
 {
     public function loadHtml(): void
     {
@@ -25,7 +25,7 @@ class TreeListItem extends \ModulesGarden\ggsmodule\Components\TreeListItem\Tree
 
     public function loadData(): void
     {
-        $parentId = \ModulesGarden\ggsmodule\Core\Support\Facades\Request::get('formData')['item_id'];
+        $parentId = \ModulesGarden\GGSModule\Core\Support\Facades\Request::get('formData')['item_id'];
         for ($j = 0; $j < rand(0, 5); $j++)
         {
             $subitem = new TreeListItem();

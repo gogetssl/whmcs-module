@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\CommandLine\LoadCommands;
+namespace ModulesGarden\GGSModule\Core\CommandLine\LoadCommands;
 
 interface LoadCommandsControllersInterface
 {

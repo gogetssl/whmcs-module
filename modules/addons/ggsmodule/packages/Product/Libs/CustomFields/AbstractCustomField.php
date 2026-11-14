@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Libs\CustomFields;
+namespace ModulesGarden\GGSModule\Packages\Product\Libs\CustomFields;
 
 class AbstractCustomField
 {

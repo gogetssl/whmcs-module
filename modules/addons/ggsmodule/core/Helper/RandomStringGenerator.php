@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Helper;
+namespace ModulesGarden\GGSModule\Core\Helper;
 
 /**
  * Helper for generating random strings

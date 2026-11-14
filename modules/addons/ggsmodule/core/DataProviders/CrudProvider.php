@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\DataProviders;
+namespace ModulesGarden\GGSModule\Core\DataProviders;
 
-use ModulesGarden\ggsmodule\Core\Contracts\CrudProviderInterface;
-use ModulesGarden\ggsmodule\Core\Security\IntegrityToken\IntegrityToken;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Validator;
-use ModulesGarden\ggsmodule\Core\Translation\TranslatorTrait;
+use ModulesGarden\GGSModule\Core\Contracts\CrudProviderInterface;
+use ModulesGarden\GGSModule\Core\Security\IntegrityToken\IntegrityToken;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\Support\Facades\Validator;
+use ModulesGarden\GGSModule\Core\Translation\TranslatorTrait;
 
 class CrudProvider implements CrudProviderInterface
 {
@@ -42,8 +42,8 @@ class CrudProvider implements CrudProviderInterface
 
     public function __construct()
     {
-        $this->formData        = new DataContainer((array)\ModulesGarden\ggsmodule\Core\Support\Facades\Request::get('formData', []));
-        $this->ajaxData        = new DataContainer((array)\ModulesGarden\ggsmodule\Core\Support\Facades\Request::get('ajaxData', []));
+        $this->formData        = new DataContainer((array)\ModulesGarden\GGSModule\Core\Support\Facades\Request::get('formData', []));
+        $this->ajaxData        = new DataContainer((array)\ModulesGarden\GGSModule\Core\Support\Facades\Request::get('ajaxData', []));
         $this->data            = new DataContainer();
         $this->availableValues = new DataContainer();
 
@@ -128,7 +128,7 @@ class CrudProvider implements CrudProviderInterface
     {
         if ($this->crfProtection)
         {
-            \ModulesGarden\ggsmodule\Core\Security\CsrfToken\CsrfToken::validate(get_class($this), \ModulesGarden\ggsmodule\Core\Support\Facades\Request::get('csrfProtection', ''));
+            \ModulesGarden\GGSModule\Core\Security\CsrfToken\CsrfToken::validate(get_class($this), \ModulesGarden\GGSModule\Core\Support\Facades\Request::get('csrfProtection', ''));
         }
     }
 

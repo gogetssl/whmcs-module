@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\DataProviders;
+namespace ModulesGarden\GGSModule\Core\DataProviders;
 
 use Exception;
-use ModulesGarden\ggsmodule\Core\Contracts\ArrayProviderInterface;
+use ModulesGarden\GGSModule\Core\Contracts\ArrayProviderInterface;
 
 class ObjectDataProvider extends AbstractRecordsListDataProvider implements ArrayProviderInterface
 {

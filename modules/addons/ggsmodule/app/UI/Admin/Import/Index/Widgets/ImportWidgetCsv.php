@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Import\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Import\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Import\Index\Forms\ImportForm;
-use ModulesGarden\ggsmodule\App\UI\Admin\Import\Index\Forms\ImportFormCsv;
-use ModulesGarden\ggsmodule\Components\Alert\Alert;
-use ModulesGarden\ggsmodule\Components\Label\LabelDanger;
-use ModulesGarden\ggsmodule\Components\Link\Link;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Enums\Color;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Currency;
+use ModulesGarden\GGSModule\App\UI\Admin\Import\Index\Forms\ImportForm;
+use ModulesGarden\GGSModule\App\UI\Admin\Import\Index\Forms\ImportFormCsv;
+use ModulesGarden\GGSModule\Components\Alert\Alert;
+use ModulesGarden\GGSModule\Components\Label\LabelDanger;
+use ModulesGarden\GGSModule\Components\Link\Link;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Enums\Color;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Currency;
 
 class ImportWidgetCsv extends Widget
 {

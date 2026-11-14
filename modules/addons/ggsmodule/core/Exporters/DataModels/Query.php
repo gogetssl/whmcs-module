@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Exporters\DataModels;
+namespace ModulesGarden\GGSModule\Core\Exporters\DataModels;
 
-use ModulesGarden\ggsmodule\Core\Exporters\Source\DataModelInterface;
+use ModulesGarden\GGSModule\Core\Exporters\Source\DataModelInterface;
 
 class Query extends Collection implements DataModelInterface
 {

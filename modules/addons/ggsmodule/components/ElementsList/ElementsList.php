@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ElementsList;
+namespace ModulesGarden\GGSModule\Components\ElementsList;
 
-use ModulesGarden\ggsmodule\Components\DataTable\DataTable;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Components\DataTable\DataTable;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
 
 abstract class ElementsList extends DataTable
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\TileButton;
+namespace ModulesGarden\GGSModule\Components\TileButton;
 
-use ModulesGarden\ggsmodule\Components\Button\Button;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ImageTrait;
+use ModulesGarden\GGSModule\Components\Button\Button;
+use ModulesGarden\GGSModule\Core\Components\Traits\ImageTrait;
 
 /**
  * Class IconButton

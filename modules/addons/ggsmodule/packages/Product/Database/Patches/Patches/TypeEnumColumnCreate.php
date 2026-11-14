@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Database\Patches\Patches;
+namespace ModulesGarden\GGSModule\Packages\Product\Database\Patches\Patches;
 
-use ModulesGarden\ggsmodule\Packages\Product\Database\Patches\Source\PatchInterface;
-use ModulesGarden\ggsmodule\Packages\Product\Models\ProductConfiguration;
+use ModulesGarden\GGSModule\Packages\Product\Database\Patches\Source\PatchInterface;
+use ModulesGarden\GGSModule\Packages\Product\Models\ProductConfiguration;
 use Illuminate\Database\Capsule\Manager as DB;
 
 class TypeEnumColumnCreate implements PatchInterface

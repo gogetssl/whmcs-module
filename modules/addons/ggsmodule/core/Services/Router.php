@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Services;
+namespace ModulesGarden\GGSModule\Core\Services;
 
-class Router extends \ModulesGarden\ggsmodule\Core\Routing\Router
+class Router extends \ModulesGarden\GGSModule\Core\Routing\Router
 {
 
 }

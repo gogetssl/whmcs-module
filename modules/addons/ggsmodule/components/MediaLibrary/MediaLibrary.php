@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\MediaLibrary;
+namespace ModulesGarden\GGSModule\Components\MediaLibrary;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxTrait;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ComponentsContainerTrait;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxOnLoadInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentContainerInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\ResponseInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\ObjectDataProvider;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
-use ModulesGarden\ggsmodule\Core\Support\Text;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxTrait;
+use ModulesGarden\GGSModule\Core\Components\Traits\ComponentsContainerTrait;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxOnLoadInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentContainerInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Core\Contracts\ResponseInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\ObjectDataProvider;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Core\Support\Text;
 
 class MediaLibrary extends AbstractComponent implements AjaxOnLoadInterface, ComponentContainerInterface
 {

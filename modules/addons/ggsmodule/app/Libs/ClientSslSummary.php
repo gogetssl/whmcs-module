@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\App\Models\Request;
+use ModulesGarden\GGSModule\App\Models\Request;
 use WHMCS\Database\Capsule;
 
 /**
@@ -34,7 +34,7 @@ class ClientSslSummary
             ->join('tblproducts', 'tblproducts.id', '=', 'tblhosting.packageid')
             ->leftJoin('tblsslorders', 'tblsslorders.serviceid', '=', 'tblhosting.id')
             ->where('tblhosting.userid', $this->userId)
-            ->where('tblproducts.servertype', 'ggsmodule')
+            ->where('tblproducts.servertype', 'GGSModule')
             ->orderBy('tblhosting.id', 'desc')
             ->get([
                 'tblhosting.id', 'tblhosting.domain', 'tblhosting.domainstatus', 'tblhosting.regdate', 'tblhosting.nextduedate',

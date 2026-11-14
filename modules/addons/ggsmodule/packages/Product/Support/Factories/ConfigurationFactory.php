@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Support\Factories;
+namespace ModulesGarden\GGSModule\Packages\Product\Support\Factories;
 
-use ModulesGarden\ggsmodule\Core\Data\Container;
-use ModulesGarden\ggsmodule\Core\WHMCS\ModuleParamsBuilder;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\Configuration\ConfigurationContainer;
-use ModulesGarden\ggsmodule\Packages\Product\Services\ProductConfiguration;
+use ModulesGarden\GGSModule\Core\Data\Container;
+use ModulesGarden\GGSModule\Core\WHMCS\ModuleParamsBuilder;
+use ModulesGarden\GGSModule\Packages\Product\Libs\Configuration\ConfigurationContainer;
+use ModulesGarden\GGSModule\Packages\Product\Services\ProductConfiguration;
 
 class ConfigurationFactory
 {

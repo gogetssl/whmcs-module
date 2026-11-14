@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\MediaLibrary\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\MediaLibrary\Forms;
 
-use ModulesGarden\ggsmodule\Components\HiddenField\HiddenField;
-use ModulesGarden\ggsmodule\Components\MediaLibrary\RemoveForm;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Home\MediaLibrary\Providers\MediaLibraryProvider;
+use ModulesGarden\GGSModule\Components\HiddenField\HiddenField;
+use ModulesGarden\GGSModule\Components\MediaLibrary\RemoveForm;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Home\MediaLibrary\Providers\MediaLibraryProvider;
 
 class RemoveImageForm extends RemoveForm
 {

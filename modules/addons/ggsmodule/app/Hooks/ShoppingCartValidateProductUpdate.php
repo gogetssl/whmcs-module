@@ -1,6 +1,6 @@
 <?php
 
-use ModulesGarden\ggsmodule\App\Libs\AcmeHelpers;
+use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
 use WHMCS\Database\Capsule;
 
 $hookManager->register(
@@ -9,10 +9,10 @@ $hookManager->register(
         $pid = isset($_SESSION['cart']['products'][$params['i']]['pid']) ? (int)$_SESSION['cart']['products'][$params['i']]['pid'] : 0;
 
         // code signing: 2 / 3 years only on an own HSM
-        $csError = $pid ? \ModulesGarden\ggsmodule\App\Libs\CodeSigningService::cartError($pid, $params['billingcycle'] ?? ($_SESSION['cart']['products'][$params['i']]['billingcycle'] ?? ''), (array)($params['configoption'] ?? [])) : null;
+        $csError = $pid ? \ModulesGarden\GGSModule\App\Libs\CodeSigningService::cartError($pid, $params['billingcycle'] ?? ($_SESSION['cart']['products'][$params['i']]['billingcycle'] ?? ''), (array)($params['configoption'] ?? [])) : null;
         if ($csError)
         {
-            return [\ModulesGarden\ggsmodule\Core\translate($csError)];
+            return [\ModulesGarden\GGSModule\Core\translate($csError)];
         }
 
         if (!$pid || !AcmeHelpers::isAcmeWhmcsProduct($pid))
@@ -44,7 +44,7 @@ $hookManager->register(
 
         if ($sansCount <= 0 && $wildcardCount <= 0)
         {
-            return [\ModulesGarden\ggsmodule\Core\translate('acme_order_requires_at_least_one_san')];
+            return [\ModulesGarden\GGSModule\Core\translate('acme_order_requires_at_least_one_san')];
         }
     },
     1

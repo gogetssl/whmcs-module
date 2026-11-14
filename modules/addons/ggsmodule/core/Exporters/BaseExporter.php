@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Exporters;
+namespace ModulesGarden\GGSModule\Core\Exporters;
 
-use ModulesGarden\ggsmodule\Core\Exporters\Source\DataModelInterface;
+use ModulesGarden\GGSModule\Core\Exporters\Source\DataModelInterface;
 
 abstract class BaseExporter
 {

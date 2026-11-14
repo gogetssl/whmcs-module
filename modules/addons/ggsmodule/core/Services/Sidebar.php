@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Services;
+namespace ModulesGarden\GGSModule\Core\Services;
 
-use ModulesGarden\ggsmodule\Core\UI\Sidebar\Sidebar as SidebarContainer;
-use ModulesGarden\ggsmodule\Core\UI\Sidebar\Item as SidebarItem;
+use ModulesGarden\GGSModule\Core\UI\Sidebar\Sidebar as SidebarContainer;
+use ModulesGarden\GGSModule\Core\UI\Sidebar\Item as SidebarItem;
 
 class Sidebar
 {
@@ -33,7 +33,7 @@ class Sidebar
 
     protected function load()
     {
-        $this->build(\ModulesGarden\ggsmodule\Core\Support\Facades\Config::get('sidebars', []));
+        $this->build(\ModulesGarden\GGSModule\Core\Support\Facades\Config::get('sidebars', []));
     }
 
     protected function build(array $data = [])

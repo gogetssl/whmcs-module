@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\TabsWidget;
+namespace ModulesGarden\GGSModule\Components\TabsWidget;
 
-use ModulesGarden\ggsmodule\Components\Tab\Tab;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Components\Tab\Tab;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
 
 /**
  * Class TabsWidget

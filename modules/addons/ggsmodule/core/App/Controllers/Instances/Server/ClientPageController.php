@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Server;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\Instances\Server;
 
-use ModulesGarden\ggsmodule\App\Hooks\InternalHooks\PreClientAreaPageLoad;
-use ModulesGarden\ggsmodule\Core\App\Controllers\Instances\HttpController;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\ClientAreaInterface;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Router;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Translator;
-use ModulesGarden\ggsmodule\Core\UI\View;
-use ModulesGarden\ggsmodule\Core\UI\Views\ServerModuleClientArea;
+use ModulesGarden\GGSModule\App\Hooks\InternalHooks\PreClientAreaPageLoad;
+use ModulesGarden\GGSModule\Core\App\Controllers\Instances\HttpController;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\ClientAreaInterface;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\Support\Facades\Router;
+use ModulesGarden\GGSModule\Core\Support\Facades\Translator;
+use ModulesGarden\GGSModule\Core\UI\View;
+use ModulesGarden\GGSModule\Core\UI\Views\ServerModuleClientArea;
 
 class ClientPageController extends HttpController implements ClientAreaInterface
 {
@@ -29,7 +29,7 @@ class ClientPageController extends HttpController implements ClientAreaInterface
             'requirelogin' => true,
             'forcessl'     => false,
             'vars'         => [
-                'content' => \ModulesGarden\ggsmodule\Core\Support\Facades\Smarty::view('clientarea', $data, ModuleConstants::getTemplateDir() . '/controllers')
+                'content' => \ModulesGarden\GGSModule\Core\Support\Facades\Smarty::view('clientarea', $data, ModuleConstants::getTemplateDir() . '/controllers')
             ]
         ];
     }

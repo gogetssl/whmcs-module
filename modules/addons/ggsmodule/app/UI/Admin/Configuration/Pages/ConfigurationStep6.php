@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Pages;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Configuration\Pages;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Content\Step6;
-use ModulesGarden\ggsmodule\App\UI\Admin\Configuration\Shared\WizardLayout;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ClientAreaInterface;
-use ModulesGarden\ggsmodule\Components\Container\Container;
+use ModulesGarden\GGSModule\App\UI\Admin\Configuration\Content\Step6;
+use ModulesGarden\GGSModule\App\UI\Admin\Configuration\Shared\WizardLayout;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ClientAreaInterface;
+use ModulesGarden\GGSModule\Components\Container\Container;
 
 
 class ConfigurationStep6 extends Container implements AdminAreaInterface, ClientAreaInterface

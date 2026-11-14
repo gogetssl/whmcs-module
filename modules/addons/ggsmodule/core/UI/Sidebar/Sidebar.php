@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Sidebar;
+namespace ModulesGarden\GGSModule\Core\UI\Sidebar;
 
-use ModulesGarden\ggsmodule\Core\Contracts\UI\SidebarItem;
-use ModulesGarden\ggsmodule\Core\Support\Arr;
+use ModulesGarden\GGSModule\Core\Contracts\UI\SidebarItem;
+use ModulesGarden\GGSModule\Core\Support\Arr;
 
 class Sidebar
 {

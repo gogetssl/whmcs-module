@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\Enums;
+namespace ModulesGarden\GGSModule\Packages\Logs\Enums;
 
 class LogTypes
 {

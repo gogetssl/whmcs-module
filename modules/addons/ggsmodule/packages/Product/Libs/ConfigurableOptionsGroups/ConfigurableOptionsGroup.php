@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptionsGroups;
+namespace ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptionsGroups;
 
-use ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptions\AbstractConfigurableOption;
+use ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptions\AbstractConfigurableOption;
 
 class ConfigurableOptionsGroup
 {

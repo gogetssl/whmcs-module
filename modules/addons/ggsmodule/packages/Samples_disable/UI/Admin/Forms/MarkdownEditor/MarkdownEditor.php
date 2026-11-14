@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Forms\MarkdownEditor;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Forms\MarkdownEditor;
 
-use ModulesGarden\ggsmodule\Components\Button\ButtonSubmitSuccess;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Components\Button\ButtonSubmitSuccess;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
-class MarkdownEditor extends \ModulesGarden\ggsmodule\Components\Form\Form implements AjaxComponentInterface
+class MarkdownEditor extends \ModulesGarden\GGSModule\Components\Form\Form implements AjaxComponentInterface
 {
     public function loadHtml(): void
     {
@@ -16,7 +16,7 @@ class MarkdownEditor extends \ModulesGarden\ggsmodule\Components\Form\Form imple
 
         $this->builder->setDefaultContainer($widget);
 
-        $markdown = new \ModulesGarden\ggsmodule\Components\MarkdownEditor\MarkdownEditor();
+        $markdown = new \ModulesGarden\GGSModule\Components\MarkdownEditor\MarkdownEditor();
         $markdown->setName('markdown');
         $this->builder->addElement($markdown);
 

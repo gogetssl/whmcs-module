@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Configuration\Addon\Activate;
+namespace ModulesGarden\GGSModule\App\Configuration\Addon\Activate;
 
-use ModulesGarden\ggsmodule\App\Helpers\EmailTemplates;
+use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
 
 /**
  * Runs before module activation actions
  */
-class Before extends \ModulesGarden\ggsmodule\Core\Configuration\Addon\Activate\Before
+class Before extends \ModulesGarden\GGSModule\Core\Configuration\Addon\Activate\Before
 {
     /**
      * @param array $params

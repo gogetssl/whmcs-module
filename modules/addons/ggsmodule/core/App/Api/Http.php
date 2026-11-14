@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Api;
+namespace ModulesGarden\GGSModule\Core\Api;
 
 use AltoRouter;
 use Exception;
-use ModulesGarden\ggsmodule\App\Libs\Exceptions\ApiException;
-use ModulesGarden\ggsmodule\App\Libs\Exceptions\WhmcsApiException;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Traits\IsDebugOn;
+use ModulesGarden\GGSModule\App\Libs\Exceptions\ApiException;
+use ModulesGarden\GGSModule\App\Libs\Exceptions\WhmcsApiException;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Traits\IsDebugOn;
 
 /**
  * Description of Http
@@ -165,7 +165,7 @@ class Http
      */
     protected function getController($classname)
     {
-        $classname = "\\ModulesGarden\\ggsmodule\\App\\Http\\Api\\{$classname}";
+        $classname = "\\ModulesGarden\\GGSModule\\App\\Http\\Api\\{$classname}";
 
         return new $classname;
     }

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\Card;
-use ModulesGarden\ggsmodule\Components\Container\Container;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\Card;
+use ModulesGarden\GGSModule\Components\Container\Container;
 
 /**
  * Automated SSL promotion (design: automated-ssl-banner.html). Shown on the dashboard instead of the certificate
@@ -39,7 +39,7 @@ class AutomatedSslBanner extends Container
             . '</div></div>'
             . '<div class="ssl-promo-actions">'
             . '<div class="ssl-promo-shield" aria-hidden="true"><span class="ssl-promo-ring"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-8 9-8 9s-8-4-8-9V5l8-3 8 3z"/><path d="m9 12 2 2 4-4"/></svg></div>'
-            . '<div><a class="ssl-promo-cta" href="addonmodules.php?module=ggsmodule&amp;mg-page=products">' . Card::e($this->translate('cta'))
+            . '<div><a class="ssl-promo-cta" href="addonmodules.php?module=GGSModule&amp;mg-page=products">' . Card::e($this->translate('cta'))
             . '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>'
             . '<p class="ssl-promo-note">' . Card::e($this->translate('note')) . '</p></div>'
             . '</div></div></section>';

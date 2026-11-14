@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Options;
+namespace ModulesGarden\GGSModule\Components\Graph\Options;
 
 use Illuminate\Contracts\Support\Arrayable;
-use ModulesGarden\ggsmodule\Components\Graph\Constants\Colors;
+use ModulesGarden\GGSModule\Components\Graph\Constants\Colors;
 
 class ColorsOptions implements Arrayable
 {

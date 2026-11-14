@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\DropdownMenuItem;
+namespace ModulesGarden\GGSModule\Components\DropdownMenuItem;
 
 class DropdownMenuItemEdit extends DropdownMenuItem
 {

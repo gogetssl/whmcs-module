@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Products\Index\DataTables\Products\Modals;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Products\Index\DataTables\Products\Modals;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Products\Index\DataTables\Products\Forms\ImportForm;
-use ModulesGarden\ggsmodule\Components\Modal\Modal;
-use ModulesGarden\ggsmodule\Components\Modal\ModalEdit;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\App\UI\Admin\Products\Index\DataTables\Products\Forms\ImportForm;
+use ModulesGarden\GGSModule\Components\Modal\Modal;
+use ModulesGarden\GGSModule\Components\Modal\ModalEdit;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
 class ImportModal extends ModalEdit implements AdminAreaInterface, AjaxComponentInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Libs;
+namespace ModulesGarden\GGSModule\App\Libs;
 
-use ModulesGarden\ggsmodule\Packages\Logs\Support\Facades\Logger;
+use ModulesGarden\GGSModule\Packages\Logs\Support\Facades\Logger;
 use WHMCS\Database\Capsule;
 
 /**
@@ -48,7 +48,7 @@ class RenewalPrices
         $services = Capsule::table('tblhosting as h')
             ->join('tblproducts as p', 'p.id', '=', 'h.packageid')
             ->join('tblclients as c', 'c.id', '=', 'h.userid')
-            ->where('p.servertype', 'ggsmodule')
+            ->where('p.servertype', 'GGSModule')
             ->whereIn('h.domainstatus', ['Active', 'Suspended'])
             ->get(['h.id', 'h.userid', 'h.packageid', 'h.billingcycle', 'h.amount', 'c.currency']);
 

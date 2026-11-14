@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models;
 
 class ProductConfigGroup extends \WHMCS\Product\ConfigOptionGroup
 {
     public function configOptions()
     {
-        return $this->hasMany('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\ProductConfigOption', "gid");
+        return $this->hasMany('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\ProductConfigOption', "gid");
     }
 
     public function scopeOfProductId($query, $productId)

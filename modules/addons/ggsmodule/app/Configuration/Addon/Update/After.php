@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Configuration\Addon\Update;
+namespace ModulesGarden\GGSModule\App\Configuration\Addon\Update;
 
-use ModulesGarden\ggsmodule\Core\Database\FileLoader;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Database\FileLoader;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 /**
  * runs after module update actions
  */
-class After extends \ModulesGarden\ggsmodule\Core\Configuration\Addon\Update\After
+class After extends \ModulesGarden\GGSModule\Core\Configuration\Addon\Update\After
 {
     /**
      * @param array $params
@@ -21,7 +21,7 @@ class After extends \ModulesGarden\ggsmodule\Core\Configuration\Addon\Update\Aft
         $fileLoader = new FileLoader();
         $fileLoader->performQueryFromFile(ModuleConstants::getFullPath('app', 'Database', 'schema.sql'));
         // columns added to existing tables
-        \ModulesGarden\ggsmodule\App\Libs\AisHelpers::ensureColumns();
+        \ModulesGarden\GGSModule\App\Libs\AisHelpers::ensureColumns();
 
         return $return;
     }

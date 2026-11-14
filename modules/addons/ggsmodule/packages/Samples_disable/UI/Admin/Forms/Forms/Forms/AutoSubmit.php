@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Forms\Forms\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Forms\Forms\Forms;
 
-use ModulesGarden\ggsmodule\Components\Form\AbstractForm;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxAutoSubmitInterface;
+use ModulesGarden\GGSModule\Components\Form\AbstractForm;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxAutoSubmitInterface;
 
 class AutoSubmit extends AbstractForm /*implements AjaxAutoSubmitInterface*/
 {

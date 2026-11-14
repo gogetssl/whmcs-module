@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ProgressBar;
+namespace ModulesGarden\GGSModule\Components\ProgressBar;
 
-use ModulesGarden\ggsmodule\Core\Components\Enums\BackgroundColor;
+use ModulesGarden\GGSModule\Core\Components\Enums\BackgroundColor;
 
 class ProgressBarDanger extends ProgressBar
 {

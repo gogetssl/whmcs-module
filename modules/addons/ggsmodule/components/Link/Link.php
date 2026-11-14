@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Link;
+namespace ModulesGarden\GGSModule\Components\Link;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Traits\UrlTrait;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Traits\UrlTrait;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
 
 class Link extends AbstractComponent
 {

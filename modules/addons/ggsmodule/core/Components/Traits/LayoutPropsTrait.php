@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Traits;
+namespace ModulesGarden\GGSModule\Core\Components\Traits;
 
-use ModulesGarden\ggsmodule\Core\Components\Enums\LayoutProps;
+use ModulesGarden\GGSModule\Core\Components\Enums\LayoutProps;
 
 trait LayoutPropsTrait
 {

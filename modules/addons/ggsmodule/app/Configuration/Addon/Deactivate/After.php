@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Configuration\Addon\Deactivate;
+namespace ModulesGarden\GGSModule\App\Configuration\Addon\Deactivate;
 
 /**
  * Runs after addon deactivation
  */
-class After extends \ModulesGarden\ggsmodule\Core\Configuration\Addon\Deactivate\After
+class After extends \ModulesGarden\GGSModule\Core\Configuration\Addon\Deactivate\After
 {
     /**
      * @param array $params

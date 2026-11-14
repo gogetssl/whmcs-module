@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\BasicElements\Modals;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\BasicElements\Modals;
 
-use ModulesGarden\ggsmodule\Components\Alert\AlertDanger;
-use ModulesGarden\ggsmodule\Components\Button\ButtonDanger;
-use ModulesGarden\ggsmodule\Components\Button\ButtonPrimary;
-use ModulesGarden\ggsmodule\Components\Button\ButtonSuccess;
-use ModulesGarden\ggsmodule\Components\Modal\ModalDanger;
-use ModulesGarden\ggsmodule\Components\Modal\ModalEdit;
-use ModulesGarden\ggsmodule\Components\Modal\ModalSuccess;
-use ModulesGarden\ggsmodule\Components\Toolbar\Toolbar;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Action;
+use ModulesGarden\GGSModule\Components\Alert\AlertDanger;
+use ModulesGarden\GGSModule\Components\Button\ButtonDanger;
+use ModulesGarden\GGSModule\Components\Button\ButtonPrimary;
+use ModulesGarden\GGSModule\Components\Button\ButtonSuccess;
+use ModulesGarden\GGSModule\Components\Modal\ModalDanger;
+use ModulesGarden\GGSModule\Components\Modal\ModalEdit;
+use ModulesGarden\GGSModule\Components\Modal\ModalSuccess;
+use ModulesGarden\GGSModule\Components\Toolbar\Toolbar;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Action;
 
 class BaseModals extends Widget
 {

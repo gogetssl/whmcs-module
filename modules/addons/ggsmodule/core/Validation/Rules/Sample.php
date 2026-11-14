@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Validation\Rules;
+namespace ModulesGarden\GGSModule\Core\Validation\Rules;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Validation\ImplicitRuleInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Validation\ImplicitRuleInterface;
 
 class Sample implements ImplicitRuleInterface
 {

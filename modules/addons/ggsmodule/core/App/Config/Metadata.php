@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Config;
+namespace ModulesGarden\GGSModule\Core\App\Config;
 
-use ModulesGarden\ggsmodule\Core\Data\Container;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Data\Container;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 class Metadata
 {
@@ -18,8 +18,8 @@ class Metadata
      */
     protected function loadEdition(Container $container)
     {
-        $container->set('configuration.systemName', \ModulesGarden\ggsmodule\App\Libs\Edition::name());
-        $container->set('configuration.description', \ModulesGarden\ggsmodule\App\Libs\Edition::description());
+        $container->set('configuration.systemName', \ModulesGarden\GGSModule\App\Libs\Edition::name());
+        $container->set('configuration.description', \ModulesGarden\GGSModule\App\Libs\Edition::description());
     }
 
     protected function loadModuleVersion(Container $container)

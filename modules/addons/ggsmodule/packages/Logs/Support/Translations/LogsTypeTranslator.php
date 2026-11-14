@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\Support\Translations;
+namespace ModulesGarden\GGSModule\Packages\Logs\Support\Translations;
 
-use ModulesGarden\ggsmodule\Core\Components\Traits\TranslatorTrait;
-use ModulesGarden\ggsmodule\Packages\Logs\Enums\LogTypes;
-use ModulesGarden\ggsmodule\Packages\Logs\Models\Logs;
+use ModulesGarden\GGSModule\Core\Components\Traits\TranslatorTrait;
+use ModulesGarden\GGSModule\Packages\Logs\Enums\LogTypes;
+use ModulesGarden\GGSModule\Packages\Logs\Models\Logs;
 
 class LogsTypeTranslator
 {

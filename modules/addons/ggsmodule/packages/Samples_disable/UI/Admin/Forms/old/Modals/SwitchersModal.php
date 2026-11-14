@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Modals;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Modals;
 
-use ModulesGarden\ggsmodule\Components\Modal\Modal;
-use ModulesGarden\ggsmodule\Components\Modal\ModalEdit;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Forms\SwitchersForm;
+use ModulesGarden\GGSModule\Components\Modal\Modal;
+use ModulesGarden\GGSModule\Components\Modal\ModalEdit;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Forms\SwitchersForm;
 
 class SwitchersModal extends ModalEdit
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\DataProviders;
+namespace ModulesGarden\GGSModule\Core\DataProviders;
 
 use JsonSerializable;
-use ModulesGarden\ggsmodule\Core\Contracts\DataSetInterface;
+use ModulesGarden\GGSModule\Core\Contracts\DataSetInterface;
 
 class DataSet implements DataSetInterface, JsonSerializable
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Cron\WithoutThread;
+namespace ModulesGarden\GGSModule\App\Cron\WithoutThread;
 
 
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 use Illuminate\Database\Capsule\Manager as DB;
 
 

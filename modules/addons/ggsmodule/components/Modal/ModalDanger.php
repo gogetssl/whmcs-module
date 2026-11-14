@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Modal;
+namespace ModulesGarden\GGSModule\Components\Modal;
 
-use ModulesGarden\ggsmodule\Components\Button\ButtonCancel;
-use ModulesGarden\ggsmodule\Components\Button\ButtonDanger;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalClose;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalFormSubmit;
+use ModulesGarden\GGSModule\Components\Button\ButtonCancel;
+use ModulesGarden\GGSModule\Components\Button\ButtonDanger;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalClose;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalFormSubmit;
 
 class ModalDanger extends ModalAction
 {

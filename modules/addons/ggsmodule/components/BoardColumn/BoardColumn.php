@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\BoardColumn;
+namespace ModulesGarden\GGSModule\Components\BoardColumn;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Container\Container;
 
 class BoardColumn extends Container
 {

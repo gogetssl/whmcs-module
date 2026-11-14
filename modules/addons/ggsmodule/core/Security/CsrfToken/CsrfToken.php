@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Security\CsrfToken;
+namespace ModulesGarden\GGSModule\Core\Security\CsrfToken;
 
-use ModulesGarden\ggsmodule\Core\Session\Session;
-use ModulesGarden\ggsmodule\Core\WHMCS\Config\Config;
+use ModulesGarden\GGSModule\Core\Session\Session;
+use ModulesGarden\GGSModule\Core\WHMCS\Config\Config;
 
 class CsrfToken
 {

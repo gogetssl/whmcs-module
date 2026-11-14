@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\Libs\GatewayHealth;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\Card;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\CronStatus;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\Pipeline;
+use ModulesGarden\GGSModule\App\Libs\GatewayHealth;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\Card;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\CronStatus;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\Pipeline;
 
 /**
  * Needs your attention: failing or never-run tasks, an unreachable gateway and orders waiting for the client, each
@@ -14,7 +14,7 @@ use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\Pipeline;
  */
 class AttentionWidget extends Card
 {
-    const BASE = 'addonmodules.php?module=ggsmodule&mg-page=';
+    const BASE = 'addonmodules.php?module=GGSModule&mg-page=';
 
     public function loadHtml(): void
     {

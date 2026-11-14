@@ -1,21 +1,21 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Cron;
+namespace ModulesGarden\GGSModule\App\Cron;
 
 use Exception;
-use ModulesGarden\Servers\ggsmodule\app\services\InvoiceRenew;
-use ModulesGarden\ggsmodule\App\Helpers\EmailTemplates;
-use ModulesGarden\ggsmodule\App\Libs\AcmeHelpers;
-use ModulesGarden\ggsmodule\App\Libs\AutoInstallHelpers;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Models\AcmeSubscription;
-use ModulesGarden\ggsmodule\App\Models\CronCheck;
-use ModulesGarden\ggsmodule\App\Models\Request;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\Core\CommandLine\AbstractCommand;
-use ModulesGarden\ggsmodule\Core\WHMCS\Helper;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Service;
-use ModulesGarden\ggsmodule\Packages\Logs\Support\Facades\Logger;
+use ModulesGarden\Servers\GGSModule\app\services\InvoiceRenew;
+use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
+use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
+use ModulesGarden\GGSModule\App\Libs\AutoInstallHelpers;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Models\AcmeSubscription;
+use ModulesGarden\GGSModule\App\Models\CronCheck;
+use ModulesGarden\GGSModule\App\Models\Request;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\Core\CommandLine\AbstractCommand;
+use ModulesGarden\GGSModule\Core\WHMCS\Helper;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Service;
+use ModulesGarden\GGSModule\Packages\Logs\Support\Facades\Logger;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
@@ -23,7 +23,7 @@ use WHMCS\Database\Capsule;
 
 /**
  * Class Sample
- * @package ModulesGarden\ggsmodule\App\Cron
+ * @package ModulesGarden\GGSModule\App\Cron
  */
 class RenewalNotifyCertificate extends AbstractCommand
 {
@@ -85,12 +85,12 @@ class RenewalNotifyCertificate extends AbstractCommand
         $certificatesQuery = Service::select(['tblhosting.*', 'tblsslorders.remoteid', 'tblproducts.configoption1'])
                                     ->join('tblsslorders', 'tblsslorders.serviceid', '=', 'tblhosting.id')
                                     ->join('tblproducts', 'tblhosting.packageid', '=', 'tblproducts.id')
-                                    ->where('tblproducts.servertype', 'ggsmodule')
+                                    ->where('tblproducts.servertype', 'GGSModule')
                                     ->where('tblhosting.domainstatus', 'Active')
                                     ->where(function($query) {
                                         $query->where('tblsslorders.status', 'Configuration Submitted')
                                               ->orWhere(function($smime) {
-                                                  $smime->whereIn('tblproducts.configoption9', \ModulesGarden\ggsmodule\App\Libs\GatewayOrderService::categories())
+                                                  $smime->whereIn('tblproducts.configoption9', \ModulesGarden\GGSModule\App\Libs\GatewayOrderService::categories())
                                                         ->where('tblsslorders.status', 'Completed');
                                               });
                                     });
@@ -114,12 +114,12 @@ class RenewalNotifyCertificate extends AbstractCommand
         foreach($certificatesQuery->get() as $srv)
         {
             // subscriptions have their own renewal (SubscriptionRenewals)
-            if(\ModulesGarden\ggsmodule\App\Libs\SubscriptionBilling::isSubscriptionProduct($srv->packageid))
+            if(\ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::isSubscriptionProduct($srv->packageid))
             {
                 continue;
             }
             // S/MIME: its own expiry e-mail, no reissue reminder (a renewal is a new order)
-            $gatewayType = \ModulesGarden\ggsmodule\App\Libs\GatewayOrderService::typeOfProduct($srv->packageid);
+            $gatewayType = \ModulesGarden\GGSModule\App\Libs\GatewayOrderService::typeOfProduct($srv->packageid);
             $isSmime     = $gatewayType !== null;
 
             $io->progressAdvance(1);
@@ -150,11 +150,11 @@ class RenewalNotifyCertificate extends AbstractCommand
                         // code signing and S/MIME have their own expiry text; a CodeGuard licence is not a certificate,
                         // so it gets the general service expiry e-mail
                         $expiryTemplate = EmailTemplates::EXPIRATION_TEMPLATE;
-                        if($gatewayType === \ModulesGarden\ggsmodule\App\Libs\CodeSigningService::class)
+                        if($gatewayType === \ModulesGarden\GGSModule\App\Libs\CodeSigningService::class)
                         {
                             $expiryTemplate = EmailTemplates::CS_EXPIRATION_TEMPLATE;
                         }
-                        elseif($gatewayType === \ModulesGarden\ggsmodule\App\Libs\SmimeService::class)
+                        elseif($gatewayType === \ModulesGarden\GGSModule\App\Libs\SmimeService::class)
                         {
                             $expiryTemplate = EmailTemplates::SMIME_EXPIRATION_TEMPLATE;
                         }
@@ -184,7 +184,7 @@ class RenewalNotifyCertificate extends AbstractCommand
                     $failedIds[] = (int)$srv->id;
                 }
                 $errorToDB = $e->getMessage();
-                Logger::error("The notification error " . $e->getMessage(), \ModulesGarden\ggsmodule\App\Libs\LogContext::exception($e, ['service' => $srv->id]));
+                Logger::error("The notification error " . $e->getMessage(), \ModulesGarden\GGSModule\App\Libs\LogContext::exception($e, ['service' => $srv->id]));
 
             }
         }
@@ -195,14 +195,14 @@ class RenewalNotifyCertificate extends AbstractCommand
         {
             $output->write('Invoice Checking...');
 
-            $classExist = class_exists('\ModulesGarden\Servers\ggsmodule\app\services\InvoiceRenew');
+            $classExist = class_exists('\ModulesGarden\Servers\GGSModule\app\services\InvoiceRenew');
             if($classExist === false)
             {
-                require_once dirname(dirname(dirname(dirname(__DIR__)))) . DIRECTORY_SEPARATOR . 'servers' . DIRECTORY_SEPARATOR . 'ggsmodule' . DIRECTORY_SEPARATOR . 'Loader.php';
-                new \ModulesGarden\Servers\ggsmodule\Loader();
+                require_once dirname(dirname(dirname(dirname(__DIR__)))) . DIRECTORY_SEPARATOR . 'servers' . DIRECTORY_SEPARATOR . 'GGSModule' . DIRECTORY_SEPARATOR . 'Loader.php';
+                new \ModulesGarden\Servers\GGSModule\Loader();
             }
 
-            $invoice = new \ModulesGarden\Servers\ggsmodule\app\services\InvoiceRenew();
+            $invoice = new \ModulesGarden\Servers\GGSModule\app\services\InvoiceRenew();
             foreach($serviceIDs as $serviceID)
             {
                 try
@@ -216,7 +216,7 @@ class RenewalNotifyCertificate extends AbstractCommand
                 {
 
                     $errorToDB = $e->getMessage();
-                    Logger::error("The renewal invoice generate error " . $e->getMessage(), \ModulesGarden\ggsmodule\App\Libs\LogContext::exception($e, ['service' => $serviceID]));
+                    Logger::error("The renewal invoice generate error " . $e->getMessage(), \ModulesGarden\GGSModule\App\Libs\LogContext::exception($e, ['service' => $serviceID]));
 
                 }
             }
@@ -226,7 +226,7 @@ class RenewalNotifyCertificate extends AbstractCommand
         $io->progressFinish();
         try
         {
-            foreach(\ModulesGarden\ggsmodule\App\Libs\SubscriptionRenewals::run($sslSettings) as $serviceId => $error)
+            foreach(\ModulesGarden\GGSModule\App\Libs\SubscriptionRenewals::run($sslSettings) as $serviceId => $error)
             {
                 $errorToDB = $error;
                 Logger::error('Subscription renewal error ' . $error, ['service' => $serviceId]);
@@ -235,7 +235,7 @@ class RenewalNotifyCertificate extends AbstractCommand
         catch(\Throwable $e)
         {
             $errorToDB = $e->getMessage();
-            Logger::error('Subscription renewal error ' . $e->getMessage(), \ModulesGarden\ggsmodule\App\Libs\LogContext::exception($e));
+            Logger::error('Subscription renewal error ' . $e->getMessage(), \ModulesGarden\GGSModule\App\Libs\LogContext::exception($e));
         }
 
         // each step on its own: the time of this run is always saved, or the job would start again every 5 minutes
@@ -248,7 +248,7 @@ class RenewalNotifyCertificate extends AbstractCommand
             catch(\Throwable $e)
             {
                 $errorToDB = $e->getMessage();
-                Logger::error('RenewalNotifyCertificate ' . $step . ' error ' . $e->getMessage(), \ModulesGarden\ggsmodule\App\Libs\LogContext::exception($e));
+                Logger::error('RenewalNotifyCertificate ' . $step . ' error ' . $e->getMessage(), \ModulesGarden\GGSModule\App\Libs\LogContext::exception($e));
             }
         }
 
@@ -261,7 +261,7 @@ class RenewalNotifyCertificate extends AbstractCommand
 
     private function terminateUnpaid()
     {
-        \ModulesGarden\ggsmodule\App\Libs\UnpaidTermination::run();
+        \ModulesGarden\GGSModule\App\Libs\UnpaidTermination::run();
     }
 
     public function checkOrderExpireDate($expireDate)

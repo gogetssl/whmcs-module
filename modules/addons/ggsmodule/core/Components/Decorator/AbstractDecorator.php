@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Decorator;
+namespace ModulesGarden\GGSModule\Core\Components\Decorator;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
 
 abstract class AbstractDecorator
 {

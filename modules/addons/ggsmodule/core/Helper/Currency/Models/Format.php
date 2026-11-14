@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Helper\Currency\Models;
+namespace ModulesGarden\GGSModule\Core\Helper\Currency\Models;
 
 /**
- * @deprecated - use \ModulesGarden\ggsmodule\Core\UI\Formatters\Price\Price instead
+ * @deprecated - use \ModulesGarden\GGSModule\Core\UI\Formatters\Price\Price instead
  */
 class Format
 {

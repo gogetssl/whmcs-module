@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\FileReader\Reader;
+namespace ModulesGarden\GGSModule\Core\FileReader\Reader;
 
 use Exception;
 use Illuminate\Database\Capsule\Manager;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\ServiceLocator;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\ServiceLocator;
 
 /**
  * Description of Sql

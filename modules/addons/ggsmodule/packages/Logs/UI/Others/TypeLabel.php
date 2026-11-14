@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Others;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Others;
 
-use ModulesGarden\ggsmodule\Packages\Logs\Support\Translations\LogsTypeTranslator;
-use ModulesGarden\ggsmodule\Components\Label\Label;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Packages\Logs\Support\Translations\LogsTypeTranslator;
+use ModulesGarden\GGSModule\Components\Label\Label;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
 
 //@todo refactor me - colors should be loaded from static class, do not use static in this class
 class TypeLabel

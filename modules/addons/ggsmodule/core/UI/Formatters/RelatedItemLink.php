@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Formatters;
+namespace ModulesGarden\GGSModule\Core\UI\Formatters;
 
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypes\Addon;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypes\Admin;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypes\Client;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypes\Domain;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypes\Hosting;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypes\Invoice;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypes\Order;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypes\Service;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\ItemTypes\Ticket;
-use ModulesGarden\ggsmodule\Core\UI\Formatters\RelatedItem\RelatedItem;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypes\Addon;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypes\Admin;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypes\Client;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypes\Domain;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypes\Hosting;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypes\Invoice;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypes\Order;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypes\Service;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\ItemTypes\Ticket;
+use ModulesGarden\GGSModule\Core\UI\Formatters\RelatedItem\RelatedItem;
 
 /**
  * @deprecated  - use RelatedItem class instead

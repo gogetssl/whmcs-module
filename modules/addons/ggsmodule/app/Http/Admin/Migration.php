@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Http\Admin;
+namespace ModulesGarden\GGSModule\App\Http\Admin;
 
-use ModulesGarden\ggsmodule\App\Migration\Choice;
-use ModulesGarden\ggsmodule\App\Migration\Engine;
-use ModulesGarden\ggsmodule\App\Migration\Store;
-use ModulesGarden\ggsmodule\App\UI\Admin\Migration\Index\MigrationContainer;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Helper;
-use ModulesGarden\ggsmodule\Core\Http\AbstractController;
-use ModulesGarden\ggsmodule\Core\Http\JsonResponse;
+use ModulesGarden\GGSModule\App\Migration\Choice;
+use ModulesGarden\GGSModule\App\Migration\Engine;
+use ModulesGarden\GGSModule\App\Migration\Store;
+use ModulesGarden\GGSModule\App\UI\Admin\Migration\Index\MigrationContainer;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Helper;
+use ModulesGarden\GGSModule\Core\Http\AbstractController;
+use ModulesGarden\GGSModule\Core\Http\JsonResponse;
 
 /**
  * Legacy module migration page and its actions.
@@ -166,7 +166,7 @@ class Migration extends AbstractController implements AdminAreaInterface
     protected function source(): string
     {
         $source = strtolower((string)($_REQUEST['source'] ?? ''));
-        if(!in_array($source, [\ModulesGarden\ggsmodule\App\Libs\Edition::get()], true))
+        if(!in_array($source, [\ModulesGarden\GGSModule\App\Libs\Edition::get()], true))
         {
             throw new \InvalidArgumentException('Unknown legacy source');
         }
@@ -190,7 +190,7 @@ class Migration extends AbstractController implements AdminAreaInterface
     protected function requireToken(): void
     {
         // WHMCS admin links carry the token in the query string (generate_token('link')); the runner posts it
-        if(!\ModulesGarden\ggsmodule\App\Libs\CsrfToken::valid($_REQUEST['token'] ?? ''))
+        if(!\ModulesGarden\GGSModule\App\Libs\CsrfToken::valid($_REQUEST['token'] ?? ''))
         {
             throw new \RuntimeException('Invalid or expired security token. Reload the page and try again.');
         }

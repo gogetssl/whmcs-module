@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\TextShowHide;
+namespace ModulesGarden\GGSModule\Components\TextShowHide;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Container\Container;
 
 class TextShowHide extends Container
 {

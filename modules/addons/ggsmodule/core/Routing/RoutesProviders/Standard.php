@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Routing\RoutesProviders;
+namespace ModulesGarden\GGSModule\Core\Routing\RoutesProviders;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Routing\RouteProviderInterface;
-use ModulesGarden\ggsmodule\Core\DependencyInjection\PackageServices;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Routing\Route;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use function ModulesGarden\ggsmodule\Core\make;
+use ModulesGarden\GGSModule\Core\Contracts\Routing\RouteProviderInterface;
+use ModulesGarden\GGSModule\Core\DependencyInjection\PackageServices;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Routing\Route;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use function ModulesGarden\GGSModule\Core\make;
 
 class Standard implements RouteProviderInterface
 {
@@ -39,7 +39,7 @@ class Standard implements RouteProviderInterface
      */
     protected function tryDefaultControllers(string $level, string $page, string $action): ?string
     {
-        $namespace = '\ModulesGarden\ggsmodule\App\Http\\' . ucfirst($level) . '\\' . ucfirst($page);
+        $namespace = '\ModulesGarden\GGSModule\App\Http\\' . ucfirst($level) . '\\' . ucfirst($page);
         if (class_exists($namespace) && method_exists($namespace, $action))
         {
             return $namespace . '@' . $action;

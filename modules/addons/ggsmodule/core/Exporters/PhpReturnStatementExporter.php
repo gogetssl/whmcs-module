@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Exporters;
+namespace ModulesGarden\GGSModule\Core\Exporters;
 
 class PhpReturnStatementExporter extends BaseExporter
 {

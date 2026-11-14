@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\UploadField;
+namespace ModulesGarden\GGSModule\Components\UploadField;
 
-use ModulesGarden\ggsmodule\Components\FormInputFile\FormInputFile;
-use ModulesGarden\ggsmodule\Components\FormInputGroup\FormInputGroup;
-use ModulesGarden\ggsmodule\Components\FormInputLabel\FormInputLabel;
+use ModulesGarden\GGSModule\Components\FormInputFile\FormInputFile;
+use ModulesGarden\GGSModule\Components\FormInputGroup\FormInputGroup;
+use ModulesGarden\GGSModule\Components\FormInputLabel\FormInputLabel;
 
 class UploadField extends FormInputGroup
 {

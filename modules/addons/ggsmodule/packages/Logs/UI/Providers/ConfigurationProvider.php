@@ -1,24 +1,24 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Providers;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Providers;
 
-use ModulesGarden\ggsmodule\App\Libs\GeneralSettings;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Providers\GeneralSettingsProvider;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Validator;
-use ModulesGarden\ggsmodule\Core\Validation\Rule;
-use ModulesGarden\ggsmodule\Packages\Logs\Enums\LogTypes;
-use ModulesGarden\ggsmodule\Packages\Logs\Support\Translations\LogsTypeTranslator;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
+use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Providers\GeneralSettingsProvider;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Support\Facades\Validator;
+use ModulesGarden\GGSModule\Core\Validation\Rule;
+use ModulesGarden\GGSModule\Packages\Logs\Enums\LogTypes;
+use ModulesGarden\GGSModule\Packages\Logs\Support\Translations\LogsTypeTranslator;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
 
 class ConfigurationProvider extends CrudProvider
 {
     public function read()
     {
         $this->data->set('logging', GeneralSettings::enabled('internalLog'));
-        $this->data->set('api_mode', \ModulesGarden\ggsmodule\App\Libs\LogPolicy::apiMode());
+        $this->data->set('api_mode', \ModulesGarden\GGSModule\App\Libs\LogPolicy::apiMode());
         $this->data->set('events', GeneralSettings::enabled('eventLog'));
-        $this->data->set('debug_services', implode(', ', \ModulesGarden\ggsmodule\App\Libs\LogPolicy::debugServices()));
+        $this->data->set('debug_services', implode(', ', \ModulesGarden\GGSModule\App\Libs\LogPolicy::debugServices()));
         $this->data->set('debug_hours', '4');
         $this->data->set('types', $this->formData->get('types', ModuleSettings::get('logs.types')));
         $this->data->set('auto_prune', $this->formData->get('auto_prune', ModuleSettings::get('logs.auto_prune', 1)));

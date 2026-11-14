@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Http\Admin;
+namespace ModulesGarden\GGSModule\App\Http\Admin;
 
-use ModulesGarden\ggsmodule\App\Libs\CsrfToken;
-use ModulesGarden\ggsmodule\App\Libs\EmailCatalog;
-use ModulesGarden\ggsmodule\App\Libs\EmailManager;
-use ModulesGarden\ggsmodule\App\UI\Admin\Emails\Index\EmailsContainer;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Helper;
-use ModulesGarden\ggsmodule\Core\Http\AbstractController;
+use ModulesGarden\GGSModule\App\Libs\CsrfToken;
+use ModulesGarden\GGSModule\App\Libs\EmailCatalog;
+use ModulesGarden\GGSModule\App\Libs\EmailManager;
+use ModulesGarden\GGSModule\App\UI\Admin\Emails\Index\EmailsContainer;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Helper;
+use ModulesGarden\GGSModule\Core\Http\AbstractController;
 use WHMCS\User\Admin\Permission;
 
 /**
@@ -141,7 +141,7 @@ class Emails extends AbstractController implements AdminAreaInterface
             $_SESSION[self::SESSION]['error'] = $e->getMessage();
         }
 
-        header('Location: addonmodules.php?module=ggsmodule&mg-page=emails' . ($key !== '' ? '&key=' . rawurlencode($key) : '') . ($language !== '' ? '&lang=' . rawurlencode($language) : ''));
+        header('Location: addonmodules.php?module=GGSModule&mg-page=emails' . ($key !== '' ? '&key=' . rawurlencode($key) : '') . ($language !== '' ? '&lang=' . rawurlencode($language) : ''));
         exit;
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\FileReader;
+namespace ModulesGarden\GGSModule\Core\FileReader;
 
 /**
  * Wrapper for files and directories validation methods

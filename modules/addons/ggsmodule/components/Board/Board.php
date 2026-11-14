@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Board;
+namespace ModulesGarden\GGSModule\Components\Board;
 
-use ModulesGarden\ggsmodule\Components\BoardColumn\BoardColumn;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Core\Components\DataBuilder;
-use ModulesGarden\ggsmodule\Core\Components\Traits\AjaxDataProviderTrait;
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Components\Response\Response;
+use ModulesGarden\GGSModule\Components\BoardColumn\BoardColumn;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Core\Components\DataBuilder;
+use ModulesGarden\GGSModule\Core\Components\Traits\AjaxDataProviderTrait;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Components\Response\Response;
 
 class Board extends Container
 {

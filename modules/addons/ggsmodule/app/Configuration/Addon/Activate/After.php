@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Configuration\Addon\Activate;
+namespace ModulesGarden\GGSModule\App\Configuration\Addon\Activate;
 
 /**
  * Runs after module activation actions
  */
-class After extends \ModulesGarden\ggsmodule\Core\Configuration\Addon\Activate\After
+class After extends \ModulesGarden\GGSModule\Core\Configuration\Addon\Activate\After
 {
     /**
      * @param array $params

@@ -1,7 +1,7 @@
 <?php
 // phpcs:ignoreFile
 
-use ModulesGarden\ggsmodule\Core\App\AppContext;
+use ModulesGarden\GGSModule\Core\App\AppContext;
 
 if (!defined('WHMCS'))
 {
@@ -10,50 +10,58 @@ if (!defined('WHMCS'))
 
 require_once dirname(__DIR__, 3) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'App' . DIRECTORY_SEPARATOR . 'AppContext.php';
 
-function ggsmodule_config()
+function GGSModule_config()
 {
+    GGSModule_adoptAnOlderInstall();
+
     return (new AppContext())->runAddonModule(__FUNCTION__, []);
 }
 
 /**
- * Tables of an install made before 1.3.0 still carry the folder name; they take the edition's name before
- * anything else runs, so the schema below finds them instead of creating a second, empty set.
+ * An install made before 1.4.0 lived in a folder of another name, and before 1.3.0 its tables were named after
+ * that folder too. Both are moved over before anything else runs, so the schema finds the tables that are there
+ * and WHMCS finds the products this module provisions.
  */
-function ggsmodule_renameTablesOfOlderInstalls()
+function GGSModule_adoptAnOlderInstall()
 {
-    require_once dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'Libs' . DIRECTORY_SEPARATOR . 'Edition.php';
-    require_once dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'Libs' . DIRECTORY_SEPARATOR . 'TablePrefix.php';
+    $libs = dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'Libs' . DIRECTORY_SEPARATOR;
+    require_once $libs . 'Edition.php';
+    require_once $libs . 'TablePrefix.php';
+    require_once $libs . 'ModuleRename.php';
 
-    try
+    foreach (['TablePrefix', 'ModuleRename'] as $step)
     {
-        \ModulesGarden\ggsmodule\App\Libs\TablePrefix::migrate();
-    }
-    catch (\Throwable $e)
-    {
-        // an install that cannot rename its tables keeps working on the ones it has
+        try
+        {
+            call_user_func(['\\ModulesGarden\\GGSModule\\App\\Libs\\' . $step, 'migrate']);
+        }
+        catch (\Throwable $e)
+        {
+            // an install that cannot be moved over keeps working on what it has; the next run tries again
+        }
     }
 }
 
-function ggsmodule_activate()
+function GGSModule_activate()
 {
-    ggsmodule_renameTablesOfOlderInstalls();
+    GGSModule_adoptAnOlderInstall();
 
     return (new AppContext())->runAddonModule(__FUNCTION__, []);
 }
 
-function ggsmodule_deactivate()
+function GGSModule_deactivate()
 {
     return (new AppContext())->runAddonModule(__FUNCTION__, []);
 }
 
-function ggsmodule_upgrade($params)
+function GGSModule_upgrade($params)
 {
-    ggsmodule_renameTablesOfOlderInstalls();
+    GGSModule_adoptAnOlderInstall();
 
     return (new AppContext())->runAddonModule(__FUNCTION__, $params);
 }
 
-function ggsmodule_output($params)
+function GGSModule_output($params)
 {
     #MGLICENSE_CHECK_ECHO_AND_RETURN_MESSAGE#
 
@@ -71,13 +79,13 @@ function ggsmodule_output($params)
 
 if (defined('CLIENTAREA'))
 {
-    function ggsmodule_clientarea($params)
+    function GGSModule_clientarea($params)
     {
         #MGLICENSE_CHECK_ECHO_AND_RETURN_MESSAGE#
 
         // Client's SSL certificates (summary filters) and "SSL Certificates by Domain" - plain Smarty pages
         require_once dirname(__DIR__, 3) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'Bootstrap.php';
 
-        return \ModulesGarden\ggsmodule\App\ClientArea\SslPages::render($_GET);
+        return \ModulesGarden\GGSModule\App\ClientArea\SslPages::render($_GET);
     }
 }

@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Http\Admin;
+namespace ModulesGarden\GGSModule\App\Http\Admin;
 
-use ModulesGarden\ggsmodule\App\Libs\Markups as MarkupRules;
-use ModulesGarden\ggsmodule\App\Libs\CsrfToken;
-use ModulesGarden\ggsmodule\App\UI\Admin\Markups\Index\MarkupsContainer;
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Helper;
-use ModulesGarden\ggsmodule\Core\Http\AbstractController;
+use ModulesGarden\GGSModule\App\Libs\Markups as MarkupRules;
+use ModulesGarden\GGSModule\App\Libs\CsrfToken;
+use ModulesGarden\GGSModule\App\UI\Admin\Markups\Index\MarkupsContainer;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Helper;
+use ModulesGarden\GGSModule\Core\Http\AbstractController;
 
 /**
  * Client markups: list, add / change (POST), delete (link with the admin token)

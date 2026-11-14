@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models;
 
 class ProductConfigOption extends \WHMCS\Product\ConfigOption
 {
@@ -9,17 +9,17 @@ class ProductConfigOption extends \WHMCS\Product\ConfigOption
      */
     public function suboptions()
     {
-        return $this->hasMany('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\ProductConfigOptionSub', 'configid', "id");
+        return $this->hasMany('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\ProductConfigOptionSub', 'configid', "id");
     }
 
     public function selectableOptions()
     {
-        return $this->hasMany('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\ProductConfigOptionSub', "configid", "id");
+        return $this->hasMany('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\ProductConfigOptionSub', "configid", "id");
     }
 
     public function configGroup()
     {
-        return $this->belongsTo('ModulesGarden\\ggsmodule\\Core\\WHMCS\\Models\\ProductConfigGroup', "gid", "id");
+        return $this->belongsTo('ModulesGarden\\GGSModule\\Core\\WHMCS\\Models\\ProductConfigGroup', "gid", "id");
     }
 
     public function scopeOfProductId($query, $productId)

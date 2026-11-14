@@ -1,18 +1,18 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Fragments\ConfigurableHintBox\UI\Widgets;
+namespace ModulesGarden\GGSModule\Fragments\ConfigurableHintBox\UI\Widgets;
 
-use ModulesGarden\ggsmodule\Components\DropdownMenu\DropdownMenu;
-use ModulesGarden\ggsmodule\Components\HintsBox\HintsBox;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ToolbarTrait;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\Data\Container;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Fragments\ConfigurableHintBox\UI\Buttons\EditConfiguration;
-use ModulesGarden\ggsmodule\Fragments\ConfigurableHintBox\UI\Buttons\ExpandButton;
-use ModulesGarden\ggsmodule\Fragments\ConfigurableHintBox\UI\Buttons\HideButton;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
+use ModulesGarden\GGSModule\Components\DropdownMenu\DropdownMenu;
+use ModulesGarden\GGSModule\Components\HintsBox\HintsBox;
+use ModulesGarden\GGSModule\Core\Components\Traits\ToolbarTrait;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\Data\Container;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Fragments\ConfigurableHintBox\UI\Buttons\EditConfiguration;
+use ModulesGarden\GGSModule\Fragments\ConfigurableHintBox\UI\Buttons\ExpandButton;
+use ModulesGarden\GGSModule\Fragments\ConfigurableHintBox\UI\Buttons\HideButton;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
 
 class ConfigurableHintBox extends HintsBox implements AjaxComponentInterface, AdminAreaInterface
 {

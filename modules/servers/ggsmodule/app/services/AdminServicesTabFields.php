@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\app\services;
+namespace ModulesGarden\Servers\GGSModule\app\services;
 
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\SSL;
-use ModulesGarden\ggsmodule\App\Libs\AutoInstallHelpers;
-use ModulesGarden\ggsmodule\App\Libs\AutoInstallQueue;
-use ModulesGarden\ggsmodule\App\Libs\CertificateService;
-use ModulesGarden\ggsmodule\App\Libs\Cpanel;
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\Models\Request;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\SSL;
+use ModulesGarden\GGSModule\App\Libs\AutoInstallHelpers;
+use ModulesGarden\GGSModule\App\Libs\AutoInstallQueue;
+use ModulesGarden\GGSModule\App\Libs\CertificateService;
+use ModulesGarden\GGSModule\App\Libs\Cpanel;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\Models\Request;
 
 /**
  * Admin service tab: order IDs, vendor status, validation per domain, dates, certificate, install target.
@@ -32,7 +32,7 @@ class AdminServicesTabFields
             {
                 $fields = ['Configuration Status' => '<span class="label label-warning">Awaiting Configuration</span>'];
                 // S/MIME after a renewal: the orders placed before
-                $gatewayType = \ModulesGarden\ggsmodule\App\Libs\GatewayOrderService::typeOfService((int)$params['serviceid']);
+                $gatewayType = \ModulesGarden\GGSModule\App\Libs\GatewayOrderService::typeOfService((int)$params['serviceid']);
                 if($gatewayType)
                 {
                     $fields += $this->getSmimePreviousOrders($gatewayType::stored((int)$params['serviceid']));
@@ -88,7 +88,7 @@ class AdminServicesTabFields
      */
     private function getSmimeDetails($serviceId, $sslService)
     {
-        $stored = \ModulesGarden\ggsmodule\App\Libs\SmimeService::stored($serviceId);
+        $stored = \ModulesGarden\GGSModule\App\Libs\SmimeService::stored($serviceId);
         $status = (string)($stored['status'] ?? '');
         $labels = ['active' => 'label-success', 'processing' => 'label-info', 'pending' => 'label-info', 'cancelled' => 'label-danger',
                    'rejected' => 'label-danger', 'failed' => 'label-danger', 'revoked' => 'label-danger', 'expired' => 'label-default'];
@@ -128,7 +128,7 @@ class AdminServicesTabFields
      */
     private function getDocumentSigningDetails($serviceId, $sslService)
     {
-        $ds     = \ModulesGarden\ggsmodule\App\Libs\DocumentSigningService::class;
+        $ds     = \ModulesGarden\GGSModule\App\Libs\DocumentSigningService::class;
         $stored = $ds::stored($serviceId);
         $status = (string)($stored['status'] ?? '');
         $labels = ['active' => 'label-success', 'processing' => 'label-info', 'pending' => 'label-info', 'invited' => 'label-warning',
@@ -162,7 +162,7 @@ class AdminServicesTabFields
      */
     private function getCodeGuardDetails($serviceId, $sslService)
     {
-        $cg      = \ModulesGarden\ggsmodule\App\Libs\CodeGuardService::class;
+        $cg      = \ModulesGarden\GGSModule\App\Libs\CodeGuardService::class;
         $stored  = $cg::stored($serviceId);
         $status  = (string)($stored['status'] ?? '');
         $labels  = ['active' => 'label-success', 'suspended' => 'label-warning', 'cancelled' => 'label-danger', 'refunded' => 'label-default'];
@@ -201,7 +201,7 @@ class AdminServicesTabFields
      */
     private function getCodeSigningDetails($serviceId, $sslService)
     {
-        $cs     = \ModulesGarden\ggsmodule\App\Libs\CodeSigningService::class;
+        $cs     = \ModulesGarden\GGSModule\App\Libs\CodeSigningService::class;
         $stored = $cs::stored($serviceId);
         $status = (string)($stored['status'] ?? '');
         $labels = ['active' => 'label-success', 'processing' => 'label-info', 'pending' => 'label-info', 'cancelled' => 'label-danger',

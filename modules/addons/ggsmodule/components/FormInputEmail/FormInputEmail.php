@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\FormInputEmail;
+namespace ModulesGarden\GGSModule\Components\FormInputEmail;
 
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
 
 class FormInputEmail extends FormInputText
 {

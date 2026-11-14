@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core;
+namespace ModulesGarden\GGSModule\Core;
 
 /**
  * Description of DependencyInjection

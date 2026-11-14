@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Configuration\Addon\Update;
+namespace ModulesGarden\GGSModule\Core\Configuration\Addon\Update;
 
 use Exception;
-use ModulesGarden\ggsmodule\Core\Configuration\Addon\Update\Patch\AbstractPatch;
-use ModulesGarden\ggsmodule\Core\DependencyInjection;
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
-use ModulesGarden\ggsmodule\Core\Support\Facades\LogActivity;
+use ModulesGarden\GGSModule\Core\Configuration\Addon\Update\Patch\AbstractPatch;
+use ModulesGarden\GGSModule\Core\DependencyInjection;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\Support\Facades\LogActivity;
 
 /**
  * Description of PatchManager

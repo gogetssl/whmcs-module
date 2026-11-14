@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\PageNavBar;
+namespace ModulesGarden\GGSModule\Components\PageNavBar;
 
-use ModulesGarden\ggsmodule\Components\NavBar\NavBar;
+use ModulesGarden\GGSModule\Components\NavBar\NavBar;
 
 /**
  * Class Form

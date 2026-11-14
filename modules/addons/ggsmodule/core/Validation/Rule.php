@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Validation;
+namespace ModulesGarden\GGSModule\Core\Validation;
 
 class Rule extends \Illuminate\Validation\Rule
 {

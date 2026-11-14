@@ -1,16 +1,16 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DynamicTabs\Pages;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DynamicTabs\Pages;
 
-use ModulesGarden\ggsmodule\Components\MarkdownEditor\MarkdownEditor;
-use ModulesGarden\ggsmodule\Components\Tab\Tab;
-use ModulesGarden\ggsmodule\Components\TabsWidget\TabsWidget;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButton;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalLoad;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DynamicTabs\Modals\EditTabsModal;
+use ModulesGarden\GGSModule\Components\MarkdownEditor\MarkdownEditor;
+use ModulesGarden\GGSModule\Components\Tab\Tab;
+use ModulesGarden\GGSModule\Components\TabsWidget\TabsWidget;
+use ModulesGarden\GGSModule\Components\IconButton\IconButton;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalLoad;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Support\Facades\ModuleSettings;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DynamicTabs\Modals\EditTabsModal;
 
 class DynamicTabs extends TabsWidget implements AdminAreaInterface, AjaxComponentInterface
 {

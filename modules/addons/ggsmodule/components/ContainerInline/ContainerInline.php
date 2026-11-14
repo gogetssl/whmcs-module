@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\ContainerInline;
+namespace ModulesGarden\GGSModule\Components\ContainerInline;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\Container\Container;
 
 class ContainerInline extends Container
 {

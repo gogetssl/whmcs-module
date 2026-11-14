@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptions;
+namespace ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptions;
 
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Product;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\ProductConfigOption;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptions\SubOption\SubOption;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Product;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\ProductConfigOption;
+use ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptions\SubOption\SubOption;
 
 /**
  *

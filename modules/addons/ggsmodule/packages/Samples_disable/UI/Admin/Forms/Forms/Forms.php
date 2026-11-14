@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Forms\Forms;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Forms\Forms;
 
-use ModulesGarden\ggsmodule\Components\Button\ButtonSubmitSuccess;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Components\Actions\FormSubmit;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Forms\Forms\Forms\AutoSubmit;
+use ModulesGarden\GGSModule\Components\Button\ButtonSubmitSuccess;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Components\Actions\FormSubmit;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Forms\Forms\Forms\AutoSubmit;
 
-class Forms extends \ModulesGarden\ggsmodule\Components\Container\Container implements AdminAreaInterface
+class Forms extends \ModulesGarden\GGSModule\Components\Container\Container implements AdminAreaInterface
 {
     public function loadHtml(): void
     {
@@ -21,7 +21,7 @@ class Forms extends \ModulesGarden\ggsmodule\Components\Container\Container impl
 
     public function form1()
     {
-        $form   = new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Forms\Forms\Forms\FormOneColumnElements();
+        $form   = new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Forms\Forms\Forms\FormOneColumnElements();
         $widget = new Widget();
         $widget->setTitle('Form One Column');
         $widget->addElement($form);
@@ -34,7 +34,7 @@ class Forms extends \ModulesGarden\ggsmodule\Components\Container\Container impl
 
     public function form2()
     {
-        $form   = new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Forms\Forms\Forms\FormTwoColumnsElements();
+        $form   = new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Forms\Forms\Forms\FormTwoColumnsElements();
         $widget = new Widget();
         $widget->setTitle('Form Two Columns');
         $widget->addElement($form);
@@ -47,7 +47,7 @@ class Forms extends \ModulesGarden\ggsmodule\Components\Container\Container impl
 
     public function form3()
     {
-        $form   = new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Forms\Forms\Forms\FormWithTabsElements();
+        $form   = new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Forms\Forms\Forms\FormWithTabsElements();
         $widget = new Widget();
         $widget->setTitle('Form With Non Form Elements');
         $widget->addElement($form);

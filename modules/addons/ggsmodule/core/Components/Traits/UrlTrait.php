@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Traits;
+namespace ModulesGarden\GGSModule\Core\Components\Traits;
 
 /**
  * Trait ElementsTrait
@@ -9,7 +9,7 @@ trait UrlTrait
 {
     /**
      * @param string $url
-     * @return \ModulesGarden\ggsmodule\Components\NavBarItem\NavBarItem|UrlTrait
+     * @return \ModulesGarden\GGSModule\Components\NavBarItem\NavBarItem|UrlTrait
      */
     public function setUrl(?string $url): self
     {

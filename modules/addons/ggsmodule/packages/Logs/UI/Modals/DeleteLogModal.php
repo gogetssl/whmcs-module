@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Logs\UI\Modals;
+namespace ModulesGarden\GGSModule\Packages\Logs\UI\Modals;
 
-use ModulesGarden\ggsmodule\Components\Modal;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Packages\Logs\UI\Forms\DeleteLogForm;
+use ModulesGarden\GGSModule\Components\Modal;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Packages\Logs\UI\Forms\DeleteLogForm;
 
 class DeleteLogModal extends Modal\ModalDanger implements AjaxComponentInterface, AdminAreaInterface
 {

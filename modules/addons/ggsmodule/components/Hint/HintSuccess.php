@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Hint;
+namespace ModulesGarden\GGSModule\Components\Hint;
 
 class HintSuccess extends Hint
 {

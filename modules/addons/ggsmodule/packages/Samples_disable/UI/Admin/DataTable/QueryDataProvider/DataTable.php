@@ -1,25 +1,25 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\QueryDataProvider;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\QueryDataProvider;
 
-use ModulesGarden\ggsmodule\Components\CopyPasswordInline\CopyPasswordInline;
-use ModulesGarden\ggsmodule\Components\DataTable\Column;
-use ModulesGarden\ggsmodule\Components\FormLabel\FormLabel;
-use ModulesGarden\ggsmodule\Components\Graph\Models\DataSet;
-use ModulesGarden\ggsmodule\Components\IconButton\IconButton;
-use ModulesGarden\ggsmodule\Components\Label\LabelSuccess;
-use ModulesGarden\ggsmodule\Components\ListSimple\ListSimple;
-use ModulesGarden\ggsmodule\Components\VisibilityWrapper\VisibilityWrapper;
-use ModulesGarden\ggsmodule\Core\Components\Actions\RedirectFromParam;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
-use ModulesGarden\ggsmodule\Core\DataProviders\QueryDataProvider;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Buttons\UserEdit;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Providers\ReorderTableProvider;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Switchers\TaxExempt;
+use ModulesGarden\GGSModule\Components\CopyPasswordInline\CopyPasswordInline;
+use ModulesGarden\GGSModule\Components\DataTable\Column;
+use ModulesGarden\GGSModule\Components\FormLabel\FormLabel;
+use ModulesGarden\GGSModule\Components\Graph\Models\DataSet;
+use ModulesGarden\GGSModule\Components\IconButton\IconButton;
+use ModulesGarden\GGSModule\Components\Label\LabelSuccess;
+use ModulesGarden\GGSModule\Components\ListSimple\ListSimple;
+use ModulesGarden\GGSModule\Components\VisibilityWrapper\VisibilityWrapper;
+use ModulesGarden\GGSModule\Core\Components\Actions\RedirectFromParam;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\Core\DataProviders\QueryDataProvider;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Buttons\UserEdit;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Providers\ReorderTableProvider;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Switchers\TaxExempt;
 use WHMCS\User\Client;
 
-class DataTable extends \ModulesGarden\ggsmodule\Components\DataTable\DataTable implements AdminAreaInterface, AjaxComponentInterface
+class DataTable extends \ModulesGarden\GGSModule\Components\DataTable\DataTable implements AdminAreaInterface, AjaxComponentInterface
 {
     //protected $recordsPerPage = 5;
 
@@ -51,8 +51,8 @@ class DataTable extends \ModulesGarden\ggsmodule\Components\DataTable\DataTable 
 
         $this->addActionButton($redirect);
         $this->addActionButton((new VisibilityWrapper(new UserEdit()))->disableWhen('id',"12")->hideWhen('id',"14"));
-        $this->addActionButton(new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Buttons\UserDelete());
-        $this->addMassActionButton((new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Buttons\UserDelete())->displayWithTitle("Delete"));
+        $this->addActionButton(new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Buttons\UserDelete());
+        $this->addMassActionButton((new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Buttons\UserDelete())->displayWithTitle("Delete"));
 
         $this->setDraggableRows();
 //
@@ -77,8 +77,8 @@ class DataTable extends \ModulesGarden\ggsmodule\Components\DataTable\DataTable 
 
         $dataProv = new QueryDataProvider($clients);
         $dataProv->setColumns([
-            new \ModulesGarden\ggsmodule\Core\DataProviders\Column('tblclients.id'),
-            new \ModulesGarden\ggsmodule\Core\DataProviders\Column('tblclients.firstname'),
+            new \ModulesGarden\GGSModule\Core\DataProviders\Column('tblclients.id'),
+            new \ModulesGarden\GGSModule\Core\DataProviders\Column('tblclients.firstname'),
         ]);
         $dataProv->setDefaultSorting('tblclients.id', 'DESC');
         $this->setDataProvider($dataProv);
@@ -88,8 +88,8 @@ class DataTable extends \ModulesGarden\ggsmodule\Components\DataTable\DataTable 
     protected function parseDataSetRecords(): void
     {
         $this->dataSet->setFieldModifier('graph', function($fieldName, $row, $fieldValue) {
-            $graph = rand(0,1) ? new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs\SparklineGraphLineInline() :
-                new \ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\Graphs\Graphs\SparklineGraphAreaInline();
+            $graph = rand(0,1) ? new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs\SparklineGraphLineInline() :
+                new \ModulesGarden\GGSModule\Packages\Samples\UI\Admin\Graphs\Graphs\SparklineGraphAreaInline();
 
             $dataSet = new DataSet();
             $dataSet->setTitle('Data Set')

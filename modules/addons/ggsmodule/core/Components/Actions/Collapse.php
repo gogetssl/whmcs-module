@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Components\Actions;
+namespace ModulesGarden\GGSModule\Core\Components\Actions;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractActionInterface;
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
-use ModulesGarden\ggsmodule\Core\Components\Actions\Traits\WithParamsTrait;
-use ModulesGarden\ggsmodule\Core\Components\Decorator\Decorator;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ComponentInterface;
+use ModulesGarden\GGSModule\Core\Components\AbstractActionInterface;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\Actions\Traits\WithParamsTrait;
+use ModulesGarden\GGSModule\Core\Components\Decorator\Decorator;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ComponentInterface;
 
 class Collapse extends AbstractActionInterface
 {

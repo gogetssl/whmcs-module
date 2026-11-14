@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Graph\Models\DataSetConfigs;
+namespace ModulesGarden\GGSModule\Components\Graph\Models\DataSetConfigs;
 
-use ModulesGarden\ggsmodule\Components\Graph\Models\DataSetConfigs\Source\NumberDataSetConfig;
+use ModulesGarden\GGSModule\Components\Graph\Models\DataSetConfigs\Source\NumberDataSetConfig;
 
 class HoverBorderWidth extends NumberDataSetConfig
 {

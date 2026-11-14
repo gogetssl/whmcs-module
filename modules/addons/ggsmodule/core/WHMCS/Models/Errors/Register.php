@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\WHMCS\Models\Errors;
+namespace ModulesGarden\GGSModule\Core\WHMCS\Models\Errors;
 
-use ModulesGarden\ggsmodule\Core\HandlerError\Exceptions\Exception;
+use ModulesGarden\GGSModule\Core\HandlerError\Exceptions\Exception;
 use function logModuleCall;
 
 /**

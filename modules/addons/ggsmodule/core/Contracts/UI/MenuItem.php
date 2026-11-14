@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Contracts\UI;
+namespace ModulesGarden\GGSModule\Core\Contracts\UI;
 
 interface MenuItem
 {

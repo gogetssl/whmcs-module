@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\TableSimple\Column;
+namespace ModulesGarden\GGSModule\Components\TableSimple\Column;
 
 class Column
 {

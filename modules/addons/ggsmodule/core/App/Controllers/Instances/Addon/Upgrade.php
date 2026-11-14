@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\App\Controllers\Instances\Addon;
+namespace ModulesGarden\GGSModule\Core\App\Controllers\Instances\Addon;
 
-use ModulesGarden\ggsmodule\Core\Contracts\Controllers\AddonControllerInterface;
-use ModulesGarden\ggsmodule\Core\Module\Addon;
-use ModulesGarden\ggsmodule\Core\Support\Facades\LogActivity;
+use ModulesGarden\GGSModule\Core\Contracts\Controllers\AddonControllerInterface;
+use ModulesGarden\GGSModule\Core\Module\Addon;
+use ModulesGarden\GGSModule\Core\Support\Facades\LogActivity;
 
-class Upgrade extends \ModulesGarden\ggsmodule\Core\App\Controllers\Instances\AddonController implements AddonControllerInterface
+class Upgrade extends \ModulesGarden\GGSModule\Core\App\Controllers\Instances\AddonController implements AddonControllerInterface
 {
     public function execute($params = []): array
     {

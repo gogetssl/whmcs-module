@@ -1,23 +1,23 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\ServiceInformation;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\ServiceInformation;
 
-use ModulesGarden\ggsmodule\Components\BoldTextWrapper\BoldTextWrapper;
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Components\CopyPasswordInline\CopyPasswordInline;
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
-use ModulesGarden\ggsmodule\Components\Image\Image;
-use ModulesGarden\ggsmodule\Components\ImageText\ImageText;
-use ModulesGarden\ggsmodule\Components\Label\Label;
-use ModulesGarden\ggsmodule\Components\Label\LabelPrimary;
-use ModulesGarden\ggsmodule\Components\TableSimple\Column\Column;
-use ModulesGarden\ggsmodule\Components\TableSimple\Record\Record;
-use ModulesGarden\ggsmodule\Components\TableSimple\TableSimple;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Components\Text\TextBold;
-use ModulesGarden\ggsmodule\Components\VisibilityWrapper\VisibilityWrapper;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Components\BoldTextWrapper\BoldTextWrapper;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Components\CopyPasswordInline\CopyPasswordInline;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Components\Image\Image;
+use ModulesGarden\GGSModule\Components\ImageText\ImageText;
+use ModulesGarden\GGSModule\Components\Label\Label;
+use ModulesGarden\GGSModule\Components\Label\LabelPrimary;
+use ModulesGarden\GGSModule\Components\TableSimple\Column\Column;
+use ModulesGarden\GGSModule\Components\TableSimple\Record\Record;
+use ModulesGarden\GGSModule\Components\TableSimple\TableSimple;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Components\Text\TextBold;
+use ModulesGarden\GGSModule\Components\VisibilityWrapper\VisibilityWrapper;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
 
 class ServiceInformation extends Container implements AdminAreaInterface
 {
@@ -35,7 +35,7 @@ class ServiceInformation extends Container implements AdminAreaInterface
             "coś",
         ]));
         $table->addRecord(new Record([
-            (new ImageText((new Image())->setUrl("/modules/addons/ggsmodule/resources/assets//img/logo.png")))->setText("Modules Garden"),
+            (new ImageText((new Image())->setUrl("/modules/addons/GGSModule/resources/assets//img/logo.png")))->setText("Modules Garden"),
             'myestdomain.com',
             (new VisibilityWrapper(new FormInputText()))->disableWhen('resource', "XXX")
         ]));

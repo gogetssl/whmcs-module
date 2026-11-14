@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\Modal;
+namespace ModulesGarden\GGSModule\Components\Modal;
 
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalClose;
-use ModulesGarden\ggsmodule\Core\Components\Actions\ModalFormSubmit;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalClose;
+use ModulesGarden\GGSModule\Core\Components\Actions\ModalFormSubmit;
 
 class ModalSuccess extends ModalAction
 {
@@ -12,13 +12,13 @@ class ModalSuccess extends ModalAction
     protected function initActionButtons()
     {
         $this->addActionButton(
-            (new \ModulesGarden\ggsmodule\Components\Button\ButtonSuccess())
+            (new \ModulesGarden\GGSModule\Components\Button\ButtonSuccess())
                 ->setTitle($this->translate('submit'))
                 ->onClick(new ModalFormSubmit($this))
         );
 
         $this->addActionButton(
-            (new \ModulesGarden\ggsmodule\Components\Button\ButtonCancel())
+            (new \ModulesGarden\GGSModule\Components\Button\ButtonCancel())
                 ->setTitle($this->translate('cancel'))
                 ->onClick(new ModalClose($this))
         );

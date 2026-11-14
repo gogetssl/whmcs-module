@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Translation;
+namespace ModulesGarden\GGSModule\Core\Translation;
 
-use ModulesGarden\ggsmodule\Core\Helper\ModuleNamespace;
+use ModulesGarden\GGSModule\Core\Helper\ModuleNamespace;
 
 /**
  * Trait ElementsTrait
@@ -11,7 +11,7 @@ trait TranslatorTrait
 {
     protected function translate($key, $replace = [], $raw = false)
     {
-        return \ModulesGarden\ggsmodule\Core\Support\Facades\Translator::getBasedOnNamespaces(
+        return \ModulesGarden\GGSModule\Core\Support\Facades\Translator::getBasedOnNamespaces(
             $raw ?: [get_class($this), ...$this->findBaseParents(get_class($this))],
             $key,
             $replace

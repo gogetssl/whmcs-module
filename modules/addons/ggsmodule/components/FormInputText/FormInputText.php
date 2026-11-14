@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\FormInputText;
+namespace ModulesGarden\GGSModule\Components\FormInputText;
 
-use ModulesGarden\ggsmodule\Core\Components\FormFields\FormField;
-use ModulesGarden\ggsmodule\Core\Components\Traits\ActionOnChangeTrait;
+use ModulesGarden\GGSModule\Core\Components\FormFields\FormField;
+use ModulesGarden\GGSModule\Core\Components\Traits\ActionOnChangeTrait;
 
 /**
  * Class IconButton

@@ -1,15 +1,15 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\UI\Providers;
+namespace ModulesGarden\GGSModule\Packages\Product\UI\Providers;
 
-use ModulesGarden\ggsmodule\Core\DataProviders\CrudProvider;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Config;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Request;
-use ModulesGarden\ggsmodule\Core\WHMCS\Models\Product;
-use ModulesGarden\ggsmodule\Packages\Product\Enums\ConfigSettings;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptions\AbstractConfigurableOption;
-use ModulesGarden\ggsmodule\Packages\Product\Libs\ConfigurableOptionsGroups\ConfigurableOptionsGroup;
-use ModulesGarden\ggsmodule\Packages\Product\Services\ConfigurableOptions;
+use ModulesGarden\GGSModule\Core\DataProviders\CrudProvider;
+use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use ModulesGarden\GGSModule\Core\Support\Facades\Request;
+use ModulesGarden\GGSModule\Core\WHMCS\Models\Product;
+use ModulesGarden\GGSModule\Packages\Product\Enums\ConfigSettings;
+use ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptions\AbstractConfigurableOption;
+use ModulesGarden\GGSModule\Packages\Product\Libs\ConfigurableOptionsGroups\ConfigurableOptionsGroup;
+use ModulesGarden\GGSModule\Packages\Product\Services\ConfigurableOptions;
 
 class CreateConfigurableOptions extends CrudProvider
 {

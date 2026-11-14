@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Migration;
+namespace ModulesGarden\GGSModule\App\Migration;
 
-use ModulesGarden\ggsmodule\App\Libs\AutoInstallQueue;
-use ModulesGarden\ggsmodule\App\Libs\Markups;
-use ModulesGarden\ggsmodule\App\Libs\Edition;
-use ModulesGarden\ggsmodule\App\Models\RemoteProduct;
-use ModulesGarden\ggsmodule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\ggsmodule\App\Libs\GatewayOrderService;
+use ModulesGarden\GGSModule\App\Libs\AutoInstallQueue;
+use ModulesGarden\GGSModule\App\Libs\Markups;
+use ModulesGarden\GGSModule\App\Libs\Edition;
+use ModulesGarden\GGSModule\App\Models\RemoteProduct;
+use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use ModulesGarden\GGSModule\App\Libs\GatewayOrderService;
 use WHMCS\Database\Capsule;
 
 /**
@@ -16,7 +16,7 @@ use WHMCS\Database\Capsule;
  */
 class Writer
 {
-    const MODULE       = 'ggsmodule';
+    const MODULE       = 'GGSModule';
     public static function tRequests()
     {
         return Edition::table('Requests');
@@ -136,7 +136,7 @@ class Writer
         $renamed = [];
         foreach((array)$product['san_options'] as $option)
         {
-            $display = $option['display'] !== '' ? $option['display'] : \ModulesGarden\ggsmodule\App\Libs\ProductCatalog::optionLabel($option['role'] === 'sans' ? 'single' : 'wildcard');
+            $display = $option['display'] !== '' ? $option['display'] : \ModulesGarden\GGSModule\App\Libs\ProductCatalog::optionLabel($option['role'] === 'sans' ? 'single' : 'wildcard');
             $newName = $option['role'] . '|' . $display;
             Capsule::table('tblproductconfigoptions')->where('id', $option['id'])->update(['optionname' => $newName, 'hidden' => 0]);
             // the unified code counts sub-options named "SAN"
@@ -153,16 +153,16 @@ class Writer
             Capsule::table('tblproductconfigoptions')->where('id', $option['id'])->update(['hidden' => 1]);
         }
         // code signing: the legacy delivery option becomes the module's "Certificate Delivery" option, else a new one
-        if(strtolower((string)$remote->category) === \ModulesGarden\ggsmodule\App\Libs\CodeSigningService::CATEGORY)
+        if(strtolower((string)$remote->category) === \ModulesGarden\GGSModule\App\Libs\CodeSigningService::CATEGORY)
         {
             $rawData = is_array($remote->rawData) ? $remote->rawData : [];
             if(!empty($product['cs_delivery_option']['id']))
             {
-                \ModulesGarden\ggsmodule\App\Libs\CodeSigningService::adoptLegacyDeliveryOption((int)$product['pid'], (int)$product['cs_delivery_option']['id'], $rawData);
+                \ModulesGarden\GGSModule\App\Libs\CodeSigningService::adoptLegacyDeliveryOption((int)$product['pid'], (int)$product['cs_delivery_option']['id'], $rawData);
             }
             else
             {
-                \ModulesGarden\ggsmodule\App\Libs\CodeSigningService::createDeliveryOption((int)$product['pid'], $rawData);
+                \ModulesGarden\GGSModule\App\Libs\CodeSigningService::createDeliveryOption((int)$product['pid'], $rawData);
             }
         }
 
@@ -391,7 +391,7 @@ class Writer
         {
             return [];
         }
-        $prefix  = \ModulesGarden\ggsmodule\App\Libs\CodeSigningService::OPTION_PROVISIONING . '|';
+        $prefix  = \ModulesGarden\GGSModule\App\Libs\CodeSigningService::OPTION_PROVISIONING . '|';
         $options = Capsule::table('tblproductconfiglinks')
             ->join('tblproductconfigoptions', 'tblproductconfigoptions.gid', '=', 'tblproductconfiglinks.gid')
             ->whereIn('tblproductconfiglinks.pid', $pids)

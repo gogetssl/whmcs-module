@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\Enums;
+namespace ModulesGarden\GGSModule\Packages\Product\Enums;
 
 class ConfigSettings
 {

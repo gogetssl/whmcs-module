@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\app\controllers\server\clientarea\parts;
+namespace ModulesGarden\Servers\GGSModule\app\controllers\server\clientarea\parts;
 
-use ModulesGarden\Servers\ggsmodule\app\models\whmcs\SSL;
-use ModulesGarden\Servers\ggsmodule\core\Lang;
-use ModulesGarden\ggsmodule\App\Libs\CertificateService;
-use ModulesGarden\ggsmodule\App\Libs\DocumentSigningService;
+use ModulesGarden\Servers\GGSModule\app\models\whmcs\SSL;
+use ModulesGarden\Servers\GGSModule\core\Lang;
+use ModulesGarden\GGSModule\App\Libs\CertificateService;
+use ModulesGarden\GGSModule\App\Libs\DocumentSigningService;
 use WHMCS\Database\Capsule;
 
 /**

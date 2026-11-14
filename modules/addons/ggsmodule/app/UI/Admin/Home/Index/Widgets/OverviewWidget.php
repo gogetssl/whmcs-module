@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\Libs\Helpers;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\Card;
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Shared\SalesSummary;
+use ModulesGarden\GGSModule\App\Libs\Helpers;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\Card;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\SalesSummary;
 
 /**
  * Sales and margin of the last month: invoiced amount, reseller cost, gross profit and margin on cost, with the
@@ -18,7 +18,7 @@ class OverviewWidget extends Card
     public function loadHtml(): void
     {
         $this->start('chart-line', $this->translate('title'),
-            '<a class="ggs-dcard__aside" href="addonmodules.php?module=ggsmodule&amp;mg-page=statistics">' . Card::e($this->translate('statistics')) . '</a>', 'info');
+            '<a class="ggs-dcard__aside" href="addonmodules.php?module=GGSModule&amp;mg-page=statistics">' . Card::e($this->translate('statistics')) . '</a>', 'info');
 
         $sales    = SalesSummary::get();
         $invoiced = $sales['paid'] + $sales['unpaid'] + $sales['overdue'];
@@ -52,6 +52,6 @@ class OverviewWidget extends Card
             . '<div class="ggs-money__bar"><i style="width:' . max(0, min(100, round($margin, 1))) . '%"></i></div>'
             . '<p class="ggs-money__note">' . Card::e($note) . '</p>'));
 
-        $this->foot('addonmodules.php?module=ggsmodule&mg-page=pricing', 'tag-outline', $this->translate('pricing'));
+        $this->foot('addonmodules.php?module=GGSModule&mg-page=pricing', 'tag-outline', $this->translate('pricing'));
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue\Modals;
+namespace ModulesGarden\GGSModule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue\Modals;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue\Forms\ResetTaskForm;
-use ModulesGarden\ggsmodule\Components\Modal\ModalWarning;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\App\UI\Admin\AutomationQueue\Index\DataTables\Queue\Forms\ResetTaskForm;
+use ModulesGarden\GGSModule\Components\Modal\ModalWarning;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
 class ResetTaskModal extends ModalWarning implements AjaxComponentInterface, AdminAreaInterface
 {

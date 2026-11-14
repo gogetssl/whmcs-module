@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\OverlayComponents;
+namespace ModulesGarden\GGSModule\Components\OverlayComponents;
 
-use ModulesGarden\ggsmodule\Components\Container\Container;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\ClientAreaInterface;
+use ModulesGarden\GGSModule\Components\Container\Container;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\ClientAreaInterface;
 
-use ModulesGarden\ggsmodule\Core\UI\Interfaces\ClientArea;
+use ModulesGarden\GGSModule\Core\UI\Interfaces\ClientArea;
 
 class OverlayComponents extends Container implements AdminAreaInterface, ClientAreaInterface
 {

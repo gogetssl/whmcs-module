@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Modals;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Modals;
 
-use ModulesGarden\ggsmodule\App\UI\Admin\Home\Index\Forms\ReportingForm;
-use ModulesGarden\ggsmodule\Components\Modal\Modal;
-use ModulesGarden\ggsmodule\Components\Modal\ModalEdit;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxComponentInterface;
+use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Forms\ReportingForm;
+use ModulesGarden\GGSModule\Components\Modal\Modal;
+use ModulesGarden\GGSModule\Components\Modal\ModalEdit;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxComponentInterface;
 
 class ReportingModal extends Modal implements AdminAreaInterface, AjaxComponentInterface
 {

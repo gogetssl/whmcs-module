@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\FormPasswordGenerator;
+namespace ModulesGarden\GGSModule\Components\FormPasswordGenerator;
 
-use ModulesGarden\ggsmodule\Components\FormInputGroup\FormInputGroup;
-use ModulesGarden\ggsmodule\Components\FormInputText\FormInputText;
-use ModulesGarden\ggsmodule\Components\RandomStringGeneratorButton\RandomStringGeneratorButton;
+use ModulesGarden\GGSModule\Components\FormInputGroup\FormInputGroup;
+use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
+use ModulesGarden\GGSModule\Components\RandomStringGeneratorButton\RandomStringGeneratorButton;
 
 /**
  * Class IconButton

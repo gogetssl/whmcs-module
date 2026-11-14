@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Fragments\ConfigurableHintBox\UI\Buttons;
+namespace ModulesGarden\GGSModule\Fragments\ConfigurableHintBox\UI\Buttons;
 
-use ModulesGarden\ggsmodule\Components\DropdownMenuItem\DropdownMenuItem;
-use ModulesGarden\ggsmodule\Core\Components\Action;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Fragments\ConfigurableHintBox\UI\Modals\EditConfigurationModal;
+use ModulesGarden\GGSModule\Components\DropdownMenuItem\DropdownMenuItem;
+use ModulesGarden\GGSModule\Core\Components\Action;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Fragments\ConfigurableHintBox\UI\Modals\EditConfigurationModal;
 
 class EditConfiguration extends DropdownMenuItem implements AdminAreaInterface
 {

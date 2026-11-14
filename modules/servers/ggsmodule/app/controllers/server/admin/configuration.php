@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\app\controllers\server\admin;
+namespace ModulesGarden\GGSModule\app\controllers\server\admin;
 
 
 class configuration {

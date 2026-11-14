@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\Builders;
+namespace ModulesGarden\GGSModule\Core\UI\Builders;
 
-use ModulesGarden\ggsmodule\Components\Label\Label;
-use ModulesGarden\ggsmodule\Core\Support\Facades\Translator;
-use ModulesGarden\ggsmodule\Core\UI\Enums\ServiceStatusConfig;
+use ModulesGarden\GGSModule\Components\Label\Label;
+use ModulesGarden\GGSModule\Core\Support\Facades\Translator;
+use ModulesGarden\GGSModule\Core\UI\Enums\ServiceStatusConfig;
 
 class ServiceStatusLabel
 {

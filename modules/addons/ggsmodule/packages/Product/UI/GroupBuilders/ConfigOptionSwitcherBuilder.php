@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Product\UI\GroupBuilders;
+namespace ModulesGarden\GGSModule\Packages\Product\UI\GroupBuilders;
 
-use ModulesGarden\ggsmodule\Components\Form\Builder\GroupBuilders\DefaultBuilder;
-use ModulesGarden\ggsmodule\Packages\Product\UI\FieldFactories\ConfigOptionSwitcherFactory;
+use ModulesGarden\GGSModule\Components\Form\Builder\GroupBuilders\DefaultBuilder;
+use ModulesGarden\GGSModule\Packages\Product\UI\FieldFactories\ConfigOptionSwitcherFactory;
 
 class ConfigOptionSwitcherBuilder extends DefaultBuilder
 {

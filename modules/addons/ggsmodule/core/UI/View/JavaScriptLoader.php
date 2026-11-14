@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\View;
+namespace ModulesGarden\GGSModule\Core\UI\View;
 
-use ModulesGarden\ggsmodule\Core\ModuleConstants;
+use ModulesGarden\GGSModule\Core\ModuleConstants;
 
 class JavaScriptLoader
 {
@@ -50,7 +50,7 @@ class JavaScriptLoader
         });
 
         $isDebug = false;
-//        $isDebug = \ModulesGarden\ggsmodule\Core\Support\Facades\Config::get('configuration.debug'); //wali błędem
+//        $isDebug = \ModulesGarden\GGSModule\Core\Support\Facades\Config::get('configuration.debug'); //wali błędem
 
         $appends = [
             "vue.js" => "typeof Vue !== 'object' && typeof Vue !== 'function' && ",

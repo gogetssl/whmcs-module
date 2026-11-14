@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Helpers;
+namespace ModulesGarden\GGSModule\App\Helpers;
 
-use ModulesGarden\ggsmodule\Packages\ModuleSettings\Models\ModuleSettings as ModuleSettingsModel;
+use ModulesGarden\GGSModule\Packages\ModuleSettings\Models\ModuleSettings as ModuleSettingsModel;
 
 /**
  * ModuleSettings - wrapper for module settings

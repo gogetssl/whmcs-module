@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\Tabs;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\Tabs;
 
 
-use ModulesGarden\ggsmodule\Components\Tab\Tab;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AdminAreaInterface;
-use ModulesGarden\ggsmodule\Core\Contracts\Components\AjaxOnLoadInterface;
-use ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\DataTable\QueryDataProvider\DataTable;
+use ModulesGarden\GGSModule\Components\Tab\Tab;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
+use ModulesGarden\GGSModule\Core\Contracts\Components\AjaxOnLoadInterface;
+use ModulesGarden\GGSModule\Packages\Samples\UI\Admin\DataTable\QueryDataProvider\DataTable;
 
-class TabsWidget extends \ModulesGarden\ggsmodule\Components\TabsWidget\TabsWidget implements AjaxOnLoadInterface, AdminAreaInterface
+class TabsWidget extends \ModulesGarden\GGSModule\Components\TabsWidget\TabsWidget implements AjaxOnLoadInterface, AdminAreaInterface
 {
     public function loadHtml(): void
     {

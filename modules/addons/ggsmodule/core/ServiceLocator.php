@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core;
+namespace ModulesGarden\GGSModule\Core;
 
 /**
  * Class ServiceLocator
  * @TODO remove that class //MM
  */
-class ServiceLocator extends \ModulesGarden\ggsmodule\Core\DependencyInjection\DependencyInjection
+class ServiceLocator extends \ModulesGarden\GGSModule\Core\DependencyInjection\DependencyInjection
 {
     /**
      * @var bool

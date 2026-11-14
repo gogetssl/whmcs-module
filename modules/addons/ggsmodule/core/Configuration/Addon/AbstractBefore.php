@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\Configuration\Addon;
+namespace ModulesGarden\GGSModule\Core\Configuration\Addon;
 
 /**
  * Description of AbstractBefore

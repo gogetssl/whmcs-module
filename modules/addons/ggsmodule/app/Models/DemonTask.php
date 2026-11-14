@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\Models;
+namespace ModulesGarden\GGSModule\App\Models;
 
 use Carbon\Carbon;
-use ModulesGarden\ggsmodule\Core\Models\ExtendedEloquentModel;
+use ModulesGarden\GGSModule\Core\Models\ExtendedEloquentModel;
 
 /**
  * Description of DemonTask

@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\DatePicker\Enums;
+namespace ModulesGarden\GGSModule\Components\DatePicker\Enums;
 
 enum Type: string
 {

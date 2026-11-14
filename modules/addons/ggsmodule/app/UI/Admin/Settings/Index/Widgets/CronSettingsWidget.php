@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Widgets;
+namespace ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Widgets;
 
-use ModulesGarden\ggsmodule\App\Libs\Icons;
-use ModulesGarden\ggsmodule\App\UI\Admin\Settings\Index\Forms\CronConfigurationForm;
-use ModulesGarden\ggsmodule\Components\Text\Text;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\App\Libs\Icons;
+use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Forms\CronConfigurationForm;
+use ModulesGarden\GGSModule\Components\Text\Text;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
 
 /**
  * CRON settings: ONE cron line for the whole module (RunAll starts every job when it is due), then the form with one

@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Core\UI\View;
+namespace ModulesGarden\GGSModule\Core\UI\View;
 
-use ModulesGarden\ggsmodule\Components\Alert\Alert;
-use ModulesGarden\ggsmodule\Core\Services\Messages;
-use function ModulesGarden\ggsmodule\Core\make;
+use ModulesGarden\GGSModule\Components\Alert\Alert;
+use ModulesGarden\GGSModule\Core\Services\Messages;
+use function ModulesGarden\GGSModule\Core\make;
 
 class AlertsBuilder
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\Servers\ggsmodule\app\models\whmcs;
+namespace ModulesGarden\Servers\GGSModule\app\models\whmcs;
 
 use \Illuminate\Database\Eloquent\model as EloquentModel;
 

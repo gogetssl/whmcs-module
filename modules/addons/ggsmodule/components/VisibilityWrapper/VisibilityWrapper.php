@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Components\VisibilityWrapper;
+namespace ModulesGarden\GGSModule\Components\VisibilityWrapper;
 
-use ModulesGarden\ggsmodule\Core\Components\AbstractComponent;
+use ModulesGarden\GGSModule\Core\Components\AbstractComponent;
 
 class VisibilityWrapper extends AbstractComponent
 {

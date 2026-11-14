@@ -1,12 +1,12 @@
 <?php
 
-namespace ModulesGarden\ggsmodule\Packages\Samples\UI\Admin\ComplexElements\Modals;
+namespace ModulesGarden\GGSModule\Packages\Samples\UI\Admin\ComplexElements\Modals;
 
-use ModulesGarden\ggsmodule\Components\Alert\AlertInfo;
-use ModulesGarden\ggsmodule\Components\Modal\ModalBase;
-use ModulesGarden\ggsmodule\Components\TableSimple\TableSimple;
-use ModulesGarden\ggsmodule\Components\TabsWidget\TabsWidget;
-use ModulesGarden\ggsmodule\Components\Widget\Widget;
+use ModulesGarden\GGSModule\Components\Alert\AlertInfo;
+use ModulesGarden\GGSModule\Components\Modal\ModalBase;
+use ModulesGarden\GGSModule\Components\TableSimple\TableSimple;
+use ModulesGarden\GGSModule\Components\TabsWidget\TabsWidget;
+use ModulesGarden\GGSModule\Components\Widget\Widget;
 use WHMCS\Database\Capsule as DB;
 
 class Base extends ModalBase
@@ -26,7 +26,7 @@ class Base extends ModalBase
         $widgetx = new Widget();
         $widgetx->addElement($productPricingTable);
 
-        $productPricingTab = new \ModulesGarden\ggsmodule\Components\Tab\Tab();
+        $productPricingTab = new \ModulesGarden\GGSModule\Components\Tab\Tab();
         $productPricingTab->setTitle('Product Pricing Tab');
         $productPricingTab->addElement($alert);
         $productPricingTab->addElement($widget);
@@ -36,7 +36,7 @@ class Base extends ModalBase
         $alert = new AlertInfo();
         $alert->setText('Hello!');
 
-        $configOptionPricing = new \ModulesGarden\ggsmodule\Components\Tab\Tab();
+        $configOptionPricing = new \ModulesGarden\GGSModule\Components\Tab\Tab();
         $configOptionPricing->setTitle('Config Options Pricing');
         $configOptionPricing->addElement($alert);
 
