@@ -422,7 +422,7 @@ add_hook('ClientAreaSecondarySidebar', 1, function($secondarySidebar) {
         if(\ModulesGarden\GGSModule\App\Libs\GeneralSettings::enabled('sslTools'))
         {
             $menu->addChild('ggsSsl_tools', [
-                'label' => 'SSL Tools',
+                'label' => $t['sslTools'],
                 'uri'   => 'index.php?m=GGSModule&page=tools',
                 'order' => $order,
             ]);
