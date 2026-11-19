@@ -54,10 +54,14 @@
                                 {if $aisInstallMethod == 'acme'}{$MGLANG->T('aisSwitchToAutoinstall')}{else}{$MGLANG->T('aisSwitchToAcme')}{/if}
                             </button>
                         {/if}
-                        <button id="ais-cancel-subscription" type="button" class="ggs-btn ggs-btn--danger">{$MGLANG->T('aisCancelSubscription')}</button>
+                        {if !$endsAtPeriodEnd}
+                            <button id="ais-cancel-subscription" type="button" class="ggs-btn ggs-btn--danger">{$MGLANG->T('aisCancelSubscription')}</button>
+                        {/if}
                     {/if}
                 {/if}
             </div>
+            {if $endsAtPeriodEnd}<p class="ggs-note" id="ais-ends-note">{$endsAtPeriodEndNote}</p>{/if}
+            {if $renewalUnpaid}<p class="ggs-note" id="ais-renewal-unpaid">{$MGLANG->T('subscriptionRenewalUnpaid')}</p>{/if}
         </div>
     </section>
 
@@ -86,8 +90,12 @@
             </h4>
             <dl class="ggs-dl">
                 <dt>{$MGLANG->T('acmeAccountId')}</dt><dd class="ggs-mono">{$subscription->acme_account_id|escape}</dd>
+                {if $acmeKeysUsable}
                 <dt>{$MGLANG->T('acmeEabKid')}</dt><dd class="ggs-mono">{$subscription->eab_kid|escape}</dd>
                 <dt>{$MGLANG->T('acmeEabHmacKey')}</dt><dd class="ggs-mono" style="word-break:break-all;">{$subscription->eab_hmac_key|escape}</dd>
+                {else}
+                <dt>{$MGLANG->T('acmeEabKid')}</dt><dd>{$MGLANG->T('acmeKeysPending')}</dd>
+                {/if}
                 <dt>{$MGLANG->T('acmeServerUrl')}</dt><dd class="ggs-mono" style="word-break:break-all;">{$subscription->server_url|escape}</dd>
             </dl>
         </section>
