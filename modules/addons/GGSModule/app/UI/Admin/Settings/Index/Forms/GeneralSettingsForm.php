@@ -7,6 +7,7 @@ use ModulesGarden\GGSModule\App\UI\Admin\Settings\Index\Providers\GeneralSetting
 use ModulesGarden\GGSModule\Components\Dropdown\Dropdown;
 use ModulesGarden\GGSModule\Components\Form\Builder\BuilderCreator;
 use ModulesGarden\GGSModule\Components\Form\Form;
+use ModulesGarden\GGSModule\Components\FormInputPassword\FormInputPassword;
 use ModulesGarden\GGSModule\Components\FormInputText\FormInputText;
 use ModulesGarden\GGSModule\Components\Switcher\Switcher;
 use ModulesGarden\GGSModule\Core\Contracts\Components\AdminAreaInterface;
@@ -45,6 +46,19 @@ class GeneralSettingsForm extends Form implements AdminAreaInterface, AjaxCompon
         $lifecycle = $this->section('lifecycle', 'sync');
         $this->builder->addFieldInContainer($lifecycle, (new Switcher())->setName('terminateCancelsOrder')->addClass('switcher-revert'), true);
         // termination of unpaid services and the pricing switches are on Settings > Finance
+
+        // LEI codes (GoGetSSL): the company search of the order form. A saved token is never sent back to the page: the
+        // field shows a mask as its placeholder, and an empty field keeps the saved token
+        if(in_array('ggs', \ModulesGarden\GGSModule\App\Libs\Edition::vendors(), true))
+        {
+            $lei   = $this->section('lei', 'card-account-details-outline');
+            $token = (new FormInputPassword())->setName('openCorporatesToken');
+            if(\ModulesGarden\GGSModule\App\Libs\GeneralSettings::get('openCorporatesToken'))
+            {
+                $token->setPlaceholder('************');
+            }
+            $this->builder->addFieldInContainer($lei, $token, true);
+        }
 
         $this->saveBar();
     }
