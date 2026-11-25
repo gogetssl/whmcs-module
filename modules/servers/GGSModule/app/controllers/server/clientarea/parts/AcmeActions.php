@@ -1,45 +1,22 @@
 <?php
 
-namespace ModulesGarden\Servers\GGSModule\app\controllers\server\clientarea\parts;
+namespace GGSModule\Server\app\controllers\server\clientarea\parts;
 
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Client;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Order;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Product;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Service;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\SSL;
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Config;
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Domain;
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\ProductConfigOptions;
-use ModulesGarden\Servers\GGSModule\app\services\InvoiceRenew;
-use ModulesGarden\Servers\GGSModule\app\services\SSLStepThree;
-use ModulesGarden\Servers\GGSModule\core\Lang;
-use ModulesGarden\Servers\GGSModule\core\process\AbstractController;
-use ModulesGarden\Servers\GGSModule\Server;
-use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
-use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
-use ModulesGarden\GGSModule\App\Libs\AisHelpers;
-use ModulesGarden\GGSModule\App\Libs\AutoInstallHelpers;
-use ModulesGarden\GGSModule\App\Libs\CertificateBundle;
-use ModulesGarden\GGSModule\App\Libs\CertificateService;
-use ModulesGarden\GGSModule\App\Libs\CertificateSyncHelpers;
-use ModulesGarden\GGSModule\App\Libs\Cpanel;
-use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
-use ModulesGarden\GGSModule\App\Libs\ProductSettings;
-use ModulesGarden\GGSModule\App\Libs\SmimeService;
-use ModulesGarden\GGSModule\App\Libs\CodeSigningService;
-use ModulesGarden\GGSModule\App\Libs\SslProductHelpers;
-use ModulesGarden\GGSModule\App\Libs\Helpers;
-use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\GGSModule\App\Models\AcmeSubscription;
-use ModulesGarden\GGSModule\App\Models\AcmeSubscriptionDomain;
-use ModulesGarden\GGSModule\App\Models\AisSubscription;
-use ModulesGarden\GGSModule\App\Models\RemoteProduct;
-use ModulesGarden\GGSModule\App\Models\Request;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\GGSModule\Core\WHMCS\Helper;
-use ModulesGarden\GGSModule\Core\WHMCS\Models\Invoice;
-use WHMCS\Billing\Tax;
+use GGSModule\Server\app\models\whmcs\Client;
+use GGSModule\Server\app\models\whmcs\Order;
+use GGSModule\Server\app\models\whmcs\Product;
+use GGSModule\Server\app\models\whmcs\Service;
+use GGSModule\Server\app\models\whmcs\SSL;
+use GGSModule\Server\app\repository\whmcs\Domain;
+use GGSModule\Server\app\repository\whmcs\ProductConfigOptions;
+use GGSModule\Server\core\Lang;
+use GGSModule\Server\Server;
+use GGSModule\App\Libs\Subscriptions\AcmeHelpers;
+use GGSModule\App\Libs\Certificates\CertificateService;
+use GGSModule\App\Libs\Support\Helpers;
+use GGSModule\App\Models\AcmeSubscription;
+use GGSModule\App\Models\AcmeSubscriptionDomain;
+use GGSModule\App\Models\Whmcs\Invoice;
 use WHMCS\Database\Capsule;
 
 /**
@@ -125,13 +102,12 @@ trait AcmeActions
         ];
     }
 
-    private function indexAcmeHTML($input, $vars = array())
+    private function indexAcmeHTML($input, $vars = [])
     {
         $serviceId    = (int)$input['params']['serviceid'];
         $userId       = (int)$input['params']['userid'];
         $sslService   = SSL::getByServiceId($serviceId);
         $product      = Product::find((int)$input['params']['pid']);
-        \ModulesGarden\GGSModule\App\Libs\SubscriptionState::ensureColumns();
         $subscription = AcmeSubscription::where('service_id', $serviceId)->first();
 
         // not active yet, or its ACME account not active yet (the keys work only then): read the current state
@@ -153,7 +129,7 @@ trait AcmeActions
 
         // when each domain was added, and - while it is still inside the refund window of its own addition - until
         // when removing it gives the money back (the slot is then free to be given back as well)
-        $refundDays = \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::REFUND_DAYS;
+        $refundDays = \GGSModule\App\Libs\Subscriptions\SubscriptionBilling::REFUND_DAYS;
         foreach($domains as $domainRow)
         {
             $added = (string)($domainRow->added_at ?: $domainRow->created_at);
@@ -200,28 +176,28 @@ trait AcmeActions
         // auto renewal stopped: the subscription ends with its period and a cancel is refused (GGS-3, both vendors) -
         // the page shows the end date instead of the Cancel button
         $vars['endsAtPeriodEnd']        = $this->endsAtPeriodEnd($serviceId, $subscription);
-        $vars['endsAtPeriodEndNote']    = $vars['endsAtPeriodEnd'] ? str_replace(':date:', \ModulesGarden\GGSModule\App\Libs\SubscriptionState::periodEndText($subscription), Lang::absoluteT('serverCA', 'home', 'acmeEndsAtPeriodEnd')) : '';
+        $vars['endsAtPeriodEndNote']    = $vars['endsAtPeriodEnd'] ? str_replace(':date:', \GGSModule\App\Libs\Subscriptions\SubscriptionState::periodEndText($subscription), Lang::absoluteT('serverCA', 'home', 'acmeEndsAtPeriodEnd')) : '';
         // the EAB keys work only once the ACME account is active; a renewal the vendor could not charge stops new certificates
-        $vars['acmeKeysUsable']         = \ModulesGarden\GGSModule\App\Libs\SubscriptionState::keysUsable($subscription);
-        $vars['renewalUnpaid']          = \ModulesGarden\GGSModule\App\Libs\SubscriptionState::renewalUnpaid($subscription);
+        $vars['acmeKeysUsable']         = \GGSModule\App\Libs\Subscriptions\SubscriptionState::keysUsable($subscription);
+        $vars['renewalUnpaid']          = \GGSModule\App\Libs\Subscriptions\SubscriptionState::renewalUnpaid($subscription);
         $vars['configurationStatus']    = $sslService ? $sslService->status : null;
         $vars['configurationURL']       = 'clientarea.php?action=productdetails&id=' . $serviceId . '&acmeconfig=1';
 
         if($vars['configurationStatus'] === 'Awaiting Configuration')
         {
-            return array(
+            return [
                 'tpl'  => 'home_acme_awaiting_configuration',
                 'vars' => $vars
-            );
+            ];
         }
 
-        return array(
+        return [
             'tpl'  => 'home_acme',
             'vars' => $vars
-        );
+        ];
     }
 
-    private function acmeConfigurationHTML($input, $vars = array())
+    private function acmeConfigurationHTML($input, $vars = [])
     {
         $whmcsProductId = (int)$input['params']['packageid'];
         $serviceId      = (int)$input['params']['serviceid'];
@@ -250,13 +226,13 @@ trait AcmeActions
         $vars['singleDomainsLimit']   = $singleLimit;
         $vars['wildcardDomainsLimit'] = $wildcardLimit;
 
-        return array(
+        return [
             'tpl'  => 'home_acme_configuration',
             'vars' => $vars
-        );
+        ];
     }
 
-    public function createSubscriptionJSON($input, $vars = array())
+    public function createSubscriptionJSON($input, $vars = [])
     {
         $this->requireCsrfToken();
         $this->requireOrderableService($input, AcmeHelpers::isAcmeWhmcsProduct((int)$input['params']['packageid']));
@@ -367,8 +343,8 @@ trait AcmeActions
         $response = $api->createAcmeSubscription($order);
 
         $apiOrderId   = isset($response['order_id']) ? (int)$response['order_id'] : (isset($response['id']) ? (int)$response['id'] : 0);
-        $apiItems     = isset($response['items']) && is_array($response['items']) ? $response['items'] : array();
-        $apiFirstItem = isset($apiItems[0]) && is_array($apiItems[0]) ? $apiItems[0] : array();
+        $apiItems     = isset($response['items']) && is_array($response['items']) ? $response['items'] : [];
+        $apiFirstItem = isset($apiItems[0]) && is_array($apiItems[0]) ? $apiItems[0] : [];
         $acmeId       = isset($apiFirstItem['id']) ? (int)$apiFirstItem['id'] : (isset($response['item_id']) ? (int)$response['item_id'] : 0);
 
         if($apiOrderId <= 0)
@@ -441,7 +417,7 @@ trait AcmeActions
         ];
     }
 
-    public function buyMoreDomainsJSON($input, $vars = array())
+    public function buyMoreDomainsJSON($input, $vars = [])
     {
         $this->requireCsrfToken();
         $this->requireOrderableService($input, AcmeHelpers::isAcmeWhmcsProduct((int)$input['params']['packageid']));
@@ -555,7 +531,7 @@ trait AcmeActions
         ];
     }
 
-    public function upgradeConfigOptionsJSON($input, $vars = array())
+    public function upgradeConfigOptionsJSON($input, $vars = [])
     {
         $this->requireCsrfToken();
         $params    = $input['params'];
@@ -592,14 +568,14 @@ trait AcmeActions
         // time, however long ago it was paid for; a slot holding a domain only while the vendor would still refund that
         // domain (within the refund window of the day THAT domain was added). So the check is how many slots are
         // refundable right now, per type.
-        $refundable = \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::refundableSlots($serviceId);
+        $refundable = \GGSModule\App\Libs\Subscriptions\SubscriptionBilling::refundableSlots($serviceId);
         foreach([['single', $hasSingle, $newSingle, $domainLimits['singleFromOption']], ['wildcard', $hasWildcard, $newWildcard, $domainLimits['wildcardFromOption']]] as $check)
         {
             list($type, $sent, $wanted, $current) = $check;
             $given = $sent ? (int)$current - (int)$wanted : 0;
             if($given > 0 && $given > $refundable[$type])
             {
-                throw new \Exception(sprintf(Lang::absoluteT('acme_downgrade_refund_window_passed'), \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::REFUND_DAYS));
+                throw new \Exception(sprintf(Lang::absoluteT('acme_downgrade_refund_window_passed'), \GGSModule\App\Libs\Subscriptions\SubscriptionBilling::REFUND_DAYS));
             }
         }
 
@@ -614,7 +590,7 @@ trait AcmeActions
                                 ->whereIn('tblinvoices.status', ['Unpaid', 'Overdue'])
                                 ->first();
 
-        if($unpaidInvoice || \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::pendingSlotPurchase($serviceId))
+        if($unpaidInvoice || \GGSModule\App\Libs\Subscriptions\SubscriptionBilling::pendingSlotPurchase($serviceId))
         {
             throw new \Exception(Lang::absoluteT('acme_upgrade_unpaid_invoice_exists'));
         }
@@ -714,7 +690,7 @@ trait AcmeActions
         $message = Lang::absoluteT('acme_upgrade_success');
         if($bought)
         {
-            $invoiceId = \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::createSlotPurchaseInvoice($serviceId, $bought);
+            $invoiceId = \GGSModule\App\Libs\Subscriptions\SubscriptionBilling::createSlotPurchaseInvoice($serviceId, $bought);
             if($invoiceId > 0)
             {
                 global $CONFIG;
@@ -729,7 +705,7 @@ trait AcmeActions
         ];
     }
 
-    public function removeDomainJSON($input, $vars = array())
+    public function removeDomainJSON($input, $vars = [])
     {
         $this->requireCsrfToken();
         $serviceId = (int)$input['id'];
@@ -778,7 +754,7 @@ trait AcmeActions
         ];
     }
 
-    public function cancelSubscriptionJSON($input, $vars = array())
+    public function cancelSubscriptionJSON($input, $vars = [])
     {
         $this->requireCsrfToken();
         $serviceId    = (int)$input['id'];
@@ -798,7 +774,7 @@ trait AcmeActions
         }
 
         // acme_id is the CaaS item ID (items[0].id), not the order ID; within the refund window the vendor refunds the order
-        $refundable = \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::orderRefundable($serviceId);
+        $refundable = \GGSModule\App\Libs\Subscriptions\SubscriptionBilling::orderRefundable($serviceId);
         CertificateService::api($serviceId)->cancelItem((int)$subscription->acme_id, 'Cancelled by client', 'caas', $refundable);
 
         $subscription->status       = 'cancelled';
@@ -810,7 +786,7 @@ trait AcmeActions
                                                                           'domainstatus' => 'Cancelled'
                                                                       ]);
 
-        $refundedCreditsAmount = \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::refundOnCancel($serviceId, 'Subscription cancelled by the client');
+        $refundedCreditsAmount = \GGSModule\App\Libs\Subscriptions\SubscriptionBilling::refundOnCancel($serviceId, 'Subscription cancelled by the client');
         $message               = Lang::absoluteT('acme_subscription_cancelled');
         if($refundedCreditsAmount > 0)
         {
@@ -826,7 +802,7 @@ trait AcmeActions
         ];
     }
 
-    public function stopAutoRenewalJSON($input, $vars = array())
+    public function stopAutoRenewalJSON($input, $vars = [])
     {
         $this->requireCsrfToken();
         $serviceId    = (int)$input['id'];
@@ -855,7 +831,7 @@ trait AcmeActions
      */
     private function endsAtPeriodEnd($serviceId, $subscription)
     {
-        return \ModulesGarden\GGSModule\App\Libs\SubscriptionState::endsAtPeriodEnd($subscription);
+        return \GGSModule\App\Libs\Subscriptions\SubscriptionState::endsAtPeriodEnd($subscription);
     }
 
     /**
@@ -871,7 +847,7 @@ trait AcmeActions
         return ['primary' => $contact, 'technical' => $contact];
     }
 
-    public function checkCertificateDetailsJSON($input, $vars = array())
+    public function checkCertificateDetailsJSON($input, $vars = [])
     {
         $serviceId = (int)$input['id'];
 

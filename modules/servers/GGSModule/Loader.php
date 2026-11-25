@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\Servers\GGSModule;
+namespace GGSModule\Server;
 
 // only through WHMCS: a direct request gets nothing (no output, no error with the server path)
 if(!defined('WHMCS'))
@@ -29,7 +29,7 @@ if(!class_exists(__NAMESPACE__.'\Loader')){
             {
                 $checkDirs = ['modules'.DS.'servers'.DS];
 
-                self::$myName = substr(__NAMESPACE__, 22);
+                self::$myName = explode('\\', __NAMESPACE__)[0];
 
                 foreach($checkDirs as $dir)
                 {
@@ -62,7 +62,7 @@ if(!class_exists(__NAMESPACE__.'\Loader')){
 
         static function loader($className){
 
-            if (strpos($className, 'ModulesGarden\\GGSModule\\App\\\\') !== false) {
+            if (strpos($className, 'GGSModule\\App\\\\') !== false) {
                 $addonFile = dirname(dirname(__DIR__)).DS.'addons'.DS.'GGSModule'.DS.'app'.DS.'Configuration'.DS.'Addon'.DS.'base.php';
                 if ($addonFile) {
                     require_once $addonFile;

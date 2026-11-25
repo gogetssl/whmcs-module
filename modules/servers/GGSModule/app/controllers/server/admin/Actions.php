@@ -1,21 +1,20 @@
 <?php
 
-namespace ModulesGarden\Servers\GGSModule\app\controllers\server\admin;
+namespace GGSModule\Server\app\controllers\server\admin;
 
 
-use ModulesGarden\Servers\GGSModule\app\services\AdminServicesTabFields;
-use ModulesGarden\Servers\GGSModule\app\services\CreateAccount;
-use ModulesGarden\Servers\GGSModule\app\services\Renew;
-use ModulesGarden\Servers\GGSModule\app\services\SSLStepOne;
-use ModulesGarden\Servers\GGSModule\app\services\SSLStepTwo;
-use ModulesGarden\Servers\GGSModule\app\services\SSLStepThree;
-use ModulesGarden\Servers\GGSModule\app\services\SyncCertificate;
-use ModulesGarden\GGSModule\App\Libs\AdminText;
-use ModulesGarden\GGSModule\App\Libs\CertificateBundle;
-use ModulesGarden\GGSModule\App\Libs\CertificateService;
-use ModulesGarden\GGSModule\App\Libs\ClientText;
-use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use GGSModule\Server\app\services\AdminServicesTabFields;
+use GGSModule\Server\app\services\CreateAccount;
+use GGSModule\Server\app\services\Renew;
+use GGSModule\Server\app\services\SSLStepOne;
+use GGSModule\Server\app\services\SSLStepTwo;
+use GGSModule\Server\app\services\SSLStepThree;
+use GGSModule\Server\app\services\SyncCertificate;
+use GGSModule\App\Libs\Support\AdminText;
+use GGSModule\App\Libs\Certificates\CertificateBundle;
+use GGSModule\App\Libs\Certificates\CertificateService;
+use GGSModule\App\Libs\Support\ClientText;
+use GGSModule\App\Libs\Support\GeneralSettings;
 
 class Actions {
 
@@ -65,15 +64,15 @@ class Actions {
     private function codeGuardState($params, $suspend)
     {
         $serviceId = (int)$params['serviceid'];
-        if(!\ModulesGarden\GGSModule\App\Libs\CodeGuardService::isCodeGuardService($serviceId))
+        if(!\GGSModule\App\Libs\ProductLines\CodeGuardService::isCodeGuardService($serviceId))
         {
             return 'success';
         }
 
         return $this->run(function() use ($serviceId, $suspend) {
             $suspend
-                ? \ModulesGarden\GGSModule\App\Libs\CodeGuardService::suspend($serviceId)
-                : \ModulesGarden\GGSModule\App\Libs\CodeGuardService::activate($serviceId);
+                ? \GGSModule\App\Libs\ProductLines\CodeGuardService::suspend($serviceId)
+                : \GGSModule\App\Libs\ProductLines\CodeGuardService::activate($serviceId);
         });
     }
 
@@ -86,13 +85,13 @@ class Actions {
     public function ChangePackage($params)
     {
         $serviceId = (int)$params['serviceid'];
-        if(!\ModulesGarden\GGSModule\App\Libs\CodeGuardService::isCodeGuardService($serviceId))
+        if(!\GGSModule\App\Libs\ProductLines\CodeGuardService::isCodeGuardService($serviceId))
         {
             return 'success';
         }
 
         return $this->run(function() use ($serviceId, $params) {
-            \ModulesGarden\GGSModule\App\Libs\CodeGuardService::changePlan($serviceId, (int)$params['pid']);
+            \GGSModule\App\Libs\ProductLines\CodeGuardService::changePlan($serviceId, (int)$params['pid']);
         });
     }
 
@@ -103,7 +102,8 @@ class Actions {
     {
         // the private keys go in any case, also when the vendor order is left open
         CertificateService::forgetPrivateKeys($params['serviceid']);
-        if(!GeneralSettings::enabled('terminateCancelsOrder'))
+        // a certificate bought at payment whose details were never submitted is always cancelled: nothing was issued
+        if(!GeneralSettings::enabled('terminateCancelsOrder') && !\GGSModule\App\Libs\Certificates\IncompleteOrder::pending($params['serviceid']))
         {
             return 'success';
         }
@@ -189,7 +189,7 @@ class Actions {
             return ClientText::get('reissueAfterIssue', 'The certificate can be reissued once it has been issued');
         }
 
-        header('Location: clientarea.php?action=productdetails&id=' . (int)$params['serviceid'] . '&mg-action=reissueSSL');
+        header('Location: clientarea.php?action=productdetails&id=' . (int)$params['serviceid'] . '&mod-action=reissueSSL');
         exit;
     }
 
@@ -398,7 +398,7 @@ class Actions {
     public function AdminCustomButtonArray($params = [])
     {
         $serviceId = isset($params['serviceid']) ? (int)$params['serviceid'] : 0;
-        $gatewayType = $serviceId ? \ModulesGarden\GGSModule\App\Libs\GatewayOrderService::typeOfService($serviceId) : null;
+        $gatewayType = $serviceId ? \GGSModule\App\Libs\ProductLines\GatewayOrderService::typeOfService($serviceId) : null;
         if($gatewayType)
         {
             // nothing to refresh or cancel before the client orders the certificate
@@ -462,4 +462,3 @@ class Actions {
     }
 
 }
-

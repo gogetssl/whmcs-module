@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Migration;
+namespace GGSModule\App\Migration;
 
-use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use GGSModule\App\Libs\Gateway\SSLTrustCenterApi;
+use GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
 
 /**
  * Gateway credentials of the legacy modules, reused for this module.

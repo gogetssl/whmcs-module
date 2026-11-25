@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Migration\Readers;
+namespace GGSModule\App\Migration\Readers;
 
-use ModulesGarden\GGSModule\App\Migration\Support\Schema;
+use GGSModule\App\Migration\Support\Schema;
 use WHMCS\Database\Capsule;
 
 /**

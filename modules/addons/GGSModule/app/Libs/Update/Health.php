@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Libs\Update;
+namespace GGSModule\App\Libs\Update;
 
-use ModulesGarden\GGSModule\App\Libs\Edition;
+use GGSModule\App\Libs\Support\Edition;
 
 /**
  * Asks the module, in a separate request through the web server, whether it loads: modules/addons/<folder>/update-health.php.

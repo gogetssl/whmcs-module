@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Libs\Update;
+namespace GGSModule\App\Libs\Update;
 
 /**
  * Replaces the two module folders (modules/addons/<folder>, modules/servers/<folder>) by renames, never by copying,

@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\Servers\GGSModule\app\services;
+namespace GGSModule\Server\app\services;
 
 
-use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\GGSModule\Core\WHMCS\Models\Invoice;
-use ModulesGarden\GGSModule\Core\WHMCS\Models\InvoiceItem;
-use ModulesGarden\GGSModule\Core\WHMCS\Models\Service;
+use GGSModule\App\Helpers\EmailTemplates;
+use GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use GGSModule\App\Models\Whmcs\Invoice;
+use GGSModule\App\Models\Whmcs\InvoiceItem;
+use GGSModule\App\Models\Whmcs\Service;
 use WHMCS\Database\Capsule;
 
 class InvoiceRenew {
@@ -109,7 +109,7 @@ class InvoiceRenew {
             $message = 'This service is billed once and cannot be renewed here. Please place a new order.';
             try
             {
-                $translated = (string)\ModulesGarden\Servers\GGSModule\core\Lang::absoluteT('renew_not_recurring');
+                $translated = (string)\GGSModule\Server\core\Lang::absoluteT('renew_not_recurring');
                 $message    = $translated !== '' && $translated !== 'renew_not_recurring' ? $translated : $message;
             }
             catch(\Throwable $e)
@@ -125,10 +125,10 @@ class InvoiceRenew {
             $invoiceItemDescription = $service['name'] . ($service['domain'] ? ' - ' . $service['domain'] : '' ) . ' (' . $service['nextduedate'] . ' - ' . $endDate . ') - Renewal';
         }
 
-        // due the payment term after today (App\Libs\RenewalPolicy); a term longer than the lead puts it after the
+        // due the payment term after today (App\Libs\Billing\RenewalPolicy); a term longer than the lead puts it after the
         // order end, which the settings page warns about
         $invoiceDate    = date('Y-m-d');
-        $invoiceDueDate = \ModulesGarden\GGSModule\App\Libs\RenewalPolicy::invoiceDueDate(\ModulesGarden\GGSModule\App\Libs\RenewalPolicy::CERTIFICATE, $invoiceDate);
+        $invoiceDueDate = \GGSModule\App\Libs\Billing\RenewalPolicy::invoiceDueDate(\GGSModule\App\Libs\Billing\RenewalPolicy::CERTIFICATE, $invoiceDate);
 
         $results = localAPI('CreateInvoice', [
             'userid' => $service['userid'],
@@ -149,11 +149,11 @@ class InvoiceRenew {
         InvoiceItem::where('invoiceid', $invoiceId)->update(['type' => 'Hosting', 'relid' => $serviceId]);
         // a renewal that costs nothing (0.00) is paid at once, so the renewal starts (WHMCS renews the service as for
         // a paid invoice); the client gets no invoice to pay
-        if(!\ModulesGarden\GGSModule\App\Libs\ZeroInvoice::settle($invoiceId, 'renewal of service #' . (int)$serviceId))
+        if(!\GGSModule\App\Libs\Billing\ZeroInvoice::settle($invoiceId, 'renewal of service #' . (int)$serviceId))
         {
             EmailTemplates::sendRenewalInvoiceEmail($serviceId, $invoiceId);
         }
-        \ModulesGarden\GGSModule\App\Libs\ProductCatalog::noticeIfDiscontinued($serviceId);
+        \GGSModule\App\Libs\Products\ProductCatalog::noticeIfDiscontinued($serviceId);
 
         return $invoiceId;
     }

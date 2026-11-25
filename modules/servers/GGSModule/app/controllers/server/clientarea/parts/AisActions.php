@@ -1,45 +1,17 @@
 <?php
 
-namespace ModulesGarden\Servers\GGSModule\app\controllers\server\clientarea\parts;
+namespace GGSModule\Server\app\controllers\server\clientarea\parts;
 
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Client;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Order;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Product;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Service;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\SSL;
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Config;
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Domain;
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\ProductConfigOptions;
-use ModulesGarden\Servers\GGSModule\app\services\InvoiceRenew;
-use ModulesGarden\Servers\GGSModule\app\services\SSLStepThree;
-use ModulesGarden\Servers\GGSModule\core\Lang;
-use ModulesGarden\Servers\GGSModule\core\process\AbstractController;
-use ModulesGarden\Servers\GGSModule\Server;
-use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
-use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
-use ModulesGarden\GGSModule\App\Libs\AisHelpers;
-use ModulesGarden\GGSModule\App\Libs\AutoInstallHelpers;
-use ModulesGarden\GGSModule\App\Libs\CertificateBundle;
-use ModulesGarden\GGSModule\App\Libs\CertificateService;
-use ModulesGarden\GGSModule\App\Libs\CertificateSyncHelpers;
-use ModulesGarden\GGSModule\App\Libs\Cpanel;
-use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
-use ModulesGarden\GGSModule\App\Libs\ProductSettings;
-use ModulesGarden\GGSModule\App\Libs\SmimeService;
-use ModulesGarden\GGSModule\App\Libs\CodeSigningService;
-use ModulesGarden\GGSModule\App\Libs\SslProductHelpers;
-use ModulesGarden\GGSModule\App\Libs\Helpers;
-use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\GGSModule\App\Models\AcmeSubscription;
-use ModulesGarden\GGSModule\App\Models\AcmeSubscriptionDomain;
-use ModulesGarden\GGSModule\App\Models\AisSubscription;
-use ModulesGarden\GGSModule\App\Models\RemoteProduct;
-use ModulesGarden\GGSModule\App\Models\Request;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\GGSModule\Core\WHMCS\Helper;
-use ModulesGarden\GGSModule\Core\WHMCS\Models\Invoice;
-use WHMCS\Billing\Tax;
+use GGSModule\Server\app\models\whmcs\Client;
+use GGSModule\Server\app\models\whmcs\Order;
+use GGSModule\Server\app\models\whmcs\Product;
+use GGSModule\Server\app\models\whmcs\SSL;
+use GGSModule\Server\core\Lang;
+use GGSModule\Server\Server;
+use GGSModule\App\Libs\Subscriptions\AisHelpers;
+use GGSModule\App\Libs\Certificates\CertificateService;
+use GGSModule\App\Libs\Support\Helpers;
+use GGSModule\App\Models\AisSubscription;
 use WHMCS\Database\Capsule;
 
 /**
@@ -48,13 +20,12 @@ use WHMCS\Database\Capsule;
  */
 trait AisActions
 {
-    private function indexAisHTML($input, $vars = array())
+    private function indexAisHTML($input, $vars = [])
     {
         $serviceId    = (int)$input['params']['serviceid'];
         $userId       = (int)$input['params']['userid'];
         $sslService   = SSL::getByServiceId($serviceId);
         $product      = Product::find((int)$input['params']['pid']);
-        AisHelpers::ensureColumns();
         $subscription = AisSubscription::getByServiceId($serviceId);
 
         // not active yet, or switched to ACME with an ACME account not active yet (the keys work only then)
@@ -85,10 +56,10 @@ trait AisActions
         $vars['configurationStatus'] = $sslService ? $sslService->status : null;
         $vars['configurationURL']   = 'clientarea.php?action=productdetails&id=' . $serviceId . '&aisconfig=1';
         // auto renewal stopped: the subscription ends with its period, a cancel is refused (GGS-3) - the end date is shown
-        $vars['endsAtPeriodEnd']     = \ModulesGarden\GGSModule\App\Libs\SubscriptionState::endsAtPeriodEnd($subscription);
-        $vars['endsAtPeriodEndNote'] = $vars['endsAtPeriodEnd'] ? str_replace(':date:', \ModulesGarden\GGSModule\App\Libs\SubscriptionState::periodEndText($subscription), Lang::absoluteT('serverCA', 'home', 'acmeEndsAtPeriodEnd')) : '';
-        $vars['acmeKeysUsable']      = \ModulesGarden\GGSModule\App\Libs\SubscriptionState::keysUsable($subscription);
-        $vars['renewalUnpaid']       = \ModulesGarden\GGSModule\App\Libs\SubscriptionState::renewalUnpaid($subscription);
+        $vars['endsAtPeriodEnd']     = \GGSModule\App\Libs\Subscriptions\SubscriptionState::endsAtPeriodEnd($subscription);
+        $vars['endsAtPeriodEndNote'] = $vars['endsAtPeriodEnd'] ? str_replace(':date:', \GGSModule\App\Libs\Subscriptions\SubscriptionState::periodEndText($subscription), Lang::absoluteT('serverCA', 'home', 'acmeEndsAtPeriodEnd')) : '';
+        $vars['acmeKeysUsable']      = \GGSModule\App\Libs\Subscriptions\SubscriptionState::keysUsable($subscription);
+        $vars['renewalUnpaid']       = \GGSModule\App\Libs\Subscriptions\SubscriptionState::renewalUnpaid($subscription);
 
         if($vars['configurationStatus'] === 'Awaiting Configuration')
         {
@@ -98,7 +69,7 @@ trait AisActions
         return ['tpl' => 'home_ais', 'vars' => $vars];
     }
 
-    private function aisConfigurationHTML($input, $vars = array())
+    private function aisConfigurationHTML($input, $vars = [])
     {
         $serviceId = (int)$input['params']['serviceid'];
         $userId    = (int)$input['params']['userid'];
@@ -117,7 +88,7 @@ trait AisActions
         return ['tpl' => 'home_ais_configuration', 'vars' => $vars];
     }
 
-    public function createAisJSON($input, $vars = array())
+    public function createAisJSON($input, $vars = [])
     {
         $this->requireCsrfToken();
         $this->requireOrderableService($input, AisHelpers::isAisWhmcsProduct((int)$input['params']['packageid']));
@@ -138,7 +109,7 @@ trait AisActions
         $api = CertificateService::api($serviceId);
 
         // TheSSLStore product ids are codes (rapidssl_automate), GoGetSSL ids are numbers
-        $apiProductId = isset($input['params']['configoption2']) ? \ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi::productId($input['params']['configoption2']) : '';
+        $apiProductId = isset($input['params']['configoption2']) ? \GGSModule\App\Libs\Gateway\SSLTrustCenterApi::productId($input['params']['configoption2']) : '';
         if($apiProductId === '' || $apiProductId === 0)
         {
             throw new \Exception(Lang::absoluteT('aisMissingProductId'));
@@ -205,7 +176,7 @@ trait AisActions
         return ['success' => true, 'message' => Lang::absoluteT('aisCreatedSuccessfully')];
     }
 
-    public function refreshAisDetailsJSON($input, $vars = array())
+    public function refreshAisDetailsJSON($input, $vars = [])
     {
         $serviceId = (int)$input['id'];
         AisHelpers::refreshAisDetails($serviceId);
@@ -213,7 +184,7 @@ trait AisActions
         return ['success' => true, 'message' => Lang::absoluteT('aisDetailsRefreshed')];
     }
 
-    public function stopAisAutoRenewalJSON($input, $vars = array())
+    public function stopAisAutoRenewalJSON($input, $vars = [])
     {
         $this->requireCsrfToken();
         $serviceId    = (int)$input['id'];
@@ -236,7 +207,7 @@ trait AisActions
         return ['success' => true, 'message' => Lang::absoluteT('aisAutoRenewalDisabled')];
     }
 
-    public function cancelAisSubscriptionJSON($input, $vars = array())
+    public function cancelAisSubscriptionJSON($input, $vars = [])
     {
         $this->requireCsrfToken();
         $serviceId    = (int)$input['id'];
@@ -250,7 +221,7 @@ trait AisActions
         {
             throw new \Exception(Lang::absoluteT('subscriptionAlreadyCancelled'));
         }
-        if(\ModulesGarden\GGSModule\App\Libs\SubscriptionState::endsAtPeriodEnd($subscription))
+        if(\GGSModule\App\Libs\Subscriptions\SubscriptionState::endsAtPeriodEnd($subscription))
         {
             throw new \Exception(Lang::absoluteT('acmeCancelledAtPeriodEnd'));
         }
@@ -262,7 +233,7 @@ trait AisActions
             throw new \Exception(Lang::absoluteT('sslConfigOrderFailedCancel'));
         }
         // within the refund window the vendor refunds the order and the client is credited
-        $refundable = \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::orderRefundable($serviceId);
+        $refundable = \GGSModule\App\Libs\Subscriptions\SubscriptionBilling::orderRefundable($serviceId);
         CertificateService::api($serviceId)->cancelItem((int)$subscription->ais_item_id, 'Cancelled by client', 'ais', $refundable);
 
         $subscription->status       = 'cancelled';
@@ -272,7 +243,7 @@ trait AisActions
 
         Capsule::table('tblhosting')->where('id', $serviceId)->update(['domainstatus' => 'Cancelled']);
 
-        $credited = \ModulesGarden\GGSModule\App\Libs\SubscriptionBilling::refundOnCancel($serviceId, 'Subscription cancelled by the client');
+        $credited = \GGSModule\App\Libs\Subscriptions\SubscriptionBilling::refundOnCancel($serviceId, 'Subscription cancelled by the client');
         $message  = Lang::absoluteT('aisSubscriptionCancelled');
         if($credited > 0)
         {
@@ -285,7 +256,7 @@ trait AisActions
     /**
      * Switches between the AutoInstall SSL agent and the client's own ACME client
      */
-    public function changeAisInstallMethodJSON($input, $vars = array())
+    public function changeAisInstallMethodJSON($input, $vars = [])
     {
         $this->requireCsrfToken();
         $serviceId    = (int)$input['id'];
@@ -311,7 +282,6 @@ trait AisActions
         try
         {
             CertificateService::api($serviceId)->changeAisInstallMethod((int)$subscription->ais_item_id, $method);
-            AisHelpers::ensureColumns();
             $subscription->install_method = $method;
             // the ACME account of an earlier switch is not this one: the details bring the new account (GoGetSSL: once it is
             // registered, a few minutes later - the page shows it as being set up until then)

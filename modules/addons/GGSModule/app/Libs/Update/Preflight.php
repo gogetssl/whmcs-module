@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Libs\Update;
+namespace GGSModule\App\Libs\Update;
 
 /**
  * Whether this server can take a one-click update. Every check that fails turns the update into "notify only": the

@@ -1,11 +1,10 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Migration;
+namespace GGSModule\App\Migration;
 
-use ModulesGarden\GGSModule\App\Libs\AddonCertificates;
-use ModulesGarden\GGSModule\App\Libs\ProductAddons;
-use ModulesGarden\GGSModule\App\Migration\Readers\LegacyReaderInterface;
-use ModulesGarden\GGSModule\App\Models\Request;
+use GGSModule\App\Libs\Certificates\AddonCertificates;
+use GGSModule\App\Libs\Products\ProductAddons;
+use GGSModule\App\Models\Request;
 use WHMCS\Database\Capsule;
 
 /**

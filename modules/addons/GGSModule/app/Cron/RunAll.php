@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Cron;
+namespace GGSModule\App\Cron;
 
-use ModulesGarden\GGSModule\App\UI\Admin\Home\Index\Shared\CronStatus;
-use ModulesGarden\GGSModule\Core\CommandLine\AbstractCommand;
-use ModulesGarden\GGSModule\Core\ModuleConstants;
+use GGSModule\App\Libs\Dashboard\CronStatus;
+use GGSModule\App\Kernel\Console\Command;
+use GGSModule\App\Kernel\Kernel;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -16,7 +16,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
  *
  *   php -q {WHMCS}/modules/addons/GGSModule/cron/cron.php RunAll
  */
-class RunAll extends AbstractCommand
+class RunAll extends Command
 {
     protected $name = 'RunAll';
 
@@ -27,12 +27,21 @@ class RunAll extends AbstractCommand
         $background = stripos(PHP_OS, 'WIN') !== 0 && function_exists('exec')
             && !in_array('exec', array_map('trim', explode(',', (string)ini_get('disable_functions'))), true);
         $php        = PHP_BINARY !== '' && is_executable(PHP_BINARY) && stripos(basename(PHP_BINARY), 'fpm') === false ? PHP_BINARY : 'php';
-        $script     = ModuleConstants::getFullPath('cron', 'cron.php');
+        $script     = Kernel::path('cron', 'cron.php');
 
         // a new module release: looked for once a day (the dashboard shows it)
         try
         {
-            \ModulesGarden\GGSModule\App\Libs\Update\Release::check();
+            \GGSModule\App\Libs\Update\Release::check();
+        }
+        catch(\Throwable $e)
+        {
+        }
+
+        // the reseller balance: read once an hour, the administrators are warned when it is low
+        try
+        {
+            \GGSModule\App\Libs\Billing\BalanceMonitor::run();
         }
         catch(\Throwable $e)
         {

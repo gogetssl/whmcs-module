@@ -1,35 +1,31 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Cron;
+namespace GGSModule\App\Cron;
 
-use Exception;
-use ModulesGarden\GGSModule\App\Libs\Helpers;
-use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
-use ModulesGarden\GGSModule\App\Libs\FinancePolicy;
-use ModulesGarden\GGSModule\App\Libs\RenewalPrices;
-use ModulesGarden\GGSModule\App\Libs\PricingService;
-use ModulesGarden\GGSModule\App\Libs\ProductSettings;
-use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\GGSModule\App\Models\CronCheck;
-use ModulesGarden\GGSModule\App\Models\RemoteProduct;
-use ModulesGarden\GGSModule\App\Models\Request;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\GGSModule\Core\CommandLine\AbstractCommand;
-use ModulesGarden\GGSModule\Core\WHMCS\Models\Currency;
-use ModulesGarden\GGSModule\Core\WHMCS\Models\Pricing;
-use ModulesGarden\GGSModule\Core\WHMCS\Models\Service;
-use ModulesGarden\GGSModule\Packages\Logs\Support\Facades\Logger;
-use ModulesGarden\GGSModule\Packages\Product\Services\ConfigurableOptions;
+use GGSModule\App\Libs\Support\Helpers;
+use GGSModule\App\Libs\Support\GeneralSettings;
+use GGSModule\App\Libs\Billing\FinancePolicy;
+use GGSModule\App\Libs\Billing\RenewalPrices;
+use GGSModule\App\Libs\Billing\PricingService;
+use GGSModule\App\Libs\Products\ProductSettings;
+use GGSModule\App\Models\CronCheck;
+use GGSModule\App\Models\RemoteProduct;
+use GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use GGSModule\App\Repositories\Whmcs\ProductRepository;
+use GGSModule\App\Kernel\Console\Command;
+use GGSModule\App\Models\Whmcs\Currency;
+use GGSModule\App\Models\Whmcs\Pricing;
+use GGSModule\App\Libs\Logs\Logger;
+use GGSModule\App\Libs\Products\ConfigOptions\ConfigurableOptions;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
 /**
  * Class Sample
- * @package ModulesGarden\GGSModule\App\Cron
+ * @package GGSModule\App\Cron
  */
-class ProductPricingUpdate extends AbstractCommand
+class ProductPricingUpdate extends Command
 {
     /**
      * Command name
@@ -85,7 +81,7 @@ class ProductPricingUpdate extends AbstractCommand
             Helpers::reSyncProducts();
 
             // catalogue sync mode (M-16): retire / hide discontinued products, show returned ones, import new ones
-            $catalogue = \ModulesGarden\GGSModule\App\Libs\CatalogueSync::apply();
+            $catalogue = \GGSModule\App\Libs\Products\CatalogueSync::apply();
             if(array_sum($catalogue))
             {
                 Logger::info('Catalogue sync: ' . json_encode($catalogue));
@@ -188,9 +184,9 @@ class ProductPricingUpdate extends AbstractCommand
                 }
 
                 // code signing: token shipping fees of the "Certificate Delivery" option
-                if(strtolower((string)$remoteProduct->category) === \ModulesGarden\GGSModule\App\Libs\CodeSigningService::CATEGORY)
+                if(strtolower((string)$remoteProduct->category) === \GGSModule\App\Libs\ProductLines\CodeSigningService::CATEGORY)
                 {
-                    \ModulesGarden\GGSModule\App\Libs\CodeSigningService::syncDeliveryPrices($whmcsProduct->id, (array)$remoteProductData);
+                    \GGSModule\App\Libs\ProductLines\CodeSigningService::syncDeliveryPrices($whmcsProduct->id, (array)$remoteProductData);
                 }
 
                 $expectedOptionNames = [
@@ -259,22 +255,22 @@ class ProductPricingUpdate extends AbstractCommand
                 }
 
                 // FLEX products: the wildcard main domain surcharge (created when missing, then priced like a SAN option)
-                if(\ModulesGarden\GGSModule\App\Libs\MainDomain::isChoice((array)$remoteProductData, (string)$whmcsProduct->configoption1))
+                if(\GGSModule\App\Libs\Certificates\MainDomain::isChoice((array)$remoteProductData, (string)$whmcsProduct->configoption1))
                 {
-                    \ModulesGarden\GGSModule\App\Libs\MainDomain::ensureOption((int)$whmcsProduct->id, (array)$remoteProductData);
+                    \GGSModule\App\Libs\Certificates\MainDomain::ensureOption((int)$whmcsProduct->id, (array)$remoteProductData);
                     $wildcardSub = \WHMCS\Database\Capsule::table('tblproductconfiglinks')
                         ->join('tblproductconfigoptions', 'tblproductconfigoptions.gid', '=', 'tblproductconfiglinks.gid')
                         ->join('tblproductconfigoptionssub', 'tblproductconfigoptionssub.configid', '=', 'tblproductconfigoptions.id')
                         ->where('tblproductconfiglinks.pid', (int)$whmcsProduct->id)
-                        ->where('tblproductconfigoptions.optionname', 'like', \ModulesGarden\GGSModule\App\Libs\MainDomain::OPTION . '|%')
-                        ->where('tblproductconfigoptionssub.optionname', 'like', \ModulesGarden\GGSModule\App\Libs\MainDomain::WILDCARD . '|%')
+                        ->where('tblproductconfigoptions.optionname', 'like', \GGSModule\App\Libs\Certificates\MainDomain::OPTION . '|%')
+                        ->where('tblproductconfigoptionssub.optionname', 'like', \GGSModule\App\Libs\Certificates\MainDomain::WILDCARD . '|%')
                         ->value('tblproductconfigoptionssub.id');
                     if($wildcardSub)
                     {
                         foreach($remoteProductData['prices'] as $remotePriceData)
                         {
                             $billingPeriod = Helpers::monthsToBillingPeriod($remotePriceData['term']);
-                            $extra         = \ModulesGarden\GGSModule\App\Libs\MainDomain::wildcardCost((array)$remoteProductData, (int)$remotePriceData['term']);
+                            $extra         = \GGSModule\App\Libs\Certificates\MainDomain::wildcardCost((array)$remoteProductData, (int)$remotePriceData['term']);
                             if($billingPeriod === false || $extra === null)
                             {
                                 continue;
@@ -315,7 +311,7 @@ class ProductPricingUpdate extends AbstractCommand
             }
 
             // product addons that sell a certificate product (M-14) keep its prices
-            $addons = \ModulesGarden\GGSModule\App\Libs\ProductAddons::syncAll();
+            $addons = \GGSModule\App\Libs\Products\ProductAddons::syncAll();
             if($addons)
             {
                 Logger::info('Product addon prices updated from their certificate products: ' . $addons);
@@ -329,11 +325,11 @@ class ProductPricingUpdate extends AbstractCommand
             }
 
             // what changed in the provider's catalogue since the last e-mail, to the administrators (M-16)
-            \ModulesGarden\GGSModule\App\Libs\CatalogueSync::notify();
+            \GGSModule\App\Libs\Products\CatalogueSync::notify();
         }
         catch(\Throwable $exception)
         {
-            Logger::error('ProductPricingUpdate Cron Error: ' . $exception->getMessage(), \ModulesGarden\GGSModule\App\Libs\LogContext::exception($exception));
+            Logger::error('ProductPricingUpdate Cron Error: ' . $exception->getMessage(), \GGSModule\App\Libs\Support\LogContext::exception($exception));
             $errorToDB = $exception->getMessage();
         }
 

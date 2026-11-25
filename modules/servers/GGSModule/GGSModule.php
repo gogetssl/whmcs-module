@@ -1,21 +1,34 @@
 <?php
 
-use ModulesGarden\Servers\GGSModule\app\controllers\server\admin\Actions;
-use ModulesGarden\Servers\GGSModule\Server;
+use GGSModule\Server\app\controllers\server\admin\Actions;
+use GGSModule\Server\Server;
 
 if(!defined('DS'))define('DS',DIRECTORY_SEPARATOR);
 
 require_once __DIR__.DS.'Loader.php';
-new \ModulesGarden\Servers\GGSModule\Loader();
+new \GGSModule\Server\Loader();
 
 // Edition name (GoGetSSL Module / TheSSLStore Plugin) - loaded directly, without booting the addon framework
-if(file_exists(dirname(__DIR__, 2).DS.'addons'.DS.'GGSModule'.DS.'app'.DS.'Libs'.DS.'Edition.php'))
+if(file_exists(dirname(__DIR__, 2).DS.'addons'.DS.'GGSModule'.DS.'app'.DS.'Libs'.DS.'Support'.DS.'Edition.php'))
 {
-    require_once dirname(__DIR__, 2).DS.'addons'.DS.'GGSModule'.DS.'app'.DS.'Libs'.DS.'Edition.php';
+    require_once dirname(__DIR__, 2).DS.'addons'.DS.'GGSModule'.DS.'app'.DS.'Libs'.DS.'Support'.DS.'Edition.php';
 }
 
-\ModulesGarden\Servers\GGSModule\Server::I();
+\GGSModule\Server\Server::I();
 
+// files updated by copying, without the addon upgrade: the database changes (App\Database\Schema) are applied here
+// too; once current it is one query per request
+try
+{
+    if(class_exists('\GGSModule\App\Database\Schema'))
+    {
+        \GGSModule\App\Database\Schema::migrate();
+    }
+}
+catch(\Throwable $e)
+{
+    // the service actions go on; the next request tries again
+}
 
 
 if (!defined("WHMCS")) {
@@ -24,16 +37,16 @@ if (!defined("WHMCS")) {
 
 /**
  * The answer for a call the module must not run as an ordinary service; null for any other:
- *  - a WHMCS product addon (App\Libs\AddonCertificates): WHMCS passes the parent service, the certificate lives on the
+ *  - a WHMCS product addon (App\Libs\Certificates\AddonCertificates): WHMCS passes the parent service, the certificate lives on the
  *    addon's own certificate service
- *  - a certificate kept as a record of the legacy module (App\Libs\RecordOnly)
+ *  - a certificate kept as a record of the legacy module (App\Libs\Certificates\RecordOnly)
  */
 function GGSModule_recordOnlyGuard($function, $params) {
-    if(!empty($params['addonId']) && class_exists('\ModulesGarden\GGSModule\App\Libs\AddonCertificates')) {
-        return \ModulesGarden\GGSModule\App\Libs\AddonCertificates::guard($function, (array)$params);
+    if(!empty($params['addonId']) && class_exists('\GGSModule\App\Libs\Certificates\AddonCertificates')) {
+        return \GGSModule\App\Libs\Certificates\AddonCertificates::guard($function, (array)$params);
     }
     try {
-        return class_exists('\ModulesGarden\GGSModule\App\Libs\RecordOnly') ? \ModulesGarden\GGSModule\App\Libs\RecordOnly::guard($function, $params) : null;
+        return class_exists('\GGSModule\App\Libs\Certificates\RecordOnly') ? \GGSModule\App\Libs\Certificates\RecordOnly::guard($function, $params) : null;
     } catch(\Throwable $e) {
         return null;
     }
@@ -41,7 +54,7 @@ function GGSModule_recordOnlyGuard($function, $params) {
 
 function GGSModule_MetaData() {
     return array(
-        'DisplayName' => class_exists('\ModulesGarden\GGSModule\App\Libs\Edition', false) ? \ModulesGarden\GGSModule\App\Libs\Edition::name() : 'GoGetSSL Module',
+        'DisplayName' => class_exists('\GGSModule\App\Libs\Support\Edition', false) ? \GGSModule\App\Libs\Support\Edition::name() : 'GoGetSSL Module',
         'APIVersion' => '1.0',
     );
 }
@@ -151,7 +164,7 @@ function GGSModule_AdminServicesTabFields(array $params) {
 
 function GGSModule_AdminServicesTabFieldsSave(array $params) {
     if(($recordOnly = GGSModule_recordOnlyGuard('AdminServicesTabFieldsSave', $params)) !== null) return $recordOnly;
-    (new \ModulesGarden\Servers\GGSModule\app\services\AdminServicesTabFields())->save($params);
+    (new \GGSModule\Server\app\services\AdminServicesTabFields())->save($params);
 }
 
 function GGSModule_SSLAdminGetCertificate($params) {

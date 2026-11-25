@@ -1,11 +1,10 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Models;
+namespace GGSModule\App\Models;
 
-use ModulesGarden\GGSModule\App\Libs\SecretValue;
-use ModulesGarden\GGSModule\Core\Models\ExtendedEloquentModel;
+use GGSModule\App\Libs\Support\SecretValue;
 
-class AisSubscription extends ExtendedEloquentModel
+class AisSubscription extends Model
 {
     public $timestamps = true;
     protected $table = 'AisSubscriptions';

@@ -1,45 +1,16 @@
 <?php
 
-namespace ModulesGarden\Servers\GGSModule\app\controllers\server\clientarea\parts;
+namespace GGSModule\Server\app\controllers\server\clientarea\parts;
 
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Client;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Order;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Product;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Service;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\SSL;
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Config;
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Domain;
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\ProductConfigOptions;
-use ModulesGarden\Servers\GGSModule\app\services\InvoiceRenew;
-use ModulesGarden\Servers\GGSModule\app\services\SSLStepThree;
-use ModulesGarden\Servers\GGSModule\core\Lang;
-use ModulesGarden\Servers\GGSModule\core\process\AbstractController;
-use ModulesGarden\Servers\GGSModule\Server;
-use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
-use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
-use ModulesGarden\GGSModule\App\Libs\AisHelpers;
-use ModulesGarden\GGSModule\App\Libs\AutoInstallHelpers;
-use ModulesGarden\GGSModule\App\Libs\CertificateBundle;
-use ModulesGarden\GGSModule\App\Libs\CertificateService;
-use ModulesGarden\GGSModule\App\Libs\CertificateSyncHelpers;
-use ModulesGarden\GGSModule\App\Libs\Cpanel;
-use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
-use ModulesGarden\GGSModule\App\Libs\ProductSettings;
-use ModulesGarden\GGSModule\App\Libs\SmimeService;
-use ModulesGarden\GGSModule\App\Libs\CodeSigningService;
-use ModulesGarden\GGSModule\App\Libs\SslProductHelpers;
-use ModulesGarden\GGSModule\App\Libs\Helpers;
-use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\GGSModule\App\Models\AcmeSubscription;
-use ModulesGarden\GGSModule\App\Models\AcmeSubscriptionDomain;
-use ModulesGarden\GGSModule\App\Models\AisSubscription;
-use ModulesGarden\GGSModule\App\Models\RemoteProduct;
-use ModulesGarden\GGSModule\App\Models\Request;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\GGSModule\Core\WHMCS\Helper;
-use ModulesGarden\GGSModule\Core\WHMCS\Models\Invoice;
-use WHMCS\Billing\Tax;
+use GGSModule\Server\app\models\whmcs\Client;
+use GGSModule\Server\app\models\whmcs\Order;
+use GGSModule\Server\app\models\whmcs\Product;
+use GGSModule\Server\app\models\whmcs\Service;
+use GGSModule\Server\app\models\whmcs\SSL;
+use GGSModule\Server\core\Lang;
+use GGSModule\Server\Server;
+use GGSModule\App\Libs\Certificates\CertificateService;
+use GGSModule\App\Libs\ProductLines\SmimeService;
 use WHMCS\Database\Capsule;
 
 /**
@@ -53,7 +24,7 @@ trait SmimeActions
     /**
      * S/MIME service page: the order form while the service waits for configuration, else the order status
      */
-    private function indexSmimeHTML($input, $vars = array())
+    private function indexSmimeHTML($input, $vars = [])
     {
         $serviceId = (int)$input['params']['serviceid'];
         $ssl       = SSL::getByServiceId($serviceId);
@@ -157,7 +128,7 @@ trait SmimeActions
         return ['tpl' => 'home_smime_configuration', 'vars' => $vars];
     }
 
-    public function createSmimeJSON($input, $vars = array())
+    public function createSmimeJSON($input, $vars = [])
     {
         $this->requireCsrfToken();
         $serviceId = (int)$input['params']['serviceid'];
@@ -227,7 +198,7 @@ trait SmimeActions
         return ['success' => true, 'message' => Lang::absoluteT('smimeOrderedSuccessfully')];
     }
 
-    public function refreshSmimeDetailsJSON($input, $vars = array())
+    public function refreshSmimeDetailsJSON($input, $vars = [])
     {
         $this->requireCsrfToken();
         $serviceId = (int)$input['params']['serviceid'];

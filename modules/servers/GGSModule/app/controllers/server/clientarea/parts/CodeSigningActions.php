@@ -1,45 +1,14 @@
 <?php
 
-namespace ModulesGarden\Servers\GGSModule\app\controllers\server\clientarea\parts;
+namespace GGSModule\Server\app\controllers\server\clientarea\parts;
 
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Client;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Order;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Product;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Service;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\SSL;
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Config;
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Domain;
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\ProductConfigOptions;
-use ModulesGarden\Servers\GGSModule\app\services\InvoiceRenew;
-use ModulesGarden\Servers\GGSModule\app\services\SSLStepThree;
-use ModulesGarden\Servers\GGSModule\core\Lang;
-use ModulesGarden\Servers\GGSModule\core\process\AbstractController;
-use ModulesGarden\Servers\GGSModule\Server;
-use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
-use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
-use ModulesGarden\GGSModule\App\Libs\AisHelpers;
-use ModulesGarden\GGSModule\App\Libs\AutoInstallHelpers;
-use ModulesGarden\GGSModule\App\Libs\CertificateBundle;
-use ModulesGarden\GGSModule\App\Libs\CertificateService;
-use ModulesGarden\GGSModule\App\Libs\CertificateSyncHelpers;
-use ModulesGarden\GGSModule\App\Libs\Cpanel;
-use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
-use ModulesGarden\GGSModule\App\Libs\ProductSettings;
-use ModulesGarden\GGSModule\App\Libs\SmimeService;
-use ModulesGarden\GGSModule\App\Libs\CodeSigningService;
-use ModulesGarden\GGSModule\App\Libs\SslProductHelpers;
-use ModulesGarden\GGSModule\App\Libs\Helpers;
-use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\GGSModule\App\Models\AcmeSubscription;
-use ModulesGarden\GGSModule\App\Models\AcmeSubscriptionDomain;
-use ModulesGarden\GGSModule\App\Models\AisSubscription;
-use ModulesGarden\GGSModule\App\Models\RemoteProduct;
-use ModulesGarden\GGSModule\App\Models\Request;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\GGSModule\Core\WHMCS\Helper;
-use ModulesGarden\GGSModule\Core\WHMCS\Models\Invoice;
-use WHMCS\Billing\Tax;
+use GGSModule\Server\app\models\whmcs\Client;
+use GGSModule\Server\app\models\whmcs\Order;
+use GGSModule\Server\app\models\whmcs\Service;
+use GGSModule\Server\app\models\whmcs\SSL;
+use GGSModule\Server\core\Lang;
+use GGSModule\App\Libs\Certificates\CertificateService;
+use GGSModule\App\Libs\ProductLines\CodeSigningService;
 use WHMCS\Database\Capsule;
 
 /**
@@ -53,7 +22,7 @@ trait CodeSigningActions
     /**
      * Code signing service page: the order form while the service waits for configuration, else the order status
      */
-    private function indexCodeSigningHTML($input, $vars = array())
+    private function indexCodeSigningHTML($input, $vars = [])
     {
         $serviceId = (int)$input['params']['serviceid'];
         $ssl       = SSL::getByServiceId($serviceId);
@@ -190,7 +159,7 @@ trait CodeSigningActions
         return ['tpl' => 'home_codesigning_configuration', 'vars' => $vars];
     }
 
-    public function createCodeSigningJSON($input, $vars = array())
+    public function createCodeSigningJSON($input, $vars = [])
     {
         $this->requireCsrfToken();
         $serviceId = (int)$input['params']['serviceid'];
@@ -220,7 +189,7 @@ trait CodeSigningActions
                 'shipping'      => is_array($input['ship'] ?? null) ? $input['ship'] : [],
             ]);
         }
-        catch(\ModulesGarden\GGSModule\App\Libs\CodeSigningInputException $e)
+        catch(\GGSModule\App\Libs\ProductLines\CodeSigningInputException $e)
         {
             $argument = (string)$e->argument;
             $argument = strpos($argument, 'cs') === 0 ? Lang::absoluteT('serverCA', 'home', $argument) : htmlspecialchars($argument);
@@ -244,7 +213,7 @@ trait CodeSigningActions
         return ['success' => true, 'message' => Lang::absoluteT('csOrderedSuccessfully')];
     }
 
-    public function refreshCodeSigningDetailsJSON($input, $vars = array())
+    public function refreshCodeSigningDetailsJSON($input, $vars = [])
     {
         $this->requireCsrfToken();
         $serviceId = (int)$input['params']['serviceid'];

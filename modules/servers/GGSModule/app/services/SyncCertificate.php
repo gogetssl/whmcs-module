@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\Servers\GGSModule\app\services;
+namespace GGSModule\Server\app\services;
 
-use ModulesGarden\GGSModule\App\Libs\CertificateSyncHelpers;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use GGSModule\App\Libs\Certificates\CertificateSyncHelpers;
+use GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
 
 /**
  * Admin "Sync Certificate" button - the SSLCertificates cron flow for a single service,
@@ -13,7 +13,7 @@ class SyncCertificate
 {
     public function run($params)
     {
-        $gatewayType = \ModulesGarden\GGSModule\App\Libs\GatewayOrderService::typeOfService($params['serviceid']);
+        $gatewayType = \GGSModule\App\Libs\ProductLines\GatewayOrderService::typeOfService($params['serviceid']);
         if($gatewayType)
         {
             $gatewayType::refresh($params['serviceid']);

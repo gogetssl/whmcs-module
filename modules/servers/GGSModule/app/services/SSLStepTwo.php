@@ -1,13 +1,13 @@
 <?php
 
-namespace ModulesGarden\Servers\GGSModule\app\services;
+namespace GGSModule\Server\app\services;
 
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Domain;
-use ModulesGarden\Servers\GGSModule\core\Lang;
-use ModulesGarden\Servers\GGSModule\core\Smarty;
-use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
+use GGSModule\Server\app\repository\whmcs\Domain;
+use GGSModule\Server\core\Lang;
+use GGSModule\Server\core\Smarty;
+use GGSModule\App\Libs\Gateway\SSLTrustCenterApi;
+use GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use GGSModule\App\Repositories\Whmcs\ProductRepository;
 
 class SSLStepTwo
 {

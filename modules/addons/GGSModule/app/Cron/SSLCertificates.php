@@ -1,24 +1,23 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Cron;
+namespace GGSModule\App\Cron;
 
 use Exception;
-use ModulesGarden\GGSModule\App\Libs\CertificateSyncHelpers;
-use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\GGSModule\App\Models\CronCheck;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\GGSModule\Core\CommandLine\AbstractCommand;
-use ModulesGarden\GGSModule\Packages\Logs\Support\Facades\Logger;
+use GGSModule\App\Libs\Certificates\CertificateSyncHelpers;
+use GGSModule\App\Libs\Gateway\SSLTrustCenterApi;
+use GGSModule\App\Models\CronCheck;
+use GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use GGSModule\App\Kernel\Console\Command;
+use GGSModule\App\Libs\Logs\Logger;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use WHMCS\Database\Capsule;
 
 /**
  * Class Sample
- * @package ModulesGarden\GGSModule\App\Cron
+ * @package GGSModule\App\Cron
  */
-class SSLCertificates extends AbstractCommand
+class SSLCertificates extends Command
 {
     /**
      * Command name
@@ -64,7 +63,8 @@ class SSLCertificates extends AbstractCommand
 
         $timestamp = time();
         $errors = false;
-        $certificatesWhere = [];
+        // certificate (item) ID => status reported by the vendor
+        $reported = [];
 
         $lastSync = (new AddonModuleRepository())->getLastCertificatesSync();
         // /services/updates?since=<unix time>: changes since the last successful run, 5 minutes overlap for changes
@@ -93,7 +93,12 @@ class SSLCertificates extends AbstractCommand
 
                 foreach ($updates as $update)
                 {
-                    $certificatesWhere[] = $update['id'];
+                    // TLS only: S/MIME, code / document signing and the other orders have their own refresh below
+                    if(empty($update['id']) || (isset($update['category']) && $update['category'] !== 'tls'))
+                    {
+                        continue;
+                    }
+                    $reported[(string)$update['id']] = isset($update['status']) ? (string)$update['status'] : '';
                 }
 
             } catch (Exception $e) {
@@ -114,7 +119,7 @@ class SSLCertificates extends AbstractCommand
         // product addons and their certificate services ended outside the module's own calls (M-14)
         try
         {
-            foreach(\ModulesGarden\GGSModule\App\Libs\AddonCertificates::reconcile() as $change)
+            foreach(\GGSModule\App\Libs\Certificates\AddonCertificates::reconcile() as $change)
             {
                 Logger::info('Product addon certificates: ' . $change);
             }
@@ -125,18 +130,11 @@ class SSLCertificates extends AbstractCommand
         }
 
         $certificatesQuery = CertificateSyncHelpers::getCertificatesQuery()
-            ->whereIn('tblsslorders.remoteid', $certificatesWhere);
+            ->whereIn('tblsslorders.remoteid', array_map('strval', array_keys($reported)) ?: ['0']);
 
-        // /services/updates reports certificate (item) IDs. Services configured before 1.2.4 still hold the API
-        // order ID in remoteid and would never match - sync a few of the longest unsynced ones per run; the sync
-        // itself migrates remoteid to the item ID (CertificateSyncHelpers::syncCertificate).
-        $legacyCertificates = CertificateSyncHelpers::getCertificatesQuery()
-            ->whereNotIn('tblsslorders.remoteid', $certificatesWhere ?: [0])
-            ->where('tblsslorders.updated_at', '<', date('Y-m-d H:i:s', strtotime('-1 day')))
-            ->orderBy('tblsslorders.updated_at', 'asc')
-            ->limit(50)
-            ->get()
-            ->toArray();
+        // one-time conversion: orders that still hold the order ID instead of the certificate (item) ID are never
+        // reported by /services/updates - each is read once and its item ID stored (CertificateSyncHelpers)
+        $legacyCertificates = CertificateSyncHelpers::itemIdConversionBatch(array_map('strval', array_keys($reported)));
 
 
         $output->write('Start checking certificates...') .
@@ -152,16 +150,35 @@ class SSLCertificates extends AbstractCommand
 
             try {
 
-                CertificateSyncHelpers::syncCertificate($certificate, $addonConfig);
+                // a reported order: its status decides whether the order is read (CertificateSyncHelpers);
+                // an order of the item ID conversion is always read
+                if(array_key_exists((string)$certificate['remoteid'], $reported))
+                {
+                    CertificateSyncHelpers::applyReportedStatus($certificate, $reported[(string)$certificate['remoteid']], $addonConfig);
+                }
+                else
+                {
+                    CertificateSyncHelpers::syncCertificate($certificate, $addonConfig);
+                }
+                CertificateSyncHelpers::clearAwaitingConfiguration((int)$certificate['id']);
 
             } catch (\Throwable $e) {
 
                 // counted as handled: an order that keeps failing must not hold a place among the oldest ones for ever
                 \WHMCS\Database\Capsule::table('tblsslorders')->where('serviceid', (int)$certificate['id'])->update(['updated_at' => date('Y-m-d H:i:s')]);
+
+                // submitted, but the client never chose how to validate: the order waits, it has not failed (read less often, see CertificateSyncHelpers)
+                if(SSLTrustCenterApi::isAwaitingConfiguration($e))
+                {
+                    CertificateSyncHelpers::markAwaitingConfiguration((int)$certificate['id']);
+                    $io->write('Waiting for configuration: service #' . (int)$certificate['id']);
+                    continue;
+                }
+
                 $failed[$certificate['id']] = $e->getMessage();
                 $io->write('Error: ' . $e->getMessage());
 
-                Logger::error($e->getMessage(), \ModulesGarden\GGSModule\App\Libs\LogContext::exception($e, ['service' => $certificate['id']]));
+                Logger::error($e->getMessage(), \GGSModule\App\Libs\Support\LogContext::exception($e, ['service' => $certificate['id']]));
 
                 continue;
 
@@ -170,8 +187,20 @@ class SSLCertificates extends AbstractCommand
 
         }
 
+        // certificates bought at payment and completed with their token outside WHMCS (a hosting panel plugin): the
+        // services waiting for their details take those orders over (App\Libs\Certificates\IncompleteOrder)
+        foreach(\GGSModule\App\Libs\Certificates\IncompleteOrder::adoptReported(array_keys($reported)) as $serviceId => $message)
+        {
+            $failed[$serviceId] = $message;
+        }
+        // orders migrated from the legacy TheSSLStore module that were bought at payment: their token is read once
+        foreach(\GGSModule\App\Libs\Certificates\IncompleteOrder::claimMigratedBatch() as $serviceId => $message)
+        {
+            $failed[$serviceId] = $message;
+        }
+
         // S/MIME and code signing orders (own order data, not in the /services/updates handling above)
-        foreach(\ModulesGarden\GGSModule\App\Libs\GatewayOrderService::TYPES as $type)
+        foreach(\GGSModule\App\Libs\ProductLines\GatewayOrderService::TYPES as $type)
         {
             try
             {
@@ -190,7 +219,30 @@ class SSLCertificates extends AbstractCommand
         // one line that says how many orders failed and which, instead of the message of the last one
         if($failed)
         {
-            $errorToDB = \ModulesGarden\GGSModule\App\Libs\CronErrors::summary($failed, count($toCheck));
+            $errorToDB = \GGSModule\App\Libs\Support\CronErrors::summary($failed, count($toCheck));
+        }
+
+        // ACME subscriptions waiting for their certificate (were refreshed by the retired SSLCertificatesProcessing)
+        foreach(\GGSModule\App\Models\AcmeSubscription::where('status', 'pending')->get() as $subscription)
+        {
+            try
+            {
+                \GGSModule\App\Libs\Subscriptions\AcmeHelpers::refreshAcmeCertificateDetails($subscription->service_id);
+            }
+            catch(\Throwable $e)
+            {
+                $errorToDB = $errorToDB ?: $e->getMessage();
+            }
+        }
+
+        // legacy migration housekeeping: expired backup tables, log rows older than 30 days
+        try
+        {
+            \GGSModule\App\Migration\Engine::housekeeping();
+        }
+        catch(\Throwable $e)
+        {
+            $errorToDB = $errorToDB ?: $e->getMessage();
         }
 
         CronCheck::updateOrCreate(

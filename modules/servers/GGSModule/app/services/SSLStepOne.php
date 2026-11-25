@@ -1,17 +1,17 @@
 <?php
 
-namespace ModulesGarden\Servers\GGSModule\app\services;
+namespace GGSModule\Server\app\services;
 
-use ModulesGarden\Servers\GGSModule\core\Lang;
-use ModulesGarden\Servers\GGSModule\core\Smarty;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
+use GGSModule\Server\core\Lang;
+use GGSModule\Server\core\Smarty;
+use GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
 
 class SSLStepOne
 {
     public function run($params)
     {
         // S/MIME is ordered on the service page of the module, not on the WHMCS SSL configuration page
-        if(\ModulesGarden\GGSModule\App\Libs\GatewayOrderService::typeOfProduct($params['pid']))
+        if(\GGSModule\App\Libs\ProductLines\GatewayOrderService::typeOfProduct($params['pid']))
         {
             header('Location: clientarea.php?action=productdetails&id=' . (int)$params['serviceid']);
             exit;
@@ -61,6 +61,14 @@ class SSLStepOne
     {
         $configuration = (new AddonModuleRepository())->getModuleConfiguration();
 
+        // Default CSR Country: the fixed one from the settings, else the client's own country
+        $defaultCountry = strtoupper(trim((string)($configuration['sslSettings']['defaultCsrCountry'] ?? '')));
+        if(!preg_match('/^[A-Z]{2}$/', $defaultCountry))
+        {
+            $defaultCountry = strtoupper(trim((string)($clientData['country'] ?? '')));
+        }
+        $configuration['sslSettings']['defaultCsrCountry'] = $defaultCountry;
+
         if(!isset($configuration['sslSettings']['useProfileDetailsForCsr']) || empty($configuration['sslSettings']['useProfileDetailsForCsr']))
         {
             foreach ($clientData as $key => $value)
@@ -83,7 +91,7 @@ class SSLStepOne
             'default_csr_country' => isset($configuration['sslSettings']['defaultCsrCountry']) ? $configuration['sslSettings']['defaultCsrCountry'] : false,
             'adminFormHidden' => isset($configuration['sslSettings']['autoDetailsForDvOrders']) ? $configuration['sslSettings']['autoDetailsForDvOrders'] : false,
             'domain' => $domain,
-            'ask_webserver' => !\ModulesGarden\GGSModule\App\Libs\GeneralSettings::enabled('useDefaultWebServer'),
+            'ask_webserver' => !\GGSModule\App\Libs\Support\GeneralSettings::enabled('useDefaultWebServer'),
             'client' => $clientData,
             'post' => $_POST
         ]);

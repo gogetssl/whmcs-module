@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Libs\Update;
+namespace GGSModule\App\Libs\Update;
 
-use ModulesGarden\GGSModule\Core\Support\Facades\Config;
+use GGSModule\App\Kernel\Layout;
 use WHMCS\Database\Capsule;
 
 /**
@@ -41,7 +41,7 @@ class State
     /** The version of the files that run now */
     public static function installedVersion()
     {
-        return (string)Config::get('configuration.version', '0');
+        return Layout::version();
     }
 
     /** One line in the update history (newest first, the last 20 kept) */

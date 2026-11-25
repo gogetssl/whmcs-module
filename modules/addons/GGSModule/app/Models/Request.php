@@ -1,10 +1,9 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Models;
+namespace GGSModule\App\Models;
 
-use ModulesGarden\GGSModule\Core\Models\ExtendedEloquentModel;
 
-class Request extends ExtendedEloquentModel
+class Request extends Model
 {
     public    $timestamps = true;
     protected $table      = 'Requests';

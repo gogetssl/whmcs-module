@@ -1,9 +1,8 @@
 <?php
 
-namespace ModulesGarden\Servers\GGSModule\app\repository\whmcs;
+namespace GGSModule\Server\app\repository\whmcs;
 
-use WHMCS\Database\Capsule as DataBase;
-use ModulesGarden\Servers\GGSModule\core\Lang;
+use GGSModule\Server\core\Lang;
 
 class Domain {
 

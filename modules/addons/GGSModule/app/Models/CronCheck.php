@@ -1,10 +1,9 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Models;
+namespace GGSModule\App\Models;
 
-use ModulesGarden\GGSModule\Core\Models\ExtendedEloquentModel;
 
-class CronCheck extends ExtendedEloquentModel
+class CronCheck extends Model
 {
 
     public    $timestamps = true;

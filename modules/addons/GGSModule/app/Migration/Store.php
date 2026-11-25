@@ -1,10 +1,10 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Migration;
+namespace GGSModule\App\Migration;
 
-use ModulesGarden\GGSModule\App\Libs\Edition;
+use GGSModule\App\Libs\Support\Edition;
 
-use ModulesGarden\GGSModule\App\Migration\Support\Schema;
+use GGSModule\App\Migration\Support\Schema;
 use WHMCS\Database\Capsule;
 
 /**

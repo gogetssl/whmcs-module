@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Libs\Update;
+namespace GGSModule\App\Libs\Update;
 
-use ModulesGarden\GGSModule\App\Libs\Edition;
-use ModulesGarden\GGSModule\Core\ModuleConstants;
+use GGSModule\App\Libs\Support\Edition;
+use GGSModule\App\Kernel\Kernel;
 
 /**
  * Finds the newest release and proves it is ours.
@@ -27,7 +27,7 @@ class Release
     public static function keys()
     {
         $keys = [];
-        $file = ModuleConstants::getFullPath('app', 'Config', 'updateKeys.php');
+        $file = Kernel::path('app', 'Config', 'updateKeys.php');
         foreach((array)(is_file($file) ? include $file : []) as $id => $key)
         {
             $raw = base64_decode((string)$key, true);

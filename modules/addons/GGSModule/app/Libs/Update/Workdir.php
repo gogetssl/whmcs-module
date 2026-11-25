@@ -1,8 +1,8 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Libs\Update;
+namespace GGSModule\App\Libs\Update;
 
-use ModulesGarden\GGSModule\App\Libs\Edition;
+use GGSModule\App\Libs\Support\Edition;
 
 /**
  * The updater's own folder: modules/.<folder>-update/ - next to the module folders, so on the same disk (the swap is

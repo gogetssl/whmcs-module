@@ -1,45 +1,19 @@
 <?php
 
-namespace ModulesGarden\Servers\GGSModule\app\controllers\server\clientarea;
+namespace GGSModule\Server\app\controllers\server\clientarea;
 
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Client;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Order;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Product;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\Service;
-use ModulesGarden\Servers\GGSModule\app\models\whmcs\SSL;
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Config;
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\Domain;
-use ModulesGarden\Servers\GGSModule\app\repository\whmcs\ProductConfigOptions;
-use ModulesGarden\Servers\GGSModule\app\services\InvoiceRenew;
-use ModulesGarden\Servers\GGSModule\app\services\SSLStepThree;
-use ModulesGarden\Servers\GGSModule\core\Lang;
-use ModulesGarden\Servers\GGSModule\core\process\AbstractController;
-use ModulesGarden\Servers\GGSModule\Server;
-use ModulesGarden\GGSModule\App\Helpers\EmailTemplates;
-use ModulesGarden\GGSModule\App\Libs\AcmeHelpers;
-use ModulesGarden\GGSModule\App\Libs\AisHelpers;
-use ModulesGarden\GGSModule\App\Libs\AutoInstallHelpers;
-use ModulesGarden\GGSModule\App\Libs\CertificateBundle;
-use ModulesGarden\GGSModule\App\Libs\CertificateService;
-use ModulesGarden\GGSModule\App\Libs\CertificateSyncHelpers;
-use ModulesGarden\GGSModule\App\Libs\Cpanel;
-use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
-use ModulesGarden\GGSModule\App\Libs\ProductSettings;
-use ModulesGarden\GGSModule\App\Libs\SmimeService;
-use ModulesGarden\GGSModule\App\Libs\CodeSigningService;
-use ModulesGarden\GGSModule\App\Libs\SslProductHelpers;
-use ModulesGarden\GGSModule\App\Libs\Helpers;
-use ModulesGarden\GGSModule\App\Libs\SSLTrustCenterApi;
-use ModulesGarden\GGSModule\App\Models\AcmeSubscription;
-use ModulesGarden\GGSModule\App\Models\AcmeSubscriptionDomain;
-use ModulesGarden\GGSModule\App\Models\AisSubscription;
-use ModulesGarden\GGSModule\App\Models\RemoteProduct;
-use ModulesGarden\GGSModule\App\Models\Request;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
-use ModulesGarden\GGSModule\App\Repositories\Whmcs\ProductRepository;
-use ModulesGarden\GGSModule\Core\WHMCS\Helper;
-use ModulesGarden\GGSModule\Core\WHMCS\Models\Invoice;
-use WHMCS\Billing\Tax;
+use GGSModule\Server\app\models\whmcs\Client;
+use GGSModule\Server\app\models\whmcs\Order;
+use GGSModule\Server\app\models\whmcs\Product;
+use GGSModule\Server\app\models\whmcs\Service;
+use GGSModule\Server\app\models\whmcs\SSL;
+use GGSModule\Server\core\Lang;
+use GGSModule\Server\core\process\AbstractController;
+use GGSModule\App\Libs\Subscriptions\AcmeHelpers;
+use GGSModule\App\Libs\Subscriptions\AisHelpers;
+use GGSModule\App\Libs\ProductLines\SmimeService;
+use GGSModule\App\Libs\ProductLines\CodeSigningService;
+use GGSModule\App\Models\Request;
 use WHMCS\Database\Capsule;
 
 class home extends AbstractController
@@ -79,21 +53,21 @@ class home extends AbstractController
                 return $this->indexCodeSigningHTML($input, $vars);
             }
 
-            if(\ModulesGarden\GGSModule\App\Libs\CodeGuardService::isCodeGuardWhmcsProduct($service->packageid))
+            if(\GGSModule\App\Libs\ProductLines\CodeGuardService::isCodeGuardWhmcsProduct($service->packageid))
             {
                 return $this->indexCodeGuardHTML($input, $vars);
             }
 
-            if(\ModulesGarden\GGSModule\App\Libs\DocumentSigningService::isDocumentSigningWhmcsProduct($service->packageid))
+            if(\GGSModule\App\Libs\ProductLines\DocumentSigningService::isDocumentSigningWhmcsProduct($service->packageid))
             {
                 return $this->indexDocumentSigningHTML($input, $vars);
             }
 
-            if(\ModulesGarden\GGSModule\App\Libs\PciService::isPciWhmcsProduct($service->packageid))
+            if(\GGSModule\App\Libs\ProductLines\PciService::isPciWhmcsProduct($service->packageid))
             {
                 return $this->indexPciHTML($input, $vars);
             }
-            if(\ModulesGarden\GGSModule\App\Libs\LeiService::isLeiWhmcsProduct($service->packageid))
+            if(\GGSModule\App\Libs\ProductLines\LeiService::isLeiWhmcsProduct($service->packageid))
             {
                 return $this->indexLeiHTML($input, $vars);
             }
@@ -165,7 +139,7 @@ class home extends AbstractController
 
     private function requireCsrfToken()
     {
-        if($_SERVER['REQUEST_METHOD'] !== 'POST' || !\ModulesGarden\GGSModule\App\Libs\CsrfToken::valid($_POST['token'] ?? ''))
+        if($_SERVER['REQUEST_METHOD'] !== 'POST' || !\GGSModule\App\Libs\Support\CsrfToken::valid($_POST['token'] ?? ''))
         {
             throw new \Exception(Lang::absoluteT('invalidCsrfToken'));
         }

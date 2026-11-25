@@ -1,9 +1,9 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Libs\Update;
+namespace GGSModule\App\Libs\Update;
 
-use ModulesGarden\GGSModule\App\Libs\Edition;
-use ModulesGarden\GGSModule\App\Libs\GeneralSettings;
+use GGSModule\App\Libs\Support\Edition;
+use GGSModule\App\Libs\Support\GeneralSettings;
 use WHMCS\Database\Capsule;
 
 /**

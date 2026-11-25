@@ -1,11 +1,11 @@
 <?php
 
-namespace ModulesGarden\Servers\GGSModule\app\services;
+namespace GGSModule\Server\app\services;
 
-use ModulesGarden\Servers\GGSModule\core\Lang;
-use ModulesGarden\GGSModule\App\Libs\CaaCheck;
+use GGSModule\Server\core\Lang;
+use GGSModule\App\Libs\Certificates\CaaCheck;
 
-/** The CAA warning box on the client's pending certificate page (texts in the client's language) - see App\Libs\CaaCheck */
+/** The CAA warning box on the client's pending certificate page (texts in the client's language) - see App\Libs\Certificates\CaaCheck */
 class CaaWarning
 {
     /** Pending certificate page: the names not validated yet; '' when nothing blocks them */

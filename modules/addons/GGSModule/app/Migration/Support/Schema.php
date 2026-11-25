@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Migration\Support;
+namespace GGSModule\App\Migration\Support;
 
 use WHMCS\Database\Capsule;
 

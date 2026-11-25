@@ -8,8 +8,7 @@ if(!defined('WHMCS'))
 }
 
 
-use ModulesGarden\GGSModule\App\Models\RemoteProduct;
-use ModulesGarden\GGSModule\Core\Hook\HookIntegrator;
+use GGSModule\App\Models\RemoteProduct;
 
 
 $hookManager->register(
@@ -27,12 +26,12 @@ $hookManager->register(
     100
 );
 
-// the AutoInstall report e-mail to the administrators (App\Libs\AutoInstallReport), once a day
+// the AutoInstall report e-mail to the administrators (App\Libs\AutoInstall\AutoInstallReport), once a day
 $hookManager->register(
     function($args) {
         try
         {
-            \ModulesGarden\GGSModule\App\Libs\AutoInstallReport::notify();
+            \GGSModule\App\Libs\AutoInstall\AutoInstallReport::notify();
         }
         catch(\Throwable $e)
         {
@@ -40,4 +39,19 @@ $hookManager->register(
         }
     },
     110
+);
+
+// module log entries older than the days set under Logs > Actions > Settings are removed
+$hookManager->register(
+    function($args) {
+        try
+        {
+            \GGSModule\App\Libs\Logs\Logger::prune();
+        }
+        catch(\Throwable $e)
+        {
+            logActivity('SSL module: the module log could not be cleaned: ' . $e->getMessage());
+        }
+    },
+    120
 );

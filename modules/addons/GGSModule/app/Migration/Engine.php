@@ -1,14 +1,14 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Migration;
+namespace GGSModule\App\Migration;
 
-use ModulesGarden\GGSModule\App\Libs\Markups;
-use ModulesGarden\GGSModule\App\Libs\Cpanel;
-use ModulesGarden\GGSModule\App\Libs\EmailCatalog;
-use ModulesGarden\GGSModule\App\Libs\EmailManager;
-use ModulesGarden\GGSModule\App\Libs\LegacyEmailImport;
-use ModulesGarden\GGSModule\App\Migration\Readers\LegacyReaderInterface;
-use ModulesGarden\GGSModule\App\Migration\Support\Schema;
+use GGSModule\App\Libs\Billing\Markups;
+use GGSModule\App\Libs\AutoInstall\Cpanel;
+use GGSModule\App\Libs\Emails\EmailCatalog;
+use GGSModule\App\Libs\Emails\EmailManager;
+use GGSModule\App\Libs\Emails\LegacyEmailImport;
+use GGSModule\App\Migration\Readers\LegacyReaderInterface;
+use GGSModule\App\Migration\Support\Schema;
 use WHMCS\Database\Capsule;
 
 /**
@@ -245,7 +245,7 @@ class Engine
     /**
      * Legacy products (and TSS order codes) the gateway has no product for, with the services that use them.
      * Each needs a choice before a run: an alternative gateway product (renewals are ordered as that product) or
-     * "keep as a record" (App\Libs\RecordOnly). Read without the run's choices.
+     * "keep as a record" (App\Libs\Certificates\RecordOnly). Read without the run's choices.
      * [['ref', 'label', 'names' => [], 'pids' => [], 'unsupported' => bool, 'services' => ['active', 'awaiting', 'other']]]
      */
     public function unmatched(): array
@@ -708,7 +708,7 @@ class Engine
                 // only slower without it
             }
         }
-        // the unified module's own table: kept (App\Libs\SchemaIndexes adds the same on every install)
+        // the unified module's own table: kept (App\Database\Schema adds the same on every install)
         try
         {
             Schema::addIndex(Writer::tRequests(), 'serviceid', 'serviceid');
@@ -872,7 +872,7 @@ class Engine
                 $productRemote = trim((string)Capsule::table('tblproducts')->where('id', $pid)->value('configoption2'));
                 if($productRemote !== '')
                 {
-                    $rec['order_payload']['product']['id'] = \ModulesGarden\GGSModule\App\Migration\Readers\AbstractReader::productIdValue($productRemote);
+                    $rec['order_payload']['product']['id'] = \GGSModule\App\Migration\Readers\AbstractReader::productIdValue($productRemote);
                     if(isset($rec['certificate']) && is_array($rec['certificate']) && array_key_exists('remote_product_id', $rec['certificate']) && (string)$rec['certificate']['remote_product_id'] === '')
                     {
                         $rec['certificate']['remote_product_id'] = $productRemote;
@@ -1321,7 +1321,7 @@ class Engine
         $mysql   = Capsule::selectOne('SELECT VERSION() AS v');
         $summary = $run['summary'] ?? [];
         $lines   = [
-            \ModulesGarden\GGSModule\App\Libs\Edition::name() . ' - migration error report',
+            \GGSModule\App\Libs\Support\Edition::name() . ' - migration error report',
             str_repeat('=', 60),
             'Run:            #' . $runId . ' (' . strtoupper((string)$run['source']) . ', legacy module ' . ($run['source_version'] ?: '?') . ')',
             'Status:         ' . $run['status'],

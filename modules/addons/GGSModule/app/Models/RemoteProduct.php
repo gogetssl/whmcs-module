@@ -1,14 +1,13 @@
 <?php
 
-namespace ModulesGarden\GGSModule\App\Models;
+namespace GGSModule\App\Models;
 
-use ModulesGarden\GGSModule\App\Libs\CatalogueSync;
-use ModulesGarden\GGSModule\App\Libs\Helpers;
-use ModulesGarden\GGSModule\App\Libs\ProductCatalog;
-use ModulesGarden\GGSModule\Core\Models\ExtendedEloquentModel;
-use ModulesGarden\GGSModule\Core\WHMCS\Models\Product;
+use GGSModule\App\Libs\Products\CatalogueSync;
+use GGSModule\App\Libs\Support\Helpers;
+use GGSModule\App\Libs\Products\ProductCatalog;
+use GGSModule\App\Models\Whmcs\Product;
 
-class RemoteProduct extends ExtendedEloquentModel
+class RemoteProduct extends Model
 {
 
     public    $timestamps = true;
