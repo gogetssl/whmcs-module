@@ -5,6 +5,7 @@ namespace GGSModule\App\Pages\Admin;
 use GGSModule\App\Kernel\Page;
 use GGSModule\App\Kernel\Response;
 use GGSModule\App\Libs\Setup\MigrationScreen;
+use GGSModule\App\Libs\Support\Csv;
 use GGSModule\App\Libs\Support\Edition;
 use GGSModule\App\Migration\Choice;
 use GGSModule\App\Migration\Engine;
@@ -153,12 +154,12 @@ class Migration extends Page
         {
             foreach($rows as $r)
             {
-                fputcsv($out, [$group, $r['service_id'], $r['product_id'], $r['kind'], $r['legacy_status'], $r['target_status'], $r['remote_id'], $r['autoinstall'] ? 'yes' : '', (string)$r['reason'], implode(' | ', $r['warnings'])]);
+                fputcsv($out, Csv::row([$group, $r['service_id'], $r['product_id'], $r['kind'], $r['legacy_status'], $r['target_status'], $r['remote_id'], $r['autoinstall'] ? 'yes' : '', (string)$r['reason'], implode(' | ', $r['warnings'])]));
             }
         }
         foreach($report['products'] as $p)
         {
-            fputcsv($out, ['product', '', $p['pid'], $p['mapped'] ? 'mapped' : 'not mapped', '', '', $p['remote_product']['id'] ?? '', '', $p['legacy_product_ref'], implode(' | ', $p['warnings'])]);
+            fputcsv($out, Csv::row(['product', '', $p['pid'], $p['mapped'] ? 'mapped' : 'not mapped', '', '', $p['remote_product']['id'] ?? '', '', $p['legacy_product_ref'], implode(' | ', $p['warnings'])]));
         }
         fputcsv($out, ['credentials', '', '', $report['summary']['credentials'], '', '', '', '', '', '']);
         rewind($out);

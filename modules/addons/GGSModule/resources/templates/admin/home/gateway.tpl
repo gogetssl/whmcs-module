@@ -41,6 +41,6 @@
         </div>
     </span>
     <span class="ggs-html">
-        <a class="ggs-dcard__foot" href="#" hx-get="{url action='panel' name='gateway' recheck=1}" hx-target="#ggs-gateway" hx-swap="outerHTML">{icon name='refresh'}<span>{t key="{$w}.recheck"}</span></a>
+        <a class="ggs-dcard__foot" href="#" hx-post="{url action='panel' name='gateway'}" hx-target="#ggs-gateway" hx-swap="outerHTML">{icon name='refresh'}<span>{t key="{$w}.recheck"}</span></a>
     </span>
 </div>
