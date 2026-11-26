@@ -189,12 +189,7 @@ class RenewalNotifyCertificate extends Command
         {
             $output->write('Invoice Checking...');
 
-            $classExist = class_exists('\GGSModule\Server\app\services\InvoiceRenew');
-            if($classExist === false)
-            {
-                require_once dirname(dirname(dirname(dirname(__DIR__)))) . DIRECTORY_SEPARATOR . 'servers' . DIRECTORY_SEPARATOR . 'GGSModule' . DIRECTORY_SEPARATOR . 'Loader.php';
-                new \GGSModule\Server\Loader();
-            }
+            require_once dirname(__DIR__, 4) . DIRECTORY_SEPARATOR . 'servers' . DIRECTORY_SEPARATOR . 'GGSModule' . DIRECTORY_SEPARATOR . 'Boot.php';
 
             $invoice = new \GGSModule\Server\app\services\InvoiceRenew();
             foreach($serviceIDs as $serviceID)

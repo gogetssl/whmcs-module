@@ -3,8 +3,8 @@
 namespace GGSModule\Server\app\services;
 
 use GGSModule\Server\app\repository\whmcs\Domain;
-use GGSModule\Server\core\Lang;
-use GGSModule\Server\core\Smarty;
+use GGSModule\Server\Text;
+use GGSModule\Server\View;
 use GGSModule\App\Libs\Gateway\SSLTrustCenterApi;
 use GGSModule\App\Repositories\Whmcs\AddonModuleRepository;
 use GGSModule\App\Repositories\Whmcs\ProductRepository;
@@ -41,7 +41,7 @@ class SSLStepTwo
             $approvers = $api->getDomainEmails($domains);
             $vars['approvers'] = $this->approversToOptions($approvers);
 
-            $view = Smarty::buildTemplate('configuressl/SSLStepTwo', $vars);
+            $view = View::render('configuressl/SSLStepTwo', $vars);
             return ['approveremails' => [$view]];
 
         } catch (\Exception $e) {
@@ -56,7 +56,7 @@ class SSLStepTwo
         $decode = openssl_csr_get_subject($csr);
         if($decode === false)
         {
-            throw new \Exception(Lang::absoluteT('csr_error'));
+            throw new \Exception(Text::get('csr_error'));
         }
         return $decode;
     }
@@ -78,7 +78,7 @@ class SSLStepTwo
 
             if($countSan < count($san))
             {
-                throw new \Exception(sprintf(Lang::absoluteT('using_max_san'),$countSan));
+                throw new \Exception(sprintf(Text::get('using_max_san'),$countSan));
             }
 
             foreach ($san as $domain)
@@ -95,7 +95,7 @@ class SSLStepTwo
 
             if($countSanWildCard < count($wildcard))
             {
-                throw new \Exception(sprintf(Lang::absoluteT('using_max_san_wildcard'),$countSanWildCard));
+                throw new \Exception(sprintf(Text::get('using_max_san_wildcard'),$countSanWildCard));
             }
 
             foreach ($wildcard as $domain)

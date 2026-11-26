@@ -445,16 +445,16 @@ class AddonCertificates
         $text = '';
         try
         {
-            if(class_exists('\GGSModule\Server\core\Lang'))
+            if(class_exists('\GGSModule\Server\Text'))
             {
-                $text = html_entity_decode((string)\GGSModule\Server\core\Lang::absoluteT('addonCertificate', $key), ENT_QUOTES, 'UTF-8');
+                $text = (string)\GGSModule\Server\Text::plain('addonCertificate', $key);
             }
         }
         catch(\Throwable $e)
         {
             $text = '';
         }
-        if($text === '' || $text === $key || strpos($text, 'addonCertificate') !== false || strpos($text, '_LANG[') !== false)
+        if($text === '')
         {
             $text = self::ENGLISH[$key] ?? $key;
         }

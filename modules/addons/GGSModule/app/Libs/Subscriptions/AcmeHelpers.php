@@ -4,7 +4,7 @@ namespace GGSModule\App\Libs\Subscriptions;
 
 
 use GGSModule\Server\app\models\whmcs\SSL;
-use GGSModule\Server\core\Lang;
+use GGSModule\Server\Text;
 use GGSModule\App\Models\AcmeSubscription;
 use GGSModule\App\Models\RemoteProduct;
 use GGSModule\App\Models\Whmcs\Product;
@@ -192,7 +192,7 @@ class AcmeHelpers
 
         if(!$subscription || (int)$subscription->api_order_id <= 0)
         {
-            throw new \Exception(Lang::absoluteT('subscription_was_not_created_yet'));
+            throw new \Exception(Text::get('subscription_was_not_created_yet'));
         }
 
         $wasUnpaid  = SubscriptionState::renewalUnpaid($subscription);

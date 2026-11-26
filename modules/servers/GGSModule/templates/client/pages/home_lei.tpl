@@ -1,0 +1,206 @@
+{if $allOk === true}
+<div class="validate-ssl-unified ggs-cert ggs-smime">
+
+    <div id="ggs-lei-alerts">
+        {if $flashSuccess}
+            <div class="alert alert-success" role="alert">{$flashSuccess}</div>
+        {/if}
+        {if $flashError}
+            <div class="alert alert-danger" role="alert">{$flashError|escape}</div>
+        {/if}
+        {if $refreshError}
+            <div class="alert alert-warning" role="alert">{$text->t('smimeRefreshFailed')} {$refreshError|escape}</div>
+        {/if}
+    </div>
+
+    <section class="ggs-card ggs-hero ggs-hero--{$leiTone}">
+        <div class="ggs-hero__head">
+            <span class="ggs-hero__icon">
+                <svg class="ggs-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2M10 6h4M10 10h4M10 14h4M10 18h4"/></svg>
+            </span>
+            <div class="ggs-hero__title">
+                <span class="ggs-badge ggs-badge--{$leiTone}">{$leiStatusText|escape}</span>
+                <h3>{$productName|escape}</h3>
+                {if $leiLegalName}
+                    <p class="ggs-hero__domain">{$leiLegalName|escape}</p>
+                {/if}
+                {if $leiNumber}
+                    <p class="ggs-hero__domain ggs-mono">LEI {$leiNumber|escape}</p>
+                {/if}
+            </div>
+        </div>
+        <div class="ggs-hero__foot">
+            <p>
+                {if $leiStatus == 'active'}{if $leiIsRenewal}{$text->t('leiInfoRenewed')}{else}{$text->t('leiInfoActive')}{/if}
+                {elseif $leiStatus == 'incomplete'}{$text->t('leiInfoIncomplete')}
+                {elseif $leiStatus == 'need_action'}{$text->t('leiInfoNeedAction')}
+                {elseif $leiStatus == 'user_confirmed'}{$text->t('leiInfoUserConfirmed')}
+                {elseif $leiStatus == 'pending' || $leiStatus == 'pre_issue'}{$text->t('leiInfoPending')}
+                {elseif $leiStatus == 'failed'}{$text->t('leiInfoFailed')}
+                {elseif $leiStatus == 'revoked'}{$text->t('leiInfoRevoked')}
+                {elseif $leiStatus == 'unpaid'}{$text->t('smimeInfoContactSupport')}
+                {elseif $leiStatus == 'expired'}{$text->t('leiInfoExpired')}
+                {elseif $leiTone == 'wait'}{if $leiIsRenewal}{$text->t('leiInfoRenewalProcessing')}{else}{$text->t('leiInfoProcessing')}{/if}
+                {elseif $leiTone == 'off'}{$text->t('smimeInfoClosed')}
+                {else}{$text->t('smimeInfoContactSupport')}{/if}
+            </p>
+            <div class="ggs-actions">
+                {if $leiNeedsConfirm}
+                    <button id="ggs-lei-confirm" type="button" class="ggs-btn ggs-btn--primary">
+                        <svg class="ggs-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                        <span>{$text->t('leiConfirmButton')}</span>
+                    </button>
+                {/if}
+                {if $leiGleifUrl}
+                    <a class="ggs-btn" href="{$leiGleifUrl|escape}" target="_blank" rel="noopener">
+                        <svg class="ggs-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                        {$text->t('leiGleifButton')}
+                    </a>
+                {/if}
+                {if $renewOpen}
+                    <button type="button" class="ggs-btn ggs-btn--primary" data-toggle="modal" data-target="#ggsRenewModal">
+                        <svg class="ggs-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+                        {$text->t('renewButton')}
+                    </button>
+                {/if}
+                <button id="ggs-lei-refresh" type="button" class="ggs-btn{if $leiTone == 'wait'} ggs-btn--primary{/if}">
+                    <svg class="ggs-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+                    <span>{$text->t('smimeRefreshDetails')}</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="ggs-grid">
+        <section class="ggs-card">
+            <h4 class="ggs-card__title">
+                <svg class="ggs-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8M16 13H8M16 17H8"/></svg>
+                {$text->t('leiCardEntity')}
+            </h4>
+            {if $leiNeedsConfirm}
+                <p>{$text->t('leiConfirmHint')}</p>
+            {/if}
+            <dl class="ggs-dl">
+                <dt>{$text->t('leiNumberLabel')}</dt><dd class="ggs-mono">{if $leiNumber}{$leiNumber|escape}{else}{$text->t('validation_page', 'NA')}{/if}</dd>
+                <dt>{$text->t('leiField_legal_name')}</dt><dd>{if $leiLegalName}{$leiLegalName|escape}{else}{$text->t('validation_page', 'NA')}{/if}</dd>
+                <dt>{$text->t('leiField_registration_authority_entity_id')}</dt><dd>{if $leiRegistration}{$leiRegistration|escape}{else}{$text->t('validation_page', 'NA')}{/if}</dd>
+                <dt>{$text->t('leiField_legal_jurisdiction')}</dt><dd>{if $leiJurisdiction}{$leiJurisdiction|escape}{else}{$text->t('validation_page', 'NA')}{/if}</dd>
+                <dt>{$text->t('leiLegalAddress')}</dt><dd>{if $leiLegalAddress}{$leiLegalAddress|escape}{else}{$text->t('validation_page', 'NA')}{/if}</dd>
+                {if $leiHqAddress && $leiHqAddress != $leiLegalAddress}<dt>{$text->t('leiHqAddress')}</dt><dd>{$leiHqAddress|escape}</dd>{/if}
+                <dt>{$text->t('leiSigningSection')}</dt><dd>{if $leiSigner}{$leiSigner|escape}{else}{$text->t('validation_page', 'NA')}{/if}</dd>
+                {if $leiRaCode}<dt>{$text->t('leiRaCode')}</dt><dd class="ggs-mono">{$leiRaCode|escape}</dd>{/if}
+            </dl>
+        </section>
+
+        <section class="ggs-card">
+            <h4 class="ggs-card__title">
+                <svg class="ggs-ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></svg>
+                {$text->t('validation_page', 'cardBilling')}
+            </h4>
+            <dl class="ggs-dl">
+                <dt>{$text->t('leiValidFrom')}</dt><dd>{if $leiValidFrom}{$leiValidFrom}{else}{$text->t('validation_page', 'NA')}{/if}</dd>
+                <dt>{$text->t('leiValidTill')}</dt><dd>{if $leiValidTill}{$leiValidTill}{else}{$text->t('validation_page', 'NA')}{/if}</dd>
+                <dt>{$text->t('smimeOrderedAt')}</dt><dd>{if $leiOrderedAt}{$leiOrderedAt}{else}{$text->t('validation_page', 'NA')}{/if}</dd>
+                <dt>{$text->t('smimeNextDue')}</dt><dd>{if $billing.nextDue}{$billing.nextDue}{else}{$text->t('validation_page', 'NA')}{/if}</dd>
+                <dt>{$text->t('validation_page', 'ReccuringAmount')}</dt><dd>{$billing.amount}</dd>
+                <dt>{$text->t('validation_page', 'BillingCycle')}</dt><dd>{$billing.cycle|escape}</dd>
+                <dt>{$text->t('validation_page', 'StoreAPIOrder')}</dt><dd class="ggs-mono">{$leiItemId|escape}</dd>
+            </dl>
+        </section>
+    </div>
+    {if $renewOpen}
+    <div class="modal fade" id="ggsRenewModal" tabindex="-1" role="dialog" aria-labelledby="ggsRenewLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form method="post" action="clientarea.php?action=productdetails&id={$serviceid}">
+                    <input type="hidden" name="mod-action" value="renewOrder">
+                    <input type="hidden" name="token" value="{$csrfToken}">
+                    <div class="modal-header" style="display:block;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="ggsRenewLabel" style="text-align:left;">{$text->t('renewTitle')}</h4>
+                    </div>
+                    <div class="modal-body ggs-cert" style="text-align:left;">
+                        <p>{$text->t('leiRenewIntro')}</p>
+                        {if $renewSame}
+                            <label class="ggs-check">
+                                <input type="radio" name="renew_same" value="1" checked>
+                                <span><strong>{$text->t('renewSame')}</strong><br><small>{$text->t('leiRenewSameHint')}</small></span>
+                            </label>
+                            <label class="ggs-check" style="margin-top:12px;">
+                                <input type="radio" name="renew_same" value="0">
+                                <span><strong>{$text->t('renewNew')}</strong><br><small>{$text->t('leiRenewNewHint')}</small></span>
+                            </label>
+                        {else}
+                            <input type="hidden" name="renew_same" value="0">
+                            <p class="ggs-note ggs-note--plain">{$text->t('leiRenewNewHint')}</p>
+                        {/if}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">{$text->t('validation_page', 'Close')}</button>
+                        <button type="submit" class="btn btn-success">{$text->t('renewCreateInvoice')}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {/if}
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var clone = $('.validate-ssl-unified').clone();
+        $('.product-details').html(clone);
+        $('.mod-module .validate-ssl-unified').remove();
+        // the module's stylesheet lives in the block below and has to survive it
+        $('head').append($('link[href*="theme.css"]').first());
+        // WHMCS's own tab strip under the page: the module shows everything above it
+        $('.product-details').closest('.tab-pane').find('> .nav-tabs, > .tab-content').remove();
+    });
+
+    $(document).on('click', '#ggs-lei-confirm', function () {
+        var btn = $(this), alerts = $('#ggs-lei-alerts');
+        if (!window.confirm('{$text->t('leiConfirmAsk')|escape:'javascript'}')) {
+            return;
+        }
+        btn.prop('disabled', true);
+        $.post('clientarea.php?action=productdetails&id={$serviceid}&json=1', {ldelim}'mod-action': 'confirmLei', token: '{$csrfToken}'{rdelim}, function (ret) {
+            var payload;
+            try {
+                payload = typeof ret === 'object' ? ret : JSON.parse(String(ret).replace('<JSONRESPONSE#', '').replace('#ENDJSONRESPONSE>', ''));
+            } catch (e) {
+                payload = {ldelim}result: 'error'{rdelim};
+            }
+            if (payload.result === 'error') {
+                alerts.html($('<div class="alert alert-danger" role="alert"></div>').text(payload.error || '{$text->t('smimeErrorOccurred')|escape:'javascript'}'));
+                btn.prop('disabled', false);
+                return;
+            }
+            window.location.reload();
+        }).fail(function () {
+            alerts.html($('<div class="alert alert-danger" role="alert"></div>').text('{$text->t('smimeErrorOccurred')|escape:'javascript'}'));
+            btn.prop('disabled', false);
+        });
+    });
+    $(document).on('click', '#ggs-lei-refresh', function () {
+        var btn = $(this), alerts = $('#ggs-lei-alerts');
+        btn.prop('disabled', true);
+        $.post('clientarea.php?action=productdetails&id={$serviceid}&json=1', {ldelim}'mod-action': 'refreshLeiDetails', token: '{$csrfToken}'{rdelim}, function (ret) {
+            var payload;
+            try {
+                payload = typeof ret === 'object' ? ret : JSON.parse(String(ret).replace('<JSONRESPONSE#', '').replace('#ENDJSONRESPONSE>', ''));
+            } catch (e) {
+                payload = {ldelim}result: 'error'{rdelim};
+            }
+            if (payload.result === 'error') {
+                alerts.html($('<div class="alert alert-danger" role="alert"></div>').html(payload.error || '{$text->t('smimeErrorOccurred')|escape:'javascript'}'));
+                btn.prop('disabled', false);
+                return;
+            }
+            window.location.reload();
+        }).fail(function () {
+            alerts.html($('<div class="alert alert-danger" role="alert"></div>').text('{$text->t('smimeErrorOccurred')|escape:'javascript'}'));
+            btn.prop('disabled', false);
+        });
+    });
+</script>
+{/if}

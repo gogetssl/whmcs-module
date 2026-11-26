@@ -27,6 +27,6 @@ class AdminDownloads
             return; // another module's service (both editions can be installed side by side)
         }
         \check_token('WHMCS.admin.default');
-        \GGSModule\Server\app\controllers\server\admin\Actions::adminDownload($serviceId, (string)$_GET['ggs_download']);
+        \GGSModule\Server\app\Admin\Actions::adminDownload($serviceId, (string)$_GET['ggs_download']);
     }
 }

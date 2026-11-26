@@ -23,7 +23,7 @@ unset($moduleUpdateRecover);
 
 use WHMCS\Database\Capsule;
 use GGSModule\App\Models\Request;
-use GGSModule\Server\core\Lang;
+use GGSModule\Server\Text;
 
 // Loaded by WHMCS (ModuleHooks) and by the addon's hooks.php - WHMCS lists the server module in ModuleHooks only
 // after a product using it was saved in the admin area, so the addon makes sure the client hooks always run
@@ -33,11 +33,7 @@ if(defined('GGSMODULE_SERVER_HOOKS'))
 }
 define('GGSMODULE_SERVER_HOOKS', true);
 
-if(!defined('DS')) define('DS', DIRECTORY_SEPARATOR);
-
-require_once __DIR__ . DS . 'Loader.php';
-new \GGSModule\Server\Loader();
-\GGSModule\Server\Server::I();
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'Boot.php';
 
 
 // Admin downloads (certificate ZIP, validation file) from the module tab of the service page: a normal request, not
